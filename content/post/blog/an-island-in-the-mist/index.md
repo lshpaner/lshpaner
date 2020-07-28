@@ -6,7 +6,7 @@ date: 2020-07-11
 math: false
 pdf: true
 diagram: false
-image:
+image: 
   placement: 1
   preview_only: true
 ---
