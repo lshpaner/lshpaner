@@ -7,7 +7,7 @@ math: false
 pdf: true
 diagram: false
 image: 
-  placement: 1
+  placement: 2
   preview_only: true
 ---
 
