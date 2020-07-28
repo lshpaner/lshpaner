@@ -53,4 +53,4 @@ user_groups:
 
 While I currently specialize in building financial models for the entertainment education industry, I also volunteer at my alma mater (UCLA), on a professional panel comprising of alumni and professors overseeing the successful completion of student presentations on a variety of topics in economics, finance, and applied mathematics. 
 
-In my spare time, I enjoy hiking trails, getting out of the city and spending time in nature as well as [traveling](/post/blog). There is nothing quite like the crisp cool air in the mountains. While I do spend an inordinate amount of time behind a desk, I balance it out by exercise at the gym, drinking lots of coffee, water, and monitoring my daily activity with my apple watch. 
+In my spare time, I enjoy hiking trails, getting out of the city and spending time in nature as well as [traveling](/blog/post). There is nothing quite like the crisp cool air in the mountains. While I do spend an inordinate amount of time behind a desk, I balance it out by exercise at the gym, drinking lots of coffee, water, and monitoring my daily activity with my apple watch. 
