@@ -11,7 +11,7 @@ pdf: true
 
    I. Predictive Analytics, Clustering, Classification, and Machine Learning in R
 
-* [Machine Learning with Titanic](/post/portfolio/machine_learning_titanicsurvival/) - a survival model using summary statistics and k-nearest-neighbors (knn) to predict the survical of passengers on the RMS Titanic and viability of the model.
+* [Machine Learning with Titanic](/portfolio/post/machine_learning_titanicsurvival/) - a survival model using summary statistics and k-nearest-neighbors (knn) to predict the survical of passengers on the RMS Titanic and viability of the model.
 
 
 ---
@@ -26,7 +26,7 @@ I. Research Paper on Corporate Bonds (conducted during intership at Merrill Lync
 
 II. Independent Research Related to UCLA As a Public University
 
-- [UCLA Fall Undergraduate Enrollment Figures (1999-2019)](/post/portfolio/UCLAEnrollment/) - a hypothesis test to determine overall trajectory
+- [UCLA Fall Undergraduate Enrollment Figures (1999-2019)](/portfolio/post/UCLAEnrollment/) - a hypothesis test to determine overall trajectory
 
 ---
 ### *Independent*
