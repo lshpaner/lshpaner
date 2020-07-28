@@ -1,0 +1,401 @@
+/* Whole document: */
+
+html {
+  overflow-y: scroll;
+}
+
+html {
+  margin-left: calc(100vw - 100%);
+  margin-right: 0;
+}
+
+@media screen and (min-width: 960px) {
+  html {
+      margin-left: calc(100vw - 100%);
+      margin-right: 0;
+  }
+}
+
+body {
+  margin-top: 70px !important;
+  color: #000000;
+}
+
+.navbar {
+  min-height: 70px !important;
+  color: #000000;
+}
+
+h1{
+	font-weight: 400;
+  letter-spacing: 0.01em;
+  color: #000000;
+}
+
+h2{
+	font-weight: 400;
+  letter-spacing: 0.01em;
+  color: #000000;
+}
+
+/* links */
+
+a:active, 
+a:focus, 
+a:hover {
+  color: #3366FF;
+}
+
+/* nav */
+
+.navbar .navbar-nav .nav-link:active{
+  color:#3366FF
+}
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link:focus {
+	color: #3366FF;
+}
+
+.navbar-default .navbar-fnt {
+  color: #000000;
+}
+
+.navbar {
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-size: .9em;
+  font-weight: bold;
+}
+
+.navbar-brand {
+  text-transform: uppercase;
+  font-weight: 700;
+	letter-spacing: .1em;
+}
+
+
+/* home page */
+
+.portrait-title h2 {
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+}
+
+#about .col-12.col-lg-8 {
+  padding-top: 30px !important;
+}
+
+.network-icon li:hover {
+  transform: scale(1.30);
+}
+
+.home-section:first-of-type {
+  padding: 50px 0 50px 0;
+}
+
+.home-section:not(:first-of-type) {
+  padding: 25px 0 50px 0; 
+}
+
+/* this erases the margin-bottom for h1 */
+
+.home-section.wg-pages .section-heading h1 {
+  margin: 0 0 0 0;
+}
+
+/* this is the section subtitle */
+
+.home-section.wg-pages .section-heading p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+
+/* code */
+/* https://github.com/rstudio/blogdown/blob/master/docs/02-hugo.Rmd */
+
+pre, code {
+	color: #508991;
+	background-color: #fff;
+}
+
+pre {
+  border: 1px solid #fff;
+  box-shadow: 5px 5px 5px #eee;
+  padding: 0.25em;
+  background: #fff;
+  overflow-x: auto;
+  border-radius: 0px; /*undo rounded corners*/
+}
+
+pre code { 
+  background: none; 
+  font-size: 0.8rem;
+}
+
+/* alerts */
+
+div.alert-note > div:first-child::before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  color: #004346;
+  content: "\f0a4";
+}
+
+div.alert-warning > div:first-child::before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  color: #004346;
+  content: "\f1e2";
+}
+
+.alert-note {
+  color: #333;
+  background-color: #fff;
+  border-top: 2px solid #004346;
+  border-radius: 0px; /*undo rounded corners*/
+  border-right-style: none;
+  border-bottom-style: none;
+  border-left-style: none;
+  padding: 23px 10px 21px 10px;
+}
+
+div.alert > div {
+  font-size: 0.85rem;
+}
+
+
+div.alert.alert-warning {
+  color: #d03b39;
+  background-color: #fdf4f4;
+  border-top: 2px solid #004346;
+  border-radius: 0px; /*undo rounded corners*/
+  border-right-style: none;
+  border-bottom-style: none;
+  border-left-style: none;
+  padding: 23px 10px 21px 10px;
+}
+
+/* buttons */
+
+.btn.btn-sm, .btn-group-sm > .btn {
+  border-radius: 0rem; /*undo rounded corners*/
+  font-size: 0.8rem;
+}
+
+.btn.btn-outline-primary.my-1.mr-1 {
+  border-radius: 0px; /*undo rounded corners*/
+  font-size: 0.8rem;
+}
+
+.btn {
+  font-family: "";
+  text-transform: "";
+  font-style: "";
+  border-radius: 0px;
+}
+
+.btn-toolbar .btn:first-child {
+  border-radius: 0px;
+}
+
+.btn-toolbar .btn:last-child {
+  border-radius: 0px;
+}
+
+.btn-toolbar {
+  justify-content: center;
+}
+
+/* section headers */
+
+div.universal-wrapper.pt-3 h1 {
+  text-align: left;
+  padding-bottom: 20px;
+  text-transform: capitalize;
+}
+
+.universal-wrapper {
+  margin: 0 auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  padding-top: 0.1rem;
+  width: 100%;
+}
+
+.card-simple {
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  border: 10px solid rgba(0,0,0,0.09);
+  border-radius: 10px;
+  margin-top: 20px;
+  padding: 15px 20px 15px 20px;
+}
+
+/* about-contact helpers */
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #004346;
+  background-image: none;
+}
+
+
+/* images more like cards; iframes more seamless */
+
+img {
+	margin-bottom: 1.5rem;
+	overflow: hidden;
+	background: #fff;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
+
+/*------- iframe-----*/
+
+.iframe-container {
+ overflow: auto;
+ -webkit-overflow-scrolling: touch;
+ border: #ddd 2px solid;
+ margin: 0 auto;
+ width: 100%;
+ height: "";
+ border-top-width: 0px;
+ border-right-width: 0px;
+ border-bottom-width: 0px;
+ border-left-width: 0px;
+ 
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 1000px;
+}
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.videoWrapper {
+  position: relative;
+  padding-top: 25px;
+  }
+
+.videoWrapper iframe {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* pagination buttons */
+
+.page-link {
+	color: #004346;
+	background-color: #F0F7FA;
+	border: 1px solid #004346;
+  border-radius: 0px; /*undo rounded corners*/
+
+}
+
+.page-link:hover {
+	color: #fff;
+	background-color: #004346;
+	border-color: #004346;
+}
+
+.page-item:first-child .page-link {
+	border-top-left-radius: 0rem;
+	border-bottom-left-radius: 0rem;
+}
+
+.page-item:last-child .page-link {
+	border-top-right-radius: 0rem;
+	border-bottom-right-radius: 0rem;
+}
+
+/* https://github.com/gcushen/hugo-academic/issues/147 */
+
+.article-container {
+  max-width: none;
+}
+
+.docs-article-container {
+  max-width:none;
+}
+
+article .article-metadata {
+  margin-bottom: 0px;
+}
+
+.carousel-indicators li {
+	background-color: #06805E80;
+}
+
+.section-heading p {
+	color: #004346;
+}
+
+.table {
+  width: fit-content; 
+}
+
+/*************************************************
+ *  Sharing
+ **************************************************/
+
+.share-box {
+  float: right;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul.share {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul.share li {
+  display: inline-flex;
+  margin-right: 5px;
+}
+
+ul.share li:last-of-type {
+  margin-right: 0;
+}
+
+ul.share li .fa {
+  display: block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 16px;
+  text-align: center;
+  transition: all 150ms ease-in-out;
+  color: #fff;
+}
+
+ul.share li a {
+  background-color: #b5c6ce;
+  display: block;
+  border-radius: 50%;
+  text-decoration: none !important;
+  margin: 0;
+}
+
+ul.share li:hover .fa {
+  transform: scale(2.0)
+}

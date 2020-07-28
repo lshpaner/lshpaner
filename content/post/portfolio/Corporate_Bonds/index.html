@@ -1,0 +1,374 @@
+---
+title: "Corporate Asset Management"
+author: "Leon Shpaner"
+date: '2007-03-16'
+output:
+  pdf_document: default
+  html_document: default
+subtitle: An Insight Into The Corporate Bond Market and Its Effects On Fiduciary-Client
+  Relations At Merrill Lynch
+diagram: yes
+image:
+  placement: 1
+  caption: null
+tags:
+- Corporate Bonds
+- Merrill Lynch
+- Descriptive Statistics
+- plots
+- regression
+categories: ''
+math: yes
+---
+
+<script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
+
+
+<p>The broad spectrum of assets that comprise the portfolios of Merrill Lynch clients necessitates an in-depth financial analysis so as to comprehend investor goals, successes, and most importantly, investor psyche. This report focuses on United States corporate bonds to delve deep into the complex financial market mechanism. There are a number of different options available to Merrill Lynch clients with incomes of <em>$</em>100,000 or more. These options are examined, first, from the perspectives of the potential investor/shareholder. Then, this process is observed via the perspectives of the financial advisors (brokers) that link the investor portfolio with total earnings to properly assess value and net worth. Broker fees are thus calculated for quality assurance purposes. The world of corporate bonds warrants an understanding of its respective market so as to allocate useful information from partitions of data. An appreciation of the complexity of this financial market mechanism is gained from studying its effects on investor related activities.</p>
+<p>In a market of choices, one must recognize the essential differences between core assets before investing in any one of them. Thus it is necessary to classify each asset as a separate and distinct unit in the investor portfolio, then relating one to the other to provide a clear insight into the defining financial market mechanism. When an individual chooses to become knowledgeable in the stock market, he or she will probably decide to use that knowledge to invest at some point in time, <span class="math inline">\(\mathit{t}_{i}\)</span>. Probabilistically, there is a chance between <em>0</em> and <em>1</em> that the investor will acquire assets at some point <em>l</em> in their life. Numerical measurement of this chance warrants a linear regression equation, but first, a simple linear function is created. Risk, income, and expected gain need to be further assessed. Income <em>i</em> can be measured as total earnings over time <em>t</em>. Expected gain can be further reclassified as expected return from investments and estimated at value <span class="math inline">\(\mathit{e}_{i}\)</span>. However, risk is a bit more difficult to assign a numerical value to as it remains at <em>Pr [0,1]</em>.It becomes difficult to measure the exact probability of the risk that is associated with any investment given the circumstances of a constantly fluctuating economy. Ultimately, the prospective investor function <em>(PIF)</em> relegates to</p>
+<p><span class="math display">\[\mathit{y}_{i} = {i}_{t}+{e}_{i}+{t}_{i}+{r}_{i}{.}\]</span></p>
+<p>To find expected return from investing, the shareholder must theoretically regress total value of assets <span class="math inline">\(\alpha\)</span> at initial time <em>t</em>
+(<span class="math inline">\(\mathit{\alpha}_{i}\)</span>) vs. expected value of assets <span class="math inline">\(\alpha\)</span> at present time <em>t</em> <span class="math inline">\(({\mathit\alpha}_{p})\)</span>. The regression model becomes</p>
+<p><span class="math display">\[\mathit{y}_{i} = \mathit{\alpha}_{i} + \left( \frac{\alpha}{I} \right)_{p}(t_{i})+{r_i}{.}\]</span></p>
+<p>Thus, having examined the regression model at instantaneous time <span class="math inline">\(\mathit{t}_{i}\)</span>, it can be inferred that the expected value <span class="math inline">\(\mathit{y}_{i}\)</span> depends on the simple addition of income as a function of expected return on investments, plus time. Typically, investors do not use such complicated formulas to solve these problems. What, when, where, and how to invest is decided simply by “shopping around” for a wealth management firm. This is the “smart way”. Even the shrewdest client will need the expertise of a series 7 and 63 certified NASD broker to at least fill him in on the details. This is why large conglomerates like Merrill Lynch exist. Typically, a Merrill Lynch broker charges fees based on the client’s income. For example, if a client has an annual salary of <em>$</em>100,000, the broker will charge 1.5% of that in stocks, 0.5% in bonds, and 1% in mutual funds. The precise methodology on how the fees are calculated along with the percentage values is contingent upon investor activity. If an investor remains active (a frequent buyer and seller), then he or she will be charged on a transaction basis. Otherwise, if an investor remains a part-time client, he or she will be charged on a commission basis. Either way, the broker earns his fees based on investor activity. The investor must choose his or her investment objectives from income, growth, or total return prior to opening an account.</p>
+<p>Secondly, the investor must indicate his or her risk tolerance level from conservative, or moderate to aggressive. A typical client at Merrill Lynch has an annual income of <em>$</em>50,000 or more. So what types of assets can Merrill Lynch clients opt to have managed? The core assets are stocks, bonds, and mutual funds. Stocks, as defined by Alvin D. Hall are “securities a person has in a company that allow him to own a portion of the company as well as receive dividend payments; typically the board of directors meet quarterly to decide the dividend yield per shareholder” (Hall 24). Bonds allow the individual holder to receive fixed interest rate payments from the issuer until repaid in full at the yield to maturity date. It is also important to note that bondholders differ from shareholders of company stock. Whereas shareholders have voting rights and own a portion of the company, bondholders are exempt from ownership concessions. Bondholder financing is used to fund the sale of debt securities, whereas shareholder financing is used for the purposes of equity holder (stocks) financing. A crucial point in the managerial decision making process involves figuring out leverage. What does this mean? “Leverage is the amount of outside funds (debt) the owners use compared with their own contribution in financing the corporation’s assets. <em>The greater the use of debt, the greater the potential gain or loss to ownership shares of a given investment of capital”</em> (Madden 172). Consequently, the corporation faces a risk in using debt to finance capital investments.</p>
+<p>Corporations, municipalities, and other government entities are all issuers of bonds. A bond, generally speaking, is the highest security that a corporation can give. A client who is looking to buy bonds at a low price will opt for municipal bonds because they are tax-exempt, low risk, and are purchased at cost. Government agencies pose a lower risk than corporations. The smart investor is likely to pick municipal bonds for this reason. However, there remains limited growth potential with municipal bonds based on risk factors and principal cost alone. One who is reluctant to make decisions with large sums of money, is, to a certain extent afraid of portfolio diversification. Therefore, given a fixed budget constraint, the investor fears personal utility maximization. For this reason, portfolio diversification visa vie direct investment in U.S. corporate bonds warrants a serious discussion.</p>
+<p>First and foremost, “a bond is a written credit instrument in the promise-to-pay category. One of the common orders-to-pay negotiable instruments is the draft or bill of exchange. This instrument is an order to pay money. A draft may be defined as a written instrument created by the <em>drawer</em> (the one who draws up the instrument), addressed to a second party, the <em>drawee</em>, who is ordered to pay “a sum of money certain in amount” to a third party, the payee, on a fixed or determinable future date. A draft or bill of exchange can be drawn so that a payee is not named, merely by drawing it to the bearer, who would be the person holding the instrument and presenting it for payment” (Musselman 480). The process is summarized as follows. The bank issues an order to pay and hands it over to the corporation. The corporation must pay the creditor within the agreed timeframe so as not to default.</p>
+<p>If bondholders do not receive their fixed interest rate payments, they have the legal right to file a lawsuit against the corporation. The court will determine a judgment in the creditor’s favor, thereby forcing the company into bankruptcy. “A corporation is considered bankrupt if its assets are insufficient to meet its liabilities as adjudged by a court examination. In case of bankruptcy, the value of assets sold must go to pay bondholders first…Bondholders receive priority over general creditors because, as long-term lenders, they expose their funds to risk for a longer time, on average, then general creditors” (Madden 172).</p>
+<p>“When bonds are sold by a corporation, they become a part of its capital structure” (Musselman 125). When a company needs to borrow money for over six months to a year, it will more than likely decide to sell its bonds as opposed to distributing additional stock. This is beneficial to the bondholders because their entitlement to a share of the company’s revenue precedes that of the common and preferred stockholders. Bonds are assets in the corporate framework that can be further broken down into subcategories. Namely, mortgage bonds, income bonds, collateral trust bonds, equipment trust bonds, and debenture bonds are all qualified types of corporate debt that are either secured or unsecured. A mortgage bond is a safe security that allows for the “real property” of the corporation to be financed by its sale. If the par value of the bond cannot be repaid in due time by the corporation, the corporation will waive its rights and privileges to ownership to the investor by law. The investor may be able to, in turn, sell the corporation at a price equal to the size of the loan. According to the text <em>Introduction to Modern Business</em>, a specific example of a mortgage backed security is <em>Consolidated Edison’s 5 percent Series N</em> which should have matured back in 1987. “These bonds were issued in the amount of $60 million, secured by a mortgage on the corporation properties” (Musselman 440).</p>
+<p>If the principal of the bond cannot be secured by real property, then collateral is the next best alternative. Collateral trust bonds allow the investors to receive collateral in the form of other bonds and/or stocks that are provisioned by a trustee on the account.</p>
+<p>Then there are income bonds. These bonds pay an interest rate over and above all other fixed costs. When chief executive officers find themselves in the process of reorganizing their corporation, they may decide to issue income bonds as a substitute for the fixed interest rate. This is done to avoid the hassle associated with doling out money at regular intervals despite corporate success or failure. Even though such bonds have maturity dates, the bondholders might not get paid on time if the company is doing poorly.</p>
+<p>Yet if a company is successful, it need not worry about such problems. Sometimes it is necessary to finance capital expenditures. In doing so, corporations might find equipment trust bonds to be safe. Of course, this also depends on the type of business. In the manufacturing sector, railroad companies need to buy new and improved equipment as they expand the railways system. For example, a railroad may want to buy 25 new locomotives but cannot assemble enough cash to make the purchase without impairing its cash position. So it takes a down payment of 15 or 20 percent of insurance companies and trust companies, under an equipment trust agreement to finance this operation. Interest is paid at fixed periods to the trustee, who in turn pays the bondholders. When the bonds are fully paid, title to the equipment reverts from the trustee to the railroad company.</p>
+<p>Last but not least are debenture bonds. These “are backed solely by the general credit of the company, and not by a mortgage or any pledged assets.” When a business needs to refinance an old debt, it will turn to debenture bonds. “Since 1946, the American Telephone and Telegraph Co. has sold nearly <em>$5</em> billion worth of debenture bonds for its equipment expansion program. Of this total, <em>$3.2</em> billion was raised by selling debenture bonds that could be converted into common stock under certain conditions. The Standard Oil Co. of New Jersey, Consolidated Edison of New York, and the Coca-Cola Co. are among the large companies that have sold huge sums of debenture bonds at low interest rates. (It was easy to find buyers for these bonds because of the sound financial condition of these corporations.) As a rule, these debenture bonds carry a slightly higher interest rate than other bonds because they are not secured by a mortgage; therefore, the risk to the investor is greater” (Musselman 440-441).</p>
+<p>Business deals and ventures are brokered by investment bankers. When a corporation decides to expand out to the far reaches of the market’s capabilities it uses every feasible resource at its disposal. Investment bankers provide venture capital (otherwise known as startup capital) to investors of high-risk companies oriented in technological innovation. As a result, such commitments generate a total return of investment equal to the equity position in the firm of interest. On the opposite end of the spectrum, the corporation might need to borrow money from wealthy investors to finance their business ventures. Wealth management plays a crucial role in this struggle as corporations are lined up on one side of the “chess board” and investment management firms on the other. Those who seek high yields of returns given their investment potentials are the probable winners of this game. As an incentive, the corporation makes its bonds available to the public. Investors purchase the bonds on one end, whereas, the corporation receives payment in the form of a loan. Preceding repayment of the principle, the corporation releases the payments back to the consumers at fixed annual interest rate intervals. This is how investments on both ends are financed.</p>
+<p>A crucial step in determining strategies for clients is to look at the net asset value of a security (NAV). This applies to book values of bonds and is computed by determining “the total assets less any intangible asset, less all liabilities and securities having a prior claim, divided by the number of units outstanding.” <a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>: This means that all intangible assets along with prior bond claims are jointly removed from this equation.</p>
+<p>To illustrate the effect of corporate bond investments on the U.S. economy and vice versa, it is necessary to look as far back in history as 1900 to get a sense of the changes that have occurred over the last one hundred-and-seven years. According to the research of Hickman and Atkinson, this record is characterized by a cyclical behavior ranging from very poor performance to revitalized and improved performance. “Between the years of 1900 and 1943, 17.3 percent of “of the outstanding par value of bonds defaulted” (Bolten 281). In layman’s terms, this suggests that a significant amount of bonds in that era did not pay the semi-annual fixed interest rate per investment. Also, these bonds, as an aggregate did not pay back the face value loaned out by the investors. In contrast, however, only 10 percent of such bonds defaulted between the war-torn years of 1945-1965 (Bolten 281). The allied forces were defeated during World War II and the U.S. economy was revitalized with a substantial increase in growth rates. To elaborate, it is first necessary to define GDP (Gross Domestic Product). GDP is defined as the total dollar value of all goods and services produced annually within a country’s borders. In 1950, the GDP per capita in the United States was 9,573.00 compared to $ 4,096.00 in 1900. These figures alone suggest that the United States economy has ranked higher over fifty years of data in terms of per capita income estimations. In 1900, the U.S. was ranked third among other nations and in 1950 it was ranked first. Topping the list was a sure sign of progress to most favored nation status.<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></p>
+<p>The United States gave rise to inventors that in turn gave rise to technological progress and vice versa. Historically, the bond market has been responsive to technological progress. However, to seal the deal on profit-seeking behavior, patents and copyrights were necessary for inventors to sell their ideas to firms. Shortly before the 20th century, manufacturers of capitalintensive products consolidated their firms to counter the effects of a competitive industry. Ever since 1893, there has been considerable expansion in the manufacturing sector (Lamoreaux 87). Now such firms are re-defined visa vie mergers and acquisitions.</p>
+<p>Around 1900, there was sub-sufficient innovation as opposed to later stages, so the bond market gave little incentive for loan giving consumers to finance budding corporations. Ford Motors is a perfect example of a developing corporate bond market. In 1903 Henry Ford and a small pool of investors incorporated Ford Motors. Profit maximization was their goal. Over the years, however, substantial technological progress was made. Through its impeccable research and development strategies, Ford Motors grew out of the Model-T. In so doing, the corporation enabled newer models like the Taurus and the Mustang to become reliable and investor-worthy. Ford was not offered publicly until January 18, 1956 at <em>$</em>64.50/ share, so little is known about its bond market prices at that time. What can be inferred, however, is that as the corporation grew, it went through cyclical peaks and troughs of typical bond market behavior.<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a></p>
+<p>For example, the concept of bond investing can be illustrated with “a 10-year bond issued by the Ford Motor Company paying a 7% annual interest rate. You pay <em>$1,000</em> (the par or principal value) when the bond is issued, i.e., you lend Ford <em>$1,000</em>. You receive <em>$35</em> in interest from Ford every six months (<em>$1,000</em> x 7% = <em>$70</em> per year or <em>$35</em> every six months; 7% is the”coupon interest rate“). After the 10-year period (the bond’s”maturity“), Ford pays you back the <em>$1,000</em> you lent it.”<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a></p>
+<p>Recent trends suggest, however, that the conglomerate merger GM and Ford have not been doing so well. In an article published early May by the Washington Post, columnist Greg Schneider suggested that Standard and Poor’s hacked the two giants’ ratings to junk bond status. This implies that the two giants have lost a substantial share of investments to global competitors Honda and Nissan. Furthermore, the U.S. firms’ production costs may have disrupted their efforts in developing fully satisfactory cars. Standard and Poor’s suggests that Ford and GM have downsized their profit margins by developing SUV models, a substantial profit maximizing tool that ultimately failed. While Ford and GM sought out local buyers in the U.S. by financing their products and in turn being financed by bond buyers, they were defeated by a global giant (Schneider, E01). Japan is known for its versatile production of cars; be it Honda, Nissan, or Mazda, Japanese companies know how to cater to a global clientele full of unlimited appetites. They do not focus on SUV production as the sole source of revenue. Therefore, their capital gain potential is significantly higher. For the long haul, they will continue to show sure signs of dominant-firm strategy behavior as long as such market trends persist.</p>
+<p>Rating a company’s bonds down to junk level increases their cost of borrowing and limits the availability of preferred credit. Therefore, corporations that need to raise revenue issue junk bonds that deliver a high rate of interest while offsetting the substantial risk of default. Even though the word “junk” has a negative connotation, it does not necessarily reflect negatively on investments. For instance, if an investor is looking to buy affordable corporate bonds he might decide to purchase “junk” bonds.</p>
+<p>Long term investments in junk bonds are made with the expectation that they will be high-yielding debt securities, despite their sub-par ratings. “In their attempt to rate bonds, the ratings agencies look at such factors as the adequacy of earnings to cover interest and amortization…limitations on new debt, dividend payments, and merger activity” (Bolten 282). In effect, the ratings agencies look at the accounting costs (expenses) the businesses incur. Amortization takes place in accounting when a bond that is purchased above par value is adjusted to face value (Fitch 19). This process is necessary because investors eventually expect to receive payment in full aside from the fixed interest rate payments. The ratings agencies also acknowledge corporate debt as a source of potential revenue loss. Ford, alone, in 1999 sold $8.6 billion in debt. This put Ford ahead of other corporations.<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a> Selling off debt is a corporate strategy conducive to growth. Otherwise, if corporate debt accumulates to the point of saturation where it cannot be sold off, investor relations are negatively impacted. Thus, the ratings are also negatively affected. Finally, the S&amp;P looks at corporate performance based on company financial statements on a case by case basis. Standard and Poor’s ratings in descending order are as follows: AAA, AA, A, BBB for investment grade bonds in general. Specifically, an A rated bond is a sure sign of an issue that is investment grade. BBB rated bonds are right on the border between investment grade and below investment grade. The S&amp;P uses the same ratings in descending order: BBB, BB, B, CCC, CC, C, to classify bonds that are generally below investment grade. Pluses and minuses are also used to further assess corporate performance. So when the S&amp;P rated a bond down to BBB, they classified it as having a high risk and volatility. Anything below the BBB rating puts the corporation in jeopardy of bankruptcy. “CCC and CC grade bonds are considered outright speculations, and C rated bonds are income bonds (usually issued in reorganization and on which interest is paid only when earned) that are not paying interest. DDD and below are bonds that are in default.” The ratings in one agency compare with those in the other. A S&amp;P AAA is equivalent to a Moody’s Aaa, although the two agencies do not necessarily agree on the quality of a particular bond and may assign different ratings to the same bond” (Thaler 282). For all intents and purposes, this report focuses on the S&amp;P 500 as an indicator of bond ratings.</p>
+<p>Throughout the years the bond ratings agencies have tried to be fair, though, subjectivity remains to be seen as the basis of evaluation. “The record of the agencies has been reasonably good. From 1900 to 1943, the occurrence of default increased as the rating quality decreased (see Table 14.2).<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a> “At the beginning of 1926, the coupon on long-term AAA corporate bonds was 4.9% - not too far off the actual return for 1926-1998 of 5.77%” (Bernstein 23). The default rate as a percentage of par value rose from 6 percent in the AAA and AA ratings to 13 percent in the A rating and to 42 percent in the BB and below ratings” (Thaler 283). This means that 6 percent of AAA and AA rated bonds defaulted in repaying the principal loan, whereas, the A rated bonds defaulted on 13 percent, and the BB and below rated bonds defaulted on 42 percent of the principle value. There was a linear relationship, namely, a positive correlation between negatively rated bonds and likelihood of defaults. “The record since 1945 is difficult to judge because of the limited number of defaults and their concentration in the railroad industry. The agencies also exhibited a good record of downgrading the rating quality of a bond before it defaulted” (Thaler 283).</p>
+<p>Moreover, evidence suggests that ratings increase as business cycles go through up-trends (peak); whereas, ratings decrease as business cycles hit a downward spiral (trough). W.B. Hickman was at the forefront of this research project in the late 1950’s. He concluded that as the business activity expands, the ratings improve, and as the business activity contracts, the ratings are lowered. “A partial explanation for this cyclical pattern lies in the sensitivity of the various financial ratios used by the agencies to the business cycle. As the financial ratios change with the business cycle, the agencies respond by changing their ratings. Since 1945, this cyclical pattern among the ratings has not been so evident” (Thaler 283).</p>
+<p>Also, Hickman delved into the market rating system to discover another gauge for measuring bond ratings. He found that “bonds were rated in terms of the premium that the promised yield represented over the pure interest rate yield that prevailed at the time of the offering” (Thaler 283). In other words, the ratings were based on the interest rate yield given the premium. According to the Dictionary of Banking Terms, a premium in finance is defined as “the difference between the face value of a bond and the ABOVE PAR price. Bonds purchased at a premium are amortized over their expected life; if purchased at a discount, their book value is said to accrete or grow towards par from the date purchased” (Fitch 353). As a result, the rate of default rises with respect to the premium. Therefore, the quality of the premium will determine the overall success of the bond upon repayment.</p>
+<p>With a substantial risk, there exists a greater chance that a corporation will default on timely repayment of debt securities. Ratings are important to investors because they measure the overall track record of a corporation, much like a credit score measures a consumer’s credit history. Even though it makes sense to say that when a corporation is successful, so is the investor; this is not always the case. With risk, there exists either failure or reward. If one were to measure the precise risk associated with investing in junk bonds, it would be rather difficult to understand this by ratings alone. What is known, however, is that an inverse relationship exists between risk and rating. As the risk factor increases, the rating decreases.</p>
+<p>The process of risk assessment can be developed from the abridged yet significant yield-to-maturity formula</p>
+<p><span class="math display">\[p = {\Large\sum_{i=-1}^{-n}} c{(1+r)^{-n}} + B{(1+r)^{-n}}\]</span>
+Yield-to-maturity can be used because this composite of coupon payments over <em>n</em> years has the potential of becoming a capital gain or loss. The risk variable <span class="math inline">\(\mathit\omega\)</span> with loss probability <em>[0,1]</em> becomes noted in</p>
+<p><span class="math display">\[ p = |\omega| \cdot[c(1+r)^{-n}+B(1+r)^{-n}]{.} \]</span>
+Thus,</p>
+<p><span class="math display">\[ p = \omega =\frac{p^n+pr^n}{C+B}{.} \]</span>
+<em>where c = the annual coupon payment , n = the number of years to maturity, B = the par value, and P = the purchase price</em></p>
+<p>If the equation is manipulated to <span class="math inline">\(\omega = \frac{p}{0} {,}\)</span> then the risk variable is undefined.<a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a></p>
+<p>Formalizing the equation for <em>s</em>, we have</p>
+<p><span class="math display">\[ \large{s} = \large\sqrt{s^2} = \sqrt \frac{\LARGE\sum\limits_{i=1}^{n}\large(x_i-\overline{x})^2}{{n-1}} \]</span></p>
+<p>Aside from yielding an estimate for investment risk, the standard deviation suggests that “ two-thirds of the time the annual return of the asset will lie between 1 standard deviation above and 1 standard deviation below the mean value” (Bernstein 6). Following Chebyshev’s Rule<a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a>, we see that as <span class="math inline">\(\lim\limits_{x \to +\infty} \left(1-\frac{1}{k^2} \right){,}\)</span> the measurements will continue to fall within <em>k</em> standard deviations from the mean. The minimum value for <em>k</em> must be 2 such that <span class="math inline">\(\large¾\)</span> of the measurements will fall within 2 standard deviations of the mean. Therefore, placing the annual return of the asset “between 1 standard deviation above and 1 standard deviation below the mean value,” as Bernstein suggests, is a long shot; but it can occur, nonetheless. It is known that the standard deviation of the annual returns on short-term bonds is 3% - 5% and 6% - 8% on long-term bonds.</p>
+<p>Before purchasing a security of any type, it is vital to consult a NASD certified broker about its standard deviation of annual returns. However, it is important to remember that past performance is not indicative of future results. So if one wishes to extrapolate expected annual return, the IPO price: <span class="math inline">\(\omega = ps = p\sqrt{s^2}\)</span> must also be figured in.</p>
+<p>Investors are often faced with the dilemma of maximizing their reward given a risk associated with portfolio diversification. This risk-to-reward relationship is plotted on a two dimensional graph in rectangular coordinates where the x axis is the side of reward and the yaxis is the side of risk. One of the advantages of utilizing Morningstar software is its ability to spit out graphs that figure in risk, reward, alpha, beta, and R-squared given a number of assets. Alpha measures the difference between a portfolio’s actual returns and its expected performance, given its beta and the actual returns of the benchmark index. Alpha is often seen as a measurement of the value added or subtracted by a portfolio’s manager. Beta is a measure of the degree of change in value one can expect in a portfolio given a change in value in a benchmark index. A portfolio with a beta greater than one is generally more volatile than its benchmark index, and a portfolio with a beta of less than one is generally less volatile than its benchmark index. R-squared reflects the percentage of a portfolio’s movements that are explained by movements in its benchmark index, showing the degree of correlation between the portfolio and a benchmark. This figure is also helpful in assessing how likely it is that alpha and beta are statistically significant. To maximize total return on assets, the investor needs to diversify his portfolio such that his risk to reward outcome is optimally scattered along the north-west region of the second quadrant of the graph. Below is a graphical illustration of atypical investor trends highlighting an optimum scenario. I begin modeling this relationship using a g (gain) function to show the potentially substantial risk associated with investing in any set of assets.</p>
+<p><span class="math display">\[ G = \sigma{r}^\alpha{R}^{\alpha+1}{.}\]</span>
+The investor wishes to maximize his gain subject to the potency <em>p</em> of the investment. This is equal to the standard deviation (<span class="math inline">\(\sigma\)</span>) times the risk <em>(r)</em>, plus the reward <em>(R)</em> multiplied by depreciation <span class="math inline">\((\delta){.}\)</span> With any investment, there exists a possibility of less than perfect reward, so we account for the loss on an investment by using the depreciation variable <span class="math inline">\((\delta){.}\)</span></p>
+<p><span class="math display">\[ P = \sigma{r} + \delta{R} {.}\]</span>
+Using the method of Lagrange, we have</p>
+<p><span class="math display">\[\begin{eqnarray} L &amp;=&amp; \sigma{r}^\alpha{R}^{\alpha+1} + \lambda{(P-\sigma{r} - \delta{R})}\\[10pt]
+
+\frac{\partial L}{\partial R} &amp;=&amp; (\alpha + 1)R^\alpha\sigma{r}^\alpha - \lambda{\delta} = 0\\[10pt]
+
+\frac{\partial L}{\partial r} &amp;=&amp; (\alpha{\sigma})r^{\alpha-1}{R}^{\alpha+1} - \lambda{\sigma} = 0\\[10pt]
+
+\frac{\partial L}{\partial \lambda} &amp;=&amp; P -\sigma{r} - \delta{R} = 0\\[10pt]
+
+\frac{\delta} {\sigma} &amp;=&amp; \frac{(\alpha + 1)r} {\alpha{R}}{.} \end{eqnarray}\]</span></p>
+<p><img src="Portfolio_Diagram.PNG" />
+Alpha <span class="math inline">\((\alpha)\)</span> increases with risk, Therefore, risk <em>(r)</em> outweighs reward <em>(R)</em>.</p>
+<p>One dilemma that investors face at Merrill Lynch is locating a perfect plot to time vs. money. There is no perfect map to this approach. However, there are some great ideas to help clients. One idea sprung from a Merrill Lynch publication dated July, 11, 2006, entitled: “The RIC Report.” A seasoned financial advisor from the New York headquarters suggested that as time progresses, the probability of losing money decreases. As there is an inverse relationship between time and money, investors should focus on the long run of market behavior and ignore irrelevant short-term market hiccups. Statistically, there exists a 46% chance of losing money when investing in the S&amp;P 500 for one day. Presumably, this percentage decreases as the time horizon increases. The primary outcome resembles a “heads and tails” probability game from elementary statistics.Moreover, expanding markets have an established identity where securities have been traded frequently, in contrast to markets that recently emerged. A positive correlation exists between time and money. Unfortunately, this is a general statement as well as the opinion of one financial analyst. Merrill Lynch corporate bonds, for instance, have not shown an increase in performance in 2006. The chart is summarized as follows:</p>
+<table class="table table-striped" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="border-bottom:hidden" colspan="1">
+</th>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="5">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+As of June 30, 2006
+</div>
+</th>
+</tr>
+<tr>
+<th style="text-align:center;font-weight: bold;color: black !important;background-color: #c0c0c0 !important;">
+</th>
+<th style="text-align:center;font-weight: bold;color: black !important;background-color: #c0c0c0 !important;">
+2005
+</th>
+<th style="text-align:center;font-weight: bold;color: black !important;background-color: #c0c0c0 !important;">
+1 month
+</th>
+<th style="text-align:center;font-weight: bold;color: black !important;background-color: #c0c0c0 !important;">
+3 months
+</th>
+<th style="text-align:center;font-weight: bold;color: black !important;background-color: #c0c0c0 !important;">
+12 months
+</th>
+<th style="text-align:center;font-weight: bold;color: black !important;background-color: #c0c0c0 !important;">
+YTD
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;font-weight: bold;">
+Corporate Bonds
+</td>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
+0.1
+</td>
+<td style="text-align:center;">
+-0.4
+</td>
+<td style="text-align:center;">
+-2
+</td>
+<td style="text-align:center;">
+-1.5
+</td>
+</tr>
+</tbody>
+</table>
+<p>The year 2005 was marked by a strong positive increase in market performance by 2 points. However, in 2006, the market was beginning to deteriorate from barely positive to an increasing negative. Finally, the decline was halted at -1.5 points, ending the bumpy ride. So, from year 2005 there has been a remarkable change in performance. However, this does not suggest that the market decline continued throughout the year 2006, and as such, it is important to highlight this chart as a segment of short-run data.</p>
+<p>An uninformed investor would look at these trends and assume market degradation and/or failure from the data alone. There is enough evidence to support the claim that this particular bond market was on a steady decline, but not enough to support any claims of market
+failure in the long run.</p>
+<p>Before discussing the long run, it is necessary to see this short-run behavior from the perspective of a financial analyst. Having viewed this chart, what should an investor do in the short run? One way to cope with risk-related anxiety is to find solace in three suppressed industries, namely, pharmaceuticals, media, and telecommunications. While an average consumer may have serious doubt in the failure or success of these three sectors, there is a sure sign of hope. First and foremost, the drug companies will continue to release new and improved medications into the market. Although drug ingredients such as the phenylpropanolamine (PPA)<a href="#fn9" class="footnote-ref" id="fnref9"><sup>9</sup></a> in cough and cold medications have been recalled, alternative ingredients will become available for consumers. As far as the media is concerned, there are numerous examples of television sitcoms that have gone off-air. New ones have always arrived to fill the airspace while balancing ratings. As far as telecommunications are concerned, companies like Time Warner and AOL have merged. Other examples prove a more positive trend such as in the case of Pacific Bell. In this case, Pacific Bell was reincorporated as Cingular, which in turn merged with AT&amp;T. Now, AT&amp;T is the world’s leading telecommunications giant. With net revenues of over <em>$</em>117 billion dollars, AT&amp;T has gone on to merge with BellSouth and Yellowpages.com as well as sponsor the Olympic Games. In 2006, it topped Fortune Magazine’s Most Admired Companies list.<a href="#fn10" class="footnote-ref" id="fnref10"><sup>10</sup></a></p>
+<p>Clearly, all of these examples illustrate the substantial turnarounds in industries that are unlikely to succeed. As a result, the Federal Reserve Board may likely elasticize its iron grip on corporate conglomerations, thereby, allowing for a steady flow of investments to come in. This, of course, all depends on market liquidity in the short run. If such corporations allow for an easy convertibility in assets to cash, investors might take this as a sure sign of progress. In the short run, a tangible liquid asset can protect the consumer against recession and ease the burden of income management. For example, a person can convert his bond notes to cash and deposit the funds into his checking, savings, and/or retirement account(s). An option that Merrill Lynch clients have is to open a Cash Management Account or (CMA). On the other hand, if the Federal Reserve Board determines to ease up on liquidity too much by way of the Central Bank, fiat money may hold more of an intrinsic value to the consumer in the form of cash. This may be one way the government can try to keep consumer spending in check. At the same time, as cash withdrawals become increasingly commonplace, this may present a problem for investors; perhaps a reversal of fortune. In the worst case scenario, they can convert their assets to foreign currency.</p>
+<p>However, it is essential to be wary of these tactics as they do not protect the investor from long term phenomena like recession or inflation. So which strategy is the best to use? Suppose an investor is in the aging baby boomer generation that is reaching close to retirement age. As a result, healthcare costs increase. While this generation is scrambling to pay for their doctor visits,the economy is at risk of recession. I am not talking about a ROTH IRA or a 401(k). Perhaps, this would be a good time for investors in this intergenerational cluster to pursue purchasing corporate bonds in the pharmaceutical sector. In fact, this would be a great idea because this turnaround industry carries with it a lower than substantial risk. No matter how bad the economy is at any given time, there will always be a need for healthcare; and if there exists a potential risk for bankruptcy for a given company, then investors will find comfort in the fixed interest rate payments plus the principal associated with bonds.</p>
+<p>Goal oriented investors should consult with their financial advisor(s) to decide on a safe asset allocation mix for their portfolios. According to the “RIC Report,” the asset allocation guidelines as of July 10, 2006 are as follows:</p>
+<table class="table table-striped" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;font-weight: bold;color: #0874c4 !important;">
+</th>
+<th style="text-align:center;font-weight: bold;color: #0874c4 !important;">
+Recommended
+</th>
+<th style="text-align:center;font-weight: bold;color: #0874c4 !important;">
+Policy Range
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;font-weight: bold;background-color: #e6eed5 !important;background-color:  !important;">
+Equities
+</td>
+<td style="text-align:center;font-weight: bold;background-color: #e6eed5 !important;">
+50%
+</td>
+<td style="text-align:center;font-weight: bold;background-color: #e6eed5 !important;">
+40 - 100%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color:  !important; padding-left: 2em;" indentlevel="1">
+U.S. Stocks
+</td>
+<td style="text-align:center;">
+35
+</td>
+<td style="text-align:center;">
+40 - 80
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #e6eed5 !important;background-color:  !important; padding-left: 2em;" indentlevel="1">
+Non-U.S. Stocks
+</td>
+<td style="text-align:center;background-color: #e6eed5 !important;">
+15
+</td>
+<td style="text-align:center;background-color: #e6eed5 !important;">
+0 - 20
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;background-color: #c2d69b !important;background-color:  !important; padding-left: 2em;" indentlevel="1">
+Bonds
+</td>
+<td style="text-align:center;font-weight: bold;background-color: #c2d69b !important;">
+30
+</td>
+<td style="text-align:center;font-weight: bold;background-color: #c2d69b !important;">
+10 - 50
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;background-color: #e6eed5 !important;background-color:  !important;">
+</td>
+<td style="text-align:center;font-weight: bold;background-color: #e6eed5 !important;">
+</td>
+<td style="text-align:center;font-weight: bold;background-color: #e6eed5 !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;background-color:  !important;background-color:  !important;">
+Cash
+</td>
+<td style="text-align:center;font-weight: bold;background-color:  !important;">
+20
+</td>
+<td style="text-align:center;font-weight: bold;background-color:  !important;">
+0 - 30
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #e6eed5 !important;background-color:  !important;">
+</td>
+<td style="text-align:center;background-color: #e6eed5 !important;">
+</td>
+<td style="text-align:center;background-color: #e6eed5 !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;background-color:  !important;background-color:  !important;">
+Alternative Investments
+</td>
+<td style="text-align:center;font-weight: bold;background-color:  !important;">
+10*
+</td>
+<td style="text-align:center;font-weight: bold;background-color:  !important;">
+0 - 20
+</td>
+</tr>
+</tbody>
+</table>
+<p>Source: Merrill Lynch Investment Strategy</p>
+<ul>
+<li>Alternative Investments should be allocated via diversification from other asset categories, depending on an investor’s risk tolerance.</li>
+</ul>
+<p>From this chart, it is plain to see that bonds are not as popular as stocks and are recommended to investors to account for less than half of their portfolio’s value. This chart also shows that bonds are accounted for 10-50 percent at Merrill Lynch compared to a stronger percentage in stocks (40-100%).</p>
+<p>Nonetheless, the investor must choose his ground carefully. Through the expert advice of experienced professionals and by keeping up with the markets, one can become better informed about the upshots as well as the downward trends in industry related affairs.</p>
+<p>Merrill Lynch is just one of many global firms that manage high net worth clients’ money as well as branch out into other arenas such as investment banking and global research. There are other corporate giants among the ranks. For instance, J.P. Morgan, Goldman Sachs, Smith Barney (Citigroup) and Morgan Stanley also rank among the top 10 money managers in the United States. Merrill Lynch remains second to none.</p>
+<p>The purpose of this paper was to discuss corporate bonds as specific debt securities, their market trends, and their ratings. In some cases, personalized formulas were developed for the purposes of illustrating risk factors involved with below investment grade bonds. For the most part, however, charts and other numerical examples illustrated historical facts based on bond performance. The following message is to be found meaningful for prospective and current investors. “Past performance is not indicative of future results.” Not only does this apply to corporate bonds, but even more so to stocks, mutual funds, and all other forms of assets.</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:center;">
+Agency rating
+</th>
+<th style="text-align:center;">
+Default rate
+</th>
+<th style="text-align:center;">
+Promised yield
+</th>
+<th style="text-align:center;">
+Realized yield
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;">
+AAA
+</td>
+<td style="text-align:center;">
+5.9
+</td>
+<td style="text-align:center;">
+4.5
+</td>
+<td style="text-align:center;">
+5.1
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+AAA
+</td>
+<td style="text-align:center;">
+6.0
+</td>
+<td style="text-align:center;">
+4.6
+</td>
+<td style="text-align:center;">
+5.0
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+A
+</td>
+<td style="text-align:center;">
+13.4
+</td>
+<td style="text-align:center;">
+4.9
+</td>
+<td style="text-align:center;">
+5.0
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+BBB
+</td>
+<td style="text-align:center;">
+19.1
+</td>
+<td style="text-align:center;">
+5.4
+</td>
+<td style="text-align:center;">
+5.7
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+BB and below
+</td>
+<td style="text-align:center;">
+42.4
+</td>
+<td style="text-align:center;">
+9.5
+</td>
+<td style="text-align:center;">
+8.6
+</td>
+</tr>
+</tbody>
+</table>
+<p>SOURCE: W.B. Hickman, Corporate Bond Quality and Investor Experience, National Bureau of Economic Research, Princeton University Press, Princeton, N.J., 1958, p. 10</p>
+<hr />
+<p><strong>Works Cited</strong></p>
+<p>Madden, Carl H. The Economic Process. Illinois: Scott, Foresman and Company, 1969</p>
+<p>Musselman and Hughes. Introduction to Modern Business. Analysis and Interpretation. New Jersey: Prentis-Hall, Inc., 1950</p>
+<p>Thaler, Richard H., ed. Advances in Behavioral Finance. New York: Russell Sage Foundation, 1993</p>
+<p>Bernstein, William J. The Intelligent Asset Allocator. New York: McGraw-Hill, 2001</p>
+<p>“Ford Debt Offering Fetches U.S. Record <em>$</em>8.6B- July 9, 1999” 9 July. 1999. Lkd. Ford Bonds Burn Rubber 9 July. 1999. <a href="http://money.cnn.com/1999/07/09/companies/ford/" class="uri">http://money.cnn.com/1999/07/09/companies/ford/</a></p>
+<p>Fitch, Thomas P. Dictionary of Banking Terms. New York: Barron’s Educational Series, Inc., 2000</p>
+<p>McClave, James T. A First Course in Statistics. New jersey: Prentice Hall, 2006</p>
+<p>NationMaster- Statistics &gt; GDP per capita in 1900 by country. 25th Feb. 2007. Lkd. Economy Statistics. 25th Feb. 2007. <a href="http://www.nationmaster.com/graph/eco_gdp_per_cap_in_190-" class="uri">http://www.nationmaster.com/graph/eco_gdp_per_cap_in_190-</a> economy-gdp-per-capita-1900</p>
+<p>Ford Motor Company Stock Splits. 12th Mar, 2007. Lkd. Stock Splits. <a href="http://www.ford.com/en/company/investorInformation/stockInformation/stockSplits.htm" class="uri">http://www.ford.com/en/company/investorInformation/stockInformation/stockSplits.htm</a></p>
+<p>Phenylpropanolamine (PPA) Information Page. 23rd Dec. 2005. <a href="http://www.fda.gov/cder/drug/infopage/ppa/" class="uri">http://www.fda.gov/cder/drug/infopage/ppa/</a> AT&amp;T Investor Relations. <a href="http://www.att.com/gen/investor-relations?pid=5711" class="uri">http://www.att.com/gen/investor-relations?pid=5711</a></p>
+<p>Hall, Alvin D. Getting Started in Stocks. New York: John Wiley &amp; Sons Inc., 1997</p>
+<p>Bolten, Steven E. Security Analysis and Portfolio Management. An Analytical Approach to Investments. Graduate School of Business, New York University, University of Houston, 1972</p>
+<p>Lamoreaux, Naomi R. The Great Merger Movement in American Business. 1895-1904, Brown University</p>
+<p>MyFrs: Basics: Bonds (and Bond Funds) <a href="http://www.myfrs.com/content/basics/bonds.html" class="uri">http://www.myfrs.com/content/basics/bonds.html</a></p>
+<p>Schneider, Greg. “GM, Ford Bond Ratings Cut to Junk Status.” Washington Post. 6 May 2005 E01</p>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Merrill Lynch- Terms and Definitions For Financial Planning and Investing<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p><a href="http://www.nationmaster.com/graph/eco_gdp_per_cap_in_190-economy-gdp-per-capita-1900" class="uri">http://www.nationmaster.com/graph/eco_gdp_per_cap_in_190-economy-gdp-per-capita-1900</a><a href="#fnref2" class="footnote-back">↩︎</a></p></li>
+<li id="fn3"><p><a href="http://www.ford.com/en/company/investorInformation/stockInformation/stockSplits.htm" class="uri">http://www.ford.com/en/company/investorInformation/stockInformation/stockSplits.htm</a><a href="#fnref3" class="footnote-back">↩︎</a></p></li>
+<li id="fn4"><p><a href="http://www.myfrs.com/content/basics/bonds.html" class="uri">http://www.myfrs.com/content/basics/bonds.html</a><a href="#fnref4" class="footnote-back">↩︎</a></p></li>
+<li id="fn5"><p><a href="http://money.cnn.com/1999/07/09/companies/ford/" class="uri">http://money.cnn.com/1999/07/09/companies/ford/</a><a href="#fnref5" class="footnote-back">↩︎</a></p></li>
+<li id="fn6"><p>Table 14.2 is on page 15<a href="#fnref6" class="footnote-back">↩︎</a></p></li>
+<li id="fn7"><p><span class="math inline">\(\displaystyle \lim_{x \to +\infty} \left( \frac{1}{1+r} \right)= 0\)</span><a href="#fnref7" class="footnote-back">↩︎</a></p></li>
+<li id="fn8"><p>“Chebyshev’s Rule applies to any data set, regardless of the shape of the frequency distribution of the data” (McClave 72).<a href="#fnref8" class="footnote-back">↩︎</a></p></li>
+<li id="fn9"><p><a href="http://www.fda.gov/cder/drug/infopage/ppa/" class="uri">http://www.fda.gov/cder/drug/infopage/ppa/</a><a href="#fnref9" class="footnote-back">↩︎</a></p></li>
+<li id="fn10"><p><a href="http://www.att.com/gen/investor-relations?pid=5711" class="uri">http://www.att.com/gen/investor-relations?pid=5711</a><a href="#fnref10" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>

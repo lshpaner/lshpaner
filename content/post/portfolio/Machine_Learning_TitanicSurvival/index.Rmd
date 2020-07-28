@@ -1,0 +1,198 @@
+---
+title: "Machine Learning with Titanic"
+author: "Leon Shpaner"
+date: '2020-07-06'
+output:
+  html_document:
+    df_print: paged
+  pdf_document: default
+  word_document: default
+always_allow_html: true 
+math: yes
+pdf: yes
+diagram: yes
+tags:
+- R Markdown
+- Titanic Survival
+categories: ''
+subtitle: ''
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE)
+```
+
+In this course project, I worked with a dataset based on passengers from the RMS Titanic, a famous luxury cruise liner that sank in 1912. (For more details on the Titanic, see https://en.wikipedia.org/wiki/RMS_Titanic.) The dataset comes from Kaggle (https://www.kaggle.com/c/titanic). Kaggle hosts data science competitions and is a great resource for practicing predictive analytics skills. Provided herein are test and train datasets for the titanic scenario. Models are built with train and tested with test.
+
+Working with the train.csv dataset, I followed the following steps:
+
+* Imported the titanic.csv into a data frame in R
+* Generated a series of descriptive statistics
+* Determined if there were any variables with missing observations
+* Generated a series of visualizations to better understand the sample 
+
+The ultimate goal of the project is to build models to determine which passengers were most likely to have survived the sinking of the Titanic. In this first part of the project, we will focus on just describing the data by providing some insight into who lived and died when the Titanic sank (variable Survived in the sample). Variables are supporting insights with descriptive statistics and visualizations generated in R.
+
+1. Install the readr package, load the library, and load titanic.csv into the data frame named boat
+
+```{r}
+#install.packages("readr")
+library(readr)
+boat <- read.csv("train.csv")
+```
+
+2. Return a vector (or matrix) in the same dimension as data using the boat data frame and class function. Use the summary function to quickly summarize the sample
+
+```{r summary(boat)}
+sapply(boat,class)
+
+summary(boat)
+```
+3. Using relevant descriptive statistics, we can look at:
+  
+  a) the average fare that the passengers paid:
+```{r}
+mean(boat$Fare)
+```
+  b) the average age of passengers on the Titanic while removing all missing (NA) values:
+```{r}
+mean(as.numeric(boat$Age),na.rm=TRUE)
+```
+  c) similarly, we can get the standard deviation as follows: 
+```{r}
+sd(as.numeric(boat$Age),na.rm=TRUE)
+```
+  d) and the average (as a percentage) of those who survived:
+```{r}
+mean(boat$Survived)
+```
+
+4. To get a graphical comparison of who survived vs. who did not, we can see this in the following bar chart:
+
+```{r barplot}
+counts <- table(boat$Survived)
+par(las=2) # make label text perpendicular to axis
+par(mar=c(5,8,4,2)) # increase y-axis margin.
+barplot(counts, main="Survived vs. Not Survived", horiz = TRUE,
+        names.arg=c("0 = Not Survived", "1 = Survived"),
+        col=c("brown2",
+        "cornflowerblue"),
+        xlim=c(0,600),space=c(0,0)) 
+```
+
+
+5. Now we will generate a histogram to show the age distribution of passengers on the titanic.
+
+```{r h=hist}
+h=hist(boat$Age,xlab="Age", ylab="Frequency", 
+       main="Passenger Age Distribution", col="lightblue")
+```
+
+6. To further examine the data, we can also look at the age of Titanic Passengers by Gender:
+
+```{r boxplot}
+boxplot(boat$Age~boat$Sex,xlab="Gender", ylab="Age", 
+        main="Boxplot - Age of Titanic Passenger by Gender")
+```
+
+Based on this basic model, we can see that 38% of the passengers survived based on the average we calculated in #3. Now, our goal is to dive deeper and select variables that we think will influence whether passengers survived, and then use k nearest neighbors (KNN) to build classification models that will predict who survived the Titanic.
+
+To accomplish this, we will load 2 additional libraries: class, and caTools. According to the documentation, class is a package that contains "various functions for classification, including k-nearest neighbour, Learning Vector Quantization and Self-Organizing Maps" (https://www.rdocumentation.org/packages/class/versions/7.3-17). CaTools "contains several basic utility functions including: moving (rolling, running) window statistic functions, read/write for GIF and ENVI binary files, fast calculation of AUC, LogitBoost classifier, base64 encoder/decoder, round-off-error-free sum and cumsum, etc." (https://www.rdocumentation.org/packages/caTools/versions/1.17.1)
+
+```{r}
+library(class)
+library(caTools)
+```
+
+In order to classify these variables, we will use KNN as a statistical estimation/ pattern recognition tool. In a nutshell, the algorithm will classify new variables based on how existing variables' current classification.
+
+```{r}
+# knn() cannot work with missing variables, so for any variables you choose,
+# check to see if there are missing variables If missing variables exist, 
+# either:
+# 1) don't use that variable, or 
+# 2) use only complete cases, or 
+# 3) replace missing values with another value that makes sense.
+```
+
+Next, we want to see if there exists a relationship between the selected variables, but not all of the variables are quantitative, and as such, we must run a logistical regression, as follows.
+
+```{r}
+library(class)
+library(caTools)
+library(tree)
+boat$AgeAVG<-boat$Age
+boat$Survived<-as.factor(boat$Survived)
+boatLR<-glm(Survived~Sex+AgeAVG+SibSp+Parch,family=binomial(),data=boat)
+#remove any variables from boat that you won’t use for your classification
+#the following code uses Survived, Sex, Age, SibSp, and Parch 
+# You can use your choice of variables, or fewer variables if you wish
+boat<-boat[,c(2,5,6,7,8)]
+sum(is.na(boat$Age))
+boat<-within(boat,Age[is.na(Age)]<-mean(Age,na.rm=TRUE))
+boat$Sex[boat$Sex=="male"]<-1
+boat$Sex[boat$Sex=="female"]<-0
+set.seed(123) 
+
+sample<-sample.split(boat$Sex, SplitRatio = .80)
+train<-subset(boat, sample == TRUE)
+test<-subset(boat, sample == FALSE)
+knn1<-knn(train[-1],test[-1],train$Sex, k=1)
+knn1
+
+train<-subset(boat, sample == TRUE)
+test<-subset(boat, sample == FALSE)
+knn1<-knn(train[-1],test[-1],train$Age, k=1)
+knn1
+
+train<-subset(boat, sample == TRUE)
+test<-subset(boat, sample == FALSE)
+knn1<-knn(train[-1],test[-1],train$Survived, k=1)
+knn1
+
+train<-subset(boat, sample == TRUE)
+test<-subset(boat, sample == FALSE)
+knn1<-knn(train[-1],test[-1],train$SibSp, k=1)
+knn1
+
+train<-subset(boat, sample == TRUE)
+test<-subset(boat, sample == FALSE)
+knn1<-knn(train[-1],test[-1],train$Parch, k=1)
+knn1
+
+
+CF<-table(knn1,test$Age)
+CF
+Precision<-CF[2,2]/(CF[2,1]+CF[2,2])
+Precision
+
+train<-subset(boat, sample == TRUE)
+test<-subset(boat, sample == FALSE)
+TrainTree<-tree(Survived ~ Sex+Age+SibSp, data=train)
+
+plot(TrainTree)
+text(TrainTree, cex=.5)
+summary(TrainTree)
+TrainPrune<-prune.tree(TrainTree,best = 3,newdata=test,method = "misclass")
+plot(TrainPrune)
+text(TrainPrune, cex=.5)
+summary(TrainPrune)
+TrainPrune<-prune.tree(TrainTree,best = 2,newdata=test,method = "misclass")
+plot(TrainPrune)
+text(TrainPrune, cex=.5)
+summary(TrainPrune)
+
+PredSurv <- predict(TrainTree, test, type="class")
+
+CF<-table(test$Survived,PredSurv)
+CF
+Precision<-CF[2,2]/(CF[2,1]+CF[2,2])
+Precision
+
+
+```
+
+---
+
+
+
