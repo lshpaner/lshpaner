@@ -8,7 +8,7 @@ pdf: true
 diagram: false
 image: 
   placement: 1
-  preview_only: true
+  preview_only: false
 ---
 
 
