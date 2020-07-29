@@ -20,12 +20,12 @@ To shed more light on potential outcomes for this scenario, we will conduct the 
 
 $\small{H_0:}$ (initial hypothesis): the number of students enrolled in 2020 will be at least 30,000 ${\large\hspace{2mm}\Longrightarrow{\hspace{2mm}}}$ $\small {H_0: \mu \geq 30,000}$
 
-$\small{H_a:}$ (alternative hypothesis): the number of students enrolled in 2020 will exceed 30,000 ${\large\Longrightarrow{\hspace{2mm}}}$ $\small {H_a: \mu \neq 30,000}$
+$\small{H_a:}$ (alternative hypothesis): the number of students enrolled in 2020 will fall below 30,000 ${\large\Longrightarrow{\hspace{2mm}}}$ $\small {H_a: \mu < 30,000}$
 
 
 The last 20 years’ worth of data are observed with actual fall enrollment numbers (source: https://www.universityofcalifornia.edu/infocenter/fall-enrollment-glance). The average number of enrolled students is measured as 27340.48 from the 21 observations. In order to test these numbers, a z-value measuring the difference between the average (mean) of the last 20 years’ observations and our null (initially hypothesized value) must be calculated. This mathematical value is expressed in the following:
 
-$\small{TS = z = \large\frac{\overline{x} - x_o}{SE_\overline{x}}{\hspace{2mm}\Longrightarrow{\hspace{2mm}}}}$
+$\small{TS = z = \large\frac{\overline{x} -\mu_o}{SE_\overline{x}}{\hspace{2mm}\Longrightarrow{\hspace{2mm}}}}$
 $\small SE_\overline{x} = \large\frac{s}{\sqrt{n}}{\hspace{2mm}\Longrightarrow{\hspace{2mm}}} \normalsize \small TS = (27340.48 - 30000)\cdot\large\frac{\sqrt{21}}{2443.37} = \small -4.988$
 
 
@@ -36,7 +36,7 @@ Prior to conducting the test, comments must be made about the potential downside
 
 Finally, the hypothesis test is conducted as follows using R.
 
-First, we load the library (readr) so we can load the csv file "UCLAEnrollment" that contains our data set into a dataframe called enrollment.
+First, we load the library (readr) so we can load the csv file "UCLAEnrollment" that contains our data set into a data frame called enrollment.
 ```{r message = TRUE}
 library(readr)
 enrollment = read.csv("UCLAEnrollment.csv")
@@ -72,16 +72,19 @@ max(as.numeric(enrollment$Enrolled, na.rm = TRUE))
 To see this trend represented using a line plot, the ggplot library is loaded and the code executed as follows:
 ```{r fig1, fig.height = 10, fig.width = 20, echo=TRUE}
 library(ggplot2)
-knitr::opts_chunk$set(fig.width=25, fig.height=8) 
+knitr::opts_chunk$set(fig.width = 25, fig.height = 8) 
 options(repr.plot.width = 1, repr.plot.height = 8)
-ggplot(data = enrollment[1:2], aes(x=Year, y=Enrolled, group = 3))+
-  expand_limits(x=2020, y=32000)+
-  geom_line(color ="#2a63ff", size=2, alpha=0.9, linetype=1)+
+ggplot(data = enrollment[1:2], aes(x = Year, y = Enrolled, group = 3))+
+  expand_limits(x = 2020, y = 32000)+
+  geom_line(color = "#2a63ff", size = 2, alpha = 0.9, linetype = 1)+
   theme_bw()+
+  theme(axis.text = element_text(size = 14),
+        axis.title = element_text(size = 14,face = "bold"))+
   labs(title = "Enrolled",
        x = "\nYear",
        y = "Number Enrolled \n")+
-  ggtitle("UCLA Undergraduate Fall Student Enrollment (1999-2019)")
+  ggtitle("UCLA Undergraduate Fall Student Enrollment (1999-2019)")+
+  theme(plot.title = element_text(size = 18, face = "bold"))
 ```
 
 From the line plot alone, we can gather that enrollment numbers have been trending upward year over year for the last 20 years. However, to answer our original question: "will we be seeing a notable decrease in new student enrollments from 2019-2020?" a t test with a confidence level of 95% is conducted below. Here, we are surmising that enrollment numbers will be greater than or equal to 30,000. Alternatively, we are postulating that the numbers will fall below 30,000. Let us now see the results by plugging in the statistics we have calculated manually earlier:
@@ -106,12 +109,21 @@ z.alpha = qnorm(1-alpha)
 
 The test statistic -4.988 is lower than the critical value of -1.645. Therefore, at a 0.05 significance level, we must reject our initial claim that student enrollment will reach or exceed 30,000 in the fall of 2020.
 
+As another measure, we can apply the pt function to calculate the lower tail p-value of the test statistic.  
+
+``` {r}
+pval = pt(z, df = n-1)
+pval
+```
+As shown by the p-value of 3.5329e-05 above being less than the 0.05 significance level, we must reject the null that $\small x \geq 30,000$
+
+A t-test is also performed on the data, thereby further strengthening the testing grounds, and confirming what we have previously concluded.
+
 ``` {r echo=TRUE}
 # t test of x against a null hypothesis
 
-t.test(enrollment$Enrolled, mu = 30000, conf.level = 0.95)
+t.test(enrollment$Enrolled, mu = 30000,alternative = "less", conf.level = 0.95) 
 ```
-
-As evident from the t-test above, the p-value of 3.553e-05 is statistically significant, and falls substantially below the alpha level of 0.05. As such, we must also reject the idea or notion that Fall Student Enrollment in 2020 will equal or surpass that of 30,000 students (the null hypothesis).
+As evident from the t-test above, the p-value of 3.533e-05 is statistically significant and falls substantially below the alpha level of 0.05. As such, we must reject the idea or notion that Fall Student Enrollment in 2020 will equal or surpass that of 30,000 students (the null hypothesis). 
 
 
