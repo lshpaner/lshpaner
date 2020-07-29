@@ -3,6 +3,10 @@ title: "COVID19 California Data"
 author: "Leon Shpaner"
 date: "`r Sys.Date()`"
 output: html_document
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: yes
 ---
 
 ```{r setup, include=FALSE}
