@@ -29,7 +29,7 @@ $\small{TS = z = \large\frac{\overline{x} -\mu_o}{SE_\overline{x}}{\hspace{2mm}\
 $\small SE_\overline{x} = \large\frac{s}{\sqrt{n}}{\hspace{2mm}\Longrightarrow{\hspace{2mm}}} \normalsize \small TS = (27340.48 - 30000)\cdot\large\frac{\sqrt{21}}{2443.37} = \small -4.988$
 
 
-where $\overline{x}$ = mean,${\hspace{2mm}}x_o$ = mean from the null and $\small {SE_\overline{x}}$ = standard error
+where $\overline{x}$ = mean,${\hspace{2mm}}\mu_o$ = mean from the null and $\small {SE_\overline{x}}$ = standard error
 
 Prior to conducting the test, comments must be made about the potential downside risk of the false positive and false negative errors. A Type 1 (false positive) error would indicate that we have rejected the null hypothesis when it was indeed true. To mitigate this risk, we will assume an alpha (critical p-value) of 0.05. This is chosen based on a wider, yet common 95% confidence level where P = 1 – 0.95 = 0.05 (the probability that the null hypothesis is true). Using this large confidence level will ultimately allow a wider range of data, with enough “wiggle room” for a larger margin of error. In determining any potential Type 2 (false negative) errors, we may run the risk of not rejecting our null (initial hypothesis) by not factoring in a large enough sample size. 
 
