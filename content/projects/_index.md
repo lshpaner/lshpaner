@@ -26,7 +26,7 @@ I. Research Paper on Corporate Bonds (conducted during intership at Merrill Lync
 
 II. Independent Research Related to UCLA As a Public University
 
-- [UCLA Fall Undergraduate Enrollment Figures (1999-2019)](/portfolio/post/UCLAUndergraduateEnrollment/) - a hypothesis test to determine overall trajectory
+- [UCLA Fall Undergraduate Enrollment Figures (1999-2019)](/portfolio/post/UCLAFallEnrollment/) - a hypothesis test to determine overall trajectory
 
 ---
 ### *Independent*
