@@ -22,7 +22,7 @@ pdf: true
 
 I. Research Paper on Corporate Bonds (conducted during intership at Merrill Lynch Global Private Client Group)
 
-- [Corporate Asset Management - An Insight Into The Corporate Bond Market and Its Effects On Fiduciary-Client Relations At Merrill Lynch](/post/portfolio/Corporate_Bonds/)
+- [Corporate Asset Management - An Insight Into The Corporate Bond Market and Its Effects On Fiduciary-Client Relations At Merrill Lynch](/portfolio/post/Corporate_Bonds/)
 
 II. Independent Research Related to UCLA As a Public University
 
@@ -33,9 +33,9 @@ II. Independent Research Related to UCLA As a Public University
 ---
 
 I. California COVID-19 Emergency Service Providers
-as a [Tableau Dashboard](/post/portfolio/COVID_19_CA_Data/)
+as a [Tableau Dashboard](/portfolio/post/COVID_19_CA_Data/)
 
-II. F.L.O.W. STATE Model – A New Perspective on Balance Sheet Pro Forma as a [Blog Post](/post/portfolio/FlowStateModel/) and [Linkedin Article](https://www.linkedin.com/pulse/flow-state-model-new-perspective-balance-sheet-pro-forma-leon-shpaner/?trackingId=jWDIwg0KuFt65YH9OOY1vg%3D%3D) - article on linkedin pulse
+II. F.L.O.W. STATE Model – A New Perspective on Balance Sheet Pro Forma as a [Blog Post](/portfolio/post/FlowStateModel/) and [Linkedin Article](https://www.linkedin.com/pulse/flow-state-model-new-perspective-balance-sheet-pro-forma-leon-shpaner/?trackingId=jWDIwg0KuFt65YH9OOY1vg%3D%3D) - article on linkedin pulse
 
 
 
