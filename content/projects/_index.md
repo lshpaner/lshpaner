@@ -33,7 +33,7 @@ II. Independent Research Related to UCLA As a Public University
 ---
 
 I. California COVID-19 Emergency Service Providers
-as a [Tableau Dashboard](/portfolio/post/COVID_19_CA_Data/)
+as a [Tableau Dashboard](/portfolio/post/COVID_19_CA_Providers/)
 
 II. F.L.O.W. STATE Model – A New Perspective on Balance Sheet Pro Forma as a [Blog Post](/portfolio/post/FlowStateModel/) and [Linkedin Article](https://www.linkedin.com/pulse/flow-state-model-new-perspective-balance-sheet-pro-forma-leon-shpaner/?trackingId=jWDIwg0KuFt65YH9OOY1vg%3D%3D) - article on linkedin pulse
 
