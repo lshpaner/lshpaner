@@ -6,7 +6,7 @@ output:
   pdf_document: default
   html_document: default
   word_document: default
-subtitle: A Hypothesis Test 
+subtitle: A Hypothesis Test
 highlight: true
 image:
   caption: ''
@@ -65,7 +65,7 @@ ggplot(data = enrollment[1:2], aes(x=Year, y=Enrolled, group = 3))+
        x = &quot;\nYear&quot;,
        y = &quot;Number Enrolled \n&quot;)+
   ggtitle(&quot;UCLA Undergraduate Fall Student Enrollment (1999-2019)&quot;)</code></pre>
-<p><img src="/portfolio/post/UCLAUndergradEnrollment/index_files/figure-html/fig1-1.png" width="1920" /></p>
+<p><img src="/portfolio/post/UCLAFallEnrollment/index_files/figure-html/fig1-1.png" width="1920" /></p>
 <p>From the line plot alone, we can gather that enrollment numbers have been trending upward year over year for the last 20 years. However, to answer our original question: “will we be seeing a notable decrease in new student enrollments from 2019-2020?” a t test with a confidence level of 95% is conducted below. Here, we are surmising that enrollment numbers will be greater than or equal to 30,000. Alternatively, we are postulating that the numbers will fall below 30,000. Let us now see the results by plugging in the statistics we have calculated manually earlier:</p>
 <pre class="r"><code>xbar = 27340.48
 mu0 = 30000.00
