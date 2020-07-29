@@ -14,6 +14,10 @@ diagram: yes
 tags:
 - R Markdown
 - Titanic Survival
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: yes
 categories: ''
 subtitle: ''
 ---
@@ -103,19 +107,19 @@ barplot(counts, main=&quot;Survived vs. Not Survived&quot;, horiz = TRUE,
         col=c(&quot;brown2&quot;,
         &quot;cornflowerblue&quot;),
         xlim=c(0,600),space=c(0,0)) </code></pre>
-<p><img src="/post/proj/Machine_Learning/index_files/figure-html/barplot-1.png" width="672" /></p>
+<p><img src="/portfolio/post/Machine_Learning_TitanicSurvival/index_files/figure-html/barplot-1.png" width="672" /></p>
 <ol start="5" style="list-style-type: decimal">
 <li>Now we will generate a histogram to show the age distribution of passengers on the titanic.</li>
 </ol>
 <pre class="r"><code>h=hist(boat$Age,xlab=&quot;Age&quot;, ylab=&quot;Frequency&quot;, 
        main=&quot;Passenger Age Distribution&quot;, col=&quot;lightblue&quot;)</code></pre>
-<p><img src="/post/proj/Machine_Learning/index_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p><img src="/portfolio/post/Machine_Learning_TitanicSurvival/index_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
 <ol start="6" style="list-style-type: decimal">
 <li>To further examine the data, we can also look at the age of Titanic Passengers by Gender:</li>
 </ol>
 <pre class="r"><code>boxplot(boat$Age~boat$Sex,xlab=&quot;Gender&quot;, ylab=&quot;Age&quot;, 
         main=&quot;Boxplot - Age of Titanic Passenger by Gender&quot;)</code></pre>
-<p><img src="/post/proj/Machine_Learning/index_files/figure-html/boxplot-1.png" width="672" /></p>
+<p><img src="/portfolio/post/Machine_Learning_TitanicSurvival/index_files/figure-html/boxplot-1.png" width="672" /></p>
 <p>Based on this basic model, we can see that 38% of the passengers survived based on the average we calculated in #3. Now, our goal is to dive deeper and select variables that we think will influence whether passengers survived, and then use k nearest neighbors (KNN) to build classification models that will predict who survived the Titanic.</p>
 <p>To accomplish this, we will load 2 additional libraries: class, and caTools. According to the documentation, class is a package that contains “various functions for classification, including k-nearest neighbour, Learning Vector Quantization and Self-Organizing Maps” (<a href="https://www.rdocumentation.org/packages/class/versions/7.3-17" class="uri">https://www.rdocumentation.org/packages/class/versions/7.3-17</a>). CaTools “contains several basic utility functions including: moving (rolling, running) window statistic functions, read/write for GIF and ENVI binary files, fast calculation of AUC, LogitBoost classifier, base64 encoder/decoder, round-off-error-free sum and cumsum, etc.” (<a href="https://www.rdocumentation.org/packages/caTools/versions/1.17.1" class="uri">https://www.rdocumentation.org/packages/caTools/versions/1.17.1</a>)</p>
 <pre class="r"><code>library(class)
@@ -278,7 +282,7 @@ TrainTree&lt;-tree(Survived ~ Sex+Age+SibSp, data=train)
 
 plot(TrainTree)
 text(TrainTree, cex=.5)</code></pre>
-<p><img src="/post/proj/Machine_Learning/index_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p><img src="/portfolio/post/Machine_Learning_TitanicSurvival/index_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
 <pre class="r"><code>summary(TrainTree)
 ## 
 ## Classification tree:
@@ -289,7 +293,7 @@ text(TrainTree, cex=.5)</code></pre>
 TrainPrune&lt;-prune.tree(TrainTree,best = 3,newdata=test,method = &quot;misclass&quot;)
 plot(TrainPrune)
 text(TrainPrune, cex=.5)</code></pre>
-<p><img src="/post/proj/Machine_Learning/index_files/figure-html/unnamed-chunk-9-2.png" width="672" /></p>
+<p><img src="/portfolio/post/Machine_Learning_TitanicSurvival/index_files/figure-html/unnamed-chunk-9-2.png" width="672" /></p>
 <pre class="r"><code>summary(TrainPrune)
 ## 
 ## Classification tree:
@@ -302,7 +306,7 @@ text(TrainPrune, cex=.5)</code></pre>
 TrainPrune&lt;-prune.tree(TrainTree,best = 2,newdata=test,method = &quot;misclass&quot;)
 plot(TrainPrune)
 text(TrainPrune, cex=.5)</code></pre>
-<p><img src="/post/proj/Machine_Learning/index_files/figure-html/unnamed-chunk-9-3.png" width="672" /></p>
+<p><img src="/portfolio/post/Machine_Learning_TitanicSurvival/index_files/figure-html/unnamed-chunk-9-3.png" width="672" /></p>
 <pre class="r"><code>summary(TrainPrune)
 ## 
 ## Classification tree:
