@@ -115,7 +115,7 @@ As another measure, we can apply the pt function to calculate the lower tail p-v
 pval = pt(z, df = n-1)
 pval
 ```
-As shown by the p-value of 3.5329e-05 above being less than the 0.05 significance level, we must reject the null that $\small x \geq 30,000$
+As shown by the p-value of 3.5329e-05 above being less than the 0.05 significance level, we must reject the null that $\small x \geq 30,000.$
 
 A t-test is also performed on the data, thereby further strengthening the testing grounds, and confirming what we have previously concluded.
 
