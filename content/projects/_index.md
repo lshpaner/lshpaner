@@ -11,7 +11,7 @@ pdf: true
 
    I. Predictive Analytics, Clustering, Classification, and Machine Learning in R
 
-* [Machine Learning with Titanic](/portfolio/post/Titanic_Machine_Learning/) - a survival model using summary statistics and k-nearest-neighbors (knn) to predict the survical of passengers on the RMS Titanic and viability of the model.
+* [Machine Learning with Titanic](/projects/post/Titanic_Machine_Learning/) - a survival model using summary statistics and k-nearest-neighbors (knn) to predict the survical of passengers on the RMS Titanic and viability of the model.
 
 
 ---
@@ -22,20 +22,20 @@ pdf: true
 
 I. Research Paper on Corporate Bonds (conducted during intership at Merrill Lynch Global Private Client Group)
 
-- [Corporate Asset Management - An Insight Into The Corporate Bond Market and Its Effects On Fiduciary-Client Relations At Merrill Lynch](/portfolio/post/Corporate_Bonds/)
+- [Corporate Asset Management - An Insight Into The Corporate Bond Market and Its Effects On Fiduciary-Client Relations At Merrill Lynch](/projects/post/Corporate_Bonds/)
 
 II. Independent Research Related to UCLA As a Public University
 
-- [UCLA Fall Undergraduate Enrollment Figures (1999-2019)](/portfolio/post/UCLAFallStarts_Trends/) - a hypothesis test to determine overall trajectory
+- [UCLA Fall Undergraduate Enrollment Figures (1999-2019)](/projects/post/UCLAFallStarts_Trends/) - a hypothesis test to determine overall trajectory
 
 ---
 ### *Independent*
 ---
 
 I. California COVID-19 Emergency Service Providers
-as a [Tableau Dashboard](/portfolio/post/COVID_19_CA_EmergencyProviders/)
+as a [Tableau Dashboard](/projects/post/COVID_19_CA_EmergencyProviders/)
 
-II. F.L.O.W. STATE Model – A New Perspective on Balance Sheet Pro Forma as a [Blog Post](/portfolio/post/FlowStateModel/) and [Linkedin Article](https://www.linkedin.com/pulse/flow-state-model-new-perspective-balance-sheet-pro-forma-leon-shpaner/?trackingId=jWDIwg0KuFt65YH9OOY1vg%3D%3D) - article on linkedin pulse
+II. F.L.O.W. STATE Model – A New Perspective on Balance Sheet Pro Forma as a [Blog Post](/projects/post/FlowStateModel/) and [Linkedin Article](https://www.linkedin.com/pulse/flow-state-model-new-perspective-balance-sheet-pro-forma-leon-shpaner/?trackingId=jWDIwg0KuFt65YH9OOY1vg%3D%3D) - article on linkedin pulse
 
 
 
