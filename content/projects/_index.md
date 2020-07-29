@@ -11,7 +11,7 @@ pdf: true
 
    I. Predictive Analytics, Clustering, Classification, and Machine Learning in R
 
-* [Machine Learning with Titanic](/portfolio/post/Titanic_Survival_Machine_Learning/) - a survival model using summary statistics and k-nearest-neighbors (knn) to predict the survical of passengers on the RMS Titanic and viability of the model.
+* [Machine Learning with Titanic](/portfolio/post/Titanic_Machine_Learning/) - a survival model using summary statistics and k-nearest-neighbors (knn) to predict the survical of passengers on the RMS Titanic and viability of the model.
 
 
 ---
