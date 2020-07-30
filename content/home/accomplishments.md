@@ -70,9 +70,9 @@ date_format = "Jan 2006"
 
 [[item]]
   organization = "Google"
-  organization_url = ""
+  organization_url = "https://skillshop.exceedlms.com/student/catalog/list?search=google%20analytics"
   title = "Google Analytics Individual Qualification (GAIQ)"
-  url = "https://skillshop.exceedlms.com/student/catalog/list?search=google%20analytics"
+  url = ""
   certificate_url = "https://skillshop.exceedlms.com/student/award/54981612/"
   date_start = "2020-07-18"
   date_end = "2021-07-18"
