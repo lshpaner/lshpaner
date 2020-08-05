@@ -15,7 +15,7 @@ I. Predictive Analytics, Clustering, Classification, and Machine Learning in R
 
 II. Optimizing a Stock Portfolio in R
 
-* [Optimizing a diversified portfolio based on 4 stocks](/projects/post/StockPortfolio) - a classic portfolio optimization problem and solution using quadratic programming (QP)
+* [Optimizing a Diversified Portfolio Based on 4 Stocks](/projects/post/StockPortfolio) - a classic portfolio optimization problem and solution using quadratic programming (QP)
 
 
 ---
