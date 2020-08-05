@@ -24,7 +24,7 @@ tags:
 
 
 
-<p>Utilizing the R programming language in R Studio, we will utilize a classic stock portfolio optimization approach to examine the following 4 ticker symbols, Tejon Ranch Company (TRC), Snapchat (SNAP), AI Powered Equity ETF (AIEQ), and 2U (TWOU). These are pretty well-diversified stocks from a sample portfolio, so the data presented herein is true, significant, and will yield actionable insights.</p>
+<p>In R Studio, we will utilize a classic stock portfolio optimization approach to examine the following 4 ticker symbols, Tejon Ranch Company (TRC), Snapchat (SNAP), AI Powered Equity ETF (AIEQ), and 2U (TWOU). These are pretty well-diversified stocks from a sample portfolio, so the data presented herein is true, significant, and will yield actionable insights.</p>
 <p>We start by loading the required libraries below (quantmod (the stock package), quadprog (for the quadratic program), the ROI plugin and subsequent package in order to gauge the return on investment). We also load the magrittr package <a href="https://cran.r-project.org/web/packages/magrittr/vignettes/magrittr.html">“to decrease development time and improve readability”</a> and the broom package to <a href="https://cran.r-project.org/web/packages/broom/vignettes/broom.html">“bridge the gap from untidy outputs of predictions and estimations to the tidy data we want to work with.”</a></p>
 <pre class="r"><code>library(quantmod)
 library(quadprog)
@@ -66,7 +66,7 @@ stocks_series = tidy(stocks) %&gt;%
   scale_color_manual(values = c(&quot;#2a63ff&quot;, &quot;#000000&quot;, &quot;#999900&quot;, &quot;#cd1409&quot;, 
                                 alpha = 1, linetype = 1)) + geom_line(size=1)
 stocks_series</code></pre>
-<p><img src="/projects/post/StockPortfolio/index_files/figure-html/fig1-1.png" width="1920" /></p>
+<p><img src="/projects/post/Stock_Portfolio_in_R/index_files/figure-html/fig1-1.png" width="1920" /></p>
 <p>This will ultimately allow us to plug the value of our stocks at their closing period into the object close, using the cbind syntax, binding the data into columns. Then we load the close prices into the vector of returns, thereby looking at returns as a function of close prices.</p>
 <pre class="r"><code>close&lt;-cbind(TRC$TRC.Close, SNAP$SNAP.Close, AIEQ$AIEQ.Close, TWOU$TWOU.Close)
 View(close) #look at close to make sure your stock data was input correctly
