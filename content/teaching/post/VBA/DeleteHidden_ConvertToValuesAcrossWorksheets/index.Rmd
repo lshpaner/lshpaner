@@ -1,0 +1,52 @@
+---
+title: "VBA - script for deleteing all hidden rows and columns and converting formulas in an excel workbook to values across all worksheets"
+author: "Leon Shpaner"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+Copy the following code into the VBA Environment in excel:
+<pre>
+  <code>
+  
+Sub DeleteHidden_ConvertToValuesAllWorksheets()
+    
+    Dim ws As Worksheet, rng As Range
+    For Each ws In ActiveWorkbook.Worksheets
+    For Each rng In ws.UsedRange
+        If rng.HasFormula Then
+        rng.Formula = rng.Value
+    End If
+        Next rng
+        Next ws
+'delete all Hidden rows-columns in all sheets
+
+    Dim r As Long, c As Long, x As Long
+    Application.ScreenUpdating = False
+
+    For Each ws In Sheets
+
+r = ws.Cells.Find(What:="*", SearchOrder:=xlByRows, SearchDirection:=xlPrevious).Row
+c = ws.Cells.Find(What:="*", SearchOrder:=xlByColumns, SearchDirection:=xlPrevious).Column
+    For x = r To 1 Step -1
+
+    If ws.Rows(x).Hidden = True Then ws.Rows(x).Delete
+Next
+For x = c To 1 Step -1
+
+If ws.Columns(x).Hidden = True Then ws.Columns(x).Delete
+
+Next
+
+Next
+
+Application.ScreenUpdating = True
+End Sub
+
+
+
+  </code>
+</pre>

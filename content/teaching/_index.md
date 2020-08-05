@@ -43,13 +43,11 @@ I am a Course Facilitator for the following programs:
 
 
 
-
-
-
-
-
 --- 
 ### *Visual Basic for Applications (VBA)*
 Helpful Macros 
 
-- [VBA - script for removing alpha characters from a string of alphanumeric text](/teaching/post/VBA/RemoveAlphas/) - very useful when cleaning data in excel
+- [VBA - script for removing alpha characters from a string of alphanumeric text](/teaching/post/VBA/RemoveAlphas/) - very useful when cleaning alpha characters from numeric data in excel
+- [VBA - script for converting formulas in an excel workbook to values across all worksheets](/teaching/post/VBA/ConvertToValuesAcrossWorksheets/) - one stop solution for converting all formulas to values within an entire excel workbook
+
+- [VBA - script for deleteing all hidden rows and columns and converting formulas in an excel workbook to values across all worksheets](/teaching/post/VBA/DeleteHidden_ConvertToValuesAcrossWorksheets/) - if you want to also delete all hidden rows and columns and on top of that convert all formulas to values within an entire excel workbook - use this 

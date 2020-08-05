@@ -1,0 +1,29 @@
+---
+title: "VBA - script for converting formulas in an excel workbook to values across all worksheets"
+author: "Leon Shpaner"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+Copy the following code into the VBA Environment in excel:
+<pre>
+  <code>
+  
+Sub ConvertFormulasToValuesAllWorksheets()
+    
+    Dim ws As Worksheet, rng As Range
+    For Each ws In ActiveWorkbook.Worksheets
+    For Each rng In ws.UsedRange
+        If rng.HasFormula Then
+        rng.Formula = rng.Value
+    End If
+        Next rng
+        Next ws
+
+End Sub
+
+  </code>
+</pre>
