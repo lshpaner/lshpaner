@@ -3,9 +3,9 @@ title: "Optimizing a Stock Portfolio in R"
 author: "Leon Shpaner"
 date: "`r Sys.Date()`"
 output:
-  html_document: default
-  word_document: default
   pdf_document: default
+  word_document: default
+  html_document: default
 subtitle: From a Diversified Portfolio Based on 4 Sample Stocks 
 highlight: true
 image:
