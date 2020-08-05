@@ -9,9 +9,13 @@ pdf: true
 ---
 ### *Cornell University*
 
-   I. Predictive Analytics, Clustering, Classification, and Machine Learning in R
+I. Predictive Analytics, Clustering, Classification, and Machine Learning in R
 
 * [Machine Learning with Titanic](/projects/post/Titanic_Machine_Learning/) - a survival model using summary statistics and k-nearest-neighbors (knn) to predict the survical of passengers on the RMS Titanic and viability of the model.
+
+II. Optimizing a Stock Portfolio in R
+
+* [Optimizing a diversified portfolio based on 4 stocks](/projects/post/StockPortfolio) - a classic portfolio optimization problem and solution using quadratic programming (QP)
 
 
 ---

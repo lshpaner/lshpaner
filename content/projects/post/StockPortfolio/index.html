@@ -1,0 +1,131 @@
+---
+title: "Optimizing a Stock Portfolio in R"
+author: "Leon Shpaner"
+date: "2020-08-04"
+output:
+  html_document: default
+  word_document: default
+  pdf_document: default
+subtitle: From a Diversified Portfolio Based on 4 Sample Stocks 
+highlight: true
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: yes
+tags:
+- R
+- R Studio
+- Stock Portfolio Optimization
+- Stocks
+- Optimization Problems
+- Data Analytics
+- Descriptive Statistics
+---
+
+
+
+<p>Utilizing the R programming language in R Studio, we will utilize a classic stock portfolio optimization approach to examine the following 4 ticker symbols, Tejon Ranch Company (TRC), Snapchat (SNAP), AI Powered Equity ETF (AIEQ), and 2U (TWOU). These are pretty well-diversified stocks from a sample portfolio, so the data presented herein is true, significant, and will yield actionable insights.</p>
+<p>We start by loading the required libraries below (quantmod (the stock package), quadprog (for the quadratic program), the ROI plugin and subsequent package in order to gauge the return on investment). We also load the magrittr package <a href="https://cran.r-project.org/web/packages/magrittr/vignettes/magrittr.html">“to decrease development time and improve readability”</a> and the broom package to <a href="https://cran.r-project.org/web/packages/broom/vignettes/broom.html">“bridge the gap from untidy outputs of predictions and estimations to the tidy data we want to work with.”</a></p>
+<pre class="r"><code>library(quantmod)
+library(quadprog)
+library(ROI.plugin.quadprog)
+library(ROI)
+library(ggplot2)
+library(magrittr)
+library(broom)</code></pre>
+<p>Next, we pick the desired beginning and ending date range for the stock prices (notice how we leave the end date blank, as we want to model this through the current date:</p>
+<pre class="r"><code>begin_date &lt;-&quot;2013-01-01&quot;
+end_date &lt;- &quot;2020-08-04&quot;</code></pre>
+<p>Now we simply fill in the following vector (tickers) with the 4 stocks we have specified above, and tell the code to run the function getSymbols from begin_date to end_date time period previously specified above. Lastly, the argument <code>auto.assign = TRUE</code> allows the data set to automatically be assigned a name.</p>
+<pre class="r"><code>tickers&lt;-c(&quot;TRC&quot;,&quot;SNAP&quot;,&quot;AIEQ&quot;,&quot;TWOU&quot;)
+getSymbols(tickers,from = begin_date, to = end_date, auto.assign = TRUE)</code></pre>
+<pre><code>## [1] &quot;TRC&quot;  &quot;SNAP&quot; &quot;AIEQ&quot; &quot;TWOU&quot;</code></pre>
+<p>Adding a visual component visa vie line plot for stock prices will certainly add value to this analysis. For example, from the graph below, we can immediately see that 2U outperforms all other stocks in the long run.</p>
+<pre class="r"><code>options(repr.plot.width = 1, repr.plot.height = 8)
+knitr::opts_chunk$set(fig.width = 25, fig.height = 8) 
+start = as.Date(&quot;2020-01-01&quot;) 
+end = as.Date(&quot;2020-08-04&quot;)
+getSymbols(c(&quot;TRC&quot;, &quot;SNAP&quot;, &quot;AIEQ&quot;, &quot;TWOU&quot;), src = &quot;yahoo&quot;, from = start, to = end)</code></pre>
+<pre><code>## [1] &quot;TRC&quot;  &quot;SNAP&quot; &quot;AIEQ&quot; &quot;TWOU&quot;</code></pre>
+<pre class="r"><code>stocks = as.xts(data.frame(TRC = TRC[, &quot;TRC.Adjusted&quot;], SNAP = SNAP[, &quot;SNAP.Adjusted&quot;], 
+                           AIEQ = AIEQ[, &quot;AIEQ.Adjusted&quot;], TWOU = TWOU[, &quot;TWOU.Adjusted&quot;]))
+names(stocks) = c(&quot;Tejon Ranch Company&quot;, &quot;Snapchat&quot;, &quot;AI Powered ETF&quot;, &quot;2U&quot;)
+index(stocks) = as.Date(index(stocks))
+stocks_series = tidy(stocks) %&gt;% 
+  ggplot(aes(x=index,y=value, color=series)) + geom_line()+
+  theme_bw()+
+  theme(legend.position=&quot;bottom&quot;)+
+  theme(axis.text = element_text(size = 14),
+         plot.title = element_text(size = 22), 
+         axis.title = element_text(size = 14,face = &quot;bold&quot;))+
+  labs(title = &quot;Stock Price Movement for TRC, SNAP, AIEQ, and TWOU&quot;, 
+       element_text(size=22, face = &quot;bold&quot;),
+            subtitle = &quot;End of Day Adjusted Prices&quot;,
+            caption = &quot; Source: Yahoo Finance&quot;) +
+  xlab(&quot;\n Date (2020)&quot;) + ylab(&quot;Price \n&quot;)+
+  scale_color_manual(values = c(&quot;#2a63ff&quot;, &quot;#000000&quot;, &quot;#999900&quot;, &quot;#cd1409&quot;, 
+                                alpha = 1, linetype = 1)) + geom_line(size=1)
+stocks_series</code></pre>
+<p><img src="/projects/post/StockPortfolio/index_files/figure-html/fig1-1.png" width="1920" /></p>
+<p>This will ultimately allow us to plug the value of our stocks at their closing period into the object close, using the cbind syntax, binding the data into columns. Then we load the close prices into the vector of returns, thereby looking at returns as a function of close prices.</p>
+<pre class="r"><code>close&lt;-cbind(TRC$TRC.Close, SNAP$SNAP.Close, AIEQ$AIEQ.Close, TWOU$TWOU.Close)
+View(close) #look at close to make sure your stock data was input correctly
+close&lt;-close[complete.cases(close), ]
+returns &lt;- (close/lag(close) - 1)[-1]
+head(returns)</code></pre>
+<pre><code>##               TRC.Close   SNAP.Close    AIEQ.Close    TWOU.Close
+## 2020-01-03  0.002522068 -0.001787902 -0.0041841353 -0.0135997444
+## 2020-01-06  0.011320755  0.001791104  0.0066526963  0.0327445081
+## 2020-01-07 -0.003109391  0.014898688  0.0006956522 -0.0004171882
+## 2020-01-08 -0.003743044 -0.021139224  0.0066040667  0.0016694909
+## 2020-01-09 -0.006887915  0.041391782  0.0037983772 -0.0279166667
+## 2020-01-10 -0.001261034  0.002880127 -0.0037840041 -0.0780111444</code></pre>
+<p>Taking this a step further, we examine the average returns(mu), covariance matrix (cov), standard deviation (s), and minimum value (min) of our returns vector as shown below:</p>
+<pre class="r"><code>mu&lt;-colMeans(returns)
+s&lt;-cov(returns)
+s</code></pre>
+<pre><code>##               TRC.Close   SNAP.Close   AIEQ.Close   TWOU.Close
+## TRC.Close  0.0009320552 0.0005692155 0.0005085904 0.0006068748
+## SNAP.Close 0.0005692155 0.0027714389 0.0006990460 0.0013600576
+## AIEQ.Close 0.0005085904 0.0006990460 0.0005714617 0.0007277273
+## TWOU.Close 0.0006068748 0.0013600576 0.0007277273 0.0034830722</code></pre>
+<pre class="r"><code>mu</code></pre>
+<pre><code>##     TRC.Close    SNAP.Close    AIEQ.Close    TWOU.Close 
+## -0.0002256408  0.0029149139  0.0007681058  0.0066618018</code></pre>
+<pre class="r"><code>min(mu)</code></pre>
+<pre><code>## [1] -0.0002256408</code></pre>
+<pre class="r"><code>min(returns)</code></pre>
+<pre><code>## [1] -0.2835051</code></pre>
+<p>As in any optimization problem, we must define the constraints. As shown immediately above, our minimum portfolio return is -0.6493151. Now, since we are only looking at 4 stocks, our ensuing script needs to reflect that of a 2x4 matrix. We set these up as follows, binding into rows this (with rbind), and plugging in the value for our minimum portfolio return:</p>
+<pre class="r"><code>sum1&lt;-matrix(c(1,1,1,1),ncol=4)
+constr&lt;-rbind(mu,sum1)
+constr</code></pre>
+<pre><code>##        TRC.Close  SNAP.Close   AIEQ.Close  TWOU.Close
+## mu -0.0002256408 0.002914914 0.0007681058 0.006661802
+##     1.0000000000 1.000000000 1.0000000000 1.000000000</code></pre>
+<pre class="r"><code>minreturn &lt;- -0.6493151</code></pre>
+<p>As shown above, the vector of ones is used to sum up the allocations (our decisions). The average return of the portolio, mu, will need to be greater than or equal to the minimum return value of -0.6493151 that we have just calculated.</p>
+<p>Finally, we proceed to plug in the parameters for the quadratic program by pplacing thhem into the QP data frame, thereby allowing us to run the solution and ensuing ROI as follows:</p>
+<pre class="r"><code>QP &lt;- OP(Q_objective(Q=2*s,
+                     L=c(0,0,0,0)),
+         L_constraint(L=constr,
+                      dir=c(&quot;&gt;=&quot;,&quot;==&quot;),
+                      rhs=c(minreturn,1)),
+         maximum=FALSE)
+
+QP</code></pre>
+<pre><code>## ROI Optimization Problem:
+## 
+## Minimize a quadratic objective function of length 4 with
+## - 4 continuous objective variables,
+## 
+## subject to
+## - 2 constraints of type linear.
+## - 0 lower and 0 upper non-standard variable bounds.</code></pre>
+<pre class="r"><code># run and view answer!
+sol &lt;- ROI_solve(QP, solver = &quot;quadprog&quot;)
+sol$solution</code></pre>
+<pre><code>## [1] 1.292754e-01 3.310385e-18 8.707246e-01 0.000000e+00</code></pre>
+<pre class="r"><code>sol$solution%*%mu</code></pre>
+<pre><code>##              [,1]
+## [1,] 0.0006396389</code></pre>
