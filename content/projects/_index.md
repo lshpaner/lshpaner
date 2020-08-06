@@ -33,7 +33,7 @@ II. Independent Research Related to UCLA As a Public University
 - [UCLA Fall Undergraduate Enrollment Figures (1999-2019)](/projects/post/UCLAFallStarts_Trends/) - a hypothesis test to determine overall trajectory
 
 ---
-### *Independent*
+### *Miscellaneous*
 ---
 
 I. California COVID-19 Emergency Service Providers
