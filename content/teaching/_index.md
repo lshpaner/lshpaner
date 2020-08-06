@@ -10,6 +10,8 @@ url: ""
 
 - [Financial Modeling in Excel](https://sites.google.com/g.ucla.edu/ucla-financial-modeling/home) - links to an external website
 
+- [Financial Modeling Full Lecture Series (PDF)](Financial_Modeling_Workshop_by_Leon_Shpaner-Full_Lecture_Series.pdf) - complete file of all lectures on Financial Modeling at UCLA
+
 ---
 
 ### *Cornell University*

@@ -1,0 +1,18 @@
+---
+title: "Financial Modeling Introduction"
+author: "Leon Shpaner"
+date: "`r Sys.Date()`"
+output: html_document
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+The following visualization shows county by county numbers (quantity) of emergency service providers for COVID-19 related endeavors. Herein, it is interesting to note that Los Angeles and Orange Counties have the highest number of said providers with a total of 1,025 and 388 respectively. What's more is that some counties are missing entirely from the map as there either exists no data for those areas, or they are physically lacking in resources.
+
+<iframe src="https://onedrive.live.com/embed?resid=A5FB65B6C9763D08%215655&amp;authkey=%21AICtO_orCi2PlN8&amp;em=2&amp;wdAr=1.7777777777777777&amp;wdEaa=1" width="1186px" height="691px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com"</a><a target="_blank" href="https://office.com/webapps"></a>.</iframe>
