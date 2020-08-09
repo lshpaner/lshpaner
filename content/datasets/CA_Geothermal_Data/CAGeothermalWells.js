@@ -144,12 +144,12 @@
         }, {        
             id: "Lat83",
             alias: "Lat83",
-            dataType: tableau.dataTypeEnum.string
+            dataType: tableau.dataTypeEnum.geometry
 
         }, {        
             id: "Long83",
             alias: "Long83",
-            dataType: tableau.dataTypeEnum.string
+            dataType: tableau.dataTypeEnum.geometry
 
         }, {        
             id: "DatumCode",
@@ -160,7 +160,7 @@
     
         var tableSchema = {
             id: "California_Geothermal_Wells",
-            alias: "California_Geothermal_Wells",
+            alias: "California_b Geothermal_Wells",
             columns: cols
         };
     
