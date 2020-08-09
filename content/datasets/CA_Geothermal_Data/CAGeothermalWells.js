@@ -144,12 +144,12 @@
         }, {        
             id: "Lat83",
             alias: "Lat83",
-            dataType: tableau.dataTypeEnum.geometry
+            dataType: tableau.dataTypeEnum.string
 
         }, {        
             id: "Long83",
             alias: "Long83",
-            dataType: tableau.dataTypeEnum.geometry
+            dataType: tableau.dataTypeEnum.string
 
         }, {        
             id: "DatumCode",
