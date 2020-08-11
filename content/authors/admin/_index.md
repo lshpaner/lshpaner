@@ -29,9 +29,6 @@ social:
 - icon: envelope
   icon_pack: fas
   link: "mailto:lshpaner@ucla.edu"
-- icon: twitter
-  icon_pack: fab
-  link: https://twitter.com/lshpaner
 - icon: instagram
   icon_pack: fab
   link: https://instagram.com/leo1man  
