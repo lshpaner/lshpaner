@@ -64,7 +64,7 @@ date_format = "Jan 2006"
   title = "Blockchain for Business"
   url = ""
   certificate_url = "/files/Certificates/Cornell University - Blockchain for Business Certificate.pdf"
-  date_start = "2020-05-01"
+  date_start = "2019-05-01"
   date_end = ""
   description = ""
 
