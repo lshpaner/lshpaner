@@ -1,0 +1,48 @@
+---
+title: ""
+author: "Leon Shpaner"
+date: "2017-10-16"
+output: html_document
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: yes
+---
+
+> #### VALUATION: Transforming Information into a Model Format
+> Shpaner, Leon - University of California, San Diego - Financial Modeling with Excel
+>
+>
+> 
+
+<iframe width="100%" height="700" frameborder="0" scrolling="no" src="https://onedrive.live.com/embed?resid=A5FB65B6C9763D08%2133912&authkey=%21AI0CSnbNAfnH2UI&em=2&AllowTyping=True&wdInConfigurator=True"></iframe>
+
+> Select a publicly traded company from Yahoo Finance (or another financial research web site of your choice). Create your own Excel model (based on the principles shown in the text book as well your own prior course work) to complete the following tasks:
+
+> 1) Calculate the weighted average cost of capital [WACC] of the firm (identifying and enumerating the capital sources, their respective cost, and mix);
+>
+>> **For my analysis, I chose the publicly traded company, Tejon Ranch (TRC). Its WACC = 7.45% using the classic CAPM. The calculation itself and further information is on the following sheet: =WACC!B12**
+>
+> 2) List and explain what you believe are the underlying risk factors that justify or clarify the basis for the individual cost of each of the capital sources (e.g., the specific financial and liquidity risks associated with the debt, specific operational and business risks associated with the equity). If for example you were examining an airline company, operating and business risk factors might include but not be limited to energy costs, revenue per passenger miles, seating capacity utilization rates and so forth. For its financial risk, the airline’s net free cash flow in relation to its fixed charges [principal plus interest] under different economic scenarios (optimistic, middle-of-the road and pessimistic) is helpful in determining risk exposure.
+>
+>>**Based on my conclusive findings, while there are other risk factors such as low sales volume partially attributed to price fluctuations in various commodities, it can be inferred with a high level of confidence that Tejon Ranch Company has exposed itself to higher risks in real-estate transactions creating outstanding debt in bond repayments and subsequently low to non existent liquidity arising therefrom. This statement is also supported by the company's free cash flow of $-20.8 million as of December 31, 2016 (confirmed by Wall Street Journal - http://quotes.wsj.com/TRC/financials/annual/cash-flow). This number was calculated by deducting capital expenditures of -$26.4 million dollars in real estate related purchases (property and equipment expenditures) from the net positive operating cash of $585,000.00. A more detailed "picture" is painted below with specific enumerations.**
+>> **Income statement analysis:**
+**First and foremost, from looking at the income statement, it is apparent that Tejon Ranch has experienced a negative net revenue growth of 2% from 2012 – 2016. A higher volume of sales is necessary to offset this amount and point it into a positive sales trajectory. Furthermore, total expenses (e.g. corporate expenses, farming, mineral resources, etc.) have started to trail revenues in year 2014, and by 2015, the firm began operating at a loss (negative net income). With its real estate holdings and total investment income, the firm’s net income from 2012 – 2016 is at $17.6 million.**
+>>
+>>**Cash flow statement analysis:**
+**Outlining potential risks: revenue per real estate sold – specifically: gain on sale of easements. Easements are defined as the right to use someone else’s land. Tejon ranch has no cash from operations in this area. This is a potential risk because in 2010 they have purchased 62,000 acres of land that is not being used, albeit, for conservation purposes (source: http://tejonranch.com/conservation-easements-to-be-purchased-covers-62000-acres/). Due to the fact that some items that were not made visible through the consolidated statement of cash flows, delving deeper into the corporate 10- Q from 2016 was necessary.** 
+>>
+>>**In relation to real-estate debt and risk exposure, there has been a total of 1,931 acres of Tejon Ranch Company’s land secured by the East Community Facilities District (CFD) by liens. Liens are known as rights to secure property such as land until the debt is fully discharged. In this case, a total of $55,000,000 in special taxes related to bond debt has been secured for TRCC-East. This poses a huge risk for Tejon Ranch in that continuing operations with repayment of this debt. (page 33 of 10_Q from SEC filings) As of September 30, 2016, Tejon Ranch has experienced exposure to unfavorable price fluctuations associated with certain inventories and accounts receivable, namely pistachios and almonds (ranging from 3.82 to $4.92 per pound). This fluctuation, though, at first glance may not appear significant, it does increase almost exponentially as the production volume increases over time. (page 35 of 10_Q – from SEC filings) Futhermore, Tejon Ranch has exposed itself to another potential source of risk, in what is known as “betting the company on a single project” (Haloulakos, pg. 53 – High Flight). In 2014, TRC purchased a partner interest in TMV, LLC for $70 million dollars, and has invested heavily in other joint ventures. Furthermore, there are not enough proceeds from sale of various real estate assets to offset the negative cash flow resulting in investing activities.**
+>
+>3) If you were to use most recent Cash from Operations and the WACC you calculated in #1, what is the implied Horizon or Terminal Value? What is the implied Horizon or Terminal Value if you were to use Net Free Cash Flow? [Note: Net Free Cash Flow = Cash from Operations MINUS Cash from Investing MINUS Cash from Financing]
+>
+>> **Using cash from operations and a 7.45% WACC yields a terminal value of $9.5 million – a long term growth rate of -32.43% is used because it is the net growth from years 1-5, hence longer term, negative, and therefore more pessimistic (Valuation Sheet!B10)**
+>>**Using net free cash flow, a terminal value of -1.1 million is produced =Valuation Sheet!G26 Which of these values do you believe is most accurate in valuing the enterprise? Explain your reasoning.** 
+>>
+>>**Using net free cash flow is more accurate in valuing the enterprise because it is more realistic. As outlined in the capital costs financed by debt and equity in (#2) above, net free cash flow includes cash from operating activities, and thus, is all inclusive. You cannot value an enterprise without looking at its investment income and financing. It’s like valuing a slice of pizza at the total value of the whole pie.**
+>>
+>>**In conclusion, Tejon Ranch has a negative economic value resulting from the negative net present value (NPV) as evidenced in net free cash flow. Using the weighted average cost of capital for this model is necessary because it is the rate at which Tejon Ranch is expected to pay (on average) to all of stockholders to finance its assets. As of December 31, 2016, Tejon Ranch Company's reported stockholder equity of $305.9 million =Statements of Equity!G28. Tejon Ranch Company earns returns that do not stack up to its cost of capital. As the firm grows, it will destroy its value.**
+>
+> **The learning goals from this assignment are:**
+>
+>Familiarize yourself with the mechanics of using Accounting data for Valuation while refining your interpretive skills.

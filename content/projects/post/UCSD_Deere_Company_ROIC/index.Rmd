@@ -1,0 +1,56 @@
+---
+title: ""
+author: "Leon Shpaner"
+date: "2017-10-23"
+output: html_document
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: yes
+---
+
+> #### VALUATION: Transforming Information into a Model Format
+> Shpaner, Leon - University of California, San Diego - Financial Modeling with Excel
+>
+>
+> 
+
+<iframe width="100%" height="700" frameborder="0" scrolling="no" src="https://onedrive.live.com/embed?resid=A5FB65B6C9763D08%2133893&authkey=%21AGXT7rpIgdHP8aU&em=2&AllowTyping=True&wdInConfigurator=True"></iframe>
+
+> 1) Select a publicly traded manufacturing company of your own choice and use the ROIC / FCFF approach to: calculate normalized earnings or cash flow as if these numbers are achieved instantaneously (i.e., realized at this very 
+> moment in time);
+>
+>> **ROIC = 4% <-- =(\$B\$15 * (1-\$B\$19))/\$B$4 <-- = EBIT (1- tax rate) / Total Assets**
+>>
+>> **FCFE = $769.19 (in millions) <-- = Net Income – (Cap Ex. – Depreciation) x (1 – Debt Ratio)**
+>
+> 2) List the factors or assumptions associated with the normalized earnings or cash flow;
+>
+>> **While there is a more comprehensive line item by line item breakdown in the =”ROIC Approach’! worksheet, below is the write up of assumptions associated with the normalized earnings or cash flow: John Deere (DE) reported a per share of $4.81 in 2016, the lowest amount in the last 5 years. The company had assets with a book value of $57.9 billion, and spent $2.9 billion on capital expenditures in 2016, with a depreciation of $1.5 billion. The firm had $36.2 billion in debt outstanding, on which it paid interest expenses of $763.7 million, the debt ratio being 47%. The stock has a beta of 0.77, and a tax rate of 31%.**
+>
+>
+> 3) Using the normalized earnings or cash flow as a mid-range number, estimate what you believe are high-end (optimistic) and low-end (pessimistic) earnings or cash flow numbers, and estimate the likelihood or probability of those outcomes in relation to the normalized results.
+>
+>> **Using the normalized cash flow of $769.19 as a mid-range number, I take into account the 5% growth rate in free cash flow for year 2015, and thus use it to project optimistically into the future; earnings of $807.65 are thereby realized. Similarly, taking into account the -11% decrease in cash flow for the last fiscal year of 2016, a pessimistic cash flow of $684.58 is produced. Further refining this procedure, a standard deviation of sample size s (where s = 5) is produced. On the pessimistic side, the standard deviation of this sample size yields a value of 65.54, which yields a mean of $617.58 and a normal distribution of .14%. On the optimistic side, the probability based on the normal distribution is .28%. There is a higher likelihood of short-term growth on the optimistic side, but it is ultimately offset by the net pessimistic reality that free cash flow has been on a steady decline.**
+>
+> 4) Based on the probability associated with these 3 scenarios, what is the expected value of earnings and/or cash flow?
+>
+>> **As shown in the table below, the expected value of earnings and/or cash flow is $769.19.**
+>>
+>> |                                                 |           2016           |              2017              |             2018            |       2019       |       2020       |      Average     | Standard   Deviation |   | Normal Distribution |
+>> |-------------------------------------------------|:------------------------:|:------------------------------:|:---------------------------:|:----------------:|:----------------:|:----------------:|----------------------|---|---------------------|
+>> |                                                 |           t = 1          |              t = 2             |            t = 3            |       t = 4      |       t = 5      |                  |                      |   |                     |
+>> | Optimistic (short term (2015)   FCF growth  5%) |  $               769.19  |  $                     807.65  |  $                  848.03  |  $       890.43  |  $       934.96  |  $       850.05  | 65.5361529           |   | 0.28%               |
+>> |                                                 |                          |                                |                             |                  |                  |` $       769.19` |                      |   |                     |
+>> | Pessimistic (low end - 2016) @   -11%)          |  $               769.19  |  $                     684.58  |  $                  609.28  |  $       542.26  |  $       482.61  |  $       617.58  | 113.396403           |   | 0.14%               |
+>
+> 5) Use of normalized financial results implies a reliance on historical data to predict future outcomes. Under what circumstances would you contemplate departing from historic averages and making your own estimates on the factors that influence valuation
+> of future outcomes? Explain your reasoning.
+> 
+>> **First and foremost, SEC rule 156 (using mutual funds as an example) requires the statement that "past performance is not indicative of future results." Similarly, in this fashion, I would shy away from heavily relying on historical data. However, if I were to rely on historical data, I would then use a broader range (going back at least 10 years and maybe more) in order to get a better trend. I would use actual free cash flow numbers from the cash flow statement (not taking depreciation and capital expenditures into account, in a similar fashion to what is provided in the Wall Street Journal). I would then take the last 5 years and run a linear regression to get an R^2 value. If the R^2 is closer to 1, I would use this data as a good estimate of the general trend.**
+>>
+>> **Yet, departing from historical data may be necessary to get a better "feel" for the market dynamics, as there are many factors involved in influencing pricing, revenues, and expenses. For instance, a large variability in capital expenditures will offset any predictions based on historical data. In addition, if the free cash flows do not align with profitability within a reasonable forecast period with which I am comfortable with, I would depart from heavily relying on historical data.**
+>>
+>> **In conclusion, there are a number of different ways to derive free cash flow on a historical basis (whether one is looking at FCFE (free cash flow to equity) or FCFF (free cash flow to the firm)). Taking historical free cash flow to forecast future results is done under the assumption that the growth rate is constant and aligned with the historical relationships with free cash flow. As such, making this ceteris paribus assumption for a cyclical firm can reduce the value of the forecasting excercise.**
+>
+> The learning goals from this assignment are: Further refinement in Valuation and utilization of Accounting data while observing “rules of thumb / normalization.”

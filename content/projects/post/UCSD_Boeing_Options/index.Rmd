@@ -1,0 +1,36 @@
+---
+title: ""
+author: "Leon Shpaner"
+date: "2017-11-03"
+output: html_document
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: yes
+---
+
+> #### OPTIONS: Research, Calculation & Analysis - Boeing
+> Shpaner, Leon - University of California, San Diego - Financial Modeling with Excel
+>
+>
+> 
+
+<iframe width="100%" height="700" frameborder="0" scrolling="no" src="https://onedrive.live.com/embed?resid=A5FB65B6C9763D08%2133918&authkey=%21AAvwyP8K05-n_Bk&em=2&AllowTyping=True&wdHideGridlines=True&wdHideHeaders=True&wdInConfigurator=True"></iframe>
+
+> Homework Assignment #4 is a “Wall Street” project.  Find the options for The Boeing Company (BA-NYSE) in The Wall Street Journal, Investor’s Business Daily or a comparable financial newspaper.  **The tasks to be completed for this assigned project are:**
+>
+>> 1)	Assume you buy a Boeing ***call*** option that is in the money by the smallest amount.  You will buy the nearest month possible.  If the price of the Boeing common stock goes up by 10% at the expiration of the option, what will be your dollar profit or loss 
+>> on the option?  Assume you close out your option position at its intrinsic value.
+>> 2)	Assume you buy a Boeing ***put*** option that is in the money by the smallest amount.  You will buy the nearest month possible.  If the price of the Boeing common stock goes down by 5% at the expiration of the option, what will be your dollar profit or loss 
+>> on the option?  Assume you close out your option position at its intrinsic value.
+>
+> **The learning goals from this assignment are:**
+>
+>> (1)	Demonstrate your competency in constructing an Excel model incorporating Options Pricing formulas.
+>> (2)	Establish connective relationship between course content and real world information.
+>> (3)	Improve your progression of learning via a project-based homework exercise.
+>
+> Some helpful hints to keep in mind:
+>
+>> (1) View this as a role playing exercise in which you are pursuing a DIY (Do-It-Yourself) financial strategy.
+>> (2) Keep in mind the difference between investment and speculation.  The world of options is an exciting if not dynamic fusion of both! 😃
