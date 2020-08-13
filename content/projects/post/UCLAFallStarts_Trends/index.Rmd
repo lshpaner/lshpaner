@@ -3,9 +3,9 @@ title: "UCLA Fall Undergraduate Enrollment Trends (1999-2019)"
 author: "Leon Shpaner"
 date: "`r Sys.Date()`"
 output:
-  html_document: default
   word_document: default
   pdf_document: default
+  html_document: default
 subtitle: A Hypothesis Test
 highlight: true
 image:
@@ -24,14 +24,14 @@ math: yes
 
 UCLA Undergraduate Fall Enrollments have been averaging 27,340 for the last 20 years (1999-2019), with an average 1.26% growth rate year over year. A noticeable milestone was reached in 2017 when the population of new students crossed the 31k mark. Notwithstanding, from 2018-2019 we have seen a reduction in 0.11% from 31,577 to 31,543 new student enrollments. Given the current state of COVID-19 physical distancing restrictions, coupled with the slight drop off in enrollments between 2018-2019, will we be seeing a notable decrease in new student enrollments from 2019-2020?
 
-To shed more light on potential outcomes for this scenario, we will conduct the following hypothesis test:
+To shed more light on potential outcomes of this scenario, we will conduct the following hypothesis test:
 
 $\small{H_0:}$ (initial hypothesis): the number of students enrolled in 2020 will be at least 30,000 ${\large\hspace{2mm}\Longrightarrow{\hspace{2mm}}}$ $\small {H_0: \mu \geq 30,000}$
 
 $\small{H_a:}$ (alternative hypothesis): the number of students enrolled in 2020 will fall below 30,000 ${\large\Longrightarrow{\hspace{2mm}}}$ $\small {H_a: \mu < 30,000}$
 
 
-The last 20 years’ worth of data are observed with actual fall enrollment numbers (source: https://www.universityofcalifornia.edu/infocenter/fall-enrollment-glance). The average number of enrolled students is measured as 27340.48 from the 21 observations. In order to test these numbers, a z-value measuring the difference between the average (mean) of the last 20 years’ observations and our null (initially hypothesized value) must be calculated. This mathematical value is expressed in the following:
+The last 20 years’ worth of data are observed with actual fall enrollment numbers (source: https://www.universityofcalifornia.edu/infocenter/fall-enrollment-glance). The average number of enrolled students is measured as 27340.48 from the 21 observations. Generally speaking, it is important to note that for a true hypothesis test to be more robust, an adequate sample size of at least n = 30 must be gathered and presented; this is based upon the central limit theorem, where the spread of sample means approaches a normal distribution as the sample size *n* increases. That being said, we use the parametric t-test in this experiment (which is useful for smaller sample sizes) as we proceed to draw a conclusion on our findings. To test these numbers, a z-value measuring the difference between the average (mean) of the last 20 years’ observations and our null (initially hypothesized value) must be calculated. This mathematical value is expressed in the following:
 
 $\small{TS = z = \large\frac{\overline{x} -\mu_o}{SE_\overline{x}}{\hspace{2mm}\Longrightarrow{\hspace{2mm}}}}$
 $\small SE_\overline{x} = \large\frac{s}{\sqrt{n}}{\hspace{2mm}\Longrightarrow{\hspace{2mm}}} \normalsize \small TS = (27340.48 - 30000)\cdot\large\frac{\sqrt{21}}{2443.37} = \small -4.988$
