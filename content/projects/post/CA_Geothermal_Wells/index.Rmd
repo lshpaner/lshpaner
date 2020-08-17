@@ -13,15 +13,15 @@ image:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-The following visualization shows county by county numbers (quantity) of Geothermal Wells in the State of CA. This data was sourced independently from the CALGem ArcGIS Hub open data and further linked directly to Tableau using [Javascript](https://lshpaner.rbind.io/datasets/ca_geothermal_data/cageothermalwells.js) and html to produce this [web data connector](https://lshpaner.rbind.io/datasets/ca_geothermal_data/cageothermalwells.html) whose button is only clickable within the Tableau environment.
+The following visualization shows county by county numbers (quantity) of Geothermal Wells in the State of CA. This data was sourced independently from the CALGem ArcGIS Hub open data and further linked directly to Tableau using [Javascript](https://lshpaner.rbind.io/datasets/ca_geothermal_data/cageothermalwells.js) and html to produce this [web data connector](https://lshpaner.rbind.io/datasets/ca_geothermal_data/cageothermalwells.html) whose button is clickable within the Tableau environment.
 
-Herein, it is interesting to note that out of the total number of 4,235 geothermal wells, Imperial, Sonoma, and Lake counties are the top 3 producing counties, regardless of activity status. As seen immediately in the accompanying dashboard below, many counties are also entirely omitted from this infographic. As such, it is safe to assume that there either exists no data for those areas, or they are physically lacking in geothermal wells.
+Herein, it is interesting to note that out of the total number of 4,235 records of geothermal wells in the state of California, Imperial County boasts 1,523, Sonoma County - 748, and Lake County with an impressive 617 for third place. These top 3 counties account for roughly 68% of all geothermal wells in the state, regardless of Well Status (activity level). As seen immediately in the accompanying dashboard below, many counties are also entirely omitted from this infographic. As such, it is almost safe to assume that data does not exist in these regions, or they are physically lacking in these resources.
 
-Taking a deeper dive into the data, we begin to see that Chevron U.S.A., Inc., Geysers Power Cpmpany LLC, and Freeport-McMoRan, boast 528,485, and 315 wells respectively as operators in the state of California.
+Taking a deeper dive into the data, we can also see that Chevron U.S.A., Inc., Geysers Power Company LLC, and Freeport-McMoRan, boast 528, 485, and 315 wells respectively, as the top 3 operators in the state of California.
 
-In the last tab, we can take the raw data for what it's worth and filter out according to our own needs of the experiment. For example, if we wanted to look at only active wells, the WellStatus filter *A* would give us only 1,372, so only 32% of geothermal wells are active. Other statuses like B,C,N,P, and U remain to be defined.
+In the last button of the storyboard, we can take the raw data for what it's worth and drill down according to our needs on an experiment basis. For example, if we wanted to look at only active wells, the *"WellStatus"* filter *A* would yield only 1,372 results, so only 32% of geothermal wells are active. 260 (roughly 6%) of these wells have also proven to be idle, denoted by *"WellStatus I".* Other statuses like B,C,N,P, and U remain to be defined by the resource provider. 
 
-Now, if we were to filter out our top producing operator, Chevron U.S.A, we we can also immediately see that 435 out of the 528 wells belong to Imperial County - an alarming 82%.
+Now, if we were to filter out our top producing operator, Chevron U.S.A, we can also immediately see that 435 out of the 528 wells belong to Imperial County - an alarming 82%.
 
 
 
