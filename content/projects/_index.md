@@ -68,10 +68,11 @@ IV. BONDS: Solving Fixed Income Problems via Finance & Excel
 ### *Miscellaneous*
 ---
 
-I. California COVID-19 Emergency Service Providers
-as a [Tableau Dashboard](/projects/post/COVID_19_CA_EmergencyProviders/) 📈
+I. Tableau Projects
+1. [California Geothermal Wells](/projects/post/CA_Geothermal_Wells/)
+2. [California COVID-19 Emergency Service Providers](/projects/post/COVID_19_CA_EmergencyProviders/) 
 
-II. F.L.O.W. STATE Model – A New Perspective on Balance Sheet Pro Forma as a [Blog Post](/projects/post/FlowStateModel/) and [Linkedin Article](https://www.linkedin.com/pulse/flow-state-model-new-perspective-balance-sheet-pro-forma-leon-shpaner/?trackingId=jWDIwg0KuFt65YH9OOY1vg%3D%3D) - article on linkedin pulse
+III. F.L.O.W. STATE Model – A New Perspective on Balance Sheet Pro Forma as a [Blog Post](/projects/post/FlowStateModel/) and [Linkedin Article](https://www.linkedin.com/pulse/flow-state-model-new-perspective-balance-sheet-pro-forma-leon-shpaner/?trackingId=jWDIwg0KuFt65YH9OOY1vg%3D%3D) - article on linkedin pulse
 
 
 

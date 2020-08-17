@@ -1,0 +1,20 @@
+---
+title: "California Geothermal Wells"
+author: "Leon Shpaner"
+date: "2020-08-16"
+output: html_document
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: yes
+---
+
+
+
+<p>The following visualization shows county by county numbers (quantity) of Geothermal Wells in the State of CA. This data was sourced independently from the CALGem ArcGIS Hub open data and further linked directly to Tableau using <a href="https://lshpaner.rbind.io/datasets/ca_geothermal_data/cageothermalwells.js">Javascript</a> and html to produce this <a href="https://lshpaner.rbind.io/datasets/ca_geothermal_data/cageothermalwells.html">web data connector</a> whose button is only clickable within the Tableau environment.</p>
+<p>Herein, it is interesting to note that out of the total number of 4,235 geothermal wells, Imperial, Sonoma, and Lake counties are the top 3 producing counties, regardless of activity status. As seen immediately in the accompanying dashboard below, many counties are also entirely omitted from this infographic. As such, it is safe to assume that there either exists no data for those areas, or they are physically lacking in geothermal wells.</p>
+<p>Taking a deeper dive into the data, we begin to see that Chevron U.S.A., Inc., Geysers Power Cpmpany LLC, and Freeport-McMoRan, boast 528,485, and 315 wells respectively as operators in the state of California.</p>
+<p>In the last tab, we can take the raw data for what it’s worth and filter out according to our own needs of the experiment. For example, if we wanted to look at only active wells, the WellStatus filter <em>A</em> would give us only 1,372, so only 32% of geothermal wells are active. Other statuses like B,C,N,P, and U remain to be defined.</p>
+<p>Now, if we were to filter out our top producing operator, Chevron U.S.A, we we can also immediately see that 435 out of the 528 wells belong to Imperial County - an alarming 82%.</p>
+<iframe seamless frameborder="0" src="https://public.tableau.com/views/CAGeothermalWells/GeothermalWellsinCA-inNumberandDensity?:language=en&amp;:display_count=y&amp;:showVizHome=no" width="100%" height="1100">
+</iframe>
