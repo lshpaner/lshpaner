@@ -72,7 +72,9 @@ I. Tableau Projects
 1. [California Geothermal Wells <i class="fas fa-fire" style="font-size:26px"> </i>](/projects/post/CA_GeothermalWells/) 
 2. [California COVID-19 Emergency Service Providers <i class="fas fa-hospital-symbol" style="font-size:26px"> </i>](/projects/post/COVID_19_CA_EmergencyProviders/) 
 
-III. F.L.O.W. STATE Model – A New Perspective on Balance Sheet Pro Forma as a [Blog Post](/projects/post/FlowStateModel/) and [Linkedin Article](https://www.linkedin.com/pulse/flow-state-model-new-perspective-balance-sheet-pro-forma-leon-shpaner/?trackingId=jWDIwg0KuFt65YH9OOY1vg%3D%3D) - article on linkedin pulse
+III. Independent Models 
+
+1. F.L.O.W. STATE Model – A New Perspective on Balance Sheet Pro Forma as a [Blog Post](/projects/post/FlowStateModel/) and [Linkedin Article](https://www.linkedin.com/pulse/flow-state-model-new-perspective-balance-sheet-pro-forma-leon-shpaner/?trackingId=jWDIwg0KuFt65YH9OOY1vg%3D%3D) - article on linkedin pulse
 
 
 
