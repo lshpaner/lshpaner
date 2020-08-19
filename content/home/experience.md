@@ -55,7 +55,7 @@ date_format = "Jan 2006"
   description = """
   Responsibilities:
   
-  *Negotiated with escrow officers, title companies, banks & realtors, resulting in a 7% increase in profit margins
+  * Negotiated with escrow officers, title companies, banks & realtors, resulting in a 7% increase in profit margins
   * Aided in recovering 400k in monies owed to the home owners’ associations by facilitating claims on surplus funds
   """
 [[experience]]
