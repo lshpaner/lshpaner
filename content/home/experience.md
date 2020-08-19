@@ -29,11 +29,11 @@ date_format = "Jan 2006"
   Responsibilities:
   
   * Rebuilt the School’s entire financial reporting infrastructure within a newly adopted CPM software, Prophix
-  * Saved the finance dept. about 20 hours per week by automating OPEX variance reports with Prophix and VBA macros
-  * Reduced 200k in bad-debt by running flux analyses on collection rates, headcount, and program margin analyses – this also allowed the CFO to save 20% annually in expenses across the board without cutting programs or staff
+  * Saved the finance department about 20 hours per week by automating OPEX variance reports with our CPM and VBA macros
+  * Helped reduce bad-debt by about 200k by running flux analyses on collection rates, student headcount, and program margin analysis – this also allowed the CFO to save 20% annually in expenses across the board without cutting programs or staff
   """
 [[experience]]
-  title = "Sales Reporting Analyst"
+  title = "Sales Reporting Analyst (Contractor)"
   company = "Self Mastery Co."
   company_url = "https://www.selfmasteryco.com/"
   location = ""
@@ -42,11 +42,11 @@ date_format = "Jan 2006"
   description = """
   Responsibilities:
   
-  * Automated daily sales and orders tracking with a VBA macro into excel and pushed to Google Sheets by working with IT to improve the back-end cart platform, thereby making analysis in (as close to real-time) more streamlined
-  * Created a template in Google Sheets to report daily seminar volume numbers by Instructor, leading to marketing pushing for an average of 15% more in leads across various social media platforms
+  * Automated sales and orders tracking with a VBA macro in excel and pushed to Google Sheets, producing real-time analyses
+  * Worked with IT to improve the back-end transaction reports and payment gateway • Created a template in Google Sheets to report daily seminar volume numbers by Instructor, leading to marketing pushing for an average of 15% more in leads across various social media platforms
   """
 [[experience]]
-  title = "Administrative Assistant (Full-time)"
+  title = "Account Manager"
   company = "Association Lien Services"
   company_url = "https://www.alslien.com/"
   location = "Los Angeles, CA"
@@ -55,11 +55,11 @@ date_format = "Jan 2006"
   description = """
   Responsibilities:
   
-  * Negotiated with escrow officers, title companies, banks & realtors, resulting in a 7% increase in profit                                         
-  * Facilitated claims on surplus funds for properties that have gone into foreclosure, to aide in recovering a net of 400k in monies owed to the homeowners’ associations
+  *Negotiated with escrow officers, title companies, banks & realtors, resulting in a 7% increase in profit margins
+  * Aided in recovering 400k in monies owed to the home owners’ associations by facilitating claims on surplus funds
   """
 [[experience]]
-  title = "Chargeback Recovery Specialist (Full-time)"
+  title = "Chargeback Recovery Specialist"
   company = "Verifi, Inc."
   company_url = "https://www.verifi.com/"
   location = "Beverly Hills, CA"
