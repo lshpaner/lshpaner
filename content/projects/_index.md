@@ -17,7 +17,6 @@ II. Optimizing a Stock Portfolio in R
 
 * [Optimizing a Diversified Portfolio Based on 4 Stocks](/projects/post/Stock_Portfolio_in_R) - a classic portfolio optimization problem and solution using quadratic programming (QP) 📈  <i class="fab fa-r-project" style="font-size:22px"></i>
 
-
 ---
 
 ### *University of California, Los Angeles (UCLA)*
@@ -69,8 +68,14 @@ IV. BONDS: Solving Fixed Income Problems via Finance & Excel
 ---
 
 I. Tableau Projects
-1. [California Geothermal Wells <i class="fas fa-fire" style="font-size:26px"> </i>](/projects/post/CA_GeothermalWells/) 
-2. [California COVID-19 Emergency Service Providers <i class="fas fa-hospital-symbol" style="font-size:26px"> </i>](/projects/post/COVID_19_CA_EmergencyProviders/) 
+
+To access my web data connectors and more, please visit the [Tableau Community Portal](https://tableau.github.io/webdataconnector/community/) and search for my name via CTRL+F.
+
+Otherwise, the projects linked to these connectors in Tableau are below:
+
+1. [California COVID-19 Emergency Service Providers <i class="fas fa-hospital-symbol" style="font-size:26px"> </i>](/projects/post/COVID_19_CA_EmergencyProviders/) 
+ 
+2. [California Geothermal Wells <i class="fas fa-fire" style="font-size:26px"> </i>](/projects/post/CA_GeothermalWells/)  
 
 III. Independent Models 
 
