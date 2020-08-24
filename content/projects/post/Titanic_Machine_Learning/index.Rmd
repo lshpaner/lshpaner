@@ -12,7 +12,9 @@ math: yes
 pdf: yes
 diagram: yes
 tags:
+- R
 - R Markdown
+- Machine Learning 
 - Titanic Survival
 image:
   caption: ''
