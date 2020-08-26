@@ -15,10 +15,13 @@ image:
 tags:
 - R
 - R Studio
+- ROI
 - Stock Portfolio Optimization
 - Stocks
 - Optimization Problems
-- Data Analytics
+- Data Analysis
+- Quadratic Program
+- Quantmod Package
 - Descriptive Statistics
 ---
 
