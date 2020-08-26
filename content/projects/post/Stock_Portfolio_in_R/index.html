@@ -104,8 +104,8 @@ constr</code></pre>
 ## mu -0.0002256408 0.002914914 0.0007681058 0.006661802
 ##     1.0000000000 1.000000000 1.0000000000 1.000000000</code></pre>
 <pre class="r"><code>minreturn &lt;- -0.6493151</code></pre>
-<p>As shown above, the vector of ones is used to sum up the allocations (our decisions). The average return of the portolio, mu, will need to be greater than or equal to the minimum return value of -0.6493151 that we have just calculated.</p>
-<p>Finally, we proceed to plug in the parameters for the quadratic program by placing thhem into the QP data frame, thereby allowing us to run the solution and ensuing ROI as follows:</p>
+<p>As shown above, the vector of ones is used to sum up the allocations (our decisions). The average return of the porfolio, mu, will need to be greater than or equal to the minimum return value of -0.6493151 that we have just calculated.</p>
+<p>Finally, we proceed to plug in the parameters for the quadratic program by placing them into the QP data frame, thereby allowing us to run the solution and ensuing ROI as follows:</p>
 <pre class="r"><code>QP &lt;- OP(Q_objective(Q=2*s,
                      L=c(0,0,0,0)),
          L_constraint(L=constr,
