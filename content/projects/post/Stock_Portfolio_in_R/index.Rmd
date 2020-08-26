@@ -110,7 +110,7 @@ minreturn <- -0.6493151
 
 As shown above, the vector of ones is used to sum up the allocations (our decisions). The average return of the portolio, mu, will need to be greater than or equal to the minimum return value of -0.6493151 that we have just calculated. 
 
-Finally, we proceed to plug in the parameters for the quadratic program by pplacing thhem into the QP data frame, thereby allowing us to run the solution and ensuing ROI as follows:
+Finally, we proceed to plug in the parameters for the quadratic program by placing thhem into the QP data frame, thereby allowing us to run the solution and ensuing ROI as follows:
 
 ```{r message = FALSE}
 QP <- OP(Q_objective(Q=2*s,
