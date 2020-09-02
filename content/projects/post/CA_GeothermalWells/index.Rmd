@@ -13,7 +13,7 @@ image:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-The following visualization shows county by county numbers (quantity) of Geothermal Wells in the State of CA. This data was sourced independently from the CALGem ArcGIS Hub open data and linked directly to Tableau using [Javascript](https://lshpaner.rbind.io/datasets/ca_geothermal_data/cageothermalwells.js) and html to produce this [web data connector](https://lshpaner.rbind.io/datasets/ca_geothermal_data/cageothermalwells.html) whose button is clickable within the Tableau environment.
+The following visualization shows county by county numbers (quantity) of Geothermal Wells in the State of CA. This data was sourced independently from the [CALGem ArcGIS Hub open data](https://hub.arcgis.com/datasets/d639eb012fe142c89ea8ac779a665ca5_1/data?geometry=-119.036%2C32.448%2C-114.284%2C33.255) and linked directly to Tableau using [Javascript](https://lshpaner.rbind.io/datasets/ca_geothermal_data/cageothermalwells.js) and html to produce this [web data connector](https://lshpaner.rbind.io/datasets/ca_geothermal_data/cageothermalwells.html) whose button is clickable within the Tableau environment.
 
 Herein, it is interesting to note that out of the total number of 4,235 records of geothermal wells in the state of California, Imperial County boasts 1,523, Sonoma County - 748, and Lake County with an impressive 617 for third place. These top 3 counties account for roughly 68% of all geothermal wells in the state, regardless of Well Status (activity level). As seen immediately in the accompanying dashboard below, many counties are also entirely omitted from this infographic. As such, it is almost safe to assume that data does not exist in these regions, or they are physically lacking in these resources.
 

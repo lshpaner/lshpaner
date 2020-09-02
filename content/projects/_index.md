@@ -73,9 +73,11 @@ To access my web data connectors and more, please visit the [Tableau Community P
 
 Otherwise, the projects linked to these connectors in Tableau are below:
 
-1. [California COVID-19 Emergency Service Providers <i class="fas fa-hospital-symbol" style="font-size:26px"> </i>](/projects/post/COVID_19_CA_EmergencyProviders/) 
+1. [California COVID-19 Emergency Service Providers](/projects/post/COVID_19_CA_EmergencyProviders/) 
  
-2. [California Geothermal Wells <i class="fas fa-fire" style="font-size:26px"> </i>](/projects/post/CA_GeothermalWells/)  
+2. [California Geothermal Wells](/projects/post/CA_GeothermalWells/)  
+
+3. [Department of Defense Sites in the U.S. and its Territories](/projects/post/DODSites/)
 
 III. Independent Models 
 
