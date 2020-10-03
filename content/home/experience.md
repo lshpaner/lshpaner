@@ -43,7 +43,8 @@ date_format = "Jan 2006"
   Responsibilities:
   
   * Automated sales and orders tracking with a VBA macro in excel and pushed to Google Sheets, producing real-time analyses
-  * Worked with IT to improve the back-end transaction reports and payment gateway • Created a template in Google Sheets to report daily seminar volume numbers by Instructor, leading to marketing pushing for an average of 15% more in leads across various social media platforms
+  * Worked with IT to improve the back-end transaction reports and payment gateway
+  * Created a template in Google Sheets to report daily seminar volume numbers by Instructor, leading to marketing pushing for an average of 15% more in leads across various social media platforms
   """
 [[experience]]
   title = "Account Manager"
