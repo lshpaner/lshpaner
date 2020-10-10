@@ -23,7 +23,7 @@ date_format = "Jan 2006"
   company = "Cornell University"
   company_url = "https://www.cornell.edu/search/people.cfm?netid=ls799/"
   location = "Remote"
-  date_start = "2019-01-01"
+  date_start = "2018-11-19"
   date_end = ""
   description = """
   Responsibilities:
