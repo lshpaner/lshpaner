@@ -190,8 +190,8 @@ library(knitr)
 library(readr)
 library(kableExtra)
 table3 <- read.csv("table3.csv")
-knitr::kable(table3, col.names = c('Agency rating', 'Default rate', 'Promised yield', 'Realized yield'), align = "c")%>%
-kable_styling(position = "center")
+knitr::kable(table3, format = "html", table.attr = "style='width:100%;'", col.names = c('Agency rating', 'Default rate', 'Promised yield', 'Realized yield'), align = "c")%>%
+kable_styling(position = "center", full_width = T)
 ```
 
 SOURCE: W.B. Hickman, Corporate Bond Quality and Investor Experience, National Bureau of Economic Research, Princeton University Press, Princeton, N.J., 1958, p. 10

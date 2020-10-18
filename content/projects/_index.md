@@ -7,6 +7,14 @@ url: ""
 pdf: true
 ---
 ---
+
+### *University of San Diego*
+
+I. Probability and Statistics for Data Science
+
+* [Real Estate Prices in Los Angeles – A Case Study from Redfin (working paper)](/projects/post/Los_Angeles_Real_Estate_Redfin) - statistical analysis on real-estate data in Los Angeles County
+
+
 ### *Cornell University*
 
 I. Predictive Analytics, Clustering, Classification, and Machine Learning in R
