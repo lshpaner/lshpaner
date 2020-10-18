@@ -158,10 +158,9 @@ ggplot(data = daysonmarket[1:2], aes(x = DaysMarket, y = Price, group = 3))+
 
 ## **Generalized Linear Model (GLM)**
 
-
 $$
 \begin{align*}
-=\beta_0 + \beta_1Year\_Built\begin{pmatrix}
+Price~(in~USD)=\beta_0 + \beta_1Year\_Built\begin{pmatrix}
     1 = (1911 - 1932)\\
     2 = (1933 - 1954)\\
     3 = (1955 - 1976)\\
