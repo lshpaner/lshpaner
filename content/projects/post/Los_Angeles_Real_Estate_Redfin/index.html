@@ -63,7 +63,7 @@ correlation exists, the model can prove to be beneficial and hold merit.</p>
 <p>A similar study has been conducted where “home values vary across neighborhoods. This
 implies that certain neighborhood characteristics are more desirable than others” (Hipp &amp; Singh,
 2014, 254). The goal of the research was to determine if there was a relationship between “New
-Urbanism—population density, older homes, a lack of concentration of single family units”(
+Urbanism—population density, older homes, a lack of concentration of single family units” (
 Hipp &amp; Singh, 2014, 254). Additionally, the research examined the Playa Vista Community,
 attributing revitalization to new infrastructure and addition of important technological companies
 like Youtube, Microsoft, and Fox Sports (Hipp &amp; Singh, 2014, 258). Moreover, this study
@@ -74,11 +74,12 @@ the housing market behaves and what underpins housing prices” (Clark, 2011, 1)
 </div>
 <div id="exploratory-data-analysis" class="section level2">
 <h2><strong>Exploratory Data Analysis</strong></h2>
-<p>As shown in the accompanying the location and dispersion information confirms that
-certain disparities exist. The median house price is 739,900, while the average is much higher,
-960,246.46. There exists an astounding variance between the minimum and maximum value
-(5,519,000.00) and number of days on the market. Since such a large range between data points
-for days on the market, other variables of interest will be examined further in the paper to
+<p>Exploratory Data Analysis
+As shown in the accompanying the location and dispersion information confirms that
+certain disparities exist. The median house price is $742,450.00, while the average is much
+higher, $960,246.46. There exists an astounding variance between the minimum and maximum
+value ($5,519,000.00) and number of days on the market. Since such a large range between data
+points for days on the market, other variables of interest will be examined further in the paper to
 establish relationships as they arise.</p>
 <p><strong>Figure 1.</strong></p>
 <table class="table" style="margin-left: auto; margin-right: auto;">
@@ -306,6 +307,55 @@ mitigate against any potential bias resulting from this sample, a better methodo
 produced, where the cities were bucketed into twelve geographic regions. This was further
 refined and the geographic regions were narrowed down to ten categories for a concise, yet,
 more robust and accurate model.</p>
+</div>
+<div id="regression-analysis-of-project-data" class="section level2">
+<h2><strong>Regression Analysis of Project Data</strong></h2>
+<p><strong>Figure 4.</strong></p>
+<p><em>Summary Output</em></p>
+<p><img src="Figure4.png" />
+<em>Note.</em> This model shows a somewhat strong goodness of fit based on several factors not limited
+to statistically significant <em>P-</em>values.</p>
+<p>In further refining and assessing the model, three of the independent variables are
+incorporated into a more robust framework, thereby commencing in a multiple regression table
+from which we are able to draw inference from. Microsoft Excel’s built-in data analysis toolpak
+was used to create the above summary output. This table produced the following regression
+statistics. Since this model examined more than one independent variable, we look at the
+multiple R first. This value, otherwise known as the correlation coefficient, exposes the exact
+linearity as .48, thereby showing that there exists an overall strong positive linear relationship.
+Upon further examination, we look to the R-squared (<span class="math inline">\(R^2\)</span>)
+as the coefficient of
+determination to present the percent variance for price (the dependent variable, <em>y</em>) as explained
+by the accompanying independent variables of beds, year built, and HOA. In this case, precisely
+23% of the variability in price is explained by these accompanying predictor variables. The
+subsequent value of the adjusted <span class="math inline">\(R^2\)</span>
+simply considers the number of parameters (independent
+variables) and adjusts accordingly, at a value of .21 (or approximately 21%). Based upon the
+introduction of these additional parameters, we must take them into account for a more
+conservative estimate.
+Moreover, the <em>P-</em>values in this summary output table are all statistically significant (less
+than 𝛼 = .05), whereas Table 1 assumed statistical significance at P &lt;.0001; nonetheless, the
+model holds merit. We finalize this multiple regression analysis by noting the residuals (variance
+in observed and predicted values) of the <em>n</em> = 100 price points, where</p>
+<p><span class="math display">\[y_1-\hat{y}_1,...,y_n-\hat{y}_n\]</span>
+From the 100 observations, we examine the one that has the lowest variance between the
+actual price (<em>y</em>) and the predicted price (<span class="math inline">\(y_1\)</span>). This is confirmed to be the 11th observation with a
+recorded price of 729,000. This happens to be $13,450 below the median housing price in this
+sample, and the one with the least variability.</p>
+<p><strong>Figure 5.</strong></p>
+<p><em>Sample Residual Output</em></p>
+<p><img src="Figure5.png" />
+<em>Note.</em> The difference between the actual price of 729,000 and the predicted price of 728,436.33
+is the residual value of 563.67.</p>
+<p>Since this is the value with the least variability in the dataset and the closest to zero, it is the best
+prediction in the sample. Furthermore, to narrow our focus to a one sample independent variable
+<em>x</em> in a single regression model, we establish the following hypothesis test.</p>
+<p><span class="math display">\[H_0: \text{there exists a linear relationship between housing prices and HOA presence}\]</span></p>
+<p><span class="math display">\[H_\alpha: \text{there exists no linear relationship between housing prices and HOA presence}\]</span>
+Examining the <em>P-</em>value of 0.001429009 specific to the HOA variable, we see that it is
+statistically significant and lower than the common alpha value of .05, thereby rejecting the null,
+<span class="math inline">\(H_0\)</span> at the 95% confidence level. In favor of the alternative hypothesis, <span class="math inline">\(H_\alpha\)</span>, we conclude that there
+exists no significant linear relationship between housing prices and HOA as a factor of
+consideration.</p>
 <p><br>
 <br></p>
 </div>

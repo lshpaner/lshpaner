@@ -58,13 +58,13 @@ affordability. One such variable versus another only sheds light on a particular
 this reason, additional variables need to be considered. Furthermore, one may look at the year
 that a house was built as a strategic advantage or disadvantage. This paper aims to examine these
 independent (predictor) variables against the dependent variable of price. In so doing, if a strong
-correlation exists, the model can prove to be beneficial and hold merit.
+correlation exists, the model can prove to be beneficial and hold merit. 
 
 
 A similar study has been conducted where “home values vary across neighborhoods. This
 implies that certain neighborhood characteristics are more desirable than others” (Hipp & Singh,
 2014, 254). The goal of the research was to determine if there was a relationship between “New
-Urbanism—population density, older homes, a lack of concentration of single family units”(
+Urbanism—population density, older homes, a lack of concentration of single family units” (
 Hipp & Singh, 2014, 254). Additionally, the research examined the Playa Vista Community,
 attributing revitalization to new infrastructure and addition of important technological companies
 like Youtube, Microsoft, and Fox Sports (Hipp & Singh, 2014, 258). Moreover, this study
@@ -73,13 +73,15 @@ In a comparable study, analysts sought to determine “how the housing market wi
 function in the post housing market bubble decade. It is a useful time to take another look at how
 the housing market behaves and what underpins housing prices” (Clark, 2011, 1).
 
+
 ## **Exploratory Data Analysis**
 
+Exploratory Data Analysis
 As shown in the accompanying the location and dispersion information confirms that
-certain disparities exist. The median house price is 739,900, while the average is much higher,
-960,246.46. There exists an astounding variance between the minimum and maximum value
-(5,519,000.00) and number of days on the market. Since such a large range between data points
-for days on the market, other variables of interest will be examined further in the paper to
+certain disparities exist. The median house price is $742,450.00, while the average is much
+higher, $960,246.46. There exists an astounding variance between the minimum and maximum
+value ($5,519,000.00) and number of days on the market. Since such a large range between data
+points for days on the market, other variables of interest will be examined further in the paper to
 establish relationships as they arise.
 
 **Figure 1.**
@@ -286,6 +288,65 @@ produced, where the cities were bucketed into twelve geographic regions. This wa
 refined and the geographic regions were narrowed down to ten categories for a concise, yet,
 more robust and accurate model. 
 
+## **Regression Analysis of Project Data**
+
+**Figure 4.**
+
+*Summary Output*
+
+![](Figure4.png)
+*Note.* This model shows a somewhat strong goodness of fit based on several factors not limited
+to statistically significant *P-*values.
+
+In further refining and assessing the model, three of the independent variables are
+incorporated into a more robust framework, thereby commencing in a multiple regression table
+from which we are able to draw inference from. Microsoft Excel’s built-in data analysis toolpak
+was used to create the above summary output. This table produced the following regression
+statistics. Since this model examined more than one independent variable, we look at the
+multiple R first. This value, otherwise known as the correlation coefficient, exposes the exact
+linearity as .48, thereby showing that there exists an overall strong positive linear relationship.
+Upon further examination, we look to the R-squared ($R^2$)
+as the coefficient of
+determination to present the percent variance for price (the dependent variable, *y*) as explained
+by the accompanying independent variables of beds, year built, and HOA. In this case, precisely
+23% of the variability in price is explained by these accompanying predictor variables. The
+subsequent value of the adjusted $R^2$
+simply considers the number of parameters (independent
+variables) and adjusts accordingly, at a value of .21 (or approximately 21%). Based upon the
+introduction of these additional parameters, we must take them into account for a more
+conservative estimate.
+Moreover, the *P-*values in this summary output table are all statistically significant (less
+than 𝛼 = .05), whereas Table 1 assumed statistical significance at P <.0001; nonetheless, the
+model holds merit. We finalize this multiple regression analysis by noting the residuals (variance
+in observed and predicted values) of the *n* = 100 price points, where 
+
+$$y_1-\hat{y}_1,...,y_n-\hat{y}_n$$
+From the 100 observations, we examine the one that has the lowest variance between the
+actual price (*y*) and the predicted price ($y_1$). This is confirmed to be the 11th observation with a
+recorded price of 729,000. This happens to be $13,450 below the median housing price in this
+sample, and the one with the least variability. 
+
+
+**Figure 5.**
+
+*Sample Residual Output*
+
+![](Figure5.png)
+*Note.* The difference between the actual price of 729,000 and the predicted price of 728,436.33
+is the residual value of 563.67.
+
+Since this is the value with the least variability in the dataset and the closest to zero, it is the best
+prediction in the sample. Furthermore, to narrow our focus to a one sample independent variable
+*x* in a single regression model, we establish the following hypothesis test.
+
+$$H_0: \text{there exists a linear relationship between housing prices and HOA presence}$$
+
+$$H_\alpha: \text{there exists no linear relationship between housing prices and HOA presence}$$
+Examining the *P-*value of 0.001429009 specific to the HOA variable, we see that it is
+statistically significant and lower than the common alpha value of .05, thereby rejecting the null,
+$H_0$ at the 95% confidence level. In favor of the alternative hypothesis, $H_\alpha$, we conclude that there
+exists no significant linear relationship between housing prices and HOA as a factor of
+consideration.
 
 <br>
 <br>
