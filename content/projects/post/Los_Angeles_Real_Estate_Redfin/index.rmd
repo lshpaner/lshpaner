@@ -50,7 +50,12 @@ A similar study has been conducted where “home values vary across neighborhood
 As shown in Figure 1, location and dispersion confirms that certain disparities exist.
 
 **Figure 1.**
-**Location and Dispersion in Price (Column Chart)**
+
+*Location and Dispersion in Price (Column Chart)*
+
+![](Figure1.png)
+
+
 **Note.** Prices are reflected in millions and show five of the most important summary statistics.
 
 The median house price is 742,450, while the minimum housing price is 350,000. The average house price is 946,246.46. Since such a large range between data points in price exists, other variables of interest will be examined to establish relationships as they arise.
@@ -60,27 +65,8 @@ As shown in Figure 2, a strong linear relationship does not exist between year b
 
 *Year Built vs. Price*
 
-```{r, echo=FALSE}
-library(readr)
-yearbuilt = read.csv("YearBuilt_vs_Price.csv")
-```
+![](Figure2.png)
 
-```{r fig1, fig.height = 8, fig.width = 10, echo=FALSE}
-library(ggplot2)
-knitr::opts_chunk$set(fig.width = 30, fig.height = 8) 
-options(repr.plot.width = 4, repr.plot.height = 8)
-ggplot(data = yearbuilt[1:2], aes(x = Year_Built, y = Price, group = 3))+
-  expand_limits(x = 2025, y = 6000)+
-  geom_point(color = "#2a63ff", size = 2, alpha = 0.9)+
-  theme_bw()+
-  theme(axis.text = element_text(size = 14),
-        axis.title = element_text(size = 14,face = "bold"))+
-  labs(title = "Enrolled",
-       x = "\nYear Built",
-       y = "Price (in thousands) \n")+
-  ggtitle("Year Built vs. Price")+
-  theme(plot.title = element_text(size = 18, face = "bold"))
-```
 
 *Note.* The year built is loosely correlated with price, offering no significant association.  
 
@@ -90,27 +76,7 @@ Moreover, as shown in Figure 3, the relationship between days on market and pric
 
 *Days on Market vs. Price*
 
-```{r, echo=FALSE}
-library(readr)
-daysonmarket = read.csv("Days_On_Market_vs_Price.csv")
-```
-
-```{r fig2, fig.height = 8, fig.width = 10, echo=FALSE}
-library(ggplot2)
-knitr::opts_chunk$set(fig.width = 30, fig.height = 8) 
-options(repr.plot.width = 4, repr.plot.height = 8)
-ggplot(data = daysonmarket[1:2], aes(x = DaysMarket, y = Price, group = 3))+
-  expand_limits(x = 400, y = 6000)+
-  geom_point(color = "#2a63ff", size = 2, alpha = 0.9)+
-  theme_bw()+
-  theme(axis.text = element_text(size = 14),
-        axis.title = element_text(size = 14,face = "bold"))+
-  labs(title = "Enrolled",
-       x = "\nDays On Market",
-       y = "Price (in thousands) \n")+
-  ggtitle("Days on Market vs. Price")+
-  theme(plot.title = element_text(size = 18, face = "bold"))
-```
+![](Figure3.png)
 
 *Note.* Days on market has a more substantial positive relationship with price.
 
