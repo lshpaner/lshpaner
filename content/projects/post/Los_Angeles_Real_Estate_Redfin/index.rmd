@@ -37,66 +37,24 @@ methodologies and software packages.
 ## **Real Estate Prices in Los Angeles – A Case Study from Redfin**
 
 
-There are several stakeholders involved in the real-estate decision-making framework.
-Real-estate corporations and individual decision makers alike are often tasked with resolving
-where and what to buy as they partake in their search for single family housing properties.
-However, one must choose an area of focus, especially as a future home buyer. This carefully
-selected dataset was chosen for a specific geographic region of the Los Angeles County in
-Southern California. The data is sourced from Redfin as opposed to other real-estate resources
-due to its ease of public access for MLS (Multiple Listing Service) properties. This dataset is
-represented by a flat .csv file which has been downloaded at a static moment in time in
-September 14, 2020; nonetheless, contained herein are all of the relevant parameters in helping
-to establish trends in the Los Angeles Housing Market. These parameters serve to identify
-patterns between price, housing type, and location, to name a few variables of interest.
-Considerations are made for the sample size, as the first 100 listings are examined, thereby
-extracting an appropriate sample for the ensuing analysis. Establishing pricing patterns by
-location and disposition of home will be of great benefit to the stakeholders involved.
-For example, a realtor might leverage this analysis to target specific zip codes with higher
-mean home prices. This action could potentially benefit the realtor visa vie an increase in
-commission from sales. The consumer, on the other hand, may trade neighborhood (zip code) for
-affordability. One such variable versus another only sheds light on a particular relationship. For
-this reason, additional variables need to be considered. Furthermore, one may look at the year
-that a house was built as a strategic advantage or disadvantage. This paper aims to examine these
-independent (predictor) variables against the dependent variable of price. In so doing, if a strong
-correlation exists, the model can prove to be beneficial and hold merit. 
+There are several stakeholders involved in the real-estate decision-making framework. Real-estate corporations and individual decision makers alike are often tasked with resolving where and what to buy as they partake in their search for single family housing properties. However, one must choose an area of focus, especially as a future home buyer. This carefully selected dataset was chosen for a specific geographic region of the Los Angeles County in Southern California. The data is sourced from Redfin as opposed to other real-estate resources due to its ease of public access for MLS (Multiple Listing Service) properties. This dataset is represented by a flat .csv file which has been downloaded at a static moment in time in September 14, 2020; nonetheless, contained herein are all of the relevant parameters in helping to establish trends in the Los Angeles Housing Market. These parameters serve to identify patterns between price, housing type, and location, to name a few variables of interest. Considerations are made for the sample size, as the first 100 listings are examined, thereby extracting an appropriate sample for the ensuing analysis. Establishing pricing patterns by location and disposition of home will be of great benefit to the stakeholders involved. 
+For example, a realtor might leverage this analysis to target specific zip codes with higher mean home prices. This action could potentially benefit the realtor visa vie an increase in commission from sales. The consumer, on the other hand, may trade neighborhood (zip code) for affordability. One such variable versus another only sheds light on a particular relationship. For this reason, additional variables need to be considered. Furthermore, one may look at the year that a house was built as a strategic advantage or disadvantage. This paper aims to examine these independent (predictor) variables against the dependent variable of price. In so doing, if a strong correlation exists, the model can prove to be beneficial and hold merit. 
+ng, if a strong correlation exists, the model can prove to be beneficial and hold merit. 
 
 
-A similar study has been conducted where “home values vary across neighborhoods. This
-implies that certain neighborhood characteristics are more desirable than others” (Hipp & Singh,
-2014, 254). The goal of the research was to determine if there was a relationship between “New
-Urbanism—population density, older homes, a lack of concentration of single family units” (
-Hipp & Singh, 2014, 254). Additionally, the research examined the Playa Vista Community,
-attributing revitalization to new infrastructure and addition of important technological companies
-like Youtube, Microsoft, and Fox Sports (Hipp & Singh, 2014, 258). Moreover, this study
-incorporated a similar dependent variable of home price (Hipp & Singh, 2014, 260).
-In a comparable study, analysts sought to determine “how the housing market will
-function in the post housing market bubble decade. It is a useful time to take another look at how
-the housing market behaves and what underpins housing prices” (Clark, 2011, 1).
+A similar study has been conducted where “home values vary across neighborhoods. This implies that certain neighborhood characteristics are more desirable than others” (Hipp & Singh, 2014, pg. 254). The goal of the research was to determine if there was a relationship between “New Urbanism—population density, older homes, a lack of concentration of single family units”( Hipp & Singh, 2014, pg. 254). Additionally, the research examined the Playa Vista Community, attributing revitalization to new infrastructure and addition of important technological companies like Youtube, Microsoft, and Fox Sports (Hipp & Singh, 2014, pg. 258). Moreover, this study incorporated a similar dependent variable of home price (Hipp & Singh, 2014, pg. 260). In a comparable study, analysts establish “how the housing market will function in the post housing market bubble decade. It is a useful time to take another look at how the housing market behaves and what underpins housing prices” (Clark, 2011, pg. 1).
 
 
 ## **Exploratory Data Analysis**
 
-Exploratory Data Analysis
-As shown in the accompanying the location and dispersion information confirms that
-certain disparities exist. The median house price is $742,450.00, while the average is much
-higher, $960,246.46. There exists an astounding variance between the minimum and maximum
-value ($5,519,000.00) and number of days on the market. Since such a large range between data
-points for days on the market, other variables of interest will be examined further in the paper to
-establish relationships as they arise.
+As shown in Figure 1, location and dispersion confirms that certain disparities exist.
 
 **Figure 1.**
+**Location and Dispersion in Price (Column Chart)**
+**Note.** Prices are reflected in millions and show five of the most important summary statistics.
 
-
-```{r echo = FALSE, results = 'asis'}
-library(knitr)
-library(readr)
-library(kableExtra)
-table3 <- read.csv("Figure1.csv")
-knitr::kable(table3, col.names = c('Location and Dispersion', 'Price', 'Days on Market', 'Year Built'), align = "c")%>%
-kable_styling(position = "center")
-```
-
-The following figures show varying degrees of correlation in the variables of interest.
+The median house price is 742,450, while the minimum housing price is 350,000. The average house price is 946,246.46. Since such a large range between data points in price exists, other variables of interest will be examined to establish relationships as they arise.
+As shown in Figure 2, a strong linear relationship does not exist between year built and price. There are a few noticeable outliers that create somewhat of a resemblance to a positive correlation. However, such a pattern cannot be recognized mathematically.  Most of the data points are scattered around the one-million-dollar price mark, and do not show a significant relationship between that the house was built and its resulting price.
 
 **Figure 2.**
 
@@ -106,7 +64,6 @@ The following figures show varying degrees of correlation in the variables of in
 library(readr)
 yearbuilt = read.csv("YearBuilt_vs_Price.csv")
 ```
-
 
 ```{r fig1, fig.height = 8, fig.width = 10, echo=FALSE}
 library(ggplot2)
@@ -125,10 +82,9 @@ ggplot(data = yearbuilt[1:2], aes(x = Year_Built, y = Price, group = 3))+
   theme(plot.title = element_text(size = 18, face = "bold"))
 ```
 
-*Note.* The year built of the house is loosely correlated with price, offering no significant
-association or correlation. 
+*Note.* The year built is loosely correlated with price, offering no significant association.  
 
-<br>
+Moreover, as shown in Figure 3, the relationship between days on market and price is stronger, suggesting a better linear relationship and positive correlation. An increase in the number of days on the market, shows a corresponding increase in price.
 
 **Figure 3.**
 
@@ -156,7 +112,7 @@ ggplot(data = daysonmarket[1:2], aes(x = DaysMarket, y = Price, group = 3))+
   theme(plot.title = element_text(size = 18, face = "bold"))
 ```
 
-*Note.* Days on market has a greater (more substantial) positive correlation with price
+*Note.* Days on market has a more substantial positive relationship with price.
 
 ## **Generalized Linear Model (GLM)**
 
@@ -211,12 +167,13 @@ dynamics by market location, examining this data last fits the model more approp
 
 <br>
 
+Table 1 represents the characteristics by housing type (Single Family, Townhouse,
+Condo/Co-op, and Multi-Family) for the sample population (n = 100).
+
 ![](Table1.png)
 <br>
 
-Table 1 represents the characteristics by housing type (Single Family, Townhouse,
-Condo/Co-op, and Multi-Family) for the sample population (n = 100). 48 of these 100 homes
-sampled from the redfin dataset are single family. 10 of them are town homes. 38 are condo/coops, and 4 are multi-family housing units. Of the 100 sampled herein, 13% of these homes were
+48 of these 100 homes sampled from the redfin dataset are single family. 10 of them are town homes. 38 are condo/coops, and 4 are multi-family housing units. Of the 100 sampled herein, 13% of these homes were
 built between the years of 1911-1932. 15% were built between 1933-1954. 19% were built
 between 1955-1976. However, more than half of these homes (53%) were built between 1977-
 2020. Notwithstanding, an interesting characteristic to note is that of single-family homes, where
@@ -290,6 +247,8 @@ more robust and accurate model.
 
 ## **Regression Analysis of Project Data**
 
+Figure 4 shows a summary output table using Microsoft Excel’s data analysis toolpak. In further refining and assessing the model, three of the independent variables are incorporated into a more robust framework, thereby commencing in a multiple regression table from which we are able to draw inference from.
+
 **Figure 4.**
 
 *Summary Output*
@@ -298,12 +257,7 @@ more robust and accurate model.
 *Note.* This model shows a somewhat strong goodness of fit based on several factors not limited
 to statistically significant *P-*values.
 
-In further refining and assessing the model, three of the independent variables are
-incorporated into a more robust framework, thereby commencing in a multiple regression table
-from which we are able to draw inference from. Microsoft Excel’s built-in data analysis toolpak
-was used to create the above summary output. This table produced the following regression
-statistics. Since this model examined more than one independent variable, we look at the
-multiple R first. This value, otherwise known as the correlation coefficient, exposes the exact
+This table produced the following regression statistics. Since this model examined more than one independent variable, we look at the multiple R first. This value, otherwise known as the correlation coefficient, exposes the exact
 linearity as .48, thereby showing that there exists an overall strong positive linear relationship.
 Upon further examination, we look to the R-squared ($R^2$)
 as the coefficient of
@@ -326,14 +280,14 @@ actual price (*y*) and the predicted price ($y_1$). This is confirmed to be the 
 recorded price of 729,000. This happens to be $13,450 below the median housing price in this
 sample, and the one with the least variability. 
 
+Figure 5 shows the difference between the actual price of 729,000 and the predicted price of 728,436.33 is the residual value of 563.67.
 
 **Figure 5.**
 
 *Sample Residual Output*
 
 ![](Figure5.png)
-*Note.* The difference between the actual price of 729,000 and the predicted price of 728,436.33
-is the residual value of 563.67.
+*Note.* This is just one observation out of 100, used as a proxy for the model.
 
 Since this is the value with the least variability in the dataset and the closest to zero, it is the best
 prediction in the sample. Furthermore, to narrow our focus to a one sample independent variable
