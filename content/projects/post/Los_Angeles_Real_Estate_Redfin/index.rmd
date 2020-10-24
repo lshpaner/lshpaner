@@ -59,7 +59,7 @@ As shown in Figure 1, location and dispersion confirms that certain disparities 
 **Note.** Prices are reflected in millions and show five of the most important summary statistics.
 
 The median house price is 742,450, while the minimum housing price is 350,000. The average house price is 946,246.46. Since such a large range between data points in price exists, other variables of interest will be examined to establish relationships as they arise.
-As shown in Figure 2, a strong linear relationship does not exist between year built and price. There are a few noticeable outliers that create somewhat of a resemblance to a positive correlation. However, such a pattern cannot be recognized mathematically.  Most of the data points are scattered around the one-million-dollar price mark, and do not show a significant relationship between that the house was built and its resulting price.
+As shown in Figure 2, a strong linear relationship does not exist between year built and price. There are a few noticeable outliers that create somewhat of a resemblance to a positive correlation. However, such a pattern cannot be recognized mathematically. Most of the data points are scattered around the one-million-dollar price mark, and do not show a significant relationship between that the house was built and its resulting price.
 
 **Figure 2.**
 
@@ -81,6 +81,11 @@ Moreover, as shown in Figure 3, the relationship between days on market and pric
 *Note.* Days on market has a more substantial positive relationship with price.
 
 ## **Generalized Linear Model (GLM)**
+$$\text{Price (in USD)}=\beta_0 +\beta_1\text{Year_Built}+\beta_2\text{Bedrooms}+\beta_3\text{HOA(Y|N)}+\beta_4\text{Region_in_LA}+\beta_5\text{Housing_Type}+\epsilon \ \ \ \ \ \ \ \ \ \ \ \ \ \   (1)$$ 
+ 
+
+<br>
+<br>
 
 $$
 \begin{align*}
@@ -124,12 +129,11 @@ $\epsilon$ is the error factor associated with each regression coefficient.</ol>
 
 <br>
 
-In this generalized linear model (GLM), the variable of interest is Price (in $USD). It is the
+In this generalized linear model (GLM), the variable of interest is Price (in USD). It is the
 variable (*y*) that is dependent on the following independent variables (*x*) ranked in descending
 order of impact. Year_Built has a higher positive correlation on selling price as newer homes are
-“selling at higher prices than those that were built in the past” (Manausa, 2012). Lastly, the
-Region_in _LA_County is of a more categorical nature; thus, while this does illustrate price
-dynamics by market location, examining this data last fits the model more appropriately.
+“selling at higher prices than those that were built in the past” (Manausa, 2012).The
+Region_in _LA_County is of a more categorical nature. 
 
 <br>
 
@@ -137,6 +141,7 @@ Table 1 represents the characteristics by housing type (Single Family, Townhouse
 Condo/Co-op, and Multi-Family) for the sample population (n = 100).
 
 ![](Table1.png)
+
 <br>
 
 48 of these 100 homes sampled from the redfin dataset are single family. 10 of them are town homes. 38 are condo/coops, and 4 are multi-family housing units. Of the 100 sampled herein, 13% of these homes were
@@ -240,7 +245,9 @@ than 𝛼 = .05), whereas Table 1 assumed statistical significance at P <.0001; 
 model holds merit. We finalize this multiple regression analysis by noting the residuals (variance
 in observed and predicted values) of the *n* = 100 price points, where 
 
-$$y_1-\hat{y}_1,...,y_n-\hat{y}_n$$
+$$y_1-\hat{y}_1,...,y_n-\hat{y}_n \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (2)$$ 
+
+
 From the 100 observations, we examine the one that has the lowest variance between the
 actual price (*y*) and the predicted price ($y_1$). This is confirmed to be the 11th observation with a
 recorded price of 729,000. This happens to be $13,450 below the median housing price in this

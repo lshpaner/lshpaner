@@ -63,6 +63,9 @@ As shown in Figure 2, a strong linear relationship does not exist between year b
 </div>
 <div id="generalized-linear-model-glm" class="section level2">
 <h2><strong>Generalized Linear Model (GLM)</strong></h2>
+<p><span class="math display">\[\text{Price (in USD)}=\beta_0 +\beta_1\text{Year_Built}+\beta_2\text{Bedrooms}+\beta_3\text{HOA(Y|N)}+\beta_4\text{Region_in_LA}+\beta_5\text{Housing_Type}+\epsilon \ \ \ \ \ \ \ \ \ \ \ \ \ \   (1)\]</span></p>
+<p><br>
+<br></p>
 <span class="math display">\[
 \begin{align*}
 Price~(in~USD)=\beta_0 + \beta_1Year\_Built\begin{pmatrix}
@@ -106,17 +109,16 @@ Independent variables: <span class="math inline">\(\small\ Year\_Built, \small\ 
 <span class="math inline">\(\epsilon\)</span> is the error factor associated with each regression coefficient.
 </ol>
 <p><br></p>
-<p>In this generalized linear model (GLM), the variable of interest is Price (in $USD). It is the
+<p>In this generalized linear model (GLM), the variable of interest is Price (in USD). It is the
 variable (<em>y</em>) that is dependent on the following independent variables (<em>x</em>) ranked in descending
 order of impact. Year_Built has a higher positive correlation on selling price as newer homes are
-“selling at higher prices than those that were built in the past” (Manausa, 2012). Lastly, the
-Region_in _LA_County is of a more categorical nature; thus, while this does illustrate price
-dynamics by market location, examining this data last fits the model more appropriately.</p>
+“selling at higher prices than those that were built in the past” (Manausa, 2012).The
+Region_in _LA_County is of a more categorical nature.</p>
 <p><br></p>
 <p>Table 1 represents the characteristics by housing type (Single Family, Townhouse,
 Condo/Co-op, and Multi-Family) for the sample population (n = 100).</p>
-<p><img src="Table1.png" />
-<br></p>
+<p><img src="Table1.png" /></p>
+<p><br></p>
 <p>48 of these 100 homes sampled from the redfin dataset are single family. 10 of them are town homes. 38 are condo/coops, and 4 are multi-family housing units. Of the 100 sampled herein, 13% of these homes were
 built between the years of 1911-1932. 15% were built between 1933-1954. 19% were built
 between 1955-1976. However, more than half of these homes (53%) were built between 1977-
@@ -209,8 +211,8 @@ Moreover, the <em>P-</em>values in this summary output table are all statistical
 than 𝛼 = .05), whereas Table 1 assumed statistical significance at P &lt;.0001; nonetheless, the
 model holds merit. We finalize this multiple regression analysis by noting the residuals (variance
 in observed and predicted values) of the <em>n</em> = 100 price points, where</p>
-<p><span class="math display">\[y_1-\hat{y}_1,...,y_n-\hat{y}_n\]</span>
-From the 100 observations, we examine the one that has the lowest variance between the
+<p><span class="math display">\[y_1-\hat{y}_1,...,y_n-\hat{y}_n \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (2)\]</span></p>
+<p>From the 100 observations, we examine the one that has the lowest variance between the
 actual price (<em>y</em>) and the predicted price (<span class="math inline">\(y_1\)</span>). This is confirmed to be the 11th observation with a
 recorded price of 729,000. This happens to be $13,450 below the median housing price in this
 sample, and the one with the least variability.</p>
