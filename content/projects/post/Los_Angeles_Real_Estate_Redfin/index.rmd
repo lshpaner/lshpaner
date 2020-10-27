@@ -6,10 +6,11 @@ output:
   pdf_document: default
   html_document: default
 subtitle: A Case Study from Redfin
-diagram: yes
+diagram: no
 image:
-  placement: 1
-  caption: null
+  caption: ''
+  focal_point: ''
+  preview_only: yes
 tags:
 - Descriptive Statistics
 - Hypothesis Testing
