@@ -64,6 +64,8 @@ Conversely, Figure 3 illustrates that the relationship between days on the marke
 
 *Note.* Days on market has a more substantial positive relationship with price.
 
+$$ \text{Price} = \beta_0 + \beta_1 \text{Year_Built} + \beta_2 \text{Bedrooms} + \beta_3 \text{HOA(Y|N)}} $$
+
 ## **Generalized Linear Model (GLM)**
 
 \begin{align*}
