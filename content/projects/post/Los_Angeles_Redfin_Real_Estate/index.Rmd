@@ -64,9 +64,12 @@ Conversely, Figure 3 illustrates that the relationship between days on the marke
 
 *Note.* Days on market has a more substantial positive relationship with price.
 
-$$ \text{Price} = \beta_0 + \beta_1 \text{Year_Built} + \beta_2 \text{Bedrooms} + \beta_3 \text{HOA(Y|N)}} $$
+
 
 ## **Generalized Linear Model (GLM)**
+
+$$\text{Price} = \beta_0 + \beta_1\text{Year_Built} + \beta_2\text{Bedrooms} + \beta_3\text{HOA(Y|N)} + \beta_4\text{Region_in_LA_County} + \beta_5\text{Housing_Type}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (1)$$
+<br> 
 
 \begin{align*}
 \text{Price} =\beta_0 + \beta_1\text{Year_Built}\begin{pmatrix}
@@ -184,20 +187,20 @@ The real estate market is laden with decisions relating to price and variables t
 ## **References**
 <br>
 
-Clark, W. A. (2011). Prices, Expectations and the Changing. *Housing, Theory and Society,* Vol.(28), 1. <ol> ht<span>tps://</span>doi.org/10.1080/14036096.2011.599174 </ol>
+Clark, W. A. (2011). Prices, Expectations and the Changing. *Housing, Theory and Society,* Vol.(28), 1. <ol> https://doi.org/10.1080/14036096.2011.599174 </ol>
 
 Geffner, M. (2017, September 18). Days on market: what they are, why they matter. Opendoor.<ol>
-ht<span>tps://www.opendoor.com/w/blog/why-days-on-market-matter </ol>
+https://www.opendoor.com/w/blog/why-days-on-market-matter </ol>
 
-Hipp, J. R., & Singh, A. (2014). Changing Neighborhood Determinants of Housing. *City & Community,* 1.  <ol> ht<span>tps://</span>doi.org/10.1111/cico.12071 </ol>
+Hipp, J. R., & Singh, A. (2014). Changing Neighborhood Determinants of Housing. *City & Community,* 1.  <ol> https://doi.org/10.1111/cico.12071 </ol>
 
-Manausa, J. (2012, December 10). How Does Year Built Affect A Home's Value? Joe Manausa Real Estate. <ol> ht<span>tps://</span>www.manausa.com/blog/year-built-affect-home-value/ </ol>
+Manausa, J. (2012, December 10). How Does Year Built Affect A Home's Value? Joe Manausa Real Estate. <ol> https://www.manausa.com/blog/year-built-affect-home-value/ </ol>
 
 Murphy, M. *Downloading Data.* Redfin. <ol> 
-ht<span>tps://</span>support.redfin.com/hc/en-us/articles/360016476931-Downloading-DataRedfin.</ol>
+https://support.redfin.com/hc/en-us/articles/360016476931-Downloading-DataRedfin</ol>
 
 Redfin. (2020, September 14). *Redfin Data - Los Angeles.* Real Estate, Homes for Sale, MLSListings, Agents | Redfin.                
-<ol> ht<span>tps://</span>www.redfin.com/stingray/api/gis-csv?al=2&market=socal&min_stories=1&num_homes=350&<br>ord=redfin-recommended-asc&page_number=1®ion_id=11203®ion_type=6&sf=1,2,3,5,6,7&status=9&uipt=1,2,3,4,5,6&v=8</ol>
+<ol> [https://www.redfin.com/stingray/api/gis-csv?al=2&market=socal&min_stories=1&num_homes=350&<br>ord=redfin-recommended-asc&page_number=1®ion_id=11203®ion_type=6&sf=1,2,3,5,6,7&status=9&uipt=1,2,3,4,5,6&v=8](https://www.redfin.com/stingray/api/gis-csv?al=2&market=socal&min_stories=1&num_homes=350&ord=redfin-recommended-asc&page_number=1®ion_id=11203®ion_type=6&sf=1,2,3,5,6,7&status=9&uipt=1,2,3,4,5,6&v=8)</ol>
 
 
 
