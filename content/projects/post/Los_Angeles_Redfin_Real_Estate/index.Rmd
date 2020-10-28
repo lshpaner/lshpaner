@@ -1,7 +1,7 @@
 ---
 title: "Real Estate Prices in Los Angeles County"
 author: "Leonid Shpaner"
-date: '2020-10-17'
+date: '2020-10-26'
 output:
   pdf_document: default
   html_document: default
