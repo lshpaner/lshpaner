@@ -6,7 +6,6 @@ output:
   pdf_document: default
   html_document: default
 subtitle: A Case Study from Redfin
-diagram: no
 image:
   caption: ''
   focal_point: ''
@@ -19,7 +18,6 @@ tags:
 - Real Estate
 - Redfin
 - Statistical Analysis
-
 categories: ''
 Math: yes
 ---
@@ -51,18 +49,15 @@ Math: yes
 </div>
 <div id="generalized-linear-model-glm" class="section level2">
 <h2><strong>Generalized Linear Model (GLM)</strong></h2>
-<p><span class="math display">\[\text{Price (in USD)}=\beta_0 +\beta_1\text{Year_Built}+\beta_2\text{Bedrooms}+\beta_3\text{HOA(Y|N)}+\beta_4\text{Region_in_LA}+\beta_5\text{Housing_Type}+\epsilon \ \ \ \ \ \ \ \ \ \ \ \ \ \   (1)\]</span></p>
-<p><br>
-<br></p>
-<span class="math display">\[
-\begin{align*}
-Price~(in~USD)=\beta_0 + \beta_1Year\_Built\begin{pmatrix}
+<p><span class="math display">\[\begin{align*}
+\text{Price} =\beta_0 + \beta_1\text{Year_Built}\begin{pmatrix}
     1 = (1911 - 1932)\\
     2 = (1933 - 1954)\\
     3 = (1955 - 1976)\\
     4 = (1977 - 1998)\\
     5 = (1999 - 2020)
-  \end{pmatrix} +\beta_2Bedrooms\begin{pmatrix}
+  
+  \end{pmatrix} +\beta_2\text{Bedrooms}\begin{pmatrix}
     1 = (1911 - 1932)\\
     2 = (1933 - 1954)\\
     3 = (1955 - 1976)\\
@@ -70,7 +65,7 @@ Price~(in~USD)=\beta_0 + \beta_1Year\_Built\begin{pmatrix}
     5 = (1999 - 2020)
   \end{pmatrix}
 \\
-\\+\beta_3HOA(Y|N) +\beta_4Region\_in\_LA\_County\begin{pmatrix}
+\\+\beta_3\text{HOA(Y|N)} +\beta_4\text{Region_in_LA_County}\begin{pmatrix}
     1 = Antelope~Valley\\
     2 = Los~Angeles~County\\
     3 = San~Fernando~Valley\\
@@ -80,14 +75,12 @@ Price~(in~USD)=\beta_0 + \beta_1Year\_Built\begin{pmatrix}
     10 = West~Los~Angeles
   \end{pmatrix}
 \\
-\\+\beta_5Housing\_Type\begin{pmatrix}
+\\+\beta_5\text{Housing_Type}\begin{pmatrix}
     1 = SingleFamily\\
     2 = Townhouse\\
     3 = Condo/Co-op\\
     4 = Multi-Family\\
-    \end{pmatrix} + \varepsilon
-\end{align*}
-\]</span>
+    \end{pmatrix} + \varepsilon \end{align*}\]</span></p>
 where <span class="math inline">\(\small\ Price\)</span> is the variable of interest (the dependent variable);
 <ol>
 Independent variables: <span class="math inline">\(\small\ Year\_Built, \small\ Bedrooms, \small\ Region\_in\_LA\_County, \small\ Housing\_Type\)</span>
@@ -116,8 +109,8 @@ The data also examines whether each housing type has an HOA or not. 56% of the p
 <div id="regression-analysis" class="section level2">
 <h2><strong>Regression Analysis</strong></h2>
 <p>Table 2 shows a summary output table using Microsoft Excel’s data analysis toolpak. In further refining and assessing the model, three of the independent variables are incorporated into a more robust framework, thereby commencing in a multiple regression table from which we can draw meaningful inference from. Following the summary, we look at the multiple <em>R</em> first. This value, otherwise known as the correlation coefficient, exposes the linearity at .48, thereby showing that there exists an overall positive linear relationship. Upon further examination, we look to the R-squared (<span class="math inline">\(R^2\)</span>) as the coefficient of determination to present the percent variance for the price (dependent variable y) as explained by the accompanying independent variables of beds, year built, and HOA. In this case, roughly 23% of the variability in price is explained by these predictor variables. The adjusted <span class="math inline">\(R^2\)</span> simply considers the number of parameters (independent variables) and adjusts accordingly, at a value of .21 (or approximately 21%).</p>
-<p><img src="Table2.png" />
-<em>Note.</em> This model shows a somewhat strong goodness of fit based on several factors not limited to statistically significant <em>p</em>-values.</p>
+<p><img src="Figure4.png" /></p>
+<p><em>Note.</em> This model shows a somewhat strong goodness of fit based on several factors not limited to statistically significant <em>p</em>-values.</p>
 <p>Based upon the introduction of these additional parameters, we must take them into account for a more conservative estimate. Moreover, the p-values in this summary output table are all statistically significant (less than α = .05), whereas statistical significance was previously assumed at p &lt; .0001; nonetheless, the model holds merit. From the ensuing output, we proceed to build out a more precise regression equation from summarizing all the variables involved in this model with precise numerical figures. Recalling this equation from the prior generalized linear model, the refined equation, with three independent variables takes the form of the simple linear regression model denoted by the equation:</p>
 <p><span class="math display">\[ Y = \beta_0 + \beta_1x_1 + \beta_2x_2 + \beta_3x_3 + \varepsilon \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (2) \]</span>
 Plugging in the coefficients from the output table into the equation, we have the following:</p>

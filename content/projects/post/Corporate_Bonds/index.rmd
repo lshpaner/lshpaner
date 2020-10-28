@@ -93,7 +93,7 @@ If the equation is manipulated to $\omega = \frac{p}{0} {,}$ then the risk varia
 
 Formalizing the equation for *s*, we have
 
-$$ \large{s} = \large\sqrt{s^2} = \sqrt \frac{\LARGE\sum\limits_{i=1}^{n}\large(x_i-\overline{x})^2}{{n-1}} $$ 
+$$\large{s} = \large\sqrt{s^2} = \sqrt\frac{\sum\limits_{i=1}^{n}(x_i-\overline{x})^2}{{n-1}}$$ 
 
 Aside from yielding an estimate for investment risk, the standard deviation suggests that “ two-thirds of the time the annual return of the asset will lie between 1 standard deviation above and 1 standard deviation below the mean value” (Bernstein 6). Following Chebyshev’s Rule^[“Chebyshev’s Rule applies to any data set, regardless of the shape of the frequency distribution of the data” (McClave 72).], we see that as $\lim\limits_{x \to +\infty} \left(1-\frac{1}{k^2} \right){,}$ the measurements will continue to fall within *k* standard deviations from the mean. The minimum value for *k* must be 2 such that $\large¾$ of the measurements will fall within 2 standard deviations of the mean. Therefore, placing the annual return of the asset “between 1 standard deviation above and 1 standard deviation below the mean value,” as Bernstein suggests, is a long shot; but it can occur, nonetheless. It is known that the standard deviation of the annual returns on short-term bonds is 3% - 5% and 6% - 8% on long-term bonds.
 

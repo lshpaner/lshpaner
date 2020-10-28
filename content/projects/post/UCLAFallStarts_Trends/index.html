@@ -1,7 +1,7 @@
 ---
 title: "UCLA Fall Undergraduate Enrollment Trends (1999-2019)"
 author: "Leon Shpaner"
-date: "2020-08-13"
+date: "2020-10-28"
 output:
   word_document: default
   pdf_document: default
@@ -62,8 +62,9 @@ summary(enrollment)</code></pre>
 <pre class="r"><code>max(as.numeric(enrollment$Enrolled, na.rm = TRUE))</code></pre>
 <pre><code>## [1] 31577</code></pre>
 <p>To see this trend represented using a line plot, the ggplot library is loaded and the code executed as follows:</p>
-<pre class="r"><code>library(ggplot2)
-knitr::opts_chunk$set(fig.width = 25, fig.height = 8) 
+<pre class="r"><code>library(ggplot2)</code></pre>
+<pre><code>## Warning: package &#39;ggplot2&#39; was built under R version 4.0.3</code></pre>
+<pre class="r"><code>knitr::opts_chunk$set(fig.width = 25, fig.height = 8) 
 options(repr.plot.width = 1, repr.plot.height = 8)
 ggplot(data = enrollment[1:2], aes(x = Year, y = Enrolled, group = 3))+
   expand_limits(x = 2020, y = 32000)+

@@ -135,3 +135,4 @@ t.test(enrollment$Enrolled, mu = 30000,alternative = "less", conf.level = 0.95)
 As evident from the t-test above, the p-value of 3.533e-05 is statistically significant and falls substantially below the alpha level of 0.05. As such, we must reject the idea or notion that Fall Student Enrollment in 2020 will equal or surpass that of 30,000 students (the null hypothesis). 
 
 
+
