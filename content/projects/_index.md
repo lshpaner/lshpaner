@@ -12,7 +12,7 @@ pdf: true
 
 I. Probability and Statistics for Data Science
 
-* [Real Estate Prices in Los Angeles – A Case Study from Redfin](/projects/post/Los_Angeles_Real_Estate) - statistical analysis on real-estate data in Los Angeles County
+* [Real Estate Prices in Los Angeles – A Case Study from Redfin](/projects/post/Los_Angeles_Redfin_Real_Estate) - statistical analysis on real-estate data in Los Angeles County
 
 
 ### *Cornell University*
