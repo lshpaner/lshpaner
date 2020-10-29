@@ -68,7 +68,7 @@ Conversely, Figure 3 illustrates that the relationship between days on the marke
 
 ## **Generalized Linear Model (GLM)**
 
-$$\text{Price} = \beta_0 + \beta_1\text{Year_Built} + \beta_2\text{Bedrooms} + \beta_3\text{HOA(Y|N)} + \beta_4\text{Region_in_LA_County} + \beta_5\text{Housing_Type}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (1)$$
+$$\text{Price} = \beta_0 + \beta_1\text{Year_Built} + \beta_2\text{Bedrooms} + \beta_3\text{HOA(Y|N)} + \beta_4\text{Region_in_LA_County} + \beta_5\text{Housing_Type} + \varepsilon\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (1)$$
 <br> 
 
 \begin{align*}
