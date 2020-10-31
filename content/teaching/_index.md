@@ -42,6 +42,7 @@ I am a course facilitator for the following programs:
 
 [Digital Transformation](https://www.ecornell.com/certificates/technology/digital-transformation/)
 - [Generating Opportunities for Digital Disruption](https://www.ecornell.com/courses/technology/generating-opportunities-for-digital-disruption/)
+
 - [Rapid Ideation](https://www.ecornell.com/courses/technology/rapid-ideation/)
 
 
