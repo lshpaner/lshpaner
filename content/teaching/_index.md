@@ -18,7 +18,7 @@ url: ""
 
 To reach me through the university, you may do so by visiting this [link.](https://www.cornell.edu/search/people.cfm?netid=ls799/)
 
-I am a Course Facilitator for the following programs:
+I am a course facilitator for the following programs:
 
 [Data Analytics](https://www.ecornell.com/certificates/data-science/data-analytics/)
 * [Understanding and Visualizing Data](https://www.ecornell.com/courses/data-science/understanding-and-visualizing-data/)
@@ -42,6 +42,7 @@ I am a Course Facilitator for the following programs:
 
 [Digital Transformation](https://www.ecornell.com/certificates/technology/digital-transformation/)
 - [Generating Opportunities for Digital Disruption](https://www.ecornell.com/courses/technology/generating-opportunities-for-digital-disruption/)
+- [Rapid Ideation](https://www.ecornell.com/courses/technology/rapid-ideation/)
 
 
 
