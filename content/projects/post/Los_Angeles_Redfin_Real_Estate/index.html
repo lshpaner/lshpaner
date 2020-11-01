@@ -49,8 +49,6 @@ Math: yes
 </div>
 <div id="generalized-linear-model-glm" class="section level2">
 <h2><strong>Generalized Linear Model (GLM)</strong></h2>
-<p><span class="math display">\[\text{Price} = \beta_0 + \beta_1\text{Year_Built} + \beta_2\text{Bedrooms} + \beta_3\text{HOA(Y|N)} + \beta_4\text{Region_in_LA_County} + \beta_5\text{Housing_Type} + \varepsilon\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (1)\]</span>
-<br></p>
 <p><span class="math display">\[\begin{align*}
 \text{Price} =\beta_0 + \beta_1\text{Year_Built}\begin{pmatrix}
     1 = (1911 - 1932)\\
@@ -82,10 +80,10 @@ Math: yes
     2 = Townhouse\\
     3 = Condo/Co-op\\
     4 = Multi-Family\\
-    \end{pmatrix} + \varepsilon \end{align*}\]</span></p>
+    \end{pmatrix} + \varepsilon \ \ \ \ \ \ \ \ \ \ \ \ \ \ (1) \end{align*}\]</span></p>
 where <span class="math inline">\(\small\ Price\)</span> is the variable of interest (the dependent variable);
 <ol>
-Independent variables: <span class="math inline">\(\small\ Year\_Built, \small\ Bedrooms, \small\ Region\_in\_LA\_County, \small\ Housing\_Type\)</span>
+Independent variables: Year_Built, Bedrooms, Region_in_LA_County, Housing_Type
 <br><span class="math inline">\(\beta_0\)</span> is the intercept, or constant offset term;<br>
 <span class="math inline">\(\beta_{(1~to~i)}\)</span> is the regression coefficient; and
 <p>
@@ -114,20 +112,30 @@ The data also examines whether each housing type has an HOA or not. 56% of the p
 <p><img src="Figure4.png" /></p>
 <p><em>Note.</em> This model shows a somewhat strong goodness of fit based on several factors not limited to statistically significant <em>p</em>-values.</p>
 <p>Based upon the introduction of these additional parameters, we must take them into account for a more conservative estimate. Moreover, the p-values in this summary output table are all statistically significant (less than α = .05), whereas statistical significance was previously assumed at p &lt; .0001; nonetheless, the model holds merit. From the ensuing output, we proceed to build out a more precise regression equation from summarizing all the variables involved in this model with precise numerical figures. Recalling this equation from the prior generalized linear model, the refined equation, with three independent variables takes the form of the simple linear regression model denoted by the equation:</p>
-<p><span class="math display">\[ Y = \beta_0 + \beta_1x_1 + \beta_2x_2 + \beta_3x_3 + \varepsilon \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (2) \]</span>
-Plugging in the coefficients from the output table into the equation, we have the following:</p>
-<p><span class="math display">\[ Y = -14161258 + 131239(x_1) + 7654 (x_2) - 634440.36 (x_3) + \varepsilon \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (3) \]</span>
-where <span class="math inline">\(x_1\)</span> = beds, <span class="math inline">\(x_2\)</span> = year built, and <span class="math inline">\(x_3\)</span> = HOA.</p>
+<p style="text-align: center;">
+<em>Y</em> = <span class="math inline">\(\beta_0\)</span> + <span class="math inline">\(\beta_1x_1\)</span> + <span class="math inline">\(\beta_2x_2\)</span> + <span class="math inline">\(\beta_3x_3\)</span> + <span class="math inline">\(\varepsilon\)</span>                                                              (2)
+</p>
+<p>Plugging in the coefficients from the output table into the equation, we have the following:</p>
+<p style="text-align: center;">
+<em>Y</em> = -14161258 + 131239<span class="math inline">\((x_1)\)</span> + 7654<span class="math inline">\((x_2)\)</span> - 634440.36<span class="math inline">\((x_3)\)</span> + <span class="math inline">\(\varepsilon\)</span>          (3)
+</p>
+<p>where <span class="math inline">\(x_1\)</span> = beds, <span class="math inline">\(x_2\)</span> = year built, and <span class="math inline">\(x_3\)</span> = HOA.</p>
 <p>We finalize this multiple regression analysis by noting the residuals (variance in observed and predicted values) of the <em>n</em> = 100 price points, where the predicted values of y are determined by</p>
-<p><span class="math display">\[y_1-\hat{y}_1,...,y_n-\hat{y}_n \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (4)\]</span></p>
+<p style="text-align: center;">
+<span class="math inline">\(y_1-\hat{y}_1,...,y_n-\hat{y}_n\)</span>                                                                                 (4)
+</p>
 <p>From the 100 observations, we examine the one that has the lowest variance between the actual price (<em>y</em>) and the predicted price (<span class="math inline">\(y_1\)</span>). This is confirmed to be the 11th observation with a recorded price of 729,000. This happens to be 13,450 below the median housing price in this sample, and the one with the least variability.</p>
 <p>Table 3 shows the difference between the actual price of 729,000.00 and the predicted price of 728,436.33 is the residual value of 563.67.</p>
 <p><img src="Table3.png" />
 <em>Note.</em> This is just one observation out of 100, used as a proxy for the model.</p>
 <p>Since this is the value with the least variability in the dataset and the closest to zero, it is the best prediction in the sample. Furthermore, we establish the following hypothesis test for the suitability of the multiple regression model. In our null hypothesis (<span class="math inline">\(H_0\)</span>), a linear relationship does not exist between the response variable <em>y</em> and independent variables <em>x</em>. Otherwise, a linear relationship does exist in our alternative hypothesis (<span class="math inline">\(H_\alpha\)</span>). We use the test for significance of regression (an overall model test) to determine viability. These statements are rewritten in the following proper form:</p>
-<p><span class="math display">\[H_0: \beta_1 = \beta_2 = \beta_3 = 0\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (5)\]</span></p>
-<p><span class="math display">\[H_\alpha: \beta_J \neq 0 \text{ for at least one}~j\ \ \ \ \ (6)\]</span>
-Examining the p-values of the beds, year built, and HOA, we have <em>p</em> = .048, <em>p</em> = .014, and <em>p</em> = .001, respectively. We conclude their statistical significance based upon a lower than the common alpha value of .05. We thereby reject the null, <span class="math inline">\(H_0\)</span> at the 95% confidence level. In favor of the alternative hypothesis, <span class="math inline">\(H_\alpha\)</span>, we conclude that a significant linear relationship does exist between housing prices and the corresponding independent variables. The variables themselves are not equal, and henceforth not equal to zero.</p>
+<p style="text-align: center;">
+<span class="math inline">\(H_0: \beta_1 = \beta_2 = \beta_3 = 0\)</span>                                                                           (5)
+</p>
+<p style="text-align: center;">
+<span class="math inline">\(H_\alpha: \beta_J \neq 0\)</span> <em>for at least one j</em>                                                                   (6)
+</p>
+<p>Examining the p-values of the beds, year built, and HOA, we have <em>p</em> = .048, <em>p</em> = .014, and <em>p</em> = .001, respectively. We conclude their statistical significance based upon a lower than the common alpha value of .05. We thereby reject the null, <span class="math inline">\(H_0\)</span> at the 95% confidence level. In favor of the alternative hypothesis, <span class="math inline">\(H_\alpha\)</span>, we conclude that a significant linear relationship does exist between housing prices and the corresponding independent variables. The variables themselves are not equal, and henceforth not equal to zero.</p>
 </div>
 <div id="conclusion" class="section level2">
 <h2><strong>Conclusion</strong></h2>
