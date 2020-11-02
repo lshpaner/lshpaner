@@ -41,8 +41,26 @@ A similar study has been conducted where “home values vary across neighbourhoo
 
 Figure 1 confirms that in the location and dispersion of prices, certain disparities exist.
 
-
-![](Figure1.png)
+```{r fig1, fig.height = 6, fig.width = 8, message = FALSE, warning = FALSE, echo=FALSE}
+library(readr)
+library(ggplot2)
+fig1 <- read.csv("Figure1.csv") 
+knitr::opts_chunk$set(fig.width = 20, fig.height = 8) 
+options(repr.plot.width = 4, repr.plot.height = 8)
+print(ggplot(fig1, aes(x = reorder(Location_Dispersion, Price), y = Price))+
+  geom_col(color = "#000000", fill = "white", size = 1, alpha = 0.9, stat = "identity")+
+  geom_text(aes(label = Price), position = position_dodge(2.5), vjust = -.8)+
+  theme_bw()+
+  theme(panel.border = element_blank(), panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),axis.line = element_line(colour = "black"),
+        axis.text = element_text(size = 12),
+        axis.title = element_text(size = 12))+
+  labs(subtitle = "Location and Dispersion in Price",
+       x = "\nLocation and Dispersion",
+       y = "Price (in millions) \n")+
+  ggtitle("Figure 1\n")+
+  theme(plot.title = element_text(size = 12,face = "bold"), plot.subtitle = element_text(size = 12,face = "italic")))
+```
 
 
 *Note.* Prices are reflected in millions and show five of the most important summary statistics.
@@ -52,15 +70,54 @@ The median house price is 742,450, while the minimum housing price is 350,000. T
 In Figure 2, most of the data points are visually scattered between one to two million dollars in a flat, nonconsequential way. Where one would expect to see an increase in price with a respective increase in the modernity of construction, this is not the case. There exist a few noticeable outliers that create somewhat of a resemblance to a positive correlation. However, such a pattern cannot be recognized or established mathematically.  The plot does not show a significant relationship between the year that the house was built and its resulting price. Hence, a strong linear relationship does not exist.
 
 
-![](Figure2.png)
+```{r fig2, fig.height = 6, fig.width = 8, message = FALSE, warning = FALSE, echo=FALSE}
+library(readr)
+library(ggplot2)
+yearbuilt <- read.csv("YearBuilt_vs_Price.csv")
+knitr::opts_chunk$set(fig.width = 20, fig.height = 8) 
+options(repr.plot.width = 4, repr.plot.height = 8)
+print(ggplot(data = yearbuilt[1:2], aes(x = Year_Built, y = Price, group = 3))+
+  expand_limits(x = 2025, y = 6)+
+  geom_point(color = "#2a63ff", size = 2, alpha = 0.9)+
+  theme_bw()+
+  theme(panel.border = element_blank(), panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),axis.line = element_line(colour = "black"),
+        axis.text = element_text(size = 12),
+        axis.title = element_text(size = 12))+
+  labs(subtitle = "Year Built vs. Price",
+       x = "\nYear Built",
+       y = "Price (in millions) \n")+
+  ggtitle("Figure 2\n")+
+  theme(plot.title = element_text(size = 12,face = "bold"), plot.subtitle = element_text(size = 12,face = "italic")))
+```
+
 
 
 *Note.* The year built is loosely correlated with price (at best), offering no significant association.   
 
 Conversely, Figure 3 illustrates that the relationship between days on the market and price is stronger, suggesting that a stronger linear relationship and positive correlation exist. As the number of days that a property stays on the market increases, a similar increase is witnessed in price. Days on market (or DOM as abbreviated by realtors) is “the number of days from the date on which the property is listed for sale on the local brokers’ multiple-listing services (MLS) to the date when the seller has signed a contract for the sale of the property” (Geffner, 2017). Moreover, this scatterplot illustrates that most of the properties in this sample remain listed for up to 100 days. Four properties stayed on the market from 179 – 345 days. These are the outliers. Though a positive correlation exists, there are several different factors that can affect the number of days that a property remains on the multiple-listing services (MLS), directly impacting sales price.  For example, “when buyers notice your home’s above-average DOM, they’ll wonder what’s wrong. The question typically has three answers: price, condition, or location” (Geffner, 2017).
 
+```{r fig3, fig.height = 6, fig.width = 8, message = FALSE, warning = FALSE, echo=FALSE}
+library(readr)
+library(ggplot2)
+dom <- read.csv("Days_On_Market_vs_Price.csv")
+knitr::opts_chunk$set(fig.width = 20, fig.height = 8) 
+options(repr.plot.width = 4, repr.plot.height = 8)
+print(ggplot(data = dom[1:2], aes(x = DaysMarket, y = Price, group = 3))+
+  expand_limits(x = 346, y = 6)+
+  geom_point(color = "#2a63ff", size = 2, alpha = 0.9)+
+  theme_bw()+
+  theme(panel.border = element_blank(), panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),axis.line = element_line(colour = "black"),
+        axis.text = element_text(size = 12),
+        axis.title = element_text(size = 12))+
+  labs(subtitle = "Days on Market vs. Price",
+       x = "\nDays on Market",
+       y = "Price (in millions) \n")+
+  ggtitle("Figure 3\n")+
+  theme(plot.title = element_text(size = 12,face = "bold"), plot.subtitle = element_text(size = 12,face = "italic")))
+```
 
-![](Figure3.png)
 
 *Note.* Days on market has a more substantial positive relationship with price.
 
@@ -68,6 +125,7 @@ Conversely, Figure 3 illustrates that the relationship between days on the marke
 
 ## **Generalized Linear Model (GLM)**
 
+<br>
 
 \begin{align*}
 \text{Price} =\beta_0 + \beta_1\text{Year_Built}\begin{pmatrix}
@@ -113,11 +171,299 @@ $\varepsilon$ is the error factor associated with each regression coefficient.</
 
 In this generalized linear model, price (*y*) is dependent on the year built, bedrooms, region in LA County, and housing type (ranked by impact). Year built has a higher positive correlation with price; newer homes are “selling at higher prices than those that were built in the past” (Manausa, 2012).  The Region in Los Angeles County is of a more categorical nature. 
 
+Table 1 represents the characteristics by housing type (single family, townhouse,condo/co-op, and multi-family) for the sample population (*n* = 100).
 
-Table 1 represents the characteristics by housing type (single family, townhouse,   
-condo/co-op, and multi-family) for the sample population (n = 100).
+<style type="text/css">
+.tg  {border:none;border-collapse:collapse;border-spacing:0;margin:0px auto;}
+.tg td{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;
+  padding:0px 5px;word-break:normal;}
+.tg th{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;
+  overflow:hidden;padding:0px 0px;word-break:normal;}
+.tg .tg-2egg{background-color:#ffffff;border-color:#ffffff;color:#000000;font-style:italic;text-align:center;vertical-align:top}
+.tg .tg-yd8b{background-color:#ffffff;border-color:inherit;color:#000000;font-family:Arial, Helvetica, sans-serif !important;;
+  font-weight:bold;text-align:left;vertical-align:bottom}
+.tg .tg-6uvz{background-color:#ffffff;border-color:#ffffff;color:#000000;text-align:center;vertical-align:top}
+.tg .tg-ik1f{background-color:#ffffff;border-color:#ffffff;color:#000000;text-align:left;text-decoration:underline;
+  vertical-align:top}
+.tg .tg-nu5p{background-color:#ffffff;border-color:#ffffff;color:#000000;text-align:left;vertical-align:top}
+.tg .tg-jfi3{background-color:#ffffff;border-color:inherit;color:#000000;font-family:Arial, Helvetica, sans-serif !important;;
+  font-style:italic;text-align:left;vertical-align:middle}
+.tg .tg-l5m8{background-color:#ffffff;border-color:#ffffff;color:#000000;font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-ljh4{background-color:#ffffff;border-color:#ffffff;color:#000000;text-align:right;vertical-align:top}
+</style>
+<table class="tg">
+<tbody>
+  <tr>
+    <td class="tg-yd8b" colspan="7">Table 1</td>
+  </tr>
+  <tr>
+    <td class="tg-jfi3" colspan="7">Characteristics of 100 Housing Units in Los Angeles County</td>
+  <tr style="border-bottom:2.5px solid black">
+    <td colspan="100%"></td>  
+  </tr>
+  <tr>
+    <td class="tg-nu5p"></td>
+    <td class="tg-l5m8">Population</td>
+    <td class="tg-l5m8">Single Family</td>
+    <td class="tg-l5m8">Townhouse</td>
+    <td class="tg-l5m8">Condo/Co-op</td>
+    <td class="tg-l5m8">Multi Family</td>
+    <td class="tg-ljh4"></td>
+  </tr>
+  <tr>
+    <td class="tg-nu5p"></td>
+    <td class="tg-2egg">N(%)</td>
+    <td class="tg-2egg">n(%)</td>
+    <td class="tg-2egg">n(%)</td>
+    <td class="tg-2egg">n(%)</td>
+    <td class="tg-2egg">n(%)</td>
+    <td class="tg-ljh4"></td>
+  </tr>
+  <tr>
+    <td class="tg-nu5p">Variable</td>
+    <td class="tg-6uvz">(N = 100)</td>
+    <td class="tg-6uvz">(n = 48)</td>
+    <td class="tg-6uvz">(n = 10)</td>
+    <td class="tg-6uvz">(n = 38)</td>
+    <td class="tg-6uvz">(n = 4)</td>
+    <td class="tg-ljh4"><span style="font-style:italic">P-</span>Value*</td>
+  <tr style="border-bottom:2.5px solid black">
+    <td colspan="100%"></td>  
+  </tr>
+  <tr>
+    <td class="tg-ik1f">Year Built</td>
+    <td class="tg-6uvz"></td>
+    <td class="tg-6uvz"></td>
+    <td class="tg-6uvz"></td>
+    <td class="tg-6uvz"></td>
+    <td class="tg-6uvz"></td>
+    <td class="tg-ljh4">&lt;.0001</td>
+  </tr>
+  <tr>
+    <td class="tg-nu5p">&nbsp;&nbsp;1911-1932 (1)</td>
+    <td class="tg-6uvz">13 (13%)</td>
+    <td class="tg-6uvz">8 (17%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-6uvz">1 (3%)</td>
+    <td class="tg-6uvz">4 (100%)</td>
+    <td class="tg-ljh4"></td>
+  </tr>
+  <tr>
+    <td class="tg-nu5p">&nbsp;&nbsp;1933-1954 (2)</td>
+    <td class="tg-6uvz">15 (15%)</td>
+    <td class="tg-6uvz">15 (31%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-ljh4"></td>
+  </tr>
+  <tr>
+    <td class="tg-nu5p">&nbsp;&nbsp;1955-1976 (3)</td>
+    <td class="tg-6uvz">19 (19%)</td>
+    <td class="tg-6uvz">6 (13%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-6uvz">13 (34%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-ljh4"></td>
+  </tr>
+  <tr>
+    <td class="tg-nu5p">&nbsp;&nbsp;1977-1998 (4)</td>
+    <td class="tg-6uvz">27 (27%)</td>
+    <td class="tg-6uvz">10 (21%)</td>
+    <td class="tg-6uvz">5 (50%)</td>
+    <td class="tg-6uvz">12 (32%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-ljh4"></td>
+  </tr>
+  <tr>
+    <td class="tg-nu5p">&nbsp;&nbsp;1999-2020 (5)</td>
+    <td class="tg-6uvz">26 (26%)</td>
+    <td class="tg-6uvz">9 (19%)</td>
+    <td class="tg-6uvz">5 (50%)</td>
+    <td class="tg-6uvz">12 (32%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-ljh4"></td>
+  </tr>
+  <tr>
+    <td class="tg-ik1f">Bedrooms</td>
+    <td class="tg-6uvz"></td>
+    <td class="tg-6uvz"></td>
+    <td class="tg-6uvz"></td>
+    <td class="tg-6uvz"></td>
+    <td class="tg-6uvz"></td>
+    <td class="tg-ljh4">&lt;.0001</td>
+  </tr>
+  <tr>
+    <td class="tg-nu5p">&nbsp;&nbsp;0-1 bedrooms (1)</td>
+    <td class="tg-6uvz">12 (12%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-6uvz">12 (32%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-ljh4"></td>
+  </tr>
+  <tr>
+    <td class="tg-nu5p">&nbsp;&nbsp;2 bedrooms (2)</td>
+    <td class="tg-6uvz">32 (32%)</td>
+    <td class="tg-6uvz">8 (17%)</td>
+    <td class="tg-6uvz">5 (50%)</td>
+    <td class="tg-6uvz">18 (47%)</td>
+    <td class="tg-6uvz">1 (25%)</td>
+    <td class="tg-ljh4"></td>
+  </tr>
+  <tr>
+    <td class="tg-nu5p">&nbsp;&nbsp;3 bedrooms (3)</td>
+    <td class="tg-6uvz">31 (31%)</td>
+    <td class="tg-6uvz">22 (46%)</td>
+    <td class="tg-6uvz">3 (30%)</td>
+    <td class="tg-6uvz">6 (16%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-ljh4"></td>
+  </tr>
+  <tr>
+    <td class="tg-nu5p">&nbsp;&nbsp;4 or more bedrooms (4)</td>
+    <td class="tg-6uvz">25 (25%)</td>
+    <td class="tg-6uvz">18 (38%)</td>
+    <td class="tg-6uvz">2 (20%)</td>
+    <td class="tg-6uvz">2 (5%)</td>
+    <td class="tg-6uvz">3 (75%)</td>
+    <td class="tg-ljh4"></td>
+  </tr>
+  <tr>
+    <td class="tg-ik1f">HOA</td>
+    <td class="tg-6uvz"></td>
+    <td class="tg-6uvz"></td>
+    <td class="tg-6uvz"></td>
+    <td class="tg-6uvz"></td>
+    <td class="tg-6uvz"></td>
+    <td class="tg-ljh4">&lt;.0001</td>
+  </tr>
+  <tr>
+    <td class="tg-nu5p">&nbsp;&nbsp;Yes (1)</td>
+    <td class="tg-6uvz">56 (56%)</td>
+    <td class="tg-6uvz">9 (19%)</td>
+    <td class="tg-6uvz">9 (90%)</td>
+    <td class="tg-6uvz">38 (100%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-ljh4"></td>
+  </tr>
+  <tr>
+    <td class="tg-nu5p">&nbsp;&nbsp;No (0)</td>
+    <td class="tg-6uvz">44 (44%)</td>
+    <td class="tg-6uvz">39 (81%)</td>
+    <td class="tg-6uvz">1 (10%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-6uvz">4 (100%)</td>
+    <td class="tg-ljh4"></td>
+  </tr>
+  <tr>
+    <td class="tg-ik1f">Region in Los Angeles County</td>
+    <td class="tg-6uvz"></td>
+    <td class="tg-6uvz"></td>
+    <td class="tg-6uvz"></td>
+    <td class="tg-6uvz"></td>
+    <td class="tg-6uvz"></td>
+    <td class="tg-ljh4">&lt;.0001</td>
+  </tr>
+  <tr>
+    <td class="tg-nu5p">&nbsp;&nbsp;Antelope Valley (1)</td>
+    <td class="tg-6uvz">1 (1%)</td>
+    <td class="tg-6uvz">1 (2%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-ljh4"></td>
+  </tr>
+  <tr>
+    <td class="tg-nu5p">&nbsp;&nbsp;Los Angeles (city of) (2)</td>
+    <td class="tg-6uvz">22 (22%)</td>
+    <td class="tg-6uvz">9 (19%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-6uvz">10 (26%)</td>
+    <td class="tg-6uvz">3 (75%)</td>
+    <td class="tg-ljh4"></td>
+  </tr>
+  <tr>
+    <td class="tg-nu5p">&nbsp;&nbsp;San Fernando Valley (3)</td>
+    <td class="tg-6uvz">18 (18%)</td>
+    <td class="tg-6uvz">7 (15%)</td>
+    <td class="tg-6uvz">3 (30%)</td>
+    <td class="tg-6uvz">8 (21%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-ljh4"></td>
+  </tr>
+  <tr>
+    <td class="tg-nu5p">&nbsp;&nbsp;San Gabriel Valley (4)</td>
+    <td class="tg-6uvz">13 (13%)</td>
+    <td class="tg-6uvz">9 (19%)</td>
+    <td class="tg-6uvz">1 (10%)</td>
+    <td class="tg-6uvz">3 (8%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-ljh4"></td>
+  </tr>
+  <tr>
+    <td class="tg-nu5p">&nbsp;&nbsp;Santa Clarita (5)</td>
+    <td class="tg-6uvz">10 (10%)</td>
+    <td class="tg-6uvz">8 (17%)</td>
+    <td class="tg-6uvz">1 (10%)</td>
+    <td class="tg-6uvz">1 (3%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-ljh4"></td>
+  </tr>
+  <tr>
+    <td class="tg-nu5p">&nbsp;&nbsp;South Bay (6)</td>
+    <td class="tg-6uvz">12 (12%)</td>
+    <td class="tg-6uvz">6 (13%)</td>
+    <td class="tg-6uvz">2 (20%)</td>
+    <td class="tg-6uvz">4 (11%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-ljh4"></td>
+  </tr>
+  <tr>
+    <td class="tg-nu5p">&nbsp;&nbsp;South Los Angeles (7)</td>
+    <td class="tg-6uvz">1 (1%)</td>
+    <td class="tg-6uvz">1 (2%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-ljh4"></td>
+  </tr>
+  <tr>
+    <td class="tg-nu5p">&nbsp;&nbsp;Southeast Los Angeles (8)</td>
+    <td class="tg-6uvz">4 (4%)</td>
+    <td class="tg-6uvz">3 (6%)</td>
+    <td class="tg-6uvz">1 (10%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-ljh4"></td>
+  </tr>
+  <tr>
+    <td class="tg-nu5p">&nbsp;&nbsp;West Hollywood (9)</td>
+    <td class="tg-6uvz">4 (4%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-6uvz">4 (11%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-ljh4"></td>
+  </tr>
+  <tr>
+    <td class="tg-nu5p">&nbsp;&nbsp;West Los Angeles (10)</td>
+    <td class="tg-6uvz">15 (15%)</td>
+    <td class="tg-6uvz">4 (8%)</td>
+    <td class="tg-6uvz">2 (20%)</td>
+    <td class="tg-6uvz">8 (21%)</td>
+    <td class="tg-6uvz">1 (25%)</td>
+    <td class="tg-ljh4"></td>
+  <tr style="border-bottom:2.5px solid black">
+    <td colspan="100%"></td>  
+  </tr>
+  <tr>
+    <td class="tg-nu5p" colspan="7">*<span style="font-style:italic">P-</span>values based on Pearson chi-square test of association.</td>
+  </tr>
+</tbody>
+</table>
 
-![](Table1.png)
+<br>
 *Note.* This table shows statistical significance between the variables of interest and housing type at an α level of .05 (*p* < .0001).
 <br>
 
@@ -131,7 +477,7 @@ Furthermore, Los Angeles County presents a wide range of observable data, with 5
 
 To yield a net benefit via reproducibility in subsequent iterations of the methodologies described herein, the limitations pertaining to this dataset warrant further examination to mitigate against pitfalls in further repeat studies of a similar magnitude. To accomplish this task, we must first discuss these limitations in terms of accuracy versus precision. The data was sourced as a static .csv file on September 14, 2020, assuring precision through this date only. Its accuracy cannot be fully guaranteed for the following reasons. Real estate data changes in real time as houses are bought and sold. Thus, a more refined model should take the same data into account, but not through a static .csv file. For example, statistical packages and libraries in R Studio (i.e., read .csv, readr, etc.) are capable of loading this data repeatedly over the course of a few weeks while establishing summary statistics, but with the added bonus of tracking variances in results as the housing market changes. 
 
-Furthermore, redfin, while rich in location-based housing information nationwide, does not lend itself to the best exporting capabilities to meet the needs of full size and scope for any given market. Consequently, there exists “a 350 home cap on data downloading” (Murphy, n.d.). Thus, restricting the dataset to a sample size of the first *n* = 100 rows of data without a proper randomization technique, creates yet another challenge in data integrity. To obtain a sample that is more representative of the population, a simple random sample will suffice. Here, the researcher may open the .csv file, save it as an .xslx file to retain the formulas within the file, and create a new column (A) and fill the cells down in ascending order *(0,1,2,3…350)*. The adjacent column (B) may contain a formula =RANDBETWEEN(<span style="color:blue">A2</span>, <span style="color:red"> A352</span>), where each cell contains a value between the top and bottom cells in the dataset. Filtering the new column down to values zero to one hundred will yield the desired results. 
+Furthermore, redfin, while rich in location-based housing information nationwide, does not lend itself to the best exporting capabilities to meet the needs of full size and scope for any given market. Consequently, there exists “a 350 home cap on data downloading” (Murphy, n.d.). Thus, restricting the dataset to a sample size of the first *n* = 100 rows of data without a proper randomization technique, creates yet another challenge in data integrity. To obtain a sample that is more representative of the population, a simple random sample will suffice. Here, the researcher may open the .csv file, save it as an .xslx file to retain the formulas within the file, and create a new column (A) and fill the cells down in ascending order *(0,1,2,3…350)*. The adjacent column (B) may contain a formula =RANDBETWEEN(A2, A352), where each cell contains a value between the top and bottom cells in the dataset. Filtering the new column down to values zero to one hundred will yield the desired results. 
 
 Lastly, creating a significant model for home prices in Los Angeles County based on limited information at only one moment in time presents the bottleneck of bucketing or classifying the many cities within Los Angeles County. Out of these 100 observations, the report yielded 50 unique cities, which are unsustainable for a linear regression model. Initially, ten cities with the highest average home price were chosen with the intent of illuminating insights on the composition of home prices across the county of Los Angeles. However, to mitigate against any potential bias resulting from this sample, a better methodology was produced, where the cities were bucketed into twelve geographic regions. This was further refined, and the geographic regions were narrowed down to ten categories for a concise yet more robust and accurate model. 
 
@@ -139,15 +485,204 @@ Lastly, creating a significant model for home prices in Los Angeles County based
 
 Table 2 shows a summary output table using Microsoft Excel’s data analysis toolpak. In further refining and assessing the model, three of the independent variables are incorporated into a more robust framework, thereby commencing in a multiple regression table from which we can draw meaningful inference from. Following the summary, we look at the multiple *R* first. This value, otherwise known as the correlation coefficient, exposes the linearity at .48, thereby showing that there exists an overall positive linear relationship. Upon further examination, we look to the R-squared ($\small R^2$) as the coefficient of determination to present the percent variance for the price (dependent variable y) as explained by the accompanying independent variables of beds, year built, and HOA. In this case, roughly 23% of the variability in price is explained by these predictor variables.  The adjusted $\small R^2$ simply considers the number of parameters (independent variables) and adjusts accordingly, at a value of .21 (or approximately 21%).
 
+<style type="text/css">
+.tg  {border:none;border-collapse:collapse;border-spacing:0;margin:0px auto;width:fit-content;}
+.tg td{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:0px 5px;
+  word-break:normal;}
+.tg th{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;
+  overflow:hidden;padding:0px 5px;word-break:normal;}
+.tg .tg-it13{background-color:#ffffff;border-color:inherit;font-family:Arial, Helvetica, sans-serif !important;;font-weight:bold;
+  text-align:left;vertical-align:top}
+.tg .tg-xpkd{background-color:#ffffff;border-color:inherit;font-family:Arial, Helvetica, sans-serif !important;;text-align:right;
+  vertical-align:top}
+.tg .tg-p2ny{background-color:#ffffff;border-color:inherit;font-family:Arial, Helvetica, sans-serif !important;;font-style:italic;
+  text-align:right;vertical-align:top}
+.tg .tg-lclz{background-color:#ffffff;border-color:inherit;font-family:Arial, Helvetica, sans-serif !important;;font-style:italic;
+  text-align:left;vertical-align:top}
+.tg .tg-hg53{background-color:#ffffff;border-color:inherit;font-family:Arial, Helvetica, sans-serif !important;;font-style:italic;
+  text-align:center;vertical-align:top}
+.tg .tg-8lh4{background-color:#ffffff;border-color:inherit;font-family:Arial, Helvetica, sans-serif !important;;text-align:left;
+  vertical-align:top}
+</style>
+<table class="tg">
+<tbody>
+  <tr>
+    <td class="tg-it13" colspan="7">Table 2</td>
+  </tr>
+  <tr>
+    <td class="tg-lclz" colspan="7">Summary Output</td>
+  <tr style="border-bottom:2.5px solid black">
+    <td colspan=2></td>    
+  </tr>
+  <tr>
+    <td class="tg-hg53" colspan="2">Regression Statistics</td>
+    <td class="tg-8lh4"></td>
+    <td class="tg-8lh4"></td>
+    <td class="tg-8lh4"></td>
+    <td class="tg-8lh4"></td>
+    <td class="tg-8lh4"></td>
+  <tr style="border-bottom:1px solid black">
+    <td colspan=2></td>    
+  </tr>
+  <tr>
+    <td class="tg-8lh4">Multiple R</td>
+    <td class="tg-xpkd">0.481360254433</td>
+    <td class="tg-8lh4"></td>
+    <td class="tg-8lh4"></td>
+    <td class="tg-8lh4"></td>
+    <td class="tg-8lh4"></td>
+    <td class="tg-8lh4"></td>
+  </tr>
+  <tr>
+    <td class="tg-8lh4">R Square</td>
+    <td class="tg-xpkd">0.231707694547</td>
+    <td class="tg-8lh4"></td>
+    <td class="tg-8lh4"></td>
+    <td class="tg-8lh4"></td>
+    <td class="tg-8lh4"></td>
+    <td class="tg-8lh4"></td>
+  </tr>
+  <tr>
+    <td class="tg-8lh4">Adjusted R Square</td>
+    <td class="tg-xpkd">0.207698560002</td>
+    <td class="tg-8lh4"></td>
+    <td class="tg-8lh4"></td>
+    <td class="tg-8lh4"></td>
+    <td class="tg-8lh4"></td>
+    <td class="tg-8lh4"></td>
+  </tr>
+  <tr>
+    <td class="tg-8lh4">Standard Error</td>
+    <td class="tg-xpkd">677784.561439510000</td>
+    <td class="tg-8lh4"></td>
+    <td class="tg-8lh4"></td>
+    <td class="tg-8lh4"></td>
+    <td class="tg-8lh4"></td>
+    <td class="tg-8lh4"></td>
+  </tr>
+  <tr>
+    <td class="tg-8lh4">Observations</td>
+    <td class="tg-xpkd">100</td>
+    <td class="tg-8lh4"></td>
+    <td class="tg-8lh4"></td>
+    <td class="tg-8lh4"></td>
+    <td class="tg-8lh4"></td>
+    <td class="tg-8lh4"></td>
+  </tr>
+  <tr style="border-bottom:2.5px solid black">
+    <td colspan=2></td> 
+  <tr>
+    <td class="tg-8lh4" colspan="2">&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="tg-8lh4" colspan="7">ANOVA</td>
+  </tr>
+  <tr style="border-bottom:2.5px solid black">
+    <td colspan=6></td> 
+  <tr>
+    <td class="tg-8lh4"></td>
+    <td class="tg-p2ny">df</td>
+    <td class="tg-p2ny">SS</td>
+    <td class="tg-p2ny">MS</td>
+    <td class="tg-p2ny">F</td>
+    <td class="tg-p2ny">Significance F</td>
+    <td class="tg-8lh4"></td>
+  </tr>
+  <tr style="border-bottom:1px solid black">
+    <td colspan=6></td> 
+  <tr>
+    <td class="tg-8lh4">Regression</td>
+    <td class="tg-xpkd">3</td>
+    <td class="tg-xpkd">1.3301E+13</td>
+    <td class="tg-xpkd">4.4335E+12</td>
+    <td class="tg-xpkd">9.6508141</td>
+    <td class="tg-xpkd">1.2537E-05</td>
+    <td class="tg-8lh4"></td>
+  </tr>
+  <tr>
+    <td class="tg-8lh4">Residual</td>
+    <td class="tg-xpkd">96</td>
+    <td class="tg-xpkd">4.4102E+13</td>
+    <td class="tg-xpkd">4.5939E+11</td>
+    <td class="tg-xpkd"></td>
+    <td class="tg-xpkd"></td>
+    <td class="tg-8lh4"></td>
+  </tr>
+  <tr>
+    <td class="tg-8lh4">Total</td>
+    <td class="tg-xpkd">99</td>
+    <td class="tg-xpkd">5.7402E+13</td>
+    <td class="tg-xpkd"></td>
+    <td class="tg-xpkd"></td>
+    <td class="tg-xpkd"></td>
+    <td class="tg-8lh4"></td>
+  </tr>
+  <tr style="border-bottom:2.5px solid black">
+    <td colspan=6></td> 
+  <tr>
+    <td class="tg-8lh4" colspan="6">&nbsp;&nbsp;</td>
+  </tr>
+  <tr style="border-bottom:2.5px solid black">
+    <td colspan=7></td> 
+  <tr>
+    <td class="tg-8lh4"></td>
+    <td class="tg-p2ny">Coefficients</td>
+    <td class="tg-p2ny">Standard Error</td>
+    <td class="tg-p2ny">t Stat</td>
+    <td class="tg-p2ny">P-value</td>
+    <td class="tg-p2ny">Lower 95%</td>
+    <td class="tg-p2ny">Upper 95%</td>
+  </tr>
+  <tr style="border-bottom:1px solid black">
+    <td colspan=7></td> 
+  <tr>
+    <td class="tg-8lh4">Intercept</td>
+    <td class="tg-xpkd">-14161257.458683800000</td>
+    <td class="tg-xpkd">5919543.476143070000</td>
+    <td class="tg-xpkd">-2.392288783038</td>
+    <td class="tg-xpkd">0.018690874017</td>
+    <td class="tg-xpkd">-25911458.390202900000</td>
+    <td class="tg-xpkd">-2411056.527164710000</td>
+  </tr>
+  <tr>
+    <td class="tg-8lh4">Beds</td>
+    <td class="tg-xpkd">131238.553766050000</td>
+    <td class="tg-xpkd">65582.944132257600</td>
+    <td class="tg-xpkd">2.001107993892</td>
+    <td class="tg-xpkd">0.048204063429</td>
+    <td class="tg-xpkd">1057.438560065320</td>
+    <td class="tg-xpkd">261419.668972035000</td>
+  </tr>
+  <tr>
+    <td class="tg-8lh4">Year Built</td>
+    <td class="tg-xpkd">7654.221184384500</td>
+    <td class="tg-xpkd">3055.391927911970</td>
+    <td class="tg-xpkd">2.505151995219</td>
+    <td class="tg-xpkd">0.013923912469</td>
+    <td class="tg-xpkd">1589.316141926890</td>
+    <td class="tg-xpkd">13719.126226842100</td>
+  </tr>
+  <tr>
+    <td class="tg-8lh4">HOA (Y|N)</td>
+    <td class="tg-xpkd">-634440.363956003000</td>
+    <td class="tg-xpkd">193192.764649854000</td>
+    <td class="tg-xpkd">-3.283975800573</td>
+    <td class="tg-xpkd">0.001429009423</td>
+    <td class="tg-xpkd">-1017924.970885610000</td>
+    <td class="tg-xpkd">-250955.757026393000</td>
+  </tr>
+  <tr style="border-bottom:2.5px solid black">
+    <td colspan=7></td>   
+</tbody>
+</table>
 
-![](Figure4.png)
-
+<br>
 
 *Note.* This model shows a somewhat strong goodness of fit based on several factors not limited to statistically significant *p*-values.
 
 Based upon the introduction of these additional parameters, we must take them into account for a more conservative estimate. Moreover, the p-values in this summary output table are all statistically significant (less than α = .05), whereas statistical significance was previously assumed at p < .0001; nonetheless, the model holds merit. From the ensuing output, we proceed to build out a more precise regression equation from summarizing all the variables involved in this model with precise numerical figures. Recalling this equation from the prior generalized linear model, the refined equation, with three independent variables takes the form of the simple linear regression model denoted by the equation:
 
-<p style="text-align: center;"> *Y* = $\beta_0$ + $\beta_1x_1$ + $\beta_2x_2$ + $\beta_3x_3$ + $\varepsilon$ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (2) </p>
+<p style="text-align: center;"> *Y* = $\beta_0$ + $\beta_1x_1$ + $\beta_2x_2$ + $\beta_3x_3$ + $\varepsilon$ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (2) </p>
 Plugging in the coefficients from the output table into the equation, we have the following:
 
 <p style="text-align: center;">*Y* = -14,161,258 + 131,239$(x_1)$ + 7,654$(x_2)$ - 634,440.36$(x_3)$ + $\varepsilon$  \ \ \ \ \ \ \ \ \ (3)</p>
@@ -156,22 +691,70 @@ where $x_1$ = beds, $x_2$ = year built, and $x_3$ = HOA.
 
 We finalize this multiple regression analysis by noting the residuals (variance in observed and predicted values) of the *n* = 100 price points, where the predicted values of y are determined by 
 
-<p style="text-align: center;"> $y_1-\hat{y}_1,...,y_n-\hat{y}_n$ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (4)</p> 
+<p style="text-align: center;"> $y_1-\hat{y}_1,...,y_n-\hat{y}_n$ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (4)</p> 
 
 From the 100 observations, we examine the one that has the lowest variance between the actual price (*y*) and the predicted price ($y_1$). This is confirmed to be the 11th observation with a recorded price of 729,000. This happens to be 13,450 below the median housing price in this sample, and the one with the least variability. 
 
 Table 3 shows the difference between the actual price of 729,000.00 and the predicted price of 728,436.33 is the residual value of 563.67.
 
 
+<style type="text/css">
+.tg  {border:none;border-collapse:collapse;border-spacing:0;margin:0px auto;}
+.tg td{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;
+  padding:0px 12px;word-break:normal;}
+.tg th{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;
+  overflow:hidden;padding:0px 12px;word-break:normal;}
+.tg .tg-fw6i{background-color:#ffffff;color:#000000;font-family:Arial, Helvetica, sans-serif !important;;font-weight:bold;
+  text-align:left;vertical-align:top}
+.tg .tg-wwsq{background-color:#ffffff;color:#000000;font-family:Arial, Helvetica, sans-serif !important;;font-style:italic;
+  text-align:left;vertical-align:top}
+.tg .tg-wi23{background-color:#ffffff;color:#000000;font-family:Arial, Helvetica, sans-serif !important;;text-align:center;
+  vertical-align:top}
+.tg .tg-ojb8{background-color:#ffffff;color:#000000;font-family:Arial, Helvetica, sans-serif !important;;font-style:italic;
+  text-align:center;vertical-align:top}
+</style>
+<table class="tg">
+<tbody>
+  <tr>
+    <td class="tg-fw6i" colspan="7">Table 3</td>
+  </tr>
+  <tr>
+    <td class="tg-wwsq" colspan="7">Sample Residual Output</td>
+  </tr>
+  <tr style="border-bottom:2.5px solid black">
+    <td colspan="100%"></td>  
+  <tr>
+    <td class="tg-ojb8">Observation</td>
+    <td class="tg-ojb8">Beds</td>
+    <td class="tg-ojb8">Year Built</td>
+    <td class="tg-ojb8">HOA</td>
+    <td class="tg-ojb8">Actual Price</td>
+    <td class="tg-ojb8">Predicted Price</td>
+    <td class="tg-ojb8">Residuals</td>
+  </tr>
+  <tr style="border-bottom:1px solid black">
+    <td colspan="100%"></td>  
+  <tr>
+    <td class="tg-wi23">11</td>
+    <td class="tg-wi23">2</td>
+    <td class="tg-wi23">1911</td>
+    <td class="tg-wi23">No</td>
+    <td class="tg-wi23">729000</td>
+    <td class="tg-wi23">728436</td>
+    <td class="tg-wi23">564</td>
+  </tr>
+</tbody>
+</table>
 
-![](Table3.png)
+<br>
+
 *Note.* This is just one observation out of 100, used as a proxy for the model.
 
 Since this is the value with the least variability in the dataset and the closest to zero, it is the best prediction in the sample. Furthermore, we establish the following hypothesis test for the suitability of the multiple regression model. In our null hypothesis ($\small H_0$), a linear relationship does not exist between the response variable *y* and independent variables *x*. Otherwise, a linear relationship does exist in our alternative hypothesis ($\small H_\alpha$). We use the test for significance of regression (an overall model test) to determine viability. These statements are rewritten in the following proper form:
 
-<p style="text-align: center;"> $H_0: \beta_1 = \beta_2 = \beta_3 = 0$\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  (5)</p>
+<p style="text-align: center;"> $H_0: \beta_1 = \beta_2 = \beta_3 = 0$\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (5)</p>
 
-<p style="text-align: center;">$H_\alpha: \beta_J \neq 0$ *for at least one j*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (6)</p>
+<p style="text-align: center;">$H_\alpha: \beta_J \neq 0$ *for at least one j*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (6)</p>
 
 Examining the p-values of the beds, year built, and HOA, we have *p* = .048, *p* = .014, and *p* = .001, respectively. We conclude their statistical significance based upon a lower than the common alpha value of .05. We thereby reject the null, $\small H_0$ at the 95% confidence level. In favor of the alternative hypothesis, $\small H_\alpha$, we conclude that a significant linear relationship does exist between housing prices and the corresponding independent variables. The variables themselves are not equal, and henceforth not equal to zero.
 
@@ -184,7 +767,6 @@ The real estate market is laden with decisions relating to price and variables t
 
 
 ## **References**
-<br>
 
 Clark, W. A. (2011). Prices, Expectations and the Changing. *Housing, Theory and Society,* Vol.(28), 1. <ol> https://doi.org/10.1080/14036096.2011.599174 </ol>
 

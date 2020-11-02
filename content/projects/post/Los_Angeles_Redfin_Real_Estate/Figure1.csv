@@ -1,6 +1,6 @@
-Location,Price
-Minimum,350000.00
-Median,742450.00
-Standard Deviation,761458.87
-Mean,960246.46
-Maximum,5869000.00
+Location_Dispersion,Price,True Price
+Minimum,0.35,"$350,000.00 "
+Median,0.74245,"$742,450.00 "
+Standard Deviation,0.761458869,"$761,458.87 "
+Mean,0.96024646,"$960,246.46 "
+Maximum,5.869,"$5,869,000.00 "

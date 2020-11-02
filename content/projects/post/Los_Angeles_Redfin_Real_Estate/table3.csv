@@ -1,0 +1,4 @@
+Table 3,,,,,,
+Sample Residual Output,,,,,,
+Observation,Beds,Year Built,HOA,Actual Price,Predicted Price,Residuals
+11,2,1911,No,729000,728436,564

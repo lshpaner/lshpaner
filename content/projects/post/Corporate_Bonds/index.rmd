@@ -123,7 +123,7 @@ Alpha $(\alpha)$ increases with risk, Therefore, risk *(r)* outweighs reward *(R
 
 One dilemma that investors face at Merrill Lynch is locating a perfect plot to time vs. money. There is no perfect map to this approach. However, there are some great ideas to help clients. One idea sprung from a Merrill Lynch publication dated July, 11, 2006, entitled: “The RIC Report.” A seasoned financial advisor from the New York headquarters suggested that as time progresses, the probability of losing money decreases. As there is an inverse relationship between time and money, investors should focus on the long run of market behavior and ignore irrelevant short-term market hiccups. Statistically, there exists a 46% chance of losing money when investing in the S&P 500 for one day. Presumably, this percentage decreases as the time horizon increases. The primary outcome resembles a “heads and tails” probability game from elementary statistics.Moreover, expanding markets have an established identity where securities have been traded frequently, in contrast to markets that recently emerged. A positive correlation exists between time and money. Unfortunately, this is a general statement as well as the opinion of one financial analyst. Merrill Lynch corporate bonds, for instance, have not shown an increase in performance in 2006. The chart is summarized as follows:
 
-```{r echo = FALSE, results = 'asis'}
+```{r echo = FALSE, warning = FALSE, message = FALSE, results = 'asis'}
 library(knitr)
 library(readr)
 library(kableExtra)
@@ -159,7 +159,7 @@ table2 <- read.csv("table2.csv")
 options(knitr.kable.NA = '')
 knitr::kable(table2, col.names = c('', 'Recommended','Policy Range'), align="lcc")%>%
 
-# Add a row of header with 3 columns on the top of the table. The column
+# Add a row of header with 3 columns on the top of the table.
 kable_styling(bootstrap_options = c("striped"), position = "center")%>%
 row_spec(0:0, bold = T, color = "#0874c4")%>%
 row_spec(1:1, bold = T, background = "#e6eed5")%>%
@@ -185,12 +185,12 @@ Merrill Lynch is just one of many global firms that manage high net worth client
 
 The purpose of this paper was to discuss corporate bonds as specific debt securities, their market trends, and their ratings. In some cases, personalized formulas were developed for the purposes of illustrating risk factors involved with below investment grade bonds. For the most part, however, charts and other numerical examples illustrated historical facts based on bond performance. The following message is to be found meaningful for prospective and current investors. “Past performance is not indicative of future results.” Not only does this apply to corporate bonds, but even more so to stocks, mutual funds, and all other forms of assets.
 
-```{r echo = FALSE, results = 'asis'}
+```{r echo = FALSE, warning = FALSE, message = FALSE, results = 'asis'}
 library(knitr)
 library(readr)
 library(kableExtra)
 table3 <- read.csv("table3.csv")
-knitr::kable(table3, format = "html", table.attr = "style='width:100%;'", col.names = c('Agency rating', 'Default rate', 'Promised yield', 'Realized yield'), align = "c")%>%
+knitr::kable(table3, format = "html", col.names = c('Agency rating', 'Default rate', 'Promised yield', 'Realized yield'), align = "c")%>%
 kable_styling(position = "center", full_width = T)
 ```
 
