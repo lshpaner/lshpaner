@@ -24,7 +24,7 @@ date_format = "Jan 2006"
   company_url = "https://www.lafilm.edu/"
   location = "Los Angeles, CA"
   date_start = "2013-09-01"
-  date_end = ""
+  date_end = "2020-10-30"
   description = """
   Responsibilities:
   
