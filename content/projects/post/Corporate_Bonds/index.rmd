@@ -27,6 +27,7 @@ In a market of choices, one must recognize the essential differences between cor
 
 $$\mathit{y}_{i} = {i}_{t}+{e}_{i}+{t}_{i}+{r}_{i}$$
 
+
 To find expected return from investing, the shareholder must theoretically regress total value of assets $\alpha$ at initial time *t* 
 ($\mathit{\alpha}_{i}$) vs. expected value of assets $\alpha$ at present time *t* $({\mathit\alpha}_{p})$. The regression model becomes:
 
