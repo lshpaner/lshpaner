@@ -48,7 +48,7 @@ fig1 <- read.csv("Figure1.csv")
 knitr::opts_chunk$set(fig.width = 20, fig.height = 8) 
 options(repr.plot.width = 4, repr.plot.height = 8)
 print(ggplot(fig1, aes(x = reorder(Location_Dispersion, Price), y = Price))+
-  geom_col(color = "#000000", fill = "white", size = 1, alpha = 0.9, stat = "identity")+
+  geom_col(color = "#000000", fill = "white", size = 1, alpha = 0.9, width = 1, stat = "identity")+
   geom_text(aes(label = Price), position = position_dodge(2.5), vjust = -.8)+
   theme_bw()+
   theme(panel.border = element_blank(), panel.grid.major = element_blank(),

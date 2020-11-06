@@ -424,3 +424,19 @@ ul.share li a {
 ul.share li:hover .fa {
   transform: scale(2.0)
 }
+
+/*************************************************
+ *  Custom CSS for Python
+ **************************************************/
+
+pre.python {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #23241f;
+.hljs-keyword, 
+.hljs-selector-tag, 
+.hljs-subst {
+    color: #008000;
+    font-weight: bold;
+}
+}
