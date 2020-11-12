@@ -19,7 +19,7 @@ I. Probability and Statistics for Data Science
 
 I. The World Happiness Report
 
-* [Examining the World Happiness Data](/projects/post/World_Happiness2) - a complete jupyter notebook from the Analyzing and Visualizing Data with Python course
+* [Examining the World Happiness Data](/projects/post/World_Happiness) - a complete jupyter notebook from the Analyzing and Visualizing Data with Python course <i class="fab fa-python" style="font-size:22px"></i>
 
 II. Optimizing a Stock Portfolio in R
 
