@@ -5,9 +5,10 @@ date: "`r Sys.Date()`"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
+```{r setup, include=FALSE, attr.source='.numberLines'}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
 Copy the following code into the VBA Environment in excel:
 <pre>
   <code>
