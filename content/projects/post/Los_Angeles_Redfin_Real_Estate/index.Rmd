@@ -698,8 +698,55 @@ From the 100 observations, we examine the one that has the lowest variance betwe
 
 Table 3 shows the difference between the actual price of 729,000.00 and the predicted price of 728,436.33 is the residual value of 563.67.
 
+<style type="text/css">
+.tg  {border:none;border-collapse:collapse;border-spacing:0;margin:0px auto; width: fit-content;}
+.tg td{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;
+  padding:0px 12px;word-break:break-all;}
+.tg th{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;
+  overflow:hidden;padding:0px 12px;word-break:normal;}
+.tg .tg-fw6i{background-color:#ffffff;color:#000000;font-family:Arial, Helvetica, sans-serif !important;;font-weight:bold;
+  text-align:left;vertical-align:top}
+.tg .tg-wwsq{background-color:#ffffff;color:#000000;font-family:Arial, Helvetica, sans-serif !important;;font-style:italic;
+  text-align:left;vertical-align:top}
+.tg .tg-wi23{background-color:#ffffff;color:#000000;font-family:Arial, Helvetica, sans-serif !important;;text-align:center;
+  vertical-align:top}
+.tg .tg-ojb8{background-color:#ffffff;color:#000000;font-family:Arial, Helvetica, sans-serif !important;;font-style:italic;
+  text-align:center;vertical-align:top}
+</style>
+<table class="tg">
+<tbody>
+  <tr>
+    <td class="tg-fw6i" colspan="7">Table 3</td>
+  </tr>
+  <tr>
+    <td class="tg-wwsq" colspan="7">Sample Residual Output</td>
+  </tr>
+  <tr style="border-bottom:2.5px solid black">
+    <td colspan="100%"></td>  
+  <tr>
+    <td class="tg-ojb8">Observation</td>
+    <td class="tg-ojb8">Beds</td>
+    <td class="tg-ojb8">Year Built</td>
+    <td class="tg-ojb8">HOA</td>
+    <td class="tg-ojb8">Actual Price</td>
+    <td class="tg-ojb8">Predicted Price</td>
+    <td class="tg-ojb8">Residuals</td>
+  </tr>
+  <tr style="border-bottom:1px solid black">
+    <td colspan="100%"></td>  
+  <tr>
+    <td class="tg-wi23">11</td>
+    <td class="tg-wi23">2</td>
+    <td class="tg-wi23">1911</td>
+    <td class="tg-wi23">No</td>
+    <td class="tg-wi23">729000</td>
+    <td class="tg-wi23">728436</td>
+    <td class="tg-wi23">564</td>
+  </tr>
+</tbody>
+</table>
 
-
+<br>
 
 *Note.* This is just one observation out of 100, used as a proxy for the model.
 
