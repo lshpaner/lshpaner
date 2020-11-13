@@ -173,7 +173,7 @@ In this generalized linear model, price (*y*) is dependent on the year built, be
 Table 1 represents the characteristics by housing type (single family, townhouse,condo/co-op, and multi-family) for the sample population (*n* = 100).
 
 <style type="text/css">
-.tg  {border:none;border-collapse:collapse;border-spacing:0;margin:0px auto;}
+.tg  {border:none;border-collapse:collapse;border-spacing:0;margin:0px auto; width: fit-content;}
 .tg td{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;
   padding:0px 5px;word-break:normal;}
 .tg th{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;
@@ -486,6 +486,198 @@ Lastly, creating a significant model for home prices in Los Angeles County based
 
 Table 2 shows a summary output table using Microsoft Excel’s data analysis toolpak. In further refining and assessing the model, three of the independent variables are incorporated into a more robust framework, thereby commencing in a multiple regression table from which we can draw meaningful inference from. Following the summary, we look at the multiple *R* first. This value, otherwise known as the correlation coefficient, exposes the linearity at .48, thereby showing that there exists an overall positive linear relationship. Upon further examination, we look to the R-squared ($\small R^2$) as the coefficient of determination to present the percent variance for the price (dependent variable y) as explained by the accompanying independent variables of beds, year built, and HOA. In this case, roughly 23% of the variability in price is explained by these predictor variables.  The adjusted $\small R^2$ simply considers the number of parameters (independent variables) and adjusts accordingly, at a value of .21 (or approximately 21%).
 
+<style type="text/css">
+.tg  {border:none;border-collapse:collapse;border-spacing:0;margin:0px auto;}
+.tg td{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:0px 5px;
+  word-break:normal;}
+.tg th{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;
+  overflow:inherit;padding:0px 0px;word-break:normal;}
+.tg .tg-it13{background-color:#ffffff;border-color:inherit;font-family:Arial, Helvetica, sans-serif !important;;font-weight:bold;
+  text-align:left;vertical-align:top}
+.tg .tg-xpkd{background-color:#ffffff;border-color:inherit;font-family:Arial, Helvetica, sans-serif !important;;text-align:right;
+  vertical-align:top}
+.tg .tg-p2ny{background-color:#ffffff;border-color:inherit;font-family:Arial, Helvetica, sans-serif !important;;font-style:italic;
+  text-align:right;vertical-align:top}
+.tg .tg-lclz{background-color:#ffffff;border-color:inherit;font-family:Arial, Helvetica, sans-serif !important;;font-style:italic;
+  text-align:left;vertical-align:top}
+.tg .tg-hg53{background-color:#ffffff;border-color:inherit;font-family:Arial, Helvetica, sans-serif !important;;font-style:italic;
+  text-align:center;vertical-align:top}
+.tg .tg-8lh4{background-color:#ffffff;border-color:inherit;font-family:Arial, Helvetica, sans-serif !important;;text-align:left;
+  vertical-align:top}
+</style>
+<table class="tg">
+<tbody>
+  <tr>
+    <td class="tg-it13" colspan="7">Table 2</td>
+  </tr>
+  <tr>
+    <td class="tg-lclz" colspan="7">Summary Output</td>
+  <tr style="border-bottom:2.5px solid black">
+    <td colspan=2></td>    
+  </tr>
+  <tr>
+    <td class="tg-hg53" colspan="2">Regression Statistics</td>
+    <td class="tg-8lh4"></td>
+    <td class="tg-8lh4"></td>
+    <td class="tg-8lh4"></td>
+    <td class="tg-8lh4"></td>
+    <td class="tg-8lh4"></td>
+  <tr style="border-bottom:1px solid black">
+    <td colspan=2></td>    
+  </tr>
+  <tr>
+    <td class="tg-8lh4">Multiple R</td>
+    <td class="tg-xpkd">0.481360254433</td>
+    <td class="tg-8lh4"></td>
+    <td class="tg-8lh4"></td>
+    <td class="tg-8lh4"></td>
+    <td class="tg-8lh4"></td>
+    <td class="tg-8lh4"></td>
+  </tr>
+  <tr>
+    <td class="tg-8lh4">R Square</td>
+    <td class="tg-xpkd">0.231707694547</td>
+    <td class="tg-8lh4"></td>
+    <td class="tg-8lh4"></td>
+    <td class="tg-8lh4"></td>
+    <td class="tg-8lh4"></td>
+    <td class="tg-8lh4"></td>
+  </tr>
+  <tr>
+    <td class="tg-8lh4">Adjusted R Square</td>
+    <td class="tg-xpkd">0.207698560002</td>
+    <td class="tg-8lh4"></td>
+    <td class="tg-8lh4"></td>
+    <td class="tg-8lh4"></td>
+    <td class="tg-8lh4"></td>
+    <td class="tg-8lh4"></td>
+  </tr>
+  <tr>
+    <td class="tg-8lh4">Standard Error</td>
+    <td class="tg-xpkd">677784.561439510000</td>
+    <td class="tg-8lh4"></td>
+    <td class="tg-8lh4"></td>
+    <td class="tg-8lh4"></td>
+    <td class="tg-8lh4"></td>
+    <td class="tg-8lh4"></td>
+  </tr>
+  <tr>
+    <td class="tg-8lh4">Observations</td>
+    <td class="tg-xpkd">100</td>
+    <td class="tg-8lh4"></td>
+    <td class="tg-8lh4"></td>
+    <td class="tg-8lh4"></td>
+    <td class="tg-8lh4"></td>
+    <td class="tg-8lh4"></td>
+  </tr>
+  <tr style="border-bottom:2.5px solid black">
+    <td colspan=2></td> 
+  <tr>
+    <td class="tg-8lh4" colspan="2">&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="tg-8lh4" colspan="7">ANOVA</td>
+  </tr>
+  <tr style="border-bottom:2.5px solid black">
+    <td colspan=6></td> 
+  <tr>
+    <td class="tg-8lh4"></td>
+    <td class="tg-p2ny">df</td>
+    <td class="tg-p2ny">SS</td>
+    <td class="tg-p2ny">MS</td>
+    <td class="tg-p2ny">F</td>
+    <td class="tg-p2ny">Significance F</td>
+    <td class="tg-8lh4"></td>
+  </tr>
+  <tr style="border-bottom:1px solid black">
+    <td colspan=6></td> 
+  <tr>
+    <td class="tg-8lh4">Regression</td>
+    <td class="tg-xpkd">3</td>
+    <td class="tg-xpkd">1.3301E+13</td>
+    <td class="tg-xpkd">4.4335E+12</td>
+    <td class="tg-xpkd">9.6508141</td>
+    <td class="tg-xpkd">1.2537E-05</td>
+    <td class="tg-8lh4"></td>
+  </tr>
+  <tr>
+    <td class="tg-8lh4">Residual</td>
+    <td class="tg-xpkd">96</td>
+    <td class="tg-xpkd">4.4102E+13</td>
+    <td class="tg-xpkd">4.5939E+11</td>
+    <td class="tg-xpkd"></td>
+    <td class="tg-xpkd"></td>
+    <td class="tg-8lh4"></td>
+  </tr>
+  <tr>
+    <td class="tg-8lh4">Total</td>
+    <td class="tg-xpkd">99</td>
+    <td class="tg-xpkd">5.7402E+13</td>
+    <td class="tg-xpkd"></td>
+    <td class="tg-xpkd"></td>
+    <td class="tg-xpkd"></td>
+    <td class="tg-8lh4"></td>
+  </tr>
+  <tr style="border-bottom:2.5px solid black">
+    <td colspan=6></td> 
+  <tr>
+    <td class="tg-8lh4" colspan="6">&nbsp;&nbsp;</td>
+  </tr>
+  <tr style="border-bottom:2.5px solid black">
+    <td colspan=7></td> 
+  <tr>
+    <td class="tg-8lh4"></td>
+    <td class="tg-p2ny">Coefficients</td>
+    <td class="tg-p2ny">Standard Error</td>
+    <td class="tg-p2ny">t Stat</td>
+    <td class="tg-p2ny">P-value</td>
+    <td class="tg-p2ny">Lower 95%</td>
+    <td class="tg-p2ny">Upper 95%</td>
+  </tr>
+  <tr style="border-bottom:1px solid black">
+    <td colspan=7></td> 
+  <tr>
+    <td class="tg-8lh4">Intercept</td>
+    <td class="tg-xpkd">-14161257.458683800000</td>
+    <td class="tg-xpkd">5919543.476143070000</td>
+    <td class="tg-xpkd">-2.392288783038</td>
+    <td class="tg-xpkd">0.018690874017</td>
+    <td class="tg-xpkd">-25911458.390202900000</td>
+    <td class="tg-xpkd">-2411056.527164710000</td>
+  </tr>
+  <tr>
+    <td class="tg-8lh4">Beds</td>
+    <td class="tg-xpkd">131238.553766050000</td>
+    <td class="tg-xpkd">65582.944132257600</td>
+    <td class="tg-xpkd">2.001107993892</td>
+    <td class="tg-xpkd">0.048204063429</td>
+    <td class="tg-xpkd">1057.438560065320</td>
+    <td class="tg-xpkd">261419.668972035000</td>
+  </tr>
+  <tr>
+    <td class="tg-8lh4">Year Built</td>
+    <td class="tg-xpkd">7654.221184384500</td>
+    <td class="tg-xpkd">3055.391927911970</td>
+    <td class="tg-xpkd">2.505151995219</td>
+    <td class="tg-xpkd">0.013923912469</td>
+    <td class="tg-xpkd">1589.316141926890</td>
+    <td class="tg-xpkd">13719.126226842100</td>
+  </tr>
+  <tr>
+    <td class="tg-8lh4">HOA (Y|N)</td>
+    <td class="tg-xpkd">-634440.363956003000</td>
+    <td class="tg-xpkd">193192.764649854000</td>
+    <td class="tg-xpkd">-3.283975800573</td>
+    <td class="tg-xpkd">0.001429009423</td>
+    <td class="tg-xpkd">-1017924.970885610000</td>
+    <td class="tg-xpkd">-250955.757026393000</td>
+  </tr>
+  <tr style="border-bottom:2.5px solid black">
+    <td colspan=7></td>   
+</tbody>
+</table>
+
+<br>
 
 *Note.* This model shows a somewhat strong goodness of fit based on several factors not limited to statistically significant *p*-values.
 
