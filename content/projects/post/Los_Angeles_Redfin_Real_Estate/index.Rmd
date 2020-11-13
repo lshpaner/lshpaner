@@ -172,6 +172,298 @@ In this generalized linear model, price (*y*) is dependent on the year built, be
 
 Table 1 represents the characteristics by housing type (single family, townhouse,condo/co-op, and multi-family) for the sample population (*n* = 100).
 
+<style type="text/css">
+.tg  {border:none;border-collapse:collapse;border-spacing:0;margin:0px auto;}
+.tg td{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;
+  padding:0px 5px;word-break:normal;}
+.tg th{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;
+  overflow:hidden;padding:0px 0px;word-break:normal;}
+.tg .tg-2egg{background-color:#ffffff;border-color:#ffffff;color:#000000;font-style:italic;text-align:center;vertical-align:top}
+.tg .tg-yd8b{background-color:#ffffff;border-color:inherit;color:#000000;font-family:Arial, Helvetica, sans-serif !important;;
+  font-weight:bold;text-align:left;vertical-align:bottom}
+.tg .tg-6uvz{background-color:#ffffff;border-color:#ffffff;color:#000000;text-align:center;vertical-align:top}
+.tg .tg-ik1f{background-color:#ffffff;border-color:#ffffff;color:#000000;text-align:left;text-decoration:underline;
+  vertical-align:top}
+.tg .tg-nu5p{background-color:#ffffff;border-color:#ffffff;color:#000000;text-align:left;vertical-align:top}
+.tg .tg-jfi3{background-color:#ffffff;border-color:inherit;color:#000000;font-family:Arial, Helvetica, sans-serif !important;;
+  font-style:italic;text-align:left;vertical-align:middle}
+.tg .tg-l5m8{background-color:#ffffff;border-color:#ffffff;color:#000000;font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-ljh4{background-color:#ffffff;border-color:#ffffff;color:#000000;text-align:right;vertical-align:top}
+</style>
+<table class="tg">
+<tbody>
+  <tr>
+    <td class="tg-yd8b" colspan="7">Table 1</td>
+  </tr>
+  <tr>
+    <td class="tg-jfi3" colspan="7">Characteristics of 100 Housing Units in Los Angeles County</td>
+  <tr style="border-bottom:2.5px solid black">
+    <td colspan="100%"></td>  
+  </tr>
+  <tr>
+    <td class="tg-nu5p"></td>
+    <td class="tg-l5m8">Population</td>
+    <td class="tg-l5m8">Single Family</td>
+    <td class="tg-l5m8">Townhouse</td>
+    <td class="tg-l5m8">Condo/Co-op</td>
+    <td class="tg-l5m8">Multi Family</td>
+    <td class="tg-ljh4"></td>
+  </tr>
+  <tr>
+    <td class="tg-nu5p"></td>
+    <td class="tg-2egg">N(%)</td>
+    <td class="tg-2egg">n(%)</td>
+    <td class="tg-2egg">n(%)</td>
+    <td class="tg-2egg">n(%)</td>
+    <td class="tg-2egg">n(%)</td>
+    <td class="tg-ljh4"></td>
+  </tr>
+  <tr>
+    <td class="tg-nu5p">Variable</td>
+    <td class="tg-6uvz">(N = 100)</td>
+    <td class="tg-6uvz">(n = 48)</td>
+    <td class="tg-6uvz">(n = 10)</td>
+    <td class="tg-6uvz">(n = 38)</td>
+    <td class="tg-6uvz">(n = 4)</td>
+    <td class="tg-ljh4"><span style="font-style:italic">P-</span>Value*</td>
+  <tr style="border-bottom:2.5px solid black">
+    <td colspan="100%"></td>  
+  </tr>
+  <tr>
+    <td class="tg-ik1f">Year Built</td>
+    <td class="tg-6uvz"></td>
+    <td class="tg-6uvz"></td>
+    <td class="tg-6uvz"></td>
+    <td class="tg-6uvz"></td>
+    <td class="tg-6uvz"></td>
+    <td class="tg-ljh4">&lt;.0001</td>
+  </tr>
+  <tr>
+    <td class="tg-nu5p">&nbsp;&nbsp;1911-1932 (1)</td>
+    <td class="tg-6uvz">13 (13%)</td>
+    <td class="tg-6uvz">8 (17%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-6uvz">1 (3%)</td>
+    <td class="tg-6uvz">4 (100%)</td>
+    <td class="tg-ljh4"></td>
+  </tr>
+  <tr>
+    <td class="tg-nu5p">&nbsp;&nbsp;1933-1954 (2)</td>
+    <td class="tg-6uvz">15 (15%)</td>
+    <td class="tg-6uvz">15 (31%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-ljh4"></td>
+  </tr>
+  <tr>
+    <td class="tg-nu5p">&nbsp;&nbsp;1955-1976 (3)</td>
+    <td class="tg-6uvz">19 (19%)</td>
+    <td class="tg-6uvz">6 (13%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-6uvz">13 (34%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-ljh4"></td>
+  </tr>
+  <tr>
+    <td class="tg-nu5p">&nbsp;&nbsp;1977-1998 (4)</td>
+    <td class="tg-6uvz">27 (27%)</td>
+    <td class="tg-6uvz">10 (21%)</td>
+    <td class="tg-6uvz">5 (50%)</td>
+    <td class="tg-6uvz">12 (32%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-ljh4"></td>
+  </tr>
+  <tr>
+    <td class="tg-nu5p">&nbsp;&nbsp;1999-2020 (5)</td>
+    <td class="tg-6uvz">26 (26%)</td>
+    <td class="tg-6uvz">9 (19%)</td>
+    <td class="tg-6uvz">5 (50%)</td>
+    <td class="tg-6uvz">12 (32%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-ljh4"></td>
+  </tr>
+  <tr>
+    <td class="tg-ik1f">Bedrooms</td>
+    <td class="tg-6uvz"></td>
+    <td class="tg-6uvz"></td>
+    <td class="tg-6uvz"></td>
+    <td class="tg-6uvz"></td>
+    <td class="tg-6uvz"></td>
+    <td class="tg-ljh4">&lt;.0001</td>
+  </tr>
+  <tr>
+    <td class="tg-nu5p">&nbsp;&nbsp;0-1 bedrooms (1)</td>
+    <td class="tg-6uvz">12 (12%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-6uvz">12 (32%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-ljh4"></td>
+  </tr>
+  <tr>
+    <td class="tg-nu5p">&nbsp;&nbsp;2 bedrooms (2)</td>
+    <td class="tg-6uvz">32 (32%)</td>
+    <td class="tg-6uvz">8 (17%)</td>
+    <td class="tg-6uvz">5 (50%)</td>
+    <td class="tg-6uvz">18 (47%)</td>
+    <td class="tg-6uvz">1 (25%)</td>
+    <td class="tg-ljh4"></td>
+  </tr>
+  <tr>
+    <td class="tg-nu5p">&nbsp;&nbsp;3 bedrooms (3)</td>
+    <td class="tg-6uvz">31 (31%)</td>
+    <td class="tg-6uvz">22 (46%)</td>
+    <td class="tg-6uvz">3 (30%)</td>
+    <td class="tg-6uvz">6 (16%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-ljh4"></td>
+  </tr>
+  <tr>
+    <td class="tg-nu5p">&nbsp;&nbsp;4 or more bedrooms (4)</td>
+    <td class="tg-6uvz">25 (25%)</td>
+    <td class="tg-6uvz">18 (38%)</td>
+    <td class="tg-6uvz">2 (20%)</td>
+    <td class="tg-6uvz">2 (5%)</td>
+    <td class="tg-6uvz">3 (75%)</td>
+    <td class="tg-ljh4"></td>
+  </tr>
+  <tr>
+    <td class="tg-ik1f">HOA</td>
+    <td class="tg-6uvz"></td>
+    <td class="tg-6uvz"></td>
+    <td class="tg-6uvz"></td>
+    <td class="tg-6uvz"></td>
+    <td class="tg-6uvz"></td>
+    <td class="tg-ljh4">&lt;.0001</td>
+  </tr>
+  <tr>
+    <td class="tg-nu5p">&nbsp;&nbsp;Yes (1)</td>
+    <td class="tg-6uvz">56 (56%)</td>
+    <td class="tg-6uvz">9 (19%)</td>
+    <td class="tg-6uvz">9 (90%)</td>
+    <td class="tg-6uvz">38 (100%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-ljh4"></td>
+  </tr>
+  <tr>
+    <td class="tg-nu5p">&nbsp;&nbsp;No (0)</td>
+    <td class="tg-6uvz">44 (44%)</td>
+    <td class="tg-6uvz">39 (81%)</td>
+    <td class="tg-6uvz">1 (10%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-6uvz">4 (100%)</td>
+    <td class="tg-ljh4"></td>
+  </tr>
+  <tr>
+    <td class="tg-ik1f">Region in Los Angeles County</td>
+    <td class="tg-6uvz"></td>
+    <td class="tg-6uvz"></td>
+    <td class="tg-6uvz"></td>
+    <td class="tg-6uvz"></td>
+    <td class="tg-6uvz"></td>
+    <td class="tg-ljh4">&lt;.0001</td>
+  </tr>
+  <tr>
+    <td class="tg-nu5p">&nbsp;&nbsp;Antelope Valley (1)</td>
+    <td class="tg-6uvz">1 (1%)</td>
+    <td class="tg-6uvz">1 (2%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-ljh4"></td>
+  </tr>
+  <tr>
+    <td class="tg-nu5p">&nbsp;&nbsp;Los Angeles (city of) (2)</td>
+    <td class="tg-6uvz">22 (22%)</td>
+    <td class="tg-6uvz">9 (19%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-6uvz">10 (26%)</td>
+    <td class="tg-6uvz">3 (75%)</td>
+    <td class="tg-ljh4"></td>
+  </tr>
+  <tr>
+    <td class="tg-nu5p">&nbsp;&nbsp;San Fernando Valley (3)</td>
+    <td class="tg-6uvz">18 (18%)</td>
+    <td class="tg-6uvz">7 (15%)</td>
+    <td class="tg-6uvz">3 (30%)</td>
+    <td class="tg-6uvz">8 (21%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-ljh4"></td>
+  </tr>
+  <tr>
+    <td class="tg-nu5p">&nbsp;&nbsp;San Gabriel Valley (4)</td>
+    <td class="tg-6uvz">13 (13%)</td>
+    <td class="tg-6uvz">9 (19%)</td>
+    <td class="tg-6uvz">1 (10%)</td>
+    <td class="tg-6uvz">3 (8%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-ljh4"></td>
+  </tr>
+  <tr>
+    <td class="tg-nu5p">&nbsp;&nbsp;Santa Clarita (5)</td>
+    <td class="tg-6uvz">10 (10%)</td>
+    <td class="tg-6uvz">8 (17%)</td>
+    <td class="tg-6uvz">1 (10%)</td>
+    <td class="tg-6uvz">1 (3%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-ljh4"></td>
+  </tr>
+  <tr>
+    <td class="tg-nu5p">&nbsp;&nbsp;South Bay (6)</td>
+    <td class="tg-6uvz">12 (12%)</td>
+    <td class="tg-6uvz">6 (13%)</td>
+    <td class="tg-6uvz">2 (20%)</td>
+    <td class="tg-6uvz">4 (11%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-ljh4"></td>
+  </tr>
+  <tr>
+    <td class="tg-nu5p">&nbsp;&nbsp;South Los Angeles (7)</td>
+    <td class="tg-6uvz">1 (1%)</td>
+    <td class="tg-6uvz">1 (2%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-ljh4"></td>
+  </tr>
+  <tr>
+    <td class="tg-nu5p">&nbsp;&nbsp;Southeast Los Angeles (8)</td>
+    <td class="tg-6uvz">4 (4%)</td>
+    <td class="tg-6uvz">3 (6%)</td>
+    <td class="tg-6uvz">1 (10%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-ljh4"></td>
+  </tr>
+  <tr>
+    <td class="tg-nu5p">&nbsp;&nbsp;West Hollywood (9)</td>
+    <td class="tg-6uvz">4 (4%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-6uvz">4 (11%)</td>
+    <td class="tg-6uvz">0 (0%)</td>
+    <td class="tg-ljh4"></td>
+  </tr>
+  <tr>
+    <td class="tg-nu5p">&nbsp;&nbsp;West Los Angeles (10)</td>
+    <td class="tg-6uvz">15 (15%)</td>
+    <td class="tg-6uvz">4 (8%)</td>
+    <td class="tg-6uvz">2 (20%)</td>
+    <td class="tg-6uvz">8 (21%)</td>
+    <td class="tg-6uvz">1 (25%)</td>
+    <td class="tg-ljh4"></td>
+  <tr style="border-bottom:2.5px solid black">
+    <td colspan="100%"></td>  
+  </tr>
+  <tr>
+    <td class="tg-nu5p" colspan="7">*<span style="font-style:italic">P-</span>values based on Pearson chi-square test of association.</td>
+  </tr>
+</tbody>
+</table>
+
+<br>
+
 
 *Note.* This table shows statistical significance between the variables of interest and housing type at an α level of .05 (*p* < .0001).
 <br>
