@@ -3210,13 +3210,17 @@ dtype: float64
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The results summary produces a lot of information, and resembles the sort of information produced by many different statistics packages and programs.  Note at the top of the summary table that the "Dep. Variable" (dependent variable) is called Happiness.  The independent variable(s) are summarized in the middle panel where the estimated values of the slope and y-intercept are provided, which should look something like this:</p>
-<h1><pre></h1>
 
-<pre><code>             coef    std err          t      P&gt;|t|      [0.025      0.975]
-</code></pre>
-<hr>
-<p>const         -1.4693      0.262     -5.613      0.000      -1.984      -0.955</p>
-<h1 id="LogGDP---------0.7436------0.028-----26.625------0.000-------0.689-------0.798">LogGDP         0.7436      0.028     26.625      0.000       0.689       0.798<a class="anchor-link" href="#LogGDP---------0.7436------0.028-----26.625------0.000-------0.689-------0.798">&#182;</a></h1><p>&lt;/pre&gt;</p>
+<pre>
+  ==============================================================================
+                   coef    std err          t      P>|t|      [0.025      0.975]
+  ------------------------------------------------------------------------------
+  const         -1.4693      0.262     -5.613      0.000      -1.984      -0.955
+  LogGDP         0.7436      0.028     26.625      0.000       0.689       0.798
+  ==============================================================================
+  </pre>
+  
+
 <p>The first row of the table provided concerns the constant ("const") term, and the  second row describes the <code>LogGDP</code> part of the data.  Let's break this down in some further detail.</p>
 <p>Each of the two rows contains a coefficient ('coef'): these are the parameters that we are trying to estimate.</p>
 <p>The first row, labeled 'const', describes the y-intercept $y_0$ in our model, which is the coefficient ('coef') associated with the constant ('const') term.</p>
