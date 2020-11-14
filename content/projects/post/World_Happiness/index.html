@@ -1,50 +1,9 @@
 ---
-title: " "
-output: html_document
-showthedate: False
-date: 2020-11-12
-highlight: false
+
 ---
 
-<!DOCTYPE html>
-<html>
-<head><meta charset="utf-8" />
-
-<title>World Happiness</title>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-
-
-<!-- Custom stylesheet, it must be in the same directory as the html file -->
-<link rel="stylesheet" href="custom.css">
-
-<!-- Loading mathjax macro -->
-<!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
-    <!-- MathJax configuration -->
-    <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-            processEscapes: true,
-            processEnvironments: true
-        },
-        // Center justify equations in code and markdown cells. Elsewhere
-        // we use CSS to left justify single line equations in code cells.
-        displayAlign: 'center',
-        "HTML-CSS": {
-            styles: {'.MathJax_Display': {"margin": 0}},
-            linebreaks: { automatic: true }
-        }
-    });
-    </script>
-    <!-- End of mathjax configuration --></head>
-<body>
-  <div class="jupyter">
+<link rel="stylesheet" href="./jupyter.css">
+<div class="jupyter">
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
@@ -2958,10 +2917,10 @@ plot.set_xticklabels(['2005',' ','2007',' ','2009',' ','2011',' ','2013',' ','20
 <p>Visually, the relationship between the two variables plotted above looks something like a line, albeit with a fair amount of jitter above and below that line.</p>
 <p>Linear regression is a method that estimates a relationship between two variables by fitting a line to data points relating those variables.  That is, given a set of data points relating two variables, linear regression creates a <b>model</b> of the data by assuming that the data relationship is well described by a straight line &mdash; more specifically, a straight line <em>is</em> the model of the data.  Given our assumption that a line is a good description of the data relationship, we need to identify what is the specific line that best fits our particular dataset.</p>
 <p>Mathematically, a line relating an independent variable $x$ and a dependent variable $y$ is characterized by two parameters: the slope and the y-intercept.  Mathematically, we might write:
-<p>$$y = \beta x + y_0$$</p>
-<p>where $\beta$ represents the slope and $y_0$ represents the y-intercept.  The y-intercept is where the line crosses the y-axis (i.e., for $x = 0$), and the slope indicates how a change $\Delta x$ in the independent variable corresponds to a change $\Delta y$ in the dependent variable (the slope is given by $\beta = \Delta_y/\Delta_x$).</p>
+$$y = \beta x + y_0$$
+where $\beta$ represents the slope and $y_0$ represents the y-intercept.  The y-intercept is where the line crosses the y-axis (i.e., for $x = 0$), and the slope indicates how a change $\Delta x$ in the independent variable corresponds to a change $\Delta y$ in the dependent variable (the slope is given by $\beta = \Delta_y/\Delta_x$).</p>
 <p>In our case, we are interested in quantifying the relationship between Happiness and LogGDP, so we are interested in a specific model of the form:</p>
-<p>$${\rm Happiness} = \beta * {\rm LogGDP} + y_0$$</p><p>Linear regression attempts to find the <b>best-fit line</b> that minimizes the least-squares error, that is, the difference between the actual data and the model prediction given by the equation above, summed over all data points. That is, linear regression produces a specific estimate for the parameters $\beta$ and $y_0$ that does the best job of fitting the data points.</p>
+$${\rm Happiness} = \beta * {\rm LogGDP} + y_0$$<p>Linear regression attempts to find the <b>best-fit line</b> that minimizes the least-squares error, that is, the difference between the actual data and the model prediction given by the equation above, summed over all data points. That is, linear regression produces a specific estimate for the parameters $\beta$ and $y_0$ that does the best job of fitting the data points.</p>
 <p>Visually, we can see that the slope of the general trend in the data is approximately equal to 1, because the y-axis increases by around 4 units (Happiness increasing from approximately 3 to 7) at the same time that the x-axis also increases by around 4 units (LogGDP going from 7 to 11).  It is harder to estimate the y-intercept of the dataset, since at LogGDP=7, the data are far from the y-axis at $x = 0$.  You should recognize that some estimates for the model parameters $\beta$ and $y_0$ would do a poor job of describing the data.  If we chose the slope to be $\beta=100$, for example, then our model would be predicting a much more rapid rise than we see in the actual data.  Or if we chose a very large y-intercept such as $y_0=1000$, the model predictions would lie far above the data.  But we don't need to rely on visual inspection, since we can use tools such as statsmodels to estimate these model parameters numerically.  (This is part of a general process typically referred to as "parameter estimation" or "estimating parameters from data", but it should be recognized that parameter estimation always occurs within the context of some assumed model, such as the straight line we are using here.)</p>
 <p>The method from statsmodels that we will use specifically is called Ordinary Least Squares (OLS), which is the simplest of linear regression methods to estimate the parameters that minimize the least-squares error between the actual data and the model predictions.</p>
 <p>In statsmodels, a fit to the slope $\beta$ will be carried out when we indicate what are the dependent and independent variables.  Statsmodels (and others) use a somewhat <a href="https://www.statsmodels.org/stable/endog_exog.html">different terminology</a>: what we have been calling the independent variable, statsmodels call the "exogenous" variable, and our dependent variable is the "endogenous" variable in statsmodels.  By default, statsmodels will not attempt to fit the y-intercept $y_0$, but that can be triggered by augmenting the dataset, as described in more detail below.</p>
@@ -3214,23 +3173,19 @@ dtype: float64
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The results summary produces a lot of information, and resembles the sort of information produced by many different statistics packages and programs.  Note at the top of the summary table that the "Dep. Variable" (dependent variable) is called Happiness.  The independent variable(s) are summarized in the middle panel where the estimated values of the slope and y-intercept are provided, which should look something like this:</p>
+<h1><pre></h1>
 
-<pre>
-  ==============================================================================
-                   coef    std err          t      P>|t|      [0.025      0.975]
-  ------------------------------------------------------------------------------
-  const         -1.4693      0.262     -5.613      0.000      -1.984      -0.955
-  LogGDP         0.7436      0.028     26.625      0.000       0.689       0.798
-  ==============================================================================
-  </pre>
-  
-
+<pre><code>             coef    std err          t      P&gt;|t|      [0.025      0.975]
+</code></pre>
+<hr>
+<p>const         -1.4693      0.262     -5.613      0.000      -1.984      -0.955</p>
+<h1 id="LogGDP---------0.7436------0.028-----26.625------0.000-------0.689-------0.798">LogGDP         0.7436      0.028     26.625      0.000       0.689       0.798<a class="anchor-link" href="#LogGDP---------0.7436------0.028-----26.625------0.000-------0.689-------0.798">&#182;</a></h1><p>&lt;/pre&gt;</p>
 <p>The first row of the table provided concerns the constant ("const") term, and the  second row describes the <code>LogGDP</code> part of the data.  Let's break this down in some further detail.</p>
 <p>Each of the two rows contains a coefficient ('coef'): these are the parameters that we are trying to estimate.</p>
 <p>The first row, labeled 'const', describes the y-intercept $y_0$ in our model, which is the coefficient ('coef') associated with the constant ('const') term.</p>
 <p>The second row, labeled 'LogGDP', describes the slope $\beta$ in our model, which is the coefficient ('coef') associated with the LogGDP term.</p>
 <p>In other words, using the data in the table above, OLS has identified that the best straight-line model fitting Happiness to LogGDP is:</p>
-<p>$${\rm Happiness} = 0.7436 * {\rm LogGDP} - 1.4693$$</p><p>In the visual estimation of the slope we did above, we noted that the slope should be approximately equal to 1.  That turned out to be an over-estimate since the best-fit value is actually around 0.74, but it's not wildly off.</p>
+$${\rm Happiness} = 0.7436 * {\rm LogGDP} - 1.4693$$<p>In the visual estimation of the slope we did above, we noted that the slope should be approximately equal to 1.  That turned out to be an over-estimate since the best-fit value is actually around 0.74, but it's not wildly off.</p>
 <p>The table above also includes standard errors for each parameter estimate. These numbers convey how uncertain we should be in the parameters, i.e. higher standard errors correspond to more uncertainty. The y-intercept has a standard error of 0.262 and the slope has a standard error of 0.028. These values can be used to construct confidence intervals, although this topic is outside the scope of the current course.</p>
 <p>Just because the fit indicates a positive relationship between Happiness and LogGDP does not necessarily mean that result is statistically significant.  That is similar to when we are presented with political polling data, in which two candidates might have polling averages that are close to each other, but within the "margin of error" of the poll.  A margin of error is a type of confidence interval: just because one candidate might have slightly higher polling numbers does not mean that result is statistically significant if the difference between the two candidates lies within the margin of error.</p>
 <p>In order to assess the statistical significance of its parameter estimates, statsmodels carries out a t-test on these estimated coefficients.  This is a particular type of statistical test that compares the estimated coefficients with a statistical null model in which those coefficients are zero.  The <code>t</code> scores in the table above represent the number of standard errors the estimated coefficients are away from zero, and the probability <code>P&gt;|t|</code> is the probability that one would estimate those values of the coefficients in the null model.  In other words, <code>P&gt;|t|</code> estimates how likely it is that those estimated coefficients could actually be zero just by chance.  The fact that the probability <code>P</code> is zero out to at least three significant digits is indicative of the fact that these estimated coefficients are statistically significant and not equal to zero.  (The values of these probability estimates are contained in the <code>pvalues</code> attribute of the <code>results</code> object.)  Also presented is the 95% confidence interval (CI) for these estimates, showing the interval associated with the quantiles at 0.025 and 0.975, that is, the interval in which 95% of the estimates lie within.</p>
@@ -4101,10 +4056,4 @@ dtype: int64</pre>
 </div>
     </div>
   </div>
-  </div>
-</body>
-
- 
-
-
-</html>
+</div>
