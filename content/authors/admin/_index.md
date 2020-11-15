@@ -17,8 +17,10 @@ email: "lshpaner@ucla.edu"
 interests:
 - Data Science
 - Data Analytics
-- Financial Modeling
 - Machine Learning
+- Support-vector machines
+- Hyperparameter tuning
+- Financial Modeling
 - Quantitative Research
 
 organizations:
