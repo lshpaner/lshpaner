@@ -17,7 +17,7 @@ I. Probability and Statistics for Data Science
 
 ### *Cornell University*
 
-I. The World Happiness Report - Data Analysis with Python
+I. The World Happiness Report - Data Analysis in Python
 
 * [Examining the World Happiness Data](/projects/post/World_Happiness) - a complete jupyter notebook <i class="fab fa-python" style="font-size:22px"></i>
 
