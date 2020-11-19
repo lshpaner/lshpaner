@@ -79,7 +79,7 @@ date_format = "Jan 2006"
   description = "The Analytics Individual Qualification is a demonstration of proficiency in Google Analytics"
 
 [[item]]
-  organization = "University of San Diego Applied Data Science Master’s Program & San Diego Tech Hub"
+  organization = "University of San Diego Applied Data Science Master’s Program in Partnership with San Diego Tech Hub"
   organization_url = "https://sandiegotechhub.com/data-science/"
   title = "Data Science for Good"
   url = ""
