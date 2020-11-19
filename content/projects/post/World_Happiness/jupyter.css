@@ -1365,13 +1365,13 @@ Adapted from GitHub theme
     padding-right: 0px; }
   @media (min-width: 100%) {
     .jupyter .container {
-      width: 768px; } }
+      width: 100%; } }
   @media (min-width: 100%) {
     .jupyter .container {
-      width: 940px; } }
+      width: 100%; } }
   @media (min-width: 100%) {
     .jupyter .container {
-      width: 1140px; } }
+      width: 100%; } }
   .jupyter .container-fluid {
     margin-right: auto;
     margin-left: auto;
@@ -4800,16 +4800,16 @@ Adapted from GitHub theme
     overflow: scroll; }
   @media (min-width: 100%) {
     .jupyter .modal-dialog {
-      width: 600px;
+      width: 100%;
       margin: 30px auto; }
     .jupyter .modal-content {
       -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); }
     .jupyter .modal-sm {
-      width: 300px; } }
+      width: 100%; } }
   @media (min-width: 100%) {
     .jupyter .modal-lg {
-      width: 900px; } }
+      width: 100%; } }
   .jupyter .tooltip {
     position: absolute;
     z-index: 1070;
@@ -7464,7 +7464,7 @@ Adapted from GitHub theme
     cursor: move; }
   @media (min-width: 100%) {
     .jupyter .modal .modal-dialog {
-      width: 700px; } }
+      width: 100%; } }
   @media (min-width: 100%) {
     .jupyter select.form-control {
       margin-left: 12px;
@@ -10529,7 +10529,7 @@ Adapted from GitHub theme
 	padding: 0 5px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 100%) {
 	.jupyter span.save_widget {
 		font-size: small;
 		padding: 0 0 0 5px;
