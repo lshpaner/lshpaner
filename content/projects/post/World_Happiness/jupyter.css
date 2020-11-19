@@ -1823,7 +1823,7 @@ Adapted from GitHub theme
   .jupyter .table > thead > tr > td,
   .jupyter .table > tbody > tr > td,
   .jupyter .table > tfoot > tr > td {
-    padding: 8px;
+    padding: 0px;
     line-height: 1.42857143;
     vertical-align: top;
     border-top: 1px solid #ddd; }
