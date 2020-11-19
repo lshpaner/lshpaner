@@ -8598,7 +8598,7 @@ Adapted from GitHub theme
 	box-align: stretch;
     /* Modern browsers */
   display: flex;
-  width: 100%
+  width: 1000%
 	flex-direction: row;
 	align-items: stretch;
 }
@@ -8691,7 +8691,7 @@ Adapted from GitHub theme
 }
 
 .jupyter div.output_scroll div.output_subarea {
-	overflow-x: visible;
+	overflow-x: auto;
 }
 
 .jupyter div.output_text {
