@@ -26,7 +26,7 @@ date_format = "Jan 2006"
   certificate_url = "/files/Certificates/Cornell University - Data Analytics Certificate.pdf"
   date_start = "2018-09-01"
   date_end = ""
-  description = ""
+  description = "Data analytics - Cornell certificate program"
 
 [[item]]
   organization = "Cornell University"
@@ -36,7 +36,7 @@ date_format = "Jan 2006"
   certificate_url = "/files/Certificates/Cornell University - Data Analytics in R Certificate.pdf"
   date_start = "2020-04-01"
   date_end = ""
-  description = ""
+  description = "Data analytics in R - Cornell certificate program"
 
 [[item]]
   organization = "Cornell University"
@@ -46,7 +46,7 @@ date_format = "Jan 2006"
   certificate_url = "/files/Certificates/Cornell University - Software Development in Python Certificate.pdf"
   date_start = "2020-03-01"
   date_end = ""
-  description = ""
+  description = "Python programming - Cornell certificate program"
   
 [[item]]
   organization = "Cornell University"
@@ -56,7 +56,7 @@ date_format = "Jan 2006"
   certificate_url = "/files/Certificates/Cornell University - Data Visualization in Tableau Certificate.pdf"
   date_start = "2020-05-01"
   date_end = ""
-  description = ""
+  description = "Data visualization in Tableau - Cornell certificate program"
 
 [[item]]
   organization = "Cornell University"
@@ -66,7 +66,7 @@ date_format = "Jan 2006"
   certificate_url = "/files/Certificates/Cornell University - Blockchain for Business Certificate.pdf"
   date_start = "2019-05-01"
   date_end = ""
-  description = ""
+  description = "Applications of blockchain-based solutions to solve business problems - Cornell certificate program"
 
 [[item]]
   organization = "Google"
@@ -76,7 +76,18 @@ date_format = "Jan 2006"
   certificate_url = "https://skillshop.exceedlms.com/student/award/54981612/"
   date_start = "2020-07-18"
   date_end = "2021-07-18"
-  description = ""
+  description = "The Analytics Individual Qualification is a demonstration of proficiency in Google Analytics"
+
+[[item]]
+  organization = "University of San Diego Applied Data Science Master’s Program & San Diego Tech Hub"
+  organization_url = "https://sandiegotechhub.com/data-science/"
+  title = "Data Science for Good"
+  url = ""
+  certificate_url = "/files/Certificates/Data Science for Good - Leonid Shpaner.pdf"
+  date_start = "2020-10-31"
+  date_end = ""
+  description = "An interactive virtual workshop series to develop data science skills, advance career, and drive social change. Presented by University Of San Diego Applied Data Science Master's Program and San Diego Tech Hub."
+  
   
 
 +++
