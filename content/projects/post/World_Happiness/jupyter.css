@@ -1137,7 +1137,7 @@ Adapted from GitHub theme
     font-size: 14px;
     font-weight: 300;
     line-height: 1.4; }
-  @media (min-width: 768px) {
+  @media (min-width: 375px) {
     .jupyter .lead {
       font-size: 19.5px; } }
   .jupyter small,
@@ -1363,7 +1363,7 @@ Adapted from GitHub theme
     margin-left: auto;
     padding-left: 0px;
     padding-right: 0px; }
-  @media (min-width: 768px) {
+  @media (min-width: 375px) {
     .jupyter .container {
       width: 768px; } }
   @media (min-width: 992px) {
@@ -1489,7 +1489,7 @@ Adapted from GitHub theme
     margin-left: 8.33333333%; }
   .jupyter .col-xs-offset-0 {
     margin-left: 0%; }
-  @media (min-width: 768px) {
+  @media (min-width: 375px) {
     .jupyter .col-sm-1, .jupyter .col-sm-2, .jupyter .col-sm-3, .jupyter .col-sm-4, .jupyter .col-sm-5, .jupyter .col-sm-6, .jupyter .col-sm-7, .jupyter .col-sm-8, .jupyter .col-sm-9, .jupyter .col-sm-10, .jupyter .col-sm-11, .jupyter .col-sm-12 {
       float: left; }
     .jupyter .col-sm-12 {
@@ -2359,7 +2359,7 @@ Adapted from GitHub theme
     margin-top: 5px;
     margin-bottom: 10px;
     color: #404040; }
-  @media (min-width: 768px) {
+  @media (min-width: 375px) {
     .jupyter .form-inline .form-group {
       display: inline-block;
       margin-bottom: 0;
@@ -2410,18 +2410,18 @@ Adapted from GitHub theme
   .jupyter .form-horizontal .form-group {
     margin-left: 0px;
     margin-right: 0px; }
-  @media (min-width: 768px) {
+  @media (min-width: 375px) {
     .jupyter .form-horizontal .control-label {
       text-align: right;
       margin-bottom: 0;
       padding-top: 7px; } }
   .jupyter .form-horizontal .has-feedback .form-control-feedback {
     right: 0px; }
-  @media (min-width: 768px) {
+  @media (min-width: 375px) {
     .jupyter .form-horizontal .form-group-lg .control-label {
       padding-top: 11px;
       font-size: 17px; } }
-  @media (min-width: 768px) {
+  @media (min-width: 375px) {
     .jupyter .form-horizontal .form-group-sm .control-label {
       padding-top: 6px;
       font-size: 12px; } }
@@ -3298,7 +3298,7 @@ Adapted from GitHub theme
   .jupyter .nav-tabs.nav-justified > .dropdown .dropdown-menu {
     top: auto;
     left: auto; }
-  @media (min-width: 768px) {
+  @media (min-width: 375px) {
     .jupyter .nav-tabs.nav-justified > li {
       display: table-cell;
       width: 1%; }
@@ -3311,7 +3311,7 @@ Adapted from GitHub theme
   .jupyter .nav-tabs.nav-justified > .active > a:hover,
   .jupyter .nav-tabs.nav-justified > .active > a:focus {
     border: 1px solid #ddd; }
-  @media (min-width: 768px) {
+  @media (min-width: 375px) {
     .jupyter .nav-tabs.nav-justified > li > a {
       border-bottom: 1px solid #ddd;
       border-radius: 2px 2px 0 0; }
@@ -3345,7 +3345,7 @@ Adapted from GitHub theme
   .jupyter .nav-justified > .dropdown .dropdown-menu {
     top: auto;
     left: auto; }
-  @media (min-width: 768px) {
+  @media (min-width: 375px) {
     .jupyter .nav-justified > li {
       display: table-cell;
       width: 1%; }
@@ -3360,7 +3360,7 @@ Adapted from GitHub theme
   .jupyter .nav-tabs-justified > .active > a:hover,
   .jupyter .nav-tabs-justified > .active > a:focus {
     border: 1px solid #ddd; }
-  @media (min-width: 768px) {
+  @media (min-width: 375px) {
     .jupyter .nav-tabs-justified > li > a {
       border-bottom: 1px solid #ddd;
       border-radius: 2px 2px 0 0; }
@@ -3536,7 +3536,7 @@ Adapted from GitHub theme
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
     margin-top: -1px;
     margin-bottom: -1px; }
-  @media (min-width: 768px) {
+  @media (min-width: 375px) {
     .jupyter .navbar-form .form-group {
       display: inline-block;
       margin-bottom: 0;
@@ -4798,7 +4798,7 @@ Adapted from GitHub theme
     width: 50px;
     height: 50px;
     overflow: scroll; }
-  @media (min-width: 768px) {
+  @media (min-width: 375px) {
     .jupyter .modal-dialog {
       width: 600px;
       margin: 30px auto; }
@@ -5326,7 +5326,7 @@ Adapted from GitHub theme
   @media (max-width: 767px) {
     .jupyter .visible-xs-inline-block {
       display: inline-block !important; } }
-  @media (min-width: 768px) and (max-width: 991px) {
+  @media (min-width: 375px) and (max-width: 991px) {
     .jupyter .visible-sm {
       display: block !important; }
     .jupyter table.visible-sm {
@@ -5336,13 +5336,13 @@ Adapted from GitHub theme
     .jupyter th.visible-sm,
     .jupyter td.visible-sm {
       display: table-cell !important; } }
-  @media (min-width: 768px) and (max-width: 991px) {
+  @media (min-width: 375px) and (max-width: 991px) {
     .jupyter .visible-sm-block {
       display: block !important; } }
-  @media (min-width: 768px) and (max-width: 991px) {
+  @media (min-width: 375px) and (max-width: 991px) {
     .jupyter .visible-sm-inline {
       display: inline !important; } }
-  @media (min-width: 768px) and (max-width: 991px) {
+  @media (min-width: 375px) and (max-width: 991px) {
     .jupyter .visible-sm-inline-block {
       display: inline-block !important; } }
   @media (min-width: 992px) and (max-width: 1199px) {
@@ -5386,7 +5386,7 @@ Adapted from GitHub theme
   @media (max-width: 767px) {
     .jupyter .hidden-xs {
       display: none !important; } }
-  @media (min-width: 768px) and (max-width: 991px) {
+  @media (min-width: 375px) and (max-width: 991px) {
     .jupyter .hidden-sm {
       display: none !important; } }
   @media (min-width: 992px) and (max-width: 1199px) {
@@ -7462,10 +7462,10 @@ Adapted from GitHub theme
     flex: 1; }
   .jupyter .modal-header {
     cursor: move; }
-  @media (min-width: 768px) {
+  @media (min-width: 375px) {
     .jupyter .modal .modal-dialog {
       width: 700px; } }
-  @media (min-width: 768px) {
+  @media (min-width: 375px) {
     .jupyter select.form-control {
       margin-left: 12px;
       margin-right: 12px; } }
@@ -10541,7 +10541,7 @@ Adapted from GitHub theme
 	}
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 375px) and (max-width: 991px) {
 	.jupyter span.checkpoint_status {
 		display: none;
 	}
