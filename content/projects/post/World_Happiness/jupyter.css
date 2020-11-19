@@ -8592,11 +8592,13 @@ Adapted from GitHub theme
 	display: -moz-box;
 	-moz-box-orient: horizontal;
 	-moz-box-align: stretch;
-	display: box;
+  display: box;
+  width: 100%;
 	box-orient: horizontal;
 	box-align: stretch;
     /* Modern browsers */
-	display: flex;
+  display: flex;
+  width: 100%
 	flex-direction: row;
 	align-items: stretch;
 }
