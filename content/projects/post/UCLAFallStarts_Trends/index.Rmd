@@ -3,8 +3,8 @@ title: "UCLA Fall Undergraduate Enrollment Trends (1999-2019)"
 author: "Leon Shpaner"
 date: "2020-07-28"
 output:
-  word_document: default
   pdf_document: default
+  word_document: default
   html_document: default
 subtitle: A Hypothesis Test
 highlight: true
@@ -22,6 +22,7 @@ tags:
 math: yes
 ---
 
+
 UCLA Undergraduate Fall Enrollments have been averaging 27,340 for the last 20 years (1999-2019), with an average 1.26% growth rate year over year. A noticeable milestone was reached in 2017 when the population of new students crossed the 31k mark. Notwithstanding, from 2018-2019 we have seen a reduction in 0.11% from 31,577 to 31,543 new student enrollments. Given the current state of COVID-19 physical distancing restrictions, coupled with the slight drop off in enrollments between 2018-2019, will we be seeing a notable decrease in new student enrollments from 2019-2020?
 
 To shed more light on potential outcomes of this scenario, we will conduct the following hypothesis test:
@@ -30,23 +31,24 @@ $\small{H_0:}$ (initial hypothesis): the number of students enrolled in 2020 wil
 
 $\small{H_a:}$ (alternative hypothesis): the number of students enrolled in 2020 will fall below 30,000 ${\large\Longrightarrow{\hspace{2mm}}}$ $\small {H_a: \mu < 30,000}$
 
-
-The last 20 years’ worth of data are observed with actual fall enrollment numbers (source: https://www.universityofcalifornia.edu/infocenter/fall-enrollment-glance). The average number of enrolled students is measured as 27340.48 from the 21 observations. It is important to note that for a true hypothesis test to be more robust, an adequate sample size of at least n = 30 must be gathered and presented; this is based upon the central limit theorem, where the spread of sample means approaches a normal distribution as the sample size *n* increases. That being said, we use the parametric t-test in this experiment (which is useful for smaller sample sizes) as we proceed to draw a conclusion on our findings. To test these numbers, a z-value measuring the difference between the average (mean) of the last 20 years’ observations and our null (initially hypothesized value) must be calculated. This mathematical value is expressed in the following:
+The last 20 years’ worth of data are observed with actual fall enrollment numbers (source: https://www.universityofcalifornia.edu/infocenter/fall-enrollment-glance). The average number of enrolled students is measured as 27340.48 from the 21 observations. It is important to note that for a true hypothesis test to be more robust, an adequate sample size of at least *n* = 30 must be gathered and presented; this is based upon the central limit theorem, where the spread of sample means approaches a normal distribution as the sample size *n* increases. That being said, we use the parametric t-test in this experiment (which is useful for smaller sample sizes) as we proceed to draw a conclusion on our findings. To test these numbers, a z-value measuring the difference between the average (mean) of the last 20 years’ observations and our null (initially hypothesized value) must be calculated. This mathematical value is expressed in the following:
 
 $\small{TS = z = \large\frac{\overline{x} -\mu_o}{SE_\overline{x}}{\hspace{2mm}\Longrightarrow{\hspace{2mm}}}}$
 $\small SE_\overline{x} = \large\frac{s}{\sqrt{n}}{\hspace{2mm}\Longrightarrow{\hspace{2mm}}} \normalsize \small TS = (27340.48 - 30000)\cdot\large\frac{\sqrt{21}}{2443.37} = \small -4.988$
 
 
-where $\overline{x}$ = mean,${\hspace{2mm}}\mu_o$ = mean from the null and $\small {SE_\overline{x}}$ = standard error
+$\small{TS = z = \large\frac{\overline{x} -\mu_o}{SE_\overline{x}}{\hspace{2mm}\Longrightarrow{\hspace{2mm}}}}$
+$\small SE_\overline{x} = \large\frac{s}{\sqrt{n}}{\hspace{2mm}\Longrightarrow{\hspace{2mm}}} \normalsize \small TS = (27340.48 - 30000)\cdot\large\frac{\sqrt{21}}{2443.37} = \small -4.988$
 
 Prior to conducting the test, comments must be made about the potential downside risk of the false positive and false negative errors. A Type 1 (false positive) error would indicate that we have rejected the null hypothesis when it was indeed true. To mitigate this risk, we will assume an alpha (critical p-value) of 0.05. This is chosen based on a wider, yet common 95% confidence level where P = 1 – 0.95 = 0.05 (the probability that the null hypothesis is true). Using this large confidence level will ultimately allow a wider range of data, with enough “wiggle room” for a larger margin of error. In determining any potential Type 2 (false negative) errors, we may run the risk of not rejecting our null (initial hypothesis) by not factoring in a large enough sample size. 
 
 
 Finally, the hypothesis test is conducted as follows using R.
 
-First, we load the library (readr) so we can load the csv file "UCLAEnrollment" that contains our data set into a data frame called enrollment.
+First, we load the library (readr) so we can load the csv file "UCLAEnrollment.csv" that contains our data set into a data frame called enrollment.
 ```{r message = TRUE}
 library(readr)
+library(tinytex)
 enrollment = read.csv("UCLAEnrollment.csv")
 ```
 
@@ -78,10 +80,9 @@ max(as.numeric(enrollment$Enrolled, na.rm = TRUE))
 ```
 
 To see this trend represented using a line plot, the ggplot library is loaded and the code executed as follows:
-```{r fig1, fig.height = 10, fig.width = 20, echo=TRUE}
+```{r fig1, fig.height = 8, fig.width = 20, echo=TRUE}
 library(ggplot2)
-knitr::opts_chunk$set(fig.width = 25, fig.height = 8) 
-options(repr.plot.width = 1, repr.plot.height = 8)
+knitr::opts_chunk$set(fig.width = 25, fig.height = 2) 
 ggplot(data = enrollment[1:2], aes(x = Year, y = Enrolled, group = 3))+
   expand_limits(x = 2020, y = 32000)+
   geom_line(color = "#2a63ff", size = 2, alpha = 0.9, linetype = 1)+
@@ -95,7 +96,7 @@ ggplot(data = enrollment[1:2], aes(x = Year, y = Enrolled, group = 3))+
   theme(plot.title = element_text(size = 18, face = "bold"))
 ```
 
-From the line plot alone, we can gather that enrollment numbers have been trending upward year over year for the last 20 years. However, to answer our original question: "will we be seeing a notable decrease in new student enrollments from 2019-2020?" a t test with a confidence level of 95% is conducted below. Here, we are surmising that enrollment numbers will be greater than or equal to 30,000. Alternatively, we are postulating that the numbers will fall below 30,000. Let us now see the results by plugging in the statistics we have calculated manually earlier:
+From the line plot alone, we can gather that enrollment numbers have been trending upward year over year for the last 20 years. However, to examine if we will we be seeing a notable decrease in new student enrollments from 2019-2020, a t test with a confidence level of 95% is conducted below. Here, we are surmising that enrollment numbers will be greater than or equal to 30,000. Alternatively, we are postulating that the numbers will fall below 30,000. Let us now see the results by plugging in the statistics we have calculated manually earlier:
 
 ```{r}
 xbar = 27340.48
