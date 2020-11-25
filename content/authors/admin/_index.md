@@ -52,6 +52,6 @@ user_groups:
 
 With over 10 years' experience in data mining, analytics, and teaching, my intuitive problem-solving approach has been instrumental in assessing corporate risk, forecasting sales and growth, while meticulously crafting new procedures and processes on a multitude of projects within industries including: payment processing, student housing & education, pharmaceuticals, real-estate, and personal development.
 
-While I currently specialize in building financial models,  I also serve as a course facilitator at Cornell University. Quarterly, I volunteer at my alma mater (UCLA), on a professional panel comprising of alumni and professors overseeing the successful completion of student presentations on a variety of topics in economics, finance, and applied mathematics. 
+While I currently specialize in building financial models,  I also serve as a course facilitator at Cornell University. I volunteer quarterly at my alma mater (UCLA) on a professional panel comprising of alumni and professors overseeing the successful completion of student presentations on a variety of topics in economics, finance, and applied mathematics. 
 
 In my spare time, I enjoy getting out of the city, spending time in nature, and [traveling](/blog/post) to some new places. 
