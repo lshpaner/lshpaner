@@ -96,7 +96,7 @@ date_format = "Jan 2006"
   certificate_url = "/files/Certificates/Cornell University - Python for Data Science Certificate.pdf"
   date_start = "2020-12-01"
   date_end = ""
-  description = "Working with tools such as Jupyter Notebooks, NumPy, and Pandas, to analyze real-world datasets and identify patterns and relationships in data. - Cornell certificate program"
+  description = "Working with tools such as Jupyter Notebooks, NumPy, and Pandas to analyze real-world datasets and identify patterns and relationships in data. - Cornell certificate program"
   
   
   
