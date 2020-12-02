@@ -88,6 +88,18 @@ date_format = "Jan 2006"
   date_end = ""
   description = "An interactive virtual workshop series to develop data science skills, advance career, and drive social change. Presented by University Of San Diego Applied Data Science Master's Program and San Diego Tech Hub."
   
+[[item]]
+  organization = "Cornell University"
+  organization_url = "https://www.ecornell.com/certificates/data-science/python-for-data-science/"
+  title = "Python for Data Science"
+  url = ""
+  certificate_url = "/files/Certificates/Cornell University - Python for Data Science Certificate.pdf"
+  date_start = "2020-12-01"
+  date_end = ""
+  description = "Working with tools such as Jupyter Notebooks, NumPy, and Pandas, to analyzing real-world datasets and identify patterns and relationships in data. - Cornell certificate program"
+  
+  
+  
   
 
 +++
