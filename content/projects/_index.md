@@ -94,7 +94,7 @@ Otherwise, the projects linked to these connectors in Tableau are below:
 
 3. [Department of Defense Sites in the U.S. and its Territories](/projects/post/DODSites/)
 
-III. Independent Models 
+II. Independent Models 
 
 1. F.L.O.W. STATE Model – A New Perspective on Balance Sheet Pro Forma as a [Blog Post](/projects/post/FlowStateModel/) and [Linkedin Article](https://www.linkedin.com/pulse/flow-state-model-new-perspective-balance-sheet-pro-forma-leon-shpaner/?trackingId=jWDIwg0KuFt65YH9OOY1vg%3D%3D) - article on linkedin pulse
 
