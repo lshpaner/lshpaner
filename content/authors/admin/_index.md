@@ -16,6 +16,7 @@ education:
 email: "lshpaner@ucla.edu"
 interests:
 - Data Science
+- Support Vector Machines
 - Data Analytics
 - Financial Modeling
 - Quantitative Research
