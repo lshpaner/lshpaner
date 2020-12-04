@@ -3,9 +3,9 @@ title: "Optimizing a Stock Portfolio in R"
 author: "Leon Shpaner"
 date: "2020-08-04"
 output:
-  pdf_document: default
-  word_document: default
   html_document: default
+  word_document: default
+  pdf_document: default
 subtitle: From a Diversified Portfolio Based on 4 Sample Stocks 
 highlight: true
 image:

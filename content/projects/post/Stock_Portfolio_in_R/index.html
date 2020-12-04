@@ -3,9 +3,9 @@ title: "Optimizing a Stock Portfolio in R"
 author: "Leon Shpaner"
 date: "2020-08-04"
 output:
-  pdf_document: default
-  word_document: default
   html_document: default
+  word_document: default
+  pdf_document: default
 subtitle: From a Diversified Portfolio Based on 4 Sample Stocks 
 highlight: true
 image:
@@ -25,6 +25,8 @@ tags:
 - Descriptive Statistics
 ---
 
+<link href="{{< relref "projects/post/Stock_Portfolio_in_R/index.html" >}}index_files/anchor-sections/anchor-sections.css" rel="stylesheet" />
+<script src="{{< relref "projects/post/Stock_Portfolio_in_R/index.html" >}}index_files/anchor-sections/anchor-sections.js"></script>
 
 
 <p>In R Studio, we will utilize a classic stock portfolio optimization approach to examine the following 4 ticker symbols, Tejon Ranch Company (TRC), Snapchat (SNAP), AI Powered Equity ETF (AIEQ), and 2U (TWOU). These are pretty well-diversified stocks from a sample portfolio, so the data presented herein is true, significant, and will yield actionable insights.</p>
@@ -33,9 +35,8 @@ tags:
 library(quadprog)
 library(ROI.plugin.quadprog)
 library(ROI)
-library(ggplot2)</code></pre>
-<pre><code>## Warning: package &#39;ggplot2&#39; was built under R version 4.0.3</code></pre>
-<pre class="r"><code>library(magrittr)
+library(ggplot2)
+library(magrittr)
 library(broom)</code></pre>
 <p>Next, we pick the desired beginning and ending date range for the stock prices (notice how we leave the end date blank, as we want to model this through the current date:</p>
 <pre class="r"><code>begin_date &lt;-&quot;2013-01-01&quot;
@@ -70,7 +71,7 @@ stocks_series = tidy(stocks) %&gt;%
   scale_color_manual(values = c(&quot;#2a63ff&quot;, &quot;#000000&quot;, &quot;#999900&quot;, &quot;#cd1409&quot;, 
                                 alpha = 1, linetype = 1)) + geom_line(size=1)
 stocks_series</code></pre>
-<p><img src="/projects/post/Stock_Portfolio_in_R/index_files/figure-html/fig1-1.png" width="1920" /></p>
+<p><img src="{{< relref "projects/post/Stock_Portfolio_in_R/index.html" >}}index_files/figure-html/fig1-1.png" width="1920" /></p>
 <p>This will ultimately allow us to plug the value of our stocks at their closing period into the object close, using the cbind syntax, binding the data into columns. Then we load the close prices into the vector of returns, thereby looking at returns as a function of close prices.</p>
 <pre class="r"><code>close&lt;-cbind(TRC$TRC.Close, SNAP$SNAP.Close, AIEQ$AIEQ.Close, TWOU$TWOU.Close)
 View(close) #look at close to make sure your stock data was input correctly
