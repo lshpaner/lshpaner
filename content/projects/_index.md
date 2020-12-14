@@ -14,6 +14,14 @@ I. Probability and Statistics for Data Science
 
 * [Real Estate Prices in Los Angeles – A Case Study from Redfin](/projects/post/Los_Angeles_Redfin_Real_Estate) - statistical analysis on real estate data in Los Angeles County
 
+II. Data Science Programming
+
+* [European Bank Marketing Campaign Dataset](/projects/post/European_Bank) - (a joint python project in jupyter notebook with [Jose Luis Estrada](https://www.linkedin.com/in/joseluisestr/)). <i class="fab fa-python" style="font-size:22px"></i>
+
+This in-depth analysis on European bank marketing  is followed by logistic regression as a supervised learning method for best possible outcomes. 
+
+
+
 
 ### *Cornell University*
 
