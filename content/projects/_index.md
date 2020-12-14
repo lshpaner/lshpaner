@@ -16,7 +16,7 @@ I. Probability and Statistics for Data Science
 
 II. Data Science Programming
 
-* [European Bank Marketing Campaign Dataset](/projects/post/European_Bank) - (a joint python project in jupyter notebook with [Jose Luis Estrada](https://www.linkedin.com/in/joseluisestr/)). <i class="fab fa-python" style="font-size:22px"></i>
+* [European Bank Marketing Campaign Dataset](/projects/post/European_Bank_Marketing) - (a joint python project in jupyter notebook with [Jose Luis Estrada](https://www.linkedin.com/in/joseluisestr/)). <i class="fab fa-python" style="font-size:22px"></i>
 
 This in-depth analysis on European bank marketing  is followed by logistic regression as a supervised learning method for best possible outcomes. 
 
