@@ -17,4 +17,4 @@ The following visualization shows county by county numbers (quantity) of emergen
 
 More importantly, it is interesting to note that Los Angeles and Orange Counties have the highest number of said providers with a total of 1,025 and 388 respectively. What's more is that some counties are missing entirely from the map as there either exists no data for those areas, or they are physically lacking in resources.
 
-<iframe seamless frameborder="0" src="https://public.tableau.com/views/ofCOVID-19EmergencyServiceProvidersbyCounty/Dashboard?:display_count=yes&:showVizHome=no" width = '100%' height = '1100'></iframe> 
+<iframe seamless frameborder="0" src="https://public.tableau.com/views/ofCOVID-19EmergencyServiceProvidersbyCounty/Dashboard?:display_count=y&:showVizHome=no" width = '100%' height = '1100'></iframe> 
