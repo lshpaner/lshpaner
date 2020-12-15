@@ -126,7 +126,7 @@ print(ggplot(data = dom[1:2], aes(x = DaysMarket, y = Price, group = 3))+
 
 <br>
 
-\begin{align*}
+$$\begin{align*}
 \text{Price} =\beta_0 + \beta_1\text{Year_Built}\begin{pmatrix}
     1 = (1911 - 1932)\\
     2 = (1933 - 1954)\\
@@ -157,7 +157,7 @@ print(ggplot(data = dom[1:2], aes(x = DaysMarket, y = Price, group = 3))+
     2 = Townhouse\\
     3 = Condo/Co-op\\
     4 = Multi-Family\\
-    \end{pmatrix} + \varepsilon \ \ \ \ \ \ \ \ \ \ \ \ \ \ (1) \end{align*} 
+    \end{pmatrix} + \varepsilon \ \ \ \ \ \ \ \ \ \ \ \ \ \ (1) \end{align*}$$ 
 
 
 

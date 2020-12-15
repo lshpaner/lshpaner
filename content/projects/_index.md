@@ -25,12 +25,6 @@ This in-depth analysis on European bank marketing  is followed by logistic regre
 This project can also be viewed on our [shared GitHub repo](https://github.com/MSADS-500B-Data-Science-Programming/group_project)
 
 
-
-
-
-
-
-
 ### *Cornell University*
 
 I. The World Happiness Report - Data Analysis in Python
