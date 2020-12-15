@@ -20,7 +20,7 @@ II. Data Science Programming
 
 This in-depth analysis on European bank marketing  is followed by logistic regression as a supervised learning method for best possible outcomes. 
 
-[A recorded video of our presentation is presented here](https://www.youtube.com/watch?v=-id0kLvWdJY). <i class="fab fa-youtube" style="font-size:22px"></i>
+[A recorded video of our presentation can be seen here](https://www.youtube.com/watch?v=-id0kLvWdJY). <i class="fab fa-youtube" style="font-size:22px"></i>
 
 This project can also be viewed on our [shared GitHub repo](https://github.com/MSADS-500B-Data-Science-Programming/group_project)
 
