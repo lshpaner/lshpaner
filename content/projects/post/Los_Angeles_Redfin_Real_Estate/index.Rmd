@@ -21,7 +21,6 @@ tags:
 Math: yes
 ---
 
-
 ## **Abstract**
 
 Real-estate market dynamics in Los Angeles County affect the decision-making framework of all stakeholders involved in the buying or selling process. For first time home buyers and realtors looking to expand their market reach, the methodologies presented in this paper add value to this important endeavour. Leveraging exploratory data analysis lends itself to comparative metrics between prices and home characteristics not limited to size and year built and expanding into specific characteristics that portray relationships between all variables of interest. To establish and understand these key performance indicators (KPIs) from a selective sample, a reproducible, excel-based model is produced. Limitations are discussed based on the sample size, and suggestions are made for further refinement while utilizing other sampling methodologies and software packages.

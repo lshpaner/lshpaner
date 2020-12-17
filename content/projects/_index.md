@@ -8,24 +8,25 @@ pdf: true
 ---
 ---
 
-### *University of San Diego*
+### University of San Diego
 
-I. Probability and Statistics for Data Science
-
-* [Real Estate Prices in Los Angeles – A Case Study from Redfin](/projects/post/Los_Angeles_Redfin_Real_Estate) - statistical analysis on real estate data in Los Angeles County
-
-II. Data Science Programming
+I. Data Science Programming
 
 * [European Bank Marketing Campaign Dataset](/projects/post/European_Bank_Marketing) - (a joint python project in jupyter notebook with [Jose Luis Estrada](https://www.linkedin.com/in/joseluisestr/)). <i class="fab fa-python" style="font-size:22px"></i>
 
-This in-depth analysis on European bank marketing  is followed by logistic regression as a supervised learning method for best possible outcomes. 
+    This in-depth analysis on European bank marketing  is followed by logistic regression as a supervised learning method for best possible outcomes. 
 
-[A recorded video of our presentation can be seen here](https://www.youtube.com/watch?v=-id0kLvWdJY). <i class="fab fa-youtube" style="font-size:22px"></i>
+    [A recorded video of our presentation can be seen here <i class="fab fa-youtube" style="font-size:22px"></i>](https://www.youtube.com/watch?v=-id0kLvWdJY).
 
-This project can also be viewed on our [shared GitHub repo](https://github.com/MSADS-500B-Data-Science-Programming/group_project)
+    This project can also be viewed on our [shared GitHub repo](https://github.com/MSADS-500B-Data-Science-Programming/group_project)
 
+II. Probability and Statistics for Data Science
 
-### *Cornell University*
+* [Real Estate Prices in Los Angeles – A Case Study from Redfin](/projects/post/Los_Angeles_Redfin_Real_Estate) - statistical analysis on real estate data in Los Angeles County
+
+---
+
+### Cornell University
 
 I. The World Happiness Report - Data Analysis in Python
 
@@ -43,10 +44,8 @@ III. Predictive Analytics, Clustering, Classification, and Machine Learning in R
 
 
 ---
+### University of California, Los Angeles (UCLA)
 
-### *University of California, Los Angeles (UCLA)*
-
----
 
 I. Merrill Lynch Global Private Client Group Intermship Research Paper 
 
@@ -57,7 +56,7 @@ II. Independent Research Related to UCLA As a Public University
 - [UCLA Fall Undergraduate Enrollment Figures (1999-2019)](/projects/post/UCLAFallStarts_Trends/) - a hypothesis test to determine overall trajectory 📈  <i class="fab fa-r-project" style="font-size:22px"></i>
 
 ---
-### *University of California, San Diego (UCSD)*
+### University of California, San Diego (UCSD)
 Financial Modeling with Excel - projects from the course taught by [Professor George Haloulakos](https://extension.ucsd.edu/about-extension/george-a-haloulakos)
 
 I. VALUATION: Transforming Information into a Model Format 
@@ -89,7 +88,7 @@ IV. BONDS: Solving Fixed Income Problems via Finance & Excel
 - [Bonds_Fixed_Income_Problems - embedded excel workbook <i class="far fa-file-excel" style="font-size:26px"></i>](/projects/post/UCSD_Bonds_Fixed_Income_Problems)
 
 ---
-### *Miscellaneous*
+### Miscellaneous
 ---
 
 I. Tableau Projects
