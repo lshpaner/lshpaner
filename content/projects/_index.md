@@ -18,7 +18,7 @@ I. Data Science Programming
 
     [A recorded video of our presentation can be seen here <i class="fab fa-youtube"></i>](https://www.youtube.com/watch?v=-id0kLvWdJY).
 
-    This project can also be viewed on our [shared GitHub repo <i class="fab fa-github"></i>](https://github.com/MSADS-500B-Data-Science-Programming/group_project).
+    This project can also be viewed on our [shared GitHub repository <i class="fab fa-github"></i>](https://github.com/MSADS-500B-Data-Science-Programming/group_project).
 
 II. Probability and Statistics for Data Science
 
