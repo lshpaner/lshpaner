@@ -89,7 +89,6 @@ IV. BONDS: Solving Fixed Income Problems via Finance & Excel
 
 ---
 ### Miscellaneous
----
 
 I. Tableau Projects
 
