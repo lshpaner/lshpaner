@@ -20,6 +20,16 @@ date_format = "Jan 2006"
 
 [[item]]
   organization = "Cornell University"
+  organization_url = "https://www.ecornell.com/certificates/data-science/data-science-with-sql-and-tableau/"
+  title = "Data Science with SQL and Tableau"
+  url = ""
+  certificate_url = "/files/Certificates/Cornell University - Data Science with SQL and Tableau.pdf"
+  date_start = "2020-12-17"
+  date_end = ""
+  description = "Data Science with SQL and Tableau - Cornell certificate program"
+
+[[item]]
+  organization = "Cornell University"
   organization_url = "https://www.ecornell.com/certificates/data-science/data-analytics/"
   title = "Data Analytics"
   url = ""
