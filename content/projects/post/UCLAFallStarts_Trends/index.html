@@ -6,8 +6,8 @@ output:
   pdf_document: default
   word_document: default
   html_document: default
+  highlight: github
 subtitle: A Hypothesis Test
-highlight: true
 image:
   caption: ''
   focal_point: ''
@@ -36,13 +36,13 @@ math: yes
 <p>Prior to conducting the test, comments must be made about the potential downside risk of the false positive and false negative errors. A type I (false positive) error would indicate that we have rejected the null hypothesis when it was indeed true. To mitigate this risk, we will assume an alpha (critical p-value) of 0.05. This is chosen based on a wider, yet common 95% confidence level where P = 1 – 0.95 = 0.05 (the probability that the null hypothesis is true). Using this large confidence level will ultimately allow a wider range of data, with enough “wiggle room” for a larger margin of error. In determining any potential type II (false negative) errors, we may run the risk of not rejecting our null (initial hypothesis) by not factoring in a large enough sample size.</p>
 <p>Finally, the hypothesis test is conducted as follows using R.</p>
 <p>First, we load the library (readr) so we can load the csv file “UCLAEnrollment.csv” that contains our data set into a data frame called enrollment.</p>
-<pre class="r"><code>library(readr)
+<pre class="r numberLines lineAnchors"><code>library(readr)
 library(tinytex)
 enrollment = read.csv(&quot;UCLAEnrollment.csv&quot;)</code></pre>
 <p>To see the data set, we proceed to view(enrollment) which loads this into R environment. A quick summary gives us a glance at the minimum and maximum, median, mean, as well as the 1st and 3rd quartiles of each variable in the data set.</p>
-<pre class="r"><code>View(enrollment)
-summary(enrollment)</code></pre>
-<pre><code>##       Year         Enrolled         Delta          
+<pre class="r numberLines lineAnchors"><code>View(enrollment)
+summary(enrollment)
+##       Year         Enrolled         Delta          
 ##  Min.   :1999   Min.   :24668   Min.   :-0.029900  
 ##  1st Qu.:2004   1st Qu.:25328   1st Qu.:-0.001225  
 ##  Median :2009   Median :26536   Median : 0.016200  
@@ -52,19 +52,20 @@ summary(enrollment)</code></pre>
 ##                                 NA&#39;s   :1</code></pre>
 <p>To help us better understand the characteristics of the enrollment figures, let us view the summary statistics of this variable.</p>
 <p>It becomes apparent that the average number of enrolled students year over year is roughly 27,340.</p>
-<pre class="r"><code>mean(as.numeric(enrollment$Enrolled, na.rm = TRUE))</code></pre>
-<pre><code>## [1] 27340.48</code></pre>
+<pre class="r numberLines lineAnchors"><code>
+mean(as.numeric(enrollment$Enrolled, na.rm = TRUE))
+## [1] 27340.48</code></pre>
 <p>with a standard deviation of 2,443.369.</p>
-<pre class="r"><code>sd(as.numeric(enrollment$Enrolled, na.rm = TRUE))</code></pre>
-<pre><code>## [1] 2443.369</code></pre>
+<pre class="r numberLines lineAnchors"><code>sd(as.numeric(enrollment$Enrolled, na.rm = TRUE))
+## [1] 2443.369</code></pre>
 <p>The minimum number of enrolled students in the Fall from 1999-2019 was 24,668.</p>
-<pre class="r"><code>min(as.numeric(enrollment$Enrolled, na.rm = TRUE))</code></pre>
-<pre><code>## [1] 24668</code></pre>
+<pre class="r numberLines lineAnchors"><code>min(as.numeric(enrollment$Enrolled, na.rm = TRUE))
+## [1] 24668</code></pre>
 <p>with a maximum number in the same category expressed as 31,577.</p>
-<pre class="r"><code>max(as.numeric(enrollment$Enrolled, na.rm = TRUE))</code></pre>
-<pre><code>## [1] 31577</code></pre>
+<pre class="r numberLines lineAnchors"><code>max(as.numeric(enrollment$Enrolled, na.rm = TRUE))
+## [1] 31577</code></pre>
 <p>To see this trend represented using a line plot, the ggplot library is loaded and the code executed as follows:</p>
-<pre class="r"><code>library(ggplot2)
+<pre class="r numberLines lineAnchors"><code>library(ggplot2)
 knitr::opts_chunk$set(fig.width = 25, fig.height = 2) 
 ggplot(data = enrollment[1:2], aes(x = Year, y = Enrolled, group = 3))+
   expand_limits(x = 2020, y = 32000)+
@@ -79,30 +80,30 @@ ggplot(data = enrollment[1:2], aes(x = Year, y = Enrolled, group = 3))+
   theme(plot.title = element_text(size = 18, face = &quot;bold&quot;))</code></pre>
 <p><img src="/projects/post/UCLAFallStarts_Trends/index_files/figure-html/fig1-1.png" width="1920" /></p>
 <p>From the line plot alone, we can gather that enrollment numbers have been trending upward year over year for the last 20 years. However, to examine if we will we be seeing a notable decrease in new student enrollments from 2019-2020, a t test with a confidence level of 95% is conducted below. Here, we are surmising that enrollment numbers will be greater than or equal to 30,000. Alternatively, we are postulating that the numbers will fall below 30,000. Let us now see the results by plugging in the statistics we have calculated manually earlier:</p>
-<pre class="r"><code>xbar = 27340.48
+<pre class="r numberLines lineAnchors"><code>xbar = 27340.48
 mu0 = 30000.00
 sigma = 2443.37
 n = 21
 z = (xbar-mu0)/(sigma/sqrt(n))
-z</code></pre>
-<pre><code>## [1] -4.987968</code></pre>
+z
+## [1] -4.987968</code></pre>
 <p>The z-value of -4.988 still holds true from our prior manual test, and when calculated against alpha, we retrieve the critical value as follows</p>
-<pre class="r"><code>alpha = 0.05
+<pre class="r numberLines lineAnchors"><code>alpha = 0.05
 z.alpha = qnorm(1-alpha)
 # The critical value (-z.alpha)is shown below
--z.alpha</code></pre>
-<pre><code>## [1] -1.644854</code></pre>
+-z.alpha
+## [1] -1.644854</code></pre>
 <p>The test statistic -4.988 is lower than the critical value of -1.645. Therefore, at a 0.05 significance level, we must reject our initial claim that student enrollment will reach or exceed 30,000 in the fall of 2020.</p>
 <p>As another measure, we can apply the pt function to calculate the lower tail p-value of the test statistic.</p>
-<pre class="r"><code>pval = pt(z, df = n-1)
-pval</code></pre>
-<pre><code>## [1] 3.5329e-05</code></pre>
+<pre class="r numberLines lineAnchors"><code>pval = pt(z, df = n-1)
+pval
+## [1] 3.5329e-05</code></pre>
 <p>As shown by the p-value of 3.5329e-05 above being less than the 0.05 significance level, we must reject the null that <span class="math inline">\(\small x \geq 30,000.\)</span></p>
 <p>A t-test is also performed on the data, thereby further strengthening the testing grounds, and confirming what we have previously concluded.</p>
-<pre class="r"><code># t test of x against a null hypothesis
+<pre class="r numberLines lineAnchors"><code># t test of x against a null hypothesis
 
-t.test(enrollment$Enrolled, mu = 30000,alternative = &quot;less&quot;, conf.level = 0.95) </code></pre>
-<pre><code>## 
+t.test(enrollment$Enrolled, mu = 30000,alternative = &quot;less&quot;, conf.level = 0.95) 
+## 
 ##  One Sample t-test
 ## 
 ## data:  enrollment$Enrolled

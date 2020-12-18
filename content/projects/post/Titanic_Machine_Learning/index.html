@@ -1,31 +1,28 @@
 ---
 title: "Machine Learning with Titanic"
 author: "Leon Shpaner"
-date: '2020-07-06'
+date: "2020-07-06"
 output:
   html_document:
-    df_print: paged
-  pdf_document: default
-  word_document: default
-always_allow_html: true 
-math: yes
-pdf: yes
-diagram: yes
+      template: rmarkdown_template.html
+subtitle: ''
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: yes
 tags:
 - R
 - R Markdown
 - k-nearest neighbors
 - knn
-- Machine Learning 
+- Machine Learning
 - Titanic Survival
-image:
-  caption: ''
-  focal_point: ''
-  preview_only: yes
-categories: ''
-subtitle: ''
+- Train
+- Test
 ---
 
+<link href="/rmarkdown-libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/anchor-sections/anchor-sections.js"></script>
 
 
 <p>In this course project, I worked with a dataset based on passengers from the RMS Titanic, a famous luxury cruise liner that sank in 1912. (For more details on the Titanic, see <a href="https://en.wikipedia.org/wiki/RMS_Titanic" class="uri">https://en.wikipedia.org/wiki/RMS_Titanic</a>.) The dataset comes from Kaggle (<a href="https://www.kaggle.com/c/titanic" class="uri">https://www.kaggle.com/c/titanic</a>). Kaggle hosts data science competitions and is a great resource for practicing predictive analytics skills. Provided herein are test and train datasets for the titanic scenario. Models are built with train and tested with test.</p>
@@ -40,18 +37,18 @@ subtitle: ''
 <ol style="list-style-type: decimal">
 <li>Install the readr package, load the library, and load titanic.csv into the data frame named boat</li>
 </ol>
-<pre class="r"><code>#install.packages(&quot;readr&quot;)
+<pre class="r numberLines lineAnchors numberLines"><code>#install.packages(&quot;readr&quot;)
 library(readr)
 boat &lt;- read.csv(&quot;train.csv&quot;)</code></pre>
 <ol start="2" style="list-style-type: decimal">
 <li>Return a vector (or matrix) in the same dimension as data using the boat data frame and class function. Use the summary function to quickly summarize the sample</li>
 </ol>
-<pre class="r"><code>sapply(boat,class)
+<pre class="r numberLines lineAnchors"><code>sapply(boat,class)
 ## PassengerId    Survived      Pclass        Name         Sex         Age 
 ##   &quot;integer&quot;   &quot;integer&quot;   &quot;integer&quot; &quot;character&quot; &quot;character&quot;   &quot;numeric&quot; 
 ##       SibSp       Parch      Ticket        Fare       Cabin    Embarked 
-##   &quot;integer&quot;   &quot;integer&quot; &quot;character&quot;   &quot;numeric&quot; &quot;character&quot; &quot;character&quot;
-
+##   &quot;integer&quot;   &quot;integer&quot; &quot;character&quot;   &quot;numeric&quot; &quot;character&quot; &quot;character&quot;</code></pre>
+<pre class="r numberLines lineAnchors"><code>
 summary(boat)
 ##   PassengerId       Survived          Pclass          Name          
 ##  Min.   :  1.0   Min.   :0.0000   Min.   :1.000   Length:891        
@@ -83,27 +80,27 @@ summary(boat)
 <ol style="list-style-type: lower-alpha">
 <li>the average fare that the passengers paid:</li>
 </ol>
-<pre class="r"><code>mean(boat$Fare)
+<pre class="r numberLines lineAnchors"><code>mean(boat$Fare)
 ## [1] 32.20421</code></pre>
 <ol start="2" style="list-style-type: lower-alpha">
 <li>the average age of passengers on the Titanic while removing all missing (NA) values:</li>
 </ol>
-<pre class="r"><code>mean(as.numeric(boat$Age),na.rm=TRUE)
+<pre class="r numberLines lineAnchors"><code>mean(as.numeric(boat$Age),na.rm=TRUE)
 ## [1] 29.69912</code></pre>
 <ol start="3" style="list-style-type: lower-alpha">
 <li>similarly, we can get the standard deviation as follows:</li>
 </ol>
-<pre class="r"><code>sd(as.numeric(boat$Age),na.rm=TRUE)
+<pre class="r numberLines lineAnchors"><code>sd(as.numeric(boat$Age),na.rm=TRUE)
 ## [1] 14.5265</code></pre>
 <ol start="4" style="list-style-type: lower-alpha">
 <li>and the average (as a percentage) of those who survived:</li>
 </ol>
-<pre class="r"><code>mean(boat$Survived)
+<pre class="r numberLines lineAnchors"><code>mean(boat$Survived)
 ## [1] 0.3838384</code></pre>
 <ol start="4" style="list-style-type: decimal">
 <li>To get a graphical comparison of who survived vs. who did not, we can see this in the following bar chart:</li>
 </ol>
-<pre class="r"><code>counts &lt;- table(boat$Survived)
+<pre class="r numberLines lineAnchors"><code>counts &lt;- table(boat$Survived)
 par(las=2) # make label text perpendicular to axis
 par(mar=c(5,8,4,2)) # increase y-axis margin.
 barplot(counts, main=&quot;Survived vs. Not Survived&quot;, horiz = TRUE,
@@ -115,28 +112,28 @@ barplot(counts, main=&quot;Survived vs. Not Survived&quot;, horiz = TRUE,
 <ol start="5" style="list-style-type: decimal">
 <li>Now we will generate a histogram to show the age distribution of passengers on the titanic.</li>
 </ol>
-<pre class="r"><code>h=hist(boat$Age,xlab=&quot;Age&quot;, ylab=&quot;Frequency&quot;, 
+<pre class="r numberLines lineAnchors"><code>h=hist(boat$Age,xlab=&quot;Age&quot;, ylab=&quot;Frequency&quot;, 
        main=&quot;Passenger Age Distribution&quot;, col=&quot;lightblue&quot;)</code></pre>
 <p><img src="/projects/post/Titanic_Machine_Learning/index_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
 <ol start="6" style="list-style-type: decimal">
 <li>To further examine the data, we can also look at the age of Titanic Passengers by Gender:</li>
 </ol>
-<pre class="r"><code>boxplot(boat$Age~boat$Sex,xlab=&quot;Gender&quot;, ylab=&quot;Age&quot;, 
+<pre class="r numberLines lineAnchors"><code>boxplot(boat$Age~boat$Sex,xlab=&quot;Gender&quot;, ylab=&quot;Age&quot;, 
         main=&quot;Boxplot - Age of Titanic Passenger by Gender&quot;)</code></pre>
 <p><img src="/projects/post/Titanic_Machine_Learning/index_files/figure-html/boxplot-1.png" width="672" /></p>
 <p>Based on this basic model, we can see that 38% of the passengers survived based on the average we calculated in #3. Now, our goal is to dive deeper and select variables that we think will influence whether passengers survived, and then use k nearest neighbors (KNN) to build classification models that will predict who survived the Titanic.</p>
 <p>To accomplish this, we will load 2 additional libraries: class, and caTools. According to the documentation, class is a package that contains “various functions for classification, including k-nearest neighbour, Learning Vector Quantization and Self-Organizing Maps” (<a href="https://www.rdocumentation.org/packages/class/versions/7.3-17" class="uri">https://www.rdocumentation.org/packages/class/versions/7.3-17</a>). CaTools “contains several basic utility functions including: moving (rolling, running) window statistic functions, read/write for GIF and ENVI binary files, fast calculation of AUC, LogitBoost classifier, base64 encoder/decoder, round-off-error-free sum and cumsum, etc.” (<a href="https://www.rdocumentation.org/packages/caTools/versions/1.17.1" class="uri">https://www.rdocumentation.org/packages/caTools/versions/1.17.1</a>)</p>
-<pre class="r"><code>library(class)
+<pre class="r numberLines lineAnchors"><code>library(class)
 library(caTools)</code></pre>
 <p>In order to classify these variables, we will use KNN as a statistical estimation/ pattern recognition tool. In a nutshell, the algorithm will classify new variables based on how existing variables’ current classification.</p>
-<pre class="r"><code># knn() cannot work with missing variables, so for any variables you choose,
+<pre class="r numberLines lineAnchors"><code># knn() cannot work with missing variables, so for any variables you choose,
 # check to see if there are missing variables If missing variables exist, 
 # either:
 # 1) don&#39;t use that variable, or 
 # 2) use only complete cases, or 
 # 3) replace missing values with another value that makes sense.</code></pre>
 <p>Next, we want to see if there exists a relationship between the selected variables, but not all of the variables are quantitative, and as such, we must run a logistical regression, as follows.</p>
-<pre class="r"><code>library(class)
+<pre class="r numberLines lineAnchors"><code>library(class)
 library(caTools)
 library(tree)
 boat$AgeAVG&lt;-boat$Age
@@ -147,8 +144,8 @@ boatLR&lt;-glm(Survived~Sex+AgeAVG+SibSp+Parch,family=binomial(),data=boat)
 # You can use your choice of variables, or fewer variables if you wish
 boat&lt;-boat[,c(2,5,6,7,8)]
 sum(is.na(boat$Age))
-## [1] 177
-boat&lt;-within(boat,Age[is.na(Age)]&lt;-mean(Age,na.rm=TRUE))
+## [1] 177</code></pre>
+<pre class="r numberLines lineAnchors"><code>boat&lt;-within(boat,Age[is.na(Age)]&lt;-mean(Age,na.rm=TRUE))
 boat$Sex[boat$Sex==&quot;male&quot;]&lt;-1
 boat$Sex[boat$Sex==&quot;female&quot;]&lt;-0
 set.seed(123) 
@@ -163,8 +160,8 @@ knn1
 ##  [75] 1 1 0 0 1 0 0 1 1 1 0 0 1 1 1 1 1 0 1 0 1 1 1 1 1 0 1 1 1 1 1 0 0 1 1 0 1
 ## [112] 1 1 1 0 1 1 0 1 0 1 0 1 1 1 1 0 1 1 1 1 0 1 0 1 1 1 0 1 1 1 1 1 1 1 0 1 0
 ## [149] 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 0 1 1 1 1 1
-## Levels: 0 1
-
+## Levels: 0 1</code></pre>
+<pre class="r numberLines lineAnchors"><code>
 train&lt;-subset(boat, sample == TRUE)
 test&lt;-subset(boat, sample == FALSE)
 knn1&lt;-knn(train[-1],test[-1],train$Age, k=1)
@@ -214,8 +211,8 @@ knn1
 ## [169] 35               44               48               24              
 ## [173] 27               47               19               56              
 ## [177] 33               27              
-## 86 Levels: 0.67 0.75 0.83 0.92 1 2 3 4 5 6 7 8 9 10 11 12 13 14 14.5 15 ... 80
-
+## 86 Levels: 0.67 0.75 0.83 0.92 1 2 3 4 5 6 7 8 9 10 11 12 13 14 14.5 15 ... 80</code></pre>
+<pre class="r numberLines lineAnchors"><code>
 train&lt;-subset(boat, sample == TRUE)
 test&lt;-subset(boat, sample == FALSE)
 knn1&lt;-knn(train[-1],test[-1],train$Survived, k=1)
@@ -225,8 +222,8 @@ knn1
 ##  [75] 1 1 1 1 0 0 1 0 0 0 1 1 1 0 0 0 0 1 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 1 0
 ## [112] 0 0 0 1 0 0 1 0 1 0 0 1 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 1 0 0 1 0 0 0 1 0 1
 ## [149] 0 0 0 0 1 0 0 0 1 1 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 1 0 1
-## Levels: 0 1
-
+## Levels: 0 1</code></pre>
+<pre class="r numberLines lineAnchors"><code>
 train&lt;-subset(boat, sample == TRUE)
 test&lt;-subset(boat, sample == FALSE)
 knn1&lt;-knn(train[-1],test[-1],train$SibSp, k=1)
@@ -236,8 +233,8 @@ knn1
 ##  [75] 1 1 2 1 0 4 0 0 0 0 1 0 0 0 0 0 0 0 0 2 0 0 0 0 0 0 0 1 0 0 0 0 0 0 2 1 0
 ## [112] 3 1 0 1 0 0 1 0 0 0 1 1 0 0 0 0 1 0 0 0 4 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 0
 ## [149] 0 0 1 0 0 4 0 8 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0
-## Levels: 0 1 2 3 4 5 8
-
+## Levels: 0 1 2 3 4 5 8</code></pre>
+<pre class="r numberLines lineAnchors"><code>
 train&lt;-subset(boat, sample == TRUE)
 test&lt;-subset(boat, sample == FALSE)
 knn1&lt;-knn(train[-1],test[-1],train$Parch, k=1)
@@ -247,8 +244,8 @@ knn1
 ##  [75] 0 0 1 0 0 2 0 0 0 0 0 2 2 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 2
 ## [112] 2 0 0 0 0 0 0 0 0 0 1 0 0 0 0 2 0 0 0 0 2 0 1 0 0 0 5 0 0 0 0 0 0 0 2 1 1
 ## [149] 0 0 2 0 0 1 0 2 1 1 0 0 0 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-## Levels: 0 1 2 3 4 5
-
+## Levels: 0 1 2 3 4 5</code></pre>
+<pre class="r numberLines lineAnchors"><code>
 
 CF&lt;-table(knn1,test$Age)
 CF
@@ -275,11 +272,11 @@ CF
 ##    2  0  0    0  0  1  0  0  0  0  0  0  0  0  0  0  0
 ##    3  0  0    0  0  0  0  0  0  0  0  0  0  0  0  0  0
 ##    4  0  0    0  0  0  0  0  0  0  0  0  0  0  0  0  0
-##    5  0  0    0  0  0  0  0  0  0  0  0  0  0  0  0  0
-Precision&lt;-CF[2,2]/(CF[2,1]+CF[2,2])
+##    5  0  0    0  0  0  0  0  0  0  0  0  0  0  0  0  0</code></pre>
+<pre class="r numberLines lineAnchors"><code>Precision&lt;-CF[2,2]/(CF[2,1]+CF[2,2])
 Precision
-## [1] 0.5
-
+## [1] 0.5</code></pre>
+<pre class="r numberLines lineAnchors"><code>
 train&lt;-subset(boat, sample == TRUE)
 test&lt;-subset(boat, sample == FALSE)
 TrainTree&lt;-tree(Survived ~ Sex+Age+SibSp, data=train)
@@ -287,18 +284,18 @@ TrainTree&lt;-tree(Survived ~ Sex+Age+SibSp, data=train)
 plot(TrainTree)
 text(TrainTree, cex=.5)</code></pre>
 <p><img src="/projects/post/Titanic_Machine_Learning/index_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
-<pre class="r"><code>summary(TrainTree)
+<pre class="r numberLines lineAnchors"><code>summary(TrainTree)
 ## 
 ## Classification tree:
 ## tree(formula = Survived ~ Sex + Age + SibSp, data = train)
 ## Number of terminal nodes:  5 
 ## Residual mean deviance:  0.9354 = 662.3 / 708 
-## Misclassification error rate: 0.1781 = 127 / 713
-TrainPrune&lt;-prune.tree(TrainTree,best = 3,newdata=test,method = &quot;misclass&quot;)
+## Misclassification error rate: 0.1781 = 127 / 713</code></pre>
+<pre class="r numberLines lineAnchors"><code>TrainPrune&lt;-prune.tree(TrainTree,best = 3,newdata=test,method = &quot;misclass&quot;)
 plot(TrainPrune)
 text(TrainPrune, cex=.5)</code></pre>
 <p><img src="/projects/post/Titanic_Machine_Learning/index_files/figure-html/unnamed-chunk-9-2.png" width="672" /></p>
-<pre class="r"><code>summary(TrainPrune)
+<pre class="r numberLines lineAnchors"><code>summary(TrainPrune)
 ## 
 ## Classification tree:
 ## snip.tree(tree = TrainTree, nodes = c(2L, 6L))
@@ -306,12 +303,12 @@ text(TrainPrune, cex=.5)</code></pre>
 ## [1] &quot;Sex&quot; &quot;Age&quot;
 ## Number of terminal nodes:  3 
 ## Residual mean deviance:  0.9857 = 699.9 / 710 
-## Misclassification error rate: 0.1978 = 141 / 713
-TrainPrune&lt;-prune.tree(TrainTree,best = 2,newdata=test,method = &quot;misclass&quot;)
+## Misclassification error rate: 0.1978 = 141 / 713</code></pre>
+<pre class="r numberLines lineAnchors"><code>TrainPrune&lt;-prune.tree(TrainTree,best = 2,newdata=test,method = &quot;misclass&quot;)
 plot(TrainPrune)
 text(TrainPrune, cex=.5)</code></pre>
 <p><img src="/projects/post/Titanic_Machine_Learning/index_files/figure-html/unnamed-chunk-9-3.png" width="672" /></p>
-<pre class="r"><code>summary(TrainPrune)
+<pre class="r numberLines lineAnchors"><code>summary(TrainPrune)
 ## 
 ## Classification tree:
 ## snip.tree(tree = TrainTree, nodes = 2:3)
@@ -319,8 +316,8 @@ text(TrainPrune, cex=.5)</code></pre>
 ## [1] &quot;Sex&quot;
 ## Number of terminal nodes:  2 
 ## Residual mean deviance:  1.028 = 731.2 / 711 
-## Misclassification error rate: 0.2104 = 150 / 713
-
+## Misclassification error rate: 0.2104 = 150 / 713</code></pre>
+<pre class="r numberLines lineAnchors"><code>
 PredSurv &lt;- predict(TrainTree, test, type=&quot;class&quot;)
 
 CF&lt;-table(test$Survived,PredSurv)
@@ -328,8 +325,7 @@ CF
 ##    PredSurv
 ##      0  1
 ##   0 99 16
-##   1 19 44
-Precision&lt;-CF[2,2]/(CF[2,1]+CF[2,2])
+##   1 19 44</code></pre>
+<pre class="r numberLines lineAnchors"><code>Precision&lt;-CF[2,2]/(CF[2,1]+CF[2,2])
 Precision
 ## [1] 0.6984127</code></pre>
-<hr />

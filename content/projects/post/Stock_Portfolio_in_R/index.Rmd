@@ -25,9 +25,6 @@ tags:
 - Descriptive Statistics
 ---
 
-The result looks like this: {% ihighlight rust %}println!("Hello.");{% endihighlight %}.
-
-
 In R Studio, we will utilize a classic stock portfolio optimization approach to examine the following 4 ticker symbols, Tejon Ranch Company (TRC), Snapchat (SNAP), AI Powered Equity ETF (AIEQ), and 2U (TWOU). These are pretty well-diversified stocks from a sample portfolio, so the data presented herein is true, significant, and will yield actionable insights. 
 
 We start by loading the required libraries below (quantmod (the stock package), quadprog (for the quadratic program), the ROI plugin and subsequent package in order to gauge the return on investment). We also load the magrittr package ["to decrease development time and improve readability"](https://cran.r-project.org/web/packages/magrittr/vignettes/magrittr.html) and the broom package to ["bridge the gap from untidy outputs of predictions and estimations to the tidy data we want to work with."](https://cran.r-project.org/web/packages/broom/vignettes/broom.html)

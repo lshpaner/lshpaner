@@ -6,8 +6,8 @@ output:
   pdf_document: default
   word_document: default
   html_document: default
+  highlight: github
 subtitle: A Hypothesis Test
-highlight: true
 image:
   caption: ''
   focal_point: ''
@@ -21,6 +21,10 @@ tags:
 - line plots
 math: yes
 ---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE, class.source = "numberLines lineAnchors")
+```
 
 
 UCLA undergraduate fall enrollments have been averaging 27,340 for the last 20 years (1999-2019), with a 1.26% growth rate year over year. A noticeable milestone was reached in 2017 when the population of new students crossed the 31k mark. Notwithstanding, from 2018-2019 we have seen a reduction in 0.11% from 31,577 to 31,543 new student enrollments. Given the current state of COVID-19 physical distancing restrictions, coupled with the slight drop off in enrollments between 2018-2019, will we be seeing a notable decrease in new student enrollments from 2019-2020?

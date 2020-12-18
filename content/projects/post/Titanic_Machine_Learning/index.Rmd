@@ -1,33 +1,29 @@
 ---
 title: "Machine Learning with Titanic"
 author: "Leon Shpaner"
-date: '2020-07-06'
+date: "2020-07-06"
 output:
   html_document:
-    df_print: paged
-  pdf_document: default
-  word_document: default
-always_allow_html: true 
-math: yes
-pdf: yes
-diagram: yes
+      template: rmarkdown_template.html
+subtitle: ''
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: yes
 tags:
 - R
 - R Markdown
 - k-nearest neighbors
 - knn
-- Machine Learning 
+- Machine Learning
 - Titanic Survival
-image:
-  caption: ''
-  focal_point: ''
-  preview_only: yes
-categories: ''
-subtitle: ''
+- Train
+- Test
 ---
 
+
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(collapse = TRUE)
+knitr::opts_chunk$set(collapse = TRUE, class.source = "numberLines lineAnchors")
 ```
 
 In this course project, I worked with a dataset based on passengers from the RMS Titanic, a famous luxury cruise liner that sank in 1912. (For more details on the Titanic, see https://en.wikipedia.org/wiki/RMS_Titanic.) The dataset comes from Kaggle (https://www.kaggle.com/c/titanic). Kaggle hosts data science competitions and is a great resource for practicing predictive analytics skills. Provided herein are test and train datasets for the titanic scenario. Models are built with train and tested with test.
@@ -43,7 +39,7 @@ The ultimate goal of the project is to build models to determine which passenger
 
 1. Install the readr package, load the library, and load titanic.csv into the data frame named boat
 
-```{r}
+```{r, attr.source='.numberLines'}
 #install.packages("readr")
 library(readr)
 boat <- read.csv("train.csv")
@@ -196,11 +192,4 @@ CF<-table(test$Survived,PredSurv)
 CF
 Precision<-CF[2,2]/(CF[2,1]+CF[2,2])
 Precision
-
-
 ```
-
----
-
-
-
