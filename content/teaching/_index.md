@@ -6,7 +6,7 @@ subtitle:
 url: ""
 ---
 
-### *University of California, Los Angeles (UCLA)*
+### University of California, Los Angeles (UCLA)
 
 - [Financial Modeling in Excel](https://sites.google.com/g.ucla.edu/ucla-financial-modeling/home) - links to an external website
 
@@ -14,7 +14,7 @@ url: ""
 
 ---
 
-### *Cornell University*
+### Cornell University
 
 To reach me through the university, you may do so by visiting this [link.](https://www.cornell.edu/search/people.cfm?netid=ls799/)
 
@@ -48,7 +48,7 @@ I am a course facilitator for the following programs:
 
 
 --- 
-### *Visual Basic for Applications (VBA)*
+### Visual Basic for Applications (VBA)
 Helpful Macros 
 
 - [VBA - script for removing alpha characters from a string of alphanumeric text](/teaching/post/VBA/RemoveAlphas/) - very useful when cleaning alpha characters from numeric data in excel
