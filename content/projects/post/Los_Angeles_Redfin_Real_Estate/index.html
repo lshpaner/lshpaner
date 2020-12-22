@@ -51,6 +51,7 @@ Math: yes
 <div id="generalized-linear-model-glm" class="section level2">
 <h2><strong>Generalized Linear Model (GLM)</strong></h2>
 <p><br></p>
+<p style="text-align: center;">
 <p><span class="math display">\[\begin{align*}
 \text{Price} =\beta_0 + \beta_1\text{Year_Built}\begin{pmatrix}
     1 = (1911 - 1932)\\
@@ -83,6 +84,7 @@ Math: yes
     3 = Condo/Co-op\\
     4 = Multi-Family\\
     \end{pmatrix} + \varepsilon \ \ \ \ \ \ \ \ \ \ \ \ \ \ (1) \end{align*}\]</span></p>
+</p>
 where <em>Price</em> is the variable of interest (the dependent variable);
 <ol>
 Independent variables: Year_Built, Bedrooms, Region_in_LA_County, Housing_Type
@@ -94,11 +96,11 @@ Independent variables: Year_Built, Bedrooms, Region_in_LA_County, Housing_Type
 <p>In this generalized linear model, price (<em>y</em>) is dependent on the year built, bedrooms, region in LA County, and housing type (ranked by impact). Year built has a higher positive correlation with price; newer homes are “selling at higher prices than those that were built in the past” (Manausa, 2012). The Region in Los Angeles County is of a more categorical nature.</p>
 <p>Table 1 represents the characteristics by housing type (single family, townhouse,condo/co-op, and multi-family) for the sample population (<em>n</em> = 100).</p>
 <style type="text/css">
-.tg  {border:none;border-collapse:collapse;border-spacing:0;margin:0px auto; width: fit-content;}
-.tg td{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;
-  padding:0px 5px;word-break:normal;}
+.tg  {border:none;border-collapse:collapse;border-spacing:0;margin:0px auto; width:fit-content;}
+.tg td{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;overflow:visible;overflow-x:auto;
+  padding:0px 5px;word-break:inherit;}
 .tg th{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;
-  overflow:hidden;padding:0px 0px;word-break:normal;}
+  overflow:visible; padding:0px 0px;word-break:inherit;}
 .tg .tg-2egg{background-color:#ffffff;border-color:#ffffff;color:#000000;font-style:italic;text-align:center;vertical-align:top}
 .tg .tg-yd8b{background-color:#ffffff;border-color:inherit;color:#000000;font-family:Arial, Helvetica, sans-serif !important;;
   font-weight:bold;text-align:left;vertical-align:bottom}
@@ -757,10 +759,10 @@ The data also examines whether each housing type has an HOA or not. 56% of the p
 <p>Table 2 shows a summary output table using Microsoft Excel’s data analysis toolpak. In further refining and assessing the model, three of the independent variables are incorporated into a more robust framework, thereby commencing in a multiple regression table from which we can draw meaningful inference from. Following the summary, we look at the multiple <em>R</em> first. This value, otherwise known as the correlation coefficient, exposes the linearity at .48, thereby showing that there exists an overall positive linear relationship. Upon further examination, we look to the R-squared (<span class="math inline">\(\small R^2\)</span>) as the coefficient of determination to present the percent variance for the price (dependent variable y) as explained by the accompanying independent variables of beds, year built, and HOA. In this case, roughly 23% of the variability in price is explained by these predictor variables. The adjusted <span class="math inline">\(\small R^2\)</span> simply considers the number of parameters (independent variables) and adjusts accordingly, at a value of .21 (or approximately 21%).</p>
 <style type="text/css">
 .tg  {border:none;border-collapse:collapse;border-spacing:0;margin:0px auto;}
-.tg td{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:0px 5px;
+.tg td{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;overflow:scroll; overflow-x:scroll; padding:0px 5px;
   word-break:break-all;}
 .tg th{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;
-  overflow:scroll;padding:0px 0px;word-break:normal;}
+  overflow:scroll; overflow-x:scroll; padding:0px 0px;word-break:normal;}
 .tg .tg-it13{background-color:#ffffff;border-color:inherit;font-family:Arial, Helvetica, sans-serif !important;;font-weight:bold;
   text-align:left;vertical-align:top}
 .tg .tg-xpkd{background-color:#ffffff;border-color:inherit;font-family:Arial, Helvetica, sans-serif !important;;text-align:right;
