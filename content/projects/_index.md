@@ -1,6 +1,6 @@
 ---
 title: Projects
-summary: "an overview of teaching experience and courses taught."
+summary: "a vast array of projects for different endeavors and institutions."
 type: "blank"
 subtitle: 
 url: ""
