@@ -90,7 +90,9 @@ IV. BONDS: Solving Fixed Income Problems via Finance & Excel
 ---
 ### Tableau Projects
 
-To access my web data connectors and more, please visit the [Tableau Community Portal](https://tableau.github.io/webdataconnector/community/) and search for my name via CTRL+F.
+[My Tableau Public Profile](https://public.tableau.com/profile/leon.shpaner/)
+
+To access my web data connectors, visit the [Tableau Community Portal](https://tableau.github.io/webdataconnector/community/) and search for "Leon Shpaner" on the main page.
 
 Otherwise, the projects linked to these connectors in Tableau are below:
 
