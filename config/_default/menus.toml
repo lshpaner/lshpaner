@@ -33,6 +33,6 @@
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 [[main]]
   name = "Résumé"
-  url = "files/Shpaner, Leonid - Resume 2020.pdf"
+  url = "files/Shpaner, Leonid - Resume 2021.pdf"
   weight = 80
   
