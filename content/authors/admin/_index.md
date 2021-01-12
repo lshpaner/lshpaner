@@ -42,6 +42,7 @@ title: Leon Shpaner
 user_groups:
 - Researchers
 - Visitors
+- Students
 - Professors
 - Data Scientists
 - Data Analysts
