@@ -16,7 +16,7 @@ url: ""
 
 ### Cornell University
 
-To reach me through the university, you may do so by visiting this [link.](https://www.cornell.edu/search/people.cfm?netid=ls799/)
+To reach me through the university, please visit this [link.](https://www.cornell.edu/search/people.cfm?netid=ls799/)
 
 I am a course facilitator for the following programs:
 
