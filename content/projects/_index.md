@@ -28,16 +28,12 @@ II. Probability and Statistics for Data Science
 
 ### Cornell University
 
-I. The World Happiness Report - Data Analysis in Python
 
-* [Examining the World Happiness Data](/projects/post/World_Happiness) - a complete jupyter notebook <i class="fab fa-python" style="font-size:22px"></i>
-
-
-II. Optimizing a Stock Portfolio in R
+I. Optimizing a Stock Portfolio in R
 
 * [Optimizing a Diversified Portfolio Based on 4 Stocks](/projects/post/Stock_Portfolio_in_R) - a classic portfolio optimization problem and solution using quadratic programming (QP) 📈  <i class="fab fa-r-project" style="font-size:22px"></i>
 
-III. Predictive Analytics, Clustering, Classification, and Machine Learning in R
+II. Predictive Analytics, Clustering, Classification, and Machine Learning in R
 
 * [Machine Learning with Titanic](/projects/post/Titanic_Machine_Learning/) - a survival model using summary statistics and k-nearest-neighbors (knn) to predict the survical of passengers on the RMS Titanic and viability of the model. 📈  <i class="fab fa-r-project" style="font-size:22px"></i>
 
