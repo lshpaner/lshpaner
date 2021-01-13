@@ -6,6 +6,16 @@ subtitle:
 url: ""
 ---
 
+### University of San Diego
+
+[Essentials of Analytics in Excel - DAV-X800](https://pce.sandiego.edu/search/publicCourseSearchDetails.do?method=load&courseId=49435200)
+
+---
+### Cornell University
+
+To reach me through the university, please visit this [link.](https://www.cornell.edu/search/people.cfm?netid=ls799/)
+
+--- 
 ### University of California, Los Angeles (UCLA)
 
 - [Financial Modeling in Excel](https://sites.google.com/g.ucla.edu/ucla-financial-modeling/home) (*links to an external website*)
@@ -14,11 +24,8 @@ url: ""
 
 ---
 
-### Cornell University
 
-To reach me through the university, please visit this [link.](https://www.cornell.edu/search/people.cfm?netid=ls799/)
 
---- 
 ### Visual Basic for Applications (VBA)
 > Helpful macros for a variety of business applications:
 
