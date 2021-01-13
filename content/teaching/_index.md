@@ -1,14 +1,14 @@
 ---
 title: "Teaching"
-summary: "an overview of teaching experience and courses taught."
-type: "blank"
-subtitle: 
-url: ""
+summary: an overview of teaching experience and courses taught.
+type: blank
+subtitle: ''
+url: ''
 ---
 
 ### University of San Diego
 
-[Essentials of Analytics in Excel - DAV-X800](https://pce.sandiego.edu/search/publicCourseSearchDetails.do?method=load&courseId=49435200)
+[Essentials of Analytics in Excel - DAV-X800](https://pce.sandiego.edu/search/publicCourseSearchDetails.do?method=load&courseId=49435200) *(links to an external website)*
 
 ---
 ### Cornell University
