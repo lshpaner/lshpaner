@@ -46,7 +46,7 @@ date_format = "Jan 2006"
   
   * Piloted the first ever summer workshop on Financial Modeling in Excel
   
-  Panel Judge Responsibilities:
+  Panel Judge:
   
   * Evaluate student presentations and provides specific feedback on students' presentation skills
   * Identify strengths and areas of improvement on students' presentation style and method.
