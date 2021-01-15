@@ -4,7 +4,7 @@ author: "Leon Shpaner"
 date: "2020-07-06"
 output:
   prettydoc::html_pretty:
-    theme: architect
+    theme: ipsum
     highlight: github
 image:
   caption: ''
@@ -14,7 +14,7 @@ tags:
 - R
 - RMarkdown
 - k-nearest neighbors
-- knn
+- KNN
 - Machine Learning
 - Titanic Survival
 - Train
