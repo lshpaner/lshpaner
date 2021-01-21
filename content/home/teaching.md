@@ -28,6 +28,20 @@ date_format = "Jan 2006"
   color = "#FFFFFF"
 
 [[experience]]
+  title = "Course Designer (Subject Matter Expert)"
+  company = "University of San Diego"
+  company_url = ""
+  location = "San Diego, CA - Remote"
+  date_start = "2020-12-20"
+  date_end = ""
+  description = """[Essential of Analytics in Excel](https://pce.sandiego.edu/search/publicCourseSearchDetails.do?method=load&courseId=49435200)
+  
+  This course will illustrate data analytics with Excel using fundamental statistical concepts (i.e.,   descriptive statistics, statistical inference, and regression analysis).
+
+  In so doing, it offers students a jumping-off point into the world of visualizations and data-driven   decision-making from a one-stop-shop software solution. Participants will become adept at tools such   as Pivot Tables, the Data Analysis Toolpak, the VLOOKUP, and other formulas which are relevant and    applicable to today's vast enterprises and business endeavors."""
+  
+  
+[[experience]]
   title = "eCornell Course Facilitator"
   company = "Cornell University"
   company_url = "https://www.cornell.edu/search/people.cfm?netid=ls799/"
