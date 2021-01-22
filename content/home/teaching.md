@@ -72,7 +72,7 @@ date_format = "Jan 2006"
   Panel Judge:
   
   * Evaluate student presentations and provides specific feedback on students' presentation skills
-  * Identify strengths and areas of improvement on students' presentation style and method.
+  * Identify strengths and areas of improvement on students' presentation style and method
   """
   
 
