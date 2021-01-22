@@ -105,7 +105,7 @@ date_format = "Jan 2006"
   certificate_url = "/files/Certificates/Data Science for Good - Leonid Shpaner.pdf"
   date_start = "2020-10-31"
   date_end = ""
-  description = "An interactive virtual workshop series to develop data science skills, advance career, and drive social change. Presented by University Of San Diego Applied Data Science Master's Program and San Diego Tech Hub."
+  description = "An interactive virtual workshop series to develop data science skills, advance career, and drive social change. Presented by University Of San Diego Applied Data Science Master's Program and San Diego Tech Hub"
   
 [[item]]
   organization = "Cornell University"
