@@ -10,7 +10,7 @@ education:
   - course: Data Science and Analytics
     institution: Cornell University
     year: 2018-2020
-  - course: B.A., Economics
+  - course: B.A. Economics
     institution: University of California, Los Angeles (UCLA)
     year: 2007
 email: "lshpaner@ucla.edu"
