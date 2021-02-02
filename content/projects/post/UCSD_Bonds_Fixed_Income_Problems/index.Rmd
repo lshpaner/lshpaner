@@ -17,8 +17,7 @@ image:
 
 <iframe width="100%" height="700" frameborder="0" scrolling="no" src="https://onedrive.live.com/embed?resid=A5FB65B6C9763D08%2133922&authkey=%21ALmMiJqCwzmHnsM&em=2&AllowTyping=True&wdInConfigurator=True"></iframe>
 
-> FIN MODELING w/ Excel – Homework Assignment #5 
->
+
 > Complete the following tasks (based on the principles shown in the text book, instructor learning materials as well your own prior course work):
 >
 > 1)	Briefly describe the implications of each of the hypotheses (expectations, liquidity and segmentation) when the yield curve is (a) upward sloping and (b) downward sloping.

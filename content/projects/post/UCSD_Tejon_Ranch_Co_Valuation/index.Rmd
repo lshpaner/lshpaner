@@ -18,7 +18,7 @@ image:
 <iframe width="100%" height="700" frameborder="0" scrolling="no" src="https://onedrive.live.com/embed?resid=A5FB65B6C9763D08%2133912&authkey=%21AI0CSnbNAfnH2UI&em=2&AllowTyping=True&wdInConfigurator=True"></iframe>
 
 > Select a publicly traded company from Yahoo Finance (or another financial research web site of your choice). Create your own Excel model (based on the principles shown in the text book as well your own prior course work) to complete the following tasks:
-
+>
 > 1) Calculate the weighted average cost of capital [WACC] of the firm (identifying and enumerating the capital sources, their respective cost, and mix);
 >
 >> **For my analysis, I chose the publicly traded company, Tejon Ranch (TRC). Its WACC = 7.45% using the classic CAPM. The calculation itself and further information is on the following sheet: =WACC!B12**
