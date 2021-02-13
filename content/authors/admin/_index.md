@@ -56,4 +56,4 @@ With over 10 years' experience in analytics and teaching, my intuitive problem-s
 
 I serve as a course facilitator at Cornell University and also volunteer on a professional panel of alumni and professors that oversee the successful completion of student presentations on a variety of topics in economics, finance, and applied mathematics at my alma mater, UCLA.
 
-In my spare time, I enjoy getting out of the city, spending time in nature, and [traveling](/blog/post) to some new places. 
+In my spare time, I enjoy [drawing](/blog/post/art), getting out of the city, and [traveling](/blog/post) to some new places. 
