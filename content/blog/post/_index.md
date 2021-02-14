@@ -1,5 +1,11 @@
 ---
 title: "Travel Blog"
+author: " "
+date: '2020-07-11'
+output:
+  html_document: 
+    css: float.css
+    pdf_document: default
 
 # View.
 #   1 = List

@@ -1,0 +1,4 @@
+<table><tr>
+<td> <img src="bearded_man.png" alt="drawing" style="width:750px;"/>
+<td> <img src="self_portrait.png" alt="drawing" style="width:750px;"/>
+</tr></table>

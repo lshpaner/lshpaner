@@ -1,2 +1,0 @@
-<img src="bearded_man.png" alt="drawing" style="width:850px;"/>
-<img src="self_portrait.png" alt="drawing" style="width:850px;"/>
