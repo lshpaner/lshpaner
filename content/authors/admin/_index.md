@@ -54,6 +54,4 @@ user_groups:
 
 With over 10 years' experience in analytics and teaching, my intuitive problem-solving approach has been instrumental in assessing corporate risk and forecasting sales and growth. I have designed new processes on a variety of projects within payment processing, education, real-estate, and personal development.
 
-I serve as a course facilitator at Cornell University and also volunteer on a professional panel of alumni and professors that oversee the successful completion of student presentations on a variety of topics in economics, finance, and applied mathematics at my alma mater, UCLA.
-
-In my spare time, I enjoy [drawing](/art), getting out of the city, and [traveling](/blog/post) to some new places. 
+I serve as a course facilitator at Cornell University. In my spare time, I enjoy [drawing](/art), and [travel](/blog/post). 
