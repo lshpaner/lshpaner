@@ -11,7 +11,7 @@ pdf: true
 ### University of San Diego
 
 I. Data Science Foundations
-* [Walmart Consulting Project](/projects/post/Walmart_Consulting_Project/) - applying the Cross-Industry Standard Process for Data Mining (CRISP-DM) model to real price data from Walmart
+* [Walmart Consulting Project](/projects/post/Walmart_Consulting_Project) - applying the Cross-Industry Standard Process for Data Mining (CRISP-DM) model to real price data from Walmart
 
 II. Data Science Programming
 
