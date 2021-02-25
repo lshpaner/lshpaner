@@ -16,6 +16,7 @@ tags:
 - Kaggle
 - Project Management
 - Gantt Chart
+- CRISP-DM
 Math: no
 ---
 
