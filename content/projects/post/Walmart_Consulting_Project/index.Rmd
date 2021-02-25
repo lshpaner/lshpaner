@@ -16,7 +16,7 @@ tags:
 - Kaggle
 - Project Management
 - Gantt Chart
-Math: yes
+Math: no
 ---
 
 ## <span style="color:white;background-color: #4473c5">**Business Understanding**</span>
@@ -264,7 +264,12 @@ Realizing that our challenge may extend beyond a traditional linear regression m
 
 ## **Project plan and order of tasks**
 
-<iframe width="100%" height="700" frameborder="0" scrolling="no" src="https://onedrive.live.com/embed?resid=A5FB65B6C9763D08%2161867&authkey=%21AOGksqK0YPj1Mxw&em=2&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True"></iframe>
+
+
+
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTe1cKlC2-msTnvOtSJrZQKZkQHnnmzvl2ZqVbdCalpDp8Wio5yr07Nk6jHbP8iT3qExeY9qKmW7lK9/pubhtml/sheet?headers=false&amp;gid=0&amp;range=A1:BC33" width="98%" height="1745"></iframe>
+
+
 
 ## <span style="color:white;background-color: #4473c5">**Data Understanding**</span>
 
@@ -397,24 +402,139 @@ Exploratory data analysis will shed some light on these datasets, providing valu
 
 *Boxplot Price Distribution of Walmart Items*
 
+![](fig-1.png)
+*Note. This distribution in this dataset is positive skewed, where the mean price of $3.91 is higher than the median price of $3.24.*
+
+The summary statistics breakdown in Table 3 sheds further light on the distribution of the data from a strictly numerical standpoint. The average price of $3.91 across all territories and product items, does indeed come closer to reasonable results.
+
+**Table 3**
+
+*Price Distribution of Walmart Items*
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;margin:0px auto;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-ycr8{background-color:#ffffff;text-align:left;vertical-align:top}
+.tg .tg-6v43{background-color:#ffffff;font-weight:bold;text-align:left;vertical-align:top}
+.tg .tg-i81m{background-color:#ffffff;text-align:center;vertical-align:top}
+@media screen and (max-width: 767px) {.tg {width: auto !important;}.tg col {width: auto !important;}.tg-wrap {overflow-x: auto;-webkit-overflow-scrolling: touch;margin: auto 0px;}}</style>
+<div class="tg-wrap"><table class="tg">
+  <tr>
+<thead>
+  <tr>
+    <th class="tg-ycr8"></th>
+    <th class="tg-6v43">Mean</th>
+    <th class="tg-6v43">Standard Deviation</th>
+    <th class="tg-6v43">Mode</th>
+    <th class="tg-6v43">Minimum</th>
+    <th class="tg-6v43">Q1</th>
+    <th class="tg-6v43">Median</th>
+    <th class="tg-6v43">Q3</th>
+    <th class="tg-6v43">Maximum</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-6v43">Price</td>
+    <td class="tg-i81m">$3.91</td>
+    <td class="tg-i81m">$2.40</td>
+    <td class="tg-i81m">$2.98</td>
+    <td class="tg-i81m">$0.01</td>
+    <td class="tg-i81m">$2.00</td>
+    <td class="tg-i81m">$3.24</td>
+    <td class="tg-i81m">$5.27</td>
+    <td class="tg-i81m">$11.32</td>
+  </tr>
+</tbody>
+</table></div>
+
+Understanding the patterns and behaviors of prices is the first step in building out an adequate price model. The most repeated price in this dataset (mode) is $2.98, which falls in the middle between the mean and median.
+
+A subsequent histogram in Figure 2 confirms these findings. Rather than exhibiting a normal distribution, there is a positive skew in pricing.
+
+**Figure 2**
+
+*Histogram Price Distribution of Walmart Items*
+
+![](fig-2.png)
+*Note. The histogram confirms and exhibit a positive skewness, typically seen in a Poisson distribution, rather than a normal one. Moreover, there are over sixteen million observations between the $2 and $4 price points, leaning in favor of an optimal price within that range.*
+
+
+## **Data quality report**
+
+For the purposes of an initial exploratory data analysis, the sell_prices.csv dataset provides a visual and numerical demonstration of prices across all product categories, independent of store location. During the pre-processing stage, outliers are inspected and the average price pertaining thereto equals $15.19, with an original average price of $4.41 – an alarming $10.78 difference. Subsequently removing these outliers strengthens data integrity by setting a more robust foundation for a sensible price model to build, draw inference, and actionable insights from.
+
+However, upon further examination, Figure 3 exhibits that each respective item category (i.e., hobbies, foods, and household items) is assigned its own unique identification number. In Excel, a simple text to columns can parse out these identification numbers by a common tab delimiter, thereby only attributing the categorical names to this item variable. However, doing so within the framework of Python proves challenging. Similarly, for each store location (California, Wisconsin, and Texas) there are unique identifications that will require parsing out the numeric values from the alphanumeric characters. Separating the store locations and product categories from their respective identification numbers will subsequently promote the next stage of data analysis. This includes but is not limited to identifying variable relationships through correlation, scatter plots, and eventually supervised learning via linear and logistic regression.
+
+<img src="fig-3.jpg" alt="drawing" style="width:700px;"/>
+
+
+*Note. An item_id can have more than one identification number, but still belong in the same product category.*
+
+
+Furthermore, the numerical values attributed to the column “wm_yr_wk” are only identification numbers, not actual calendar dates. This is where the calendar.csv file bridges the gap, by addressing the challenges pertaining to matching and indexing data. Once again, whereas in Excel, a simple VLOOKUP formula would suffice in matching this data between two worksheets, a rendition of this in Jupyter Notebooks may prove to be quite challenging, but not impossible.
+
+In terms of data integrity, there are no missing values and the data itself is complete, thereby negating the need for smoothing the data in the pre-processing stage. However, one of the main limitations is the need for separate datasets, rather than having a clean one-stop-shop flat file for analysis. Therefore, the physical act of merging one dataset to another within the context of the chosen data analysis tool, Python, may prove strenuous in the short run, but feasible, and rewarding in the long run. This endeavor will ultimately yield actionable insights prescribed in the previous sections of this paper.
+
 
 ## **References**
 
-Clark, W. A. (2011). Prices, Expectations and the Changing. *Housing, Theory and Society,* Vol.(28), 1. <ol> https://doi.org/10.1080/14036096.2011.599174 </ol>
+Anaconda. (2021). *User interface makes learning easier.* <ol> https://doi.org/10.1080/14036096.2011.599174 </ol>
 
-Geffner, M. (2017, September 18). Days on market: what they are, why they matter. Opendoor.<ol>
+Beers, B. (2020, February, 19). Regression Definition. *Investopedia.*<ol>
 https://www.opendoor.com/w/blog/why-days-on-market-matter </ol>
 
-Hipp, J. R., & Singh, A. (2014). Changing Neighborhood Determinants of Housing. *City & Community,* 1.  <ol> https://doi.org/10.1111/cico.12071 </ol>
+Chapman, P., Clinton, J., Kerber, R., Khabaza, T., Reinartz, T., Shearer, C., & Wirth, R. (2000). *CRISP-DM 1.0 Step-by-step data mining guide.* <ol> Predictive Analytics & Machine Learning Global Services in Training, Consulting and Enablement by TMA, LLC. https://the-modeling-agency.com/crisp-dm.pdf </ol>
+ 
+Chen, J. (2020, November 28). Disequilibrium. *Investopedia.* <ol> https://www.investopedia.com/terms/d/disequilibrium.asp </ol>
 
-Manausa, J. (2012, December 10). How Does Year Built Affect A Home's Value? Joe Manausa Real Estate. <ol> https://www.manausa.com/blog/year-built-affect-home-value/ </ol>
+Chen, J. (2021, January 25). Skewness. *Investopedia.* <ol> https://www.investopedia.com/terms/s/skewness.asp </ol>
 
-Murphy, M. *Downloading Data.* Redfin. <ol> 
-https://support.redfin.com/hc/en-us/articles/360016476931-Downloading-DataRedfin</ol>
+Edwards, J. (2019, August 16). What is predictive analytics? Transforming data into future
+insights. *CIO.* <ol> https://www.cio.com/article/3273114/what-is-predictive-analytics-transforming-data-into-future-insights.html </ol>
 
-Redfin. (2020, September 14). *Redfin Data - Los Angeles.* Real Estate, Homes for Sale, MLSListings, Agents | Redfin.                
-<ol> [https://www.redfin.com/stingray/api/gis-csv?al=2&market=socal&min_stories=1&num_homes=350&<br>ord=redfin-recommended-asc&page_number=1®ion_id=11203®ion_type=6&sf=1,2,3,5,6,7&status=9&uipt=1,2,3,4,5,6&v=8](https://www.redfin.com/stingray/api/gis-csv?al=2&market=socal&min_stories=1&num_homes=350&ord=redfin-recommended-asc&page_number=1®ion_id=11203®ion_type=6&sf=1,2,3,5,6,7&status=9&uipt=1,2,3,4,5,6&v=8)</ol>
+Federal Trade Commission. Retrieved February 22, 2021, from <ol> https://www.ftc.gov/tips-advice/competition-guidance/guide-antitrust-laws/antitrust-laws </ol>
 
+Frankfield, J. (2020, July 1). Data Analytics. *Investopedia.* <ol> https://www.investopedia.com/terms/d/data-analytics.asp </ol>
 
+Hayes, A. (2020, October 8). Confidence Interval. *Investopedia.* <ol> https://www.investopedia.com/terms/c/confidenceinterval.asp </ol>
+
+John, S. (2019, April 8). How Walmart keeps its prices so low. *Business Insider.* <ol> https://www.businessinsider.com/walmart-low-price-strategy-tips-2019-4 </ol>
+
+Kaggle. (2020). *M5 Forecasting – Accuracy.* Kaggle: Your Machine Learning and Data Science Community. January 18, 2021. <ol>https://www.kaggle.com/c/tweet-sentiment-extraction/overview </ol>
+
+Kaggle. (2020). *M5 Forecasting – Accuracy.* Kaggle: Your Machine Learning and Data Science Community. January 18, 2021. <ol> https://www.kaggle.com/c/m5-forecasting-accuracy/data </ol>
+
+Kenton, W. (2021, January 15). Economies of Scale. *Investopedia.* <ol> https://www.investopedia.com/terms/e/economiesofscale.asp </ol>
+
+Kenton, W. (2021, January 24). Multiple Linear Regression (MLR). *Investopedia.* <ol> https://www.investopedia.com/terms/m/mlr.asp </ol>
+
+Kenton, W. (2020, October 1). Revenue. *Investopedia.*  <ol> https://www.investopedia.com/terms/r/revenue.asp </ol> 
+
+Kenton, W. (2020, October 24). Statistical Significance. *Investopedia.* <ol> https://www.investopedia.com/terms/s/statistically_significant.asp </ol>
+
+Majaski, C. (2020, October 24). Hypothesis Testing. *Investopedia.* <ol> https://www.investopedia.com/terms/h/hypothesistesting.asp </ol>
+
+Morgan, R. (n.d.). Highest Proft Margin Strategies. *Chron.* <ol> https://smallbusiness.chron.com/highest-profit-margin-strategies-13951.html </ol>
+
+Project Jupyter. (2021, January 6). *The Jupyter Notebook.* <ol> https://jupyter.org/ </ol>
+
+Reiff, N. (2021, January 18). WMT, SNP, and AMZN top the list of the 10 biggest companies in
+the world. *Investopedia.* <ol> https://www.investopedia.com/articles/active-trading/111115/why-all-worlds-top-10-companies-are-american.asp </ol>
+
+Srivastava, T. (2016, July 4). Solving Case study : Optimize the Products Price for an Online
+Vendor (Level : Hard). *Analytics Vidhya.* <ol> https://www.analyticsvidhya.com/blog/2016/07/solving-case-study-optimize-products-price-online-vendor-level-hard/ </ol>
+
+U.S. Retail Pricing Laws and Regulations, California. Stat. § 12024.6. (2020). <ol> https://www.nist.gov/system/files/documents/2017/05/09/CALIFORNIA-2015.pdf </ol>
+
+U.S. Retail Pricing Laws and Regulations, Wisconsin. Stat. § 92.06 (2020). <ol> https://www.nist.gov/system/files/documents/2017/04/28/WISCONSIN.pdf </ol>
+
+Verizon. (n.d.). Business Hotspot Devices. <ol> https://www.verizon.com/business/products/devices/mobile-hotspots/inseego-mifi-m2100-5g-uw </ol>
+
+Villar, A. (1996). Constrained Profit Maximization. In: General Equilibrium with Increasing
+Returns. *Lecture Notes in Economics and Mathematical Systems, 438.* <ol> https://doi.org/10.1007/978-3-662-00457-9_9 </ol>
 
 

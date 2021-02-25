@@ -10,7 +10,10 @@ pdf: true
 
 ### University of San Diego
 
-I. Data Science Programming
+I. Data Science Foundations
+* [Walmart Consulting Project] (/projects/post/Walmart_Consulting_Project) - applying the Cross-Industry Standard Process for Data Mining (CRISP-DM) model to real price data from Walmart
+
+II. Data Science Programming
 
 * [European Bank Marketing Campaign Dataset](/projects/post/European_Bank_Marketing) - a joint python project in jupyter notebook with [Jose Luis Estrada](https://www.joseluisestrada.net/). <i class="fab fa-python" style="font-size:22px"></i>
 
@@ -20,7 +23,7 @@ I. Data Science Programming
 
     This project can also be viewed on our [shared GitHub repository <i class="fab fa-github"></i>](https://github.com/MSADS-500B-Data-Science-Programming/group_project).
 
-II. Probability and Statistics for Data Science
+III. Probability and Statistics for Data Science
 
 * [Real Estate Prices in Los Angeles – A Case Study from Redfin](/projects/post/Los_Angeles_Redfin_Real_Estate) - statistical analysis on real estate data in Los Angeles County
 
