@@ -13,6 +13,8 @@ pdf: true
 I. Data Science Foundations
 * [Walmart Consulting Project](/projects/post/Walmart_Price_Model) - applying the Cross-Industry Standard Process for Data Mining (CRISP-DM) model to real price data from Walmart
 
+    [A recorded video of the presentation can be seen here](https://drive.google.com/file/d/1JaM6oZ36d39wU49LmJwb_SvPAUF_ofME/view)
+
 II. Data Science Programming
 
 * [European Bank Marketing Campaign Dataset](/projects/post/European_Bank_Marketing) - a joint python project in jupyter notebook with [Jose Luis Estrada](https://www.joseluisestrada.net/). <i class="fab fa-python" style="font-size:22px"></i>
