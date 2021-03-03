@@ -276,8 +276,7 @@ Realizing that our challenge may extend beyond a traditional linear regression m
 
 ### **Initial data collection report**
 
-The following datasets were acquired exclusively from Kaggle on the data tab at the top of the page (Kaggle, 2020). They are listed below and found in the following master directory:
-C:\Users\lshpaner\OneDrive\University of San Diego\MS Applied Data Science\ADS-501 - Foundations of Data Science and Data Ethics\Datasets
+The following datasets were acquired exclusively from Kaggle on the data tab at the top of the page (Kaggle, 2020). 
 
 * calendar.csv
 * sales_train_validation.csv
