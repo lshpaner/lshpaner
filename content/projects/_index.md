@@ -13,7 +13,7 @@ pdf: true
 I. Data Science Foundations
 * [Walmart Consulting Project](/projects/post/Walmart_Price_Model) - applying the Cross-Industry Standard Process for Data Mining (CRISP-DM) model to real price data from Walmart
 
-    [A recorded video of the presentation can be seen here](https://drive.google.com/file/d/1JaM6oZ36d39wU49LmJwb_SvPAUF_ofME/view)
+    [A recorded video of the presentation can be seen here <i class="fab fa-youtube"></i>](https://www.youtube.com/watch?v=1TqfbGY39_c)
 
 II. Data Science Programming
 
