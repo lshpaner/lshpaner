@@ -17,6 +17,7 @@ email: "lshpaner@ucla.edu"
 interests:
 - Data Science & Analytics
 - Support Vector Machines
+- Naïve Bayes Classification
 - Financial Modeling
 - Teaching
 - Quantitative Research
