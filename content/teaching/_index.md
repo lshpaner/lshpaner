@@ -24,6 +24,9 @@ To reach me through the university, please visit this [link.](https://www.cornel
 
 ---
 
+### Python and R in RStudio
+
+- [Reticulate Installation for Python in RStudio Demo](https://www.youtube.com/watch?v=gNryvKSc8Pk&t=920s)
 
 
 ### Visual Basic for Applications (VBA)
