@@ -11,7 +11,7 @@ pdf: true
 ### University of San Diego
 
 I. Applied Data Mining
-* [Predicting Student Performance in a Portuguese Secondary Institution](/projects/post/Student_Performance) - a joint data mining project with Juliet Sieland-Harris and Dan Choi <i class="fab fa-r-project" style="font-size:22px"></i>
+* [Predicting Student Performance in a Portuguese Secondary Institution](/projects/post/Student_Performance_Models) - a joint data mining project with Juliet Sieland-Harris and Dan Choi <i class="fab fa-r-project" style="font-size:22px"></i>
 
 II. Data Science Foundations
 * [Walmart Consulting Project](/projects/post/Walmart_Price_Model) - applying the Cross-Industry Standard Process for Data Mining (CRISP-DM) model to real price data from Walmart

@@ -13,7 +13,10 @@ image:
   preview_only: yes
 tags: 
 - Data Mining
-- R Programming Language
+- Exploratory Data Analysis
+- Classification 
+- R Programming
+- "C5.0"
 - CART 
 - Logistic Regression
 - Random Forest
