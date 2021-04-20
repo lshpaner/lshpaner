@@ -1,0 +1,348 @@
+---
+title: "Predicting Student Performance in a Portuguese Secondary Institution"
+subtitle: Leonid Shpaner, Juliet Sieland-Harris, and Dan Choi
+author: ""
+date: "2021-04-15"
+output:
+  pdf_document: default
+  html_document: default
+diagram: yes
+image:
+  placement: 1
+  caption: null
+tags: 
+- Data Mining
+- R Programming Language
+- CART 
+- Logistic Regression
+- Random Forest
+- Naïve Bayes
+- Neural Network
+math: yes
+---
+
+<link href="/rmarkdown-libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/anchor-sections/anchor-sections.js"></script>
+
+
+<p><a href="/projects/post/Student_Performance/Final_Project.html">Code: R Programming Language - Appendix</a></p>
+<div id="abstract" class="section level2">
+<h2><strong>Abstract</strong></h2>
+<p>Qualitative and quantitative factors alike affect student grades. We observed 1,044 students collectively from three terms of math and language arts classes of a Portuguese secondary institution to determine which of these factors is directly influenced by performance. Student grades were tallied over the three terms, from which performance was bisected by the median and binarized into two classes of 0 and 1 (“bad”, “good”, respectively). The dataset was further subjected to an 80:20 train-test split ratio to evaluate the model performance of data outside the training set visa vie implementation of six algorithms. The C5.0 and CART models produced accuracy scores of approximately 63%; whereas logistic regression and random forest models performed approximately 1% lower in terms of accuracy. Implementation of Naïve Bayes classification in conjunction with the neural network model, yielded more accurate results of 65% and 69%, respectively. We discuss other metrics like error rate and precision and note that each model, when cross-validated, has its own limitations that may inhibit or facilitate the prediction of student performance holistically.</p>
+<p><em>Keywords</em>: student performance, machine learning, ensemble methods, data mining</p>
+</div>
+<div id="predicting-student-performance-in-a-portuguese-secondary-institution" class="section level2">
+<h2><strong>Predicting Student Performance in a Portuguese Secondary Institution</strong></h2>
+<p>Predicting student performance closes the gap between socio-economic status and other external factors in one secondary educational institution, setting a precedent via proxy model for others to follow suit. The 2018 Program for International Student Assessment (PISA) found that “socio-economic status was a strong predictor of performance in reading, mathematics and science in Portugal. In Portugal, advantaged students outperformed disadvantaged students in reading by 95 score points in PISA 2018” (The Organisation for Economic Co-operation and Development [OECD], 2018). We aim to set a precedent for repeatability, allowing for subsequent iterations of our modeling techniques.</p>
+</div>
+<div id="methodology" class="section level2">
+<h2><strong>Methodology</strong></h2>
+<p>Our goal was to measure the impact of socio-economic factors on student performance from which we would select a viable predictive model. We sourced our publicly available dataset from the UCI Machine Learning Repository (Dua, 2019) as two separate .csv files representing Math and Portuguese courses from schools of secondary education. We merged the two groups into one master “student_file.csv” file in R (R Core Team, 2020), ensuring that the dataset had no missing values; this provided us a total of 1,044 rows and 33 columns of observations. Rather than sampling the data, we chose the entire population for our ensuing exploratory data analysis, thereby allowing us to pre-emptively eliminate selection bias. Our preliminary review consisted of evaluating absences from school by age, relying on attendance to provide an initial read on overall student performance. Though we identified 480 outliers in absences, we persisted in building an inclusive model of performance; decidedly, school attendance was not a reliable target for performance. On the other hand, the following descriptive statistics provided important information about the overall distribution. Whereas the minimum student age was 15, the mean, and median were both approximated at 17, suggesting a normally distributed dataset. Performance itself was categorized into “good” if the students’ grades were above the median, and “bad” if they were below. From here, we were able to determine performance by age and gender. Figure 1 shows the normalized age group by performance.</p>
+<p><strong>Figure 1</strong></p>
+<p><em>Age Group by Performance: (“Good” or “Bad”) - Normalized</em></p>
+<p><img src="figs/unnamed-chunk-8-1.png" width="864" style="display: block; margin: auto;" /></p>
+<p><em>Note.</em> This normalized histogram assuages the comparison of performance across age groups, attributing the highest grades (248 of them) to 15–16-year-olds.</p>
+<p>Six of the ensuing models were created with these predictor variables: address, family support, and study time. Nursery school, higher education, failures, and absences were presented as well for a total of seven. Logistic regression retained only the predictors of study time and absences.</p>
+</div>
+<div id="c5.0" class="section level2">
+<h2><strong>C5.0</strong></h2>
+<p>The C5.0 model only utilizes four of the variables for the four decision nodes. Figure 2 illustrates that the root node splits for whether the student is interested in higher education. Students who are not interested in higher education immediately terminate to the leaf node two which contains 67 records and has a low likelihood of performing well. The students interested in higher education branch to the next decision node which splits by students who have failed a class previously and students who have had no previous failures. Students who had at least one previous failure branch to leaf node nine, which represents 104 records with a low chance of performing well. The students who had not failed a class branch to the address decision node. If the student has a rural address, the branch terminates to leaf node five, which is comprised of 166 records and has a moderate likelihood of performing well. Students with urban addresses branch to the final decision node for absences. However, students with more than seven absences terminate at the leaf node (consisting of 87 records) where there is a moderate chance of performing well. Students with seven or less absences terminate at leaf node seven (406 records), the highest likelihood of performing well.</p>
+<p><strong>Figure 2</strong></p>
+<p><em>C5.0 Decision Tree Predicting Student Performance</em></p>
+<p><img src="figs/unnamed-chunk-9-1.png" width="864" style="display: block; margin: auto;" /></p>
+</div>
+<div id="cart" class="section level2">
+<h2><strong>CART</strong></h2>
+<p>The resulting decision tree (Figure 3) has one root node, seven decision nodes, and nine leaf nodes. The root node begins with the “failures” variable, immediately relegating students with one or more failures to the first leaf node. These students make up 17% of the data set; 13% have a high-performance value, strongly likening a student’s previous class failures to continued poor performance. The next decision node splits based on student interest in higher education, with those not interested in higher education terminating to the second leaf node. They make up 4% of the data set; 6% of these students have a high-performance value, demonstrating that lack of interest in higher education is a strong indicator for likelihood of low performance. Another decision node splits students by address, with rural addresses terminating at the third leaf node. These students make up 7% of the data set and 20% of them have a high performance, making address another strong indicator of student success.</p>
+<p><strong>Figure 3</strong></p>
+<p><em>CART Decision Tree Predicting Student Performance</em></p>
+<p><img src="figs/unnamed-chunk-10-1.png" width="864" style="display: block; margin: auto;" />
+<em>Note.</em> After evaluating this model with the test data set, the accuracy is determined to be 63.55%.</p>
+<p><strong>Logistic Regression</strong></p>
+<p>Logistic Regression was selected as the regression model of choice for this study due to performance being a binary response. The logistic regression equation takes the parametric form of the logistic regression model:</p>
+<p><span class="math display">\[{p}(y) = \frac{\text{exp}(\beta_0+\beta_1x_1+\beta_2x_2+\cdot\cdot\cdot+\beta_px_p)}{1+\text{exp}(b_0+b_1x_1+b_2x_2+\cdot\cdot\cdot+b_px_p)}+\varepsilon\]</span>
+Study time and absences are used to predict performance using this descriptive form:</p>
+<p><span class="math display">\[\hat{p}(\textit{performance}) = \frac{\text{exp}(b_0 + b_1(\textit{study time}) + b_2(\textit{absences}))}{1+\text{exp}(b_0 + b_1(\textit{study time})+b_2(\textit{absences}))}\]</span>
+Plugging in the coefficients from our training data we have:
+<span class="math display">\[\hat{p}(\textit{performance}) = \frac{\text{exp}(-0.589 + 0.365(\textit{study time}) -0.052(\textit{absences}))}{1+\text{exp}(-0.589 + 0.365(\textit{study time})-0.052(\textit{absences}))}\]</span>
+The regression coefficient for absences is -0.052.By calculating <span class="math inline">\(e^{-0.052} = \small{0.949}\)</span>, we find that for every additional day of absence, the student’s performance is 5.2% less likely to be improved (Larose, 2019, p. 190). Herein, the <em>p-</em>values of study time (0.0000194) and absences (0.000273) were statistically significant at α = 0.05, thereby eliminating the possibility of omitting these variables from this model. When evaluated against the test data set, the accuracy for the logistic regression model was determined to be 62.53%.</p>
+</div>
+<div id="random-forests" class="section level2">
+<h2><strong>Random Forests</strong></h2>
+<p>The Random Forest ensemble classification method was selected to complement the CART and C5.0 decision trees. Since the data set is relatively small, the random forest contains 100 trees. Once the branching structure of the trees is finalized, the algorithm itself classifies the “records in the original training data set. Every record in the data set is given a classification by every tree. Since these classifications are highly unlikely to be unanimous for all records, each classification is considered a ‘vote’ for that particular target variable value. The value with the largest number of votes is deemed the final classification of the record” (Larose, 2019, p. 91). When evaluated against the test data, accuracy was determined to be 62.62% with a sensitivity of 80.21% and a specificity of 48.31%.</p>
+</div>
+<div id="naïve-bayes" class="section level2">
+<h2><strong>Naïve Bayes</strong></h2>
+<p>Multiple Naïve Bayes models were created and evaluated utilizing different predictor variables. However, the fourth iteration of the Naïve Bayes classification model contained the strongest accuracy in this study. Our basis for this approach hinges on Bayes Theorem:</p>
+<p><span class="math display">\[p(X^*) = \frac{p(Y=y^*)p(Y=y^*)}{p(X^*)} \]</span>
+where <em>x</em> and <em>y</em> are the posterior probabilities (Larose, 2019, pp.113-114). The resulting model showed a higher likelihood of receiving high grades for students with urban addresses, support from family, had attended nursery school, and expressed interest in pursuing higher education. Additionally, fewer absences and fewer previous class failures increases the likelihood of receiving a high grade. The results for study time were uninformative in this model. When evaluating the Naïve Bayes model with the test data set, the accuracy was found to be 64.95% with 90.62% sensitivity and 44.07% specificity.</p>
+</div>
+<div id="neural-networks" class="section level2">
+<h2><strong>Neural Networks</strong></h2>
+<p>This linear combination takes the following general form:</p>
+<p><span class="math display">\[ net_j = \sum\limits_{i} W_{ij}x_{ij} = W_{0j}x_{0J}+W_{IJ}x_{Ij} +...+ W_{Ij}x_{Ij}\]</span>
+Refining this for our model, we have:</p>
+<p><span class="math display">\[ net_H = \sum\limits_{i} W_{iH}x_{iH} = W_{0H}(1)+ W_{1H}x_{1H} + W_{2H}x_{2H} + W_{3H}x_{3H}+...+W_{7H}x_{7H}\]</span>
+In neural networks represented by Figure 4, we found that family support has the highest weight, thereby having the most influence on student performance in this model.</p>
+<p><strong>Figure 4</strong></p>
+<p><em>Neural Network</em></p>
+<p><img src="figs/unnamed-chunk-13-1.png" width="1056" style="display: block; margin: auto;" />
+<em>Note.</em> The higher the family support, the more influence it has on the hidden layer H1, and in turn the performance O1.</p>
+</div>
+<div id="results" class="section level2">
+<h2><strong>Results</strong></h2>
+<p>To determine which model is the strongest, a full model evaluation was performed on all six models (Table 1). The evaluation measured accuracy, error rate, sensitivity, specificity, precision, and three F measure variations. Neural network has the highest accuracy, 68.80%, and lowest error rate, 31.20%, indicating it had the highest proportion of correct classifications and lowest proportion of incorrect classifications. This model also had the highest precision rate, 63.34%, which signifies the highest proportion of predicted positives to actual positives. Specificity is the proportion of negative records classified negatively, making it sensitive to false positives. The highest specificity, 66.10%, is found in the C5.0 model which shows that it would be a good model if false positives are a priority to avoid. Sensitivity shows the proportion of positive records classified positively and will lower as false negatives increase. Naïve Bayes has the highest sensitivity, 90.63%, making it a strong model if false negatives are more crucial to avoid than false positives. The final evaluation measures conducted for this study were three F scores, which combine precision and specificity weighted into one measure. The neural network model has the highest <span class="math inline">\(\small{F_1}\)</span>, 71.82%, and <span class="math inline">\(\small{F_{0.5}}\)</span>, 66.48%, while Naïve Bayes has the highest <span class="math inline">\(\small{F_2}\)</span>, 81.01%. Since the study does not have disadvantages associated with either false positives or false negatives the neural network model is determined to be the strongest option due to its high accuracy and precision.</p>
+<p><strong>Table 1</strong></p>
+<p><em>Model Evaluation Table for Student Performance</em></p>
+<style type="text/css">
+.tg  {border:none;border-collapse:collapse;border-spacing:0;margin:0px auto; width:fit-content;}
+.tg td{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;
+  padding:10px 5px;word-break:normal;}
+.tg th{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-tgze{background-color:#ffffff;border-color:#000000;font-weight:bold;text-align:left;vertical-align:top}
+.tg .tg-mums{background-color:#ffffff;border-color:#000000;font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-iks7{background-color:#ffffff;border-color:#000000;text-align:left;vertical-align:top}
+.tg .tg-jbyd{background-color:#ffffff;border-color:#000000;text-align:center;vertical-align:top}
+@media screen and (max-width: 767px) {.tg {width: auto !important;}.tg col {width: auto !important;}.tg-wrap {overflow-x: auto;-webkit-overflow-scrolling: touch;margin: auto 0px;}}</style>
+<div class="tg-wrap">
+<table class="tg">
+<thead>
+<tr style="border-bottom:2.0px solid black">
+<td colspan="7">
+</td>
+<tr>
+<tr style="border-bottom:2.0px solid black">
+<th class="tg-tgze">
+Evaluation Measure
+</th>
+<th class="tg-mums">
+C5.0
+</th>
+<th class="tg-mums">
+CART
+</th>
+<th class="tg-mums">
+Logistic Regression
+</th>
+<th class="tg-mums">
+Random Forest
+</th>
+<th class="tg-mums">
+Naïve Bayes
+</th>
+<th class="tg-mums">
+Neural Network
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tg-iks7">
+Accuracy
+</td>
+<td class="tg-jbyd">
+0.630841
+</td>
+<td class="tg-jbyd">
+0.635514
+</td>
+<td class="tg-jbyd">
+0.625301
+</td>
+<td class="tg-jbyd">
+0.626168
+</td>
+<td class="tg-jbyd">
+0.649533
+</td>
+<td class="tg-jbyd">
+0.687952
+</td>
+</tr>
+<tr>
+<td class="tg-iks7">
+Error rate
+</td>
+<td class="tg-jbyd">
+0.369159
+</td>
+<td class="tg-jbyd">
+0.364486
+</td>
+<td class="tg-jbyd">
+0.374699
+</td>
+<td class="tg-jbyd">
+0.373832
+</td>
+<td class="tg-jbyd">
+0.350467
+</td>
+<td class="tg-jbyd">
+0.312048
+</td>
+</tr>
+<tr>
+<td class="tg-iks7">
+Sensitivity
+</td>
+<td class="tg-jbyd">
+0.593750
+</td>
+<td class="tg-jbyd">
+0.770833
+</td>
+<td class="tg-jbyd">
+0.605528
+</td>
+<td class="tg-jbyd">
+0.802083
+</td>
+<td class="tg-jbyd">
+0.906250
+</td>
+<td class="tg-jbyd">
+0.829146
+</td>
+</tr>
+<tr>
+<td class="tg-iks7">
+Specificity
+</td>
+<td class="tg-jbyd">
+0.661017
+</td>
+<td class="tg-jbyd">
+0.525424
+</td>
+<td class="tg-jbyd">
+0.643519
+</td>
+<td class="tg-jbyd">
+0.483051
+</td>
+<td class="tg-jbyd">
+0.440678
+</td>
+<td class="tg-jbyd">
+0.557870
+</td>
+</tr>
+<tr>
+<td class="tg-iks7">
+Precision
+</td>
+<td class="tg-jbyd">
+0.587629
+</td>
+<td class="tg-jbyd">
+0.569231
+</td>
+<td class="tg-jbyd">
+0.610127
+</td>
+<td class="tg-jbyd">
+0.557971
+</td>
+<td class="tg-jbyd">
+0.568628
+</td>
+<td class="tg-jbyd">
+0.633397
+</td>
+</tr>
+<tr>
+<td class="tg-iks7">
+<span class="math inline">\(F_1\)</span>
+</td>
+<td class="tg-jbyd">
+0.590674
+</td>
+<td class="tg-jbyd">
+0.654867
+</td>
+<td class="tg-jbyd">
+0.607818
+</td>
+<td class="tg-jbyd">
+0.658120
+</td>
+<td class="tg-jbyd">
+0.698795
+</td>
+<td class="tg-jbyd">
+0.718172
+</td>
+</tr>
+<tr>
+<td class="tg-iks7">
+<span class="math inline">\(F_2\)</span>
+</td>
+<td class="tg-jbyd">
+0.592516
+</td>
+<td class="tg-jbyd">
+0.719844
+</td>
+<td class="tg-jbyd">
+0.606442
+</td>
+<td class="tg-jbyd">
+0.737548
+</td>
+<td class="tg-jbyd">
+0.810056
+</td>
+<td class="tg-jbyd">
+0.780880
+</td>
+</tr>
+<tr>
+<td class="tg-iks7">
+<span class="math inline">\(F_{0.5}\)</span>
+</td>
+<td class="tg-jbyd">
+0.588843
+</td>
+<td class="tg-jbyd">
+0.600649
+</td>
+<td class="tg-jbyd">
+0.609201
+</td>
+<td class="tg-jbyd">
+0.594136
+</td>
+<td class="tg-jbyd">
+0.614407
+</td>
+<td class="tg-jbyd">
+0.664787
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="conclusion" class="section level2">
+<h2><strong>Conclusion</strong></h2>
+<p>We hereby recommend the neural network model for repeated experiments of this magnitude and caliber for its propensity to deliver reliable results based on the metrics presented herein. Selecting different school subjects and tuning the hyperparameters may improve accuracy and precision; notwithstanding, this model has proven useful in identifying outside factors to student performance, allowing schools to more equitably aide student success.</p>
+</div>
+<div id="references" class="section level2">
+<h2><strong>References</strong></h2>
+<p>Cortez, P., &amp; Silva, A. (2008). <em>Using data mining to predict secondary school student performance</em> (pp. 5-12). EUROSIS.</p>
+Dua, D., &amp; Graff, C. (2019). UCI Machine Learning Repository. University of California, School of Information and Computer Science.
+<ol>
+Retrieved from <a href="https://archive.ics.uci.edu/ml/datasets/Student+Performance" class="uri">https://archive.ics.uci.edu/ml/datasets/Student+Performance</a>
+</ol>
+<p>Larose, C. D., &amp; Larose, D. T. (2019). <em>Data Science Using Python and R.</em> Wiley.</p>
+R Core Team. (2020). <em>R: A language and environment for statistical computing</em> (Version 4.0.3) [Computer software].
+<ol>
+R Foundation for Statistical Computing. <a href="http://www.R-project.org/" class="uri">http://www.R-project.org/</a>
+</ol>
+The Organisation for Economic Co-operation and Development. (2018). <em>Program for International Student Assessment (PISA) Results from PISA 2018</em>
+<ol>
+[Annual report]. PISA. <a href="https://www.oecd.org/pisa/publications/PISA2018_CN_PRT.pdf" class="uri">https://www.oecd.org/pisa/publications/PISA2018_CN_PRT.pdf</a>
+</ol>
+</div>
