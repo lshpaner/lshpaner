@@ -8,8 +8,9 @@ output:
   html_document: default
 diagram: yes
 image:
-  placement: 1
-  caption: null
+  caption: ''
+  focal point: ''
+  preview_only: yes
 tags: 
 - Data Mining
 - R Programming Language
