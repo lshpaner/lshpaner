@@ -229,7 +229,7 @@ Plugging in the coefficients from our training data we have:
 $$\hat{p}(\textit{performance}) = \frac{\text{exp}(-0.589 + 0.365(\textit{study time}) -0.052(\textit{absences}))}{1+\text{exp}(-0.589 + 0.365(\textit{study time})-0.052(\textit{absences}))}$$
 The regression coefficient for absences is -0.052.By calculating $e^{-0.052} = \small{0.949}$, we find that for every additional day of absence, the student’s performance is 5.2% less likely to be improved (Larose, 2019, p. 190). Herein, the *p-*values of study time (0.0000194) and absences (0.000273) were statistically significant at α = 0.05, thereby eliminating the possibility of omitting these variables from this model. When evaluated against the test data set, the accuracy for the logistic regression model was determined to be 62.53%. 
 
-## **Random Forests**
+## **Random Forest**
 
 The Random Forest ensemble classification method was selected to complement the CART and C5.0 decision trees. Since the data set is relatively small, the random forest contains 100 trees. Once the branching structure of the trees is finalized, the algorithm itself classifies the “records in the original training data set. Every record in the data set is given a classification by every tree. Since these classifications are highly unlikely to be unanimous for all records, each classification is considered a ‘vote’ for that particular target variable value. The value with the largest number of votes is deemed the final classification of the record” (Larose, 2019, p. 91). When evaluated against the test data, accuracy was determined to be 62.62% with a sensitivity of 80.21% and a specificity of 48.31%.
 
