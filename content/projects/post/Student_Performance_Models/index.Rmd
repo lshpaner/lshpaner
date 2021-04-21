@@ -4,8 +4,8 @@ subtitle: Leonid Shpaner, Juliet Sieland-Harris, and Dan Choi
 author: ""
 date: "2021-04-15"
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 diagram: yes
 image:
   caption: ''
@@ -117,7 +117,7 @@ student_test$absences <- as.numeric(student_test$absences)
 student_test$failures <- as.numeric(student_test$failures)
 ```
 
-[Code: R Programming Language - Appendix](/projects/post/Student_Performance_Models/Final_Project.html)
+[Code: R Programming - Appendix](/projects/post/Student_Performance_Models/Final_Project.html)
 
 ## **Abstract**
 
