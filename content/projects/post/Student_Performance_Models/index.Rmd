@@ -215,7 +215,7 @@ rpart.plot(cart_train)
 ```
 *Note.* After evaluating this model with the test data set, the accuracy is determined to be 63.55%.
 
-**Logistic Regression**
+## **Logistic Regression**
 
 Logistic Regression was selected as the regression model of choice for this study due to performance being a binary response. The logistic regression equation takes the parametric form of the logistic regression model:
 
