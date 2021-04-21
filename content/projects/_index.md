@@ -11,16 +11,16 @@ pdf: true
 ### University of San Diego
 
 I. Applied Data Mining
-* [Predicting Student Performance in a Portuguese Secondary Institution](/projects/post/Student_Performance_Models) - a joint data mining project with Juliet Sieland-Harris and Dan Choi <i class="fab fa-r-project" style="font-size:22px"></i>
+* [Predicting Student Performance in a Portuguese Secondary Institution](/projects/post/student_performance_models) - a joint data mining project with Juliet Sieland-Harris and Dan Choi <i class="fab fa-r-project" style="font-size:22px"></i>
 
 II. Data Science Foundations
-* [Walmart Consulting Project](/projects/post/Walmart_Price_Model) - applying the Cross-Industry Standard Process for Data Mining (CRISP-DM) model to real price data from Walmart
+* [Walmart Consulting Project](/projects/post/walmart_price_model) - applying the Cross-Industry Standard Process for Data Mining (CRISP-DM) model to real price data from Walmart
 
     [A recorded video of the presentation can be seen here <i class="fab fa-youtube"></i>](https://www.youtube.com/watch?v=1TqfbGY39_c)
 
 III. Data Science Programming
 
-* [European Bank Marketing Campaign Dataset](/projects/post/European_Bank_Marketing) - a joint python project in jupyter notebook with [Jose Luis Estrada](https://www.joseluisestrada.net/). <i class="fab fa-python" style="font-size:22px"></i>
+* [European Bank Marketing Campaign Dataset](/projects/post/european_bank_marketing) - a joint python project in jupyter notebook with [Jose Luis Estrada](https://www.joseluisestrada.net/). <i class="fab fa-python" style="font-size:22px"></i>
 
     This in-depth analysis on European bank marketing  is followed by logistic regression as a supervised learning method for best possible outcomes. 
 
@@ -30,7 +30,7 @@ III. Data Science Programming
 
 IV. Probability and Statistics for Data Science
 
-* [Real Estate Prices in Los Angeles – A Case Study from Redfin](/projects/post/Los_Angeles_Redfin_Real_Estate) - statistical analysis on real estate data in Los Angeles County
+* [Real Estate Prices in Los Angeles – A Case Study from Redfin](/projects/post/los_angeles_redfin_real_estate) - statistical analysis on real estate data in Los Angeles County
 
 ---
 
@@ -39,11 +39,11 @@ IV. Probability and Statistics for Data Science
 
 I. Optimizing a Stock Portfolio in R
 
-* [Optimizing a Diversified Portfolio Based on 4 Stocks](/projects/post/Stock_Portfolio_in_R) - a classic portfolio optimization problem and solution using quadratic programming (QP) 📈  <i class="fab fa-r-project" style="font-size:22px"></i>
+* [Optimizing a Diversified Portfolio Based on 4 Stocks](/projects/post/stock_portfolio_in_r) - a classic portfolio optimization problem and solution using quadratic programming (QP) 📈  <i class="fab fa-r-project" style="font-size:22px"></i>
 
 II. Predictive Analytics, Clustering, Classification, and Machine Learning in R
 
-* [Machine Learning with Titanic](/projects/post/Titanic_Machine_Learning/) - a survival model using summary statistics and k-nearest-neighbors (knn) to predict the survical of passengers on the RMS Titanic and viability of the model. 📈  <i class="fab fa-r-project" style="font-size:22px"></i>
+* [Machine Learning with Titanic](/projects/post/titanic_machine_learning/) - a survival model using summary statistics and k-nearest-neighbors (knn) to predict the survical of passengers on the RMS Titanic and viability of the model. 📈  <i class="fab fa-r-project" style="font-size:22px"></i>
 
 
 
@@ -53,11 +53,11 @@ II. Predictive Analytics, Clustering, Classification, and Machine Learning in R
 
 I. Merrill Lynch Global Private Client Group Intermship Research Paper 
 
-- [Corporate Asset Management - An Insight Into The Corporate Bond Market and Its Effects On Fiduciary-Client Relations At Merrill Lynch](/projects/post/Corporate_Bonds/) 📈∑
+- [Corporate Asset Management - An Insight Into The Corporate Bond Market and Its Effects On Fiduciary-Client Relations At Merrill Lynch](/projects/post/corporate_bonds/) 📈∑
 
 II. Independent Research Related to UCLA As a Public University
 
-- [UCLA Fall Undergraduate Enrollment Figures (1999-2019)](/projects/post/UCLAFallStarts_Trends/) - a hypothesis test to determine overall trajectory 📈  <i class="fab fa-r-project" style="font-size:22px"></i>
+- [UCLA Fall Undergraduate Enrollment Figures (1999-2019)](/projects/post/uclafallstarts_trends/) - a hypothesis test to determine overall trajectory 📈  <i class="fab fa-r-project" style="font-size:22px"></i>
 
 ---
 ### University of California, San Diego (UCSD)
@@ -67,29 +67,29 @@ I. VALUATION: Transforming Information into a Model Format
 
 - [Tejon Ranch Company - Valuation - PDF <i class="far fa-file-pdf" style="font-size:26px"> </i>](Tejon_Ranch_Valuation.pdf)
 
-- [Tejon Ranch Company - Valuation - embedded excel workbook <i class="far fa-file-excel" style="font-size:26px"></i>](/projects/post/UCSD_Tejon_Ranch_Co_Valuation/)
+- [Tejon Ranch Company - Valuation - embedded excel workbook <i class="far fa-file-excel" style="font-size:26px"></i>](/projects/post/ucsd_tejon_ranch_co_valuation/)
 
 - [Deere & Company (DE) - Return on Ivestment Capital (ROIC) - PDF <i class="far fa-file-pdf" style="font-size:26px"> </i>](Deere_&_Company_(DE)_ROIC.pdf)
 
-- [Deere & Company (DE) - Return on Ivestment Capital (ROIC) - embedded excel workbook <i class="far fa-file-excel" style="font-size:26px"></i>](/projects/post/UCSD_Deere_Company_ROIC/) 
+- [Deere & Company (DE) - Return on Ivestment Capital (ROIC) - embedded excel workbook <i class="far fa-file-excel" style="font-size:26px"></i>](/projects/post/ucsd_deere_company_roic/) 
 
 II. PORTFOLIOS: Return & Risk via Finance & Excel
 
 - [Two Stock Portfolio - Expected Returns, Standard Deviation, Variance, and Coefficient of Variation - PDF <i class="far fa-file-pdf" style="font-size:26px"> </i>](Two_Stock_Portfolio.pdf)
 
-- [Two Stock Portfolio - Expected Returns, Standard Deviation, Variance, and Coefficient of Variation - embedded excel workbook <i class="far fa-file-excel" style="font-size:26px"></i>](/projects/post/UCSD_Two_Stock_Portfolio/)
+- [Two Stock Portfolio - Expected Returns, Standard Deviation, Variance, and Coefficient of Variation - embedded excel workbook <i class="far fa-file-excel" style="font-size:26px"></i>](/projects/post/ucsd_two_stock_portfolio/)
 
 III. OPTIONS: Research, Calculation & Analysis
 
 - [Boeing Options - Calculation & Analysis - PDF <i class="far fa-file-pdf" style="font-size:26px"> </i>](Boeing_Options.pdf)
 
-- [Boeing Options - Calculation & Analysis - embedded excel workbook <i class="far fa-file-excel" style="font-size:26px"></i>](/projects/post/UCSD_Boeing_Options)
+- [Boeing Options - Calculation & Analysis - embedded excel workbook <i class="far fa-file-excel" style="font-size:26px"></i>](/projects/post/ucsd_boeing_options)
 
 IV. BONDS: Solving Fixed Income Problems via Finance & Excel
 
 - [Bonds_Fixed_Income_Problems - PDF <i class="far fa-file-pdf" style="font-size:26px"> </i>](Bonds_Fixed_Income_Problems.pdf)
 
-- [Bonds_Fixed_Income_Problems - embedded excel workbook <i class="far fa-file-excel" style="font-size:26px"></i>](/projects/post/UCSD_Bonds_Fixed_Income_Problems)
+- [Bonds_Fixed_Income_Problems - embedded excel workbook <i class="far fa-file-excel" style="font-size:26px"></i>](/projects/post/ucsd_bonds_fixed_income_problems)
 
 ---
 ### Tableau Projects
@@ -100,11 +100,11 @@ To access my web data connectors, visit the [Tableau Community Portal](https://t
 
 Otherwise, the projects linked to these connectors in Tableau are below:
 
-1. [California COVID-19 Emergency Service Providers](/projects/post/COVID_19_CA_EmergencyProviders/) 
+1. [California COVID-19 Emergency Service Providers](/projects/post/covid_19_ca_emergencyproviders/) 
  
-2. [California Geothermal Wells](/projects/post/CA_GeothermalWells/)  
+2. [California Geothermal Wells](/projects/post/ca_geothermalwells/)  
 
-3. [Department of Defense Sites in the U.S. and its Territories](/projects/post/DODSites/)
+3. [Department of Defense Sites in the U.S. and its Territories](/projects/post/dodsites/)
 
 ---
 
