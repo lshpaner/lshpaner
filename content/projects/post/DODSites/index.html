@@ -1,7 +1,7 @@
 ---
 title: "DOD Sites in the U.S. and its Territories as Reported by the Army Corps. of Engineers"
 author: "Leon Shpaner"
-date: "2020-09-01"
+date: "2021-04-28"
 output: html_document
 image:
   caption: ''
@@ -9,10 +9,11 @@ image:
   preview_only: yes
 ---
 
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
 
 <p>The following visualization was sourced from the Army Corps. of Engineers’ list of military installations in the contiguous United States and remote territories from the <a href="https://geospatial-usace.opendata.arcgis.com/datasets/85e5114c86fc4e5ba2d1e29ca213b834_0">ArcGIS open data hub portal</a>. Though this list is not necessarily exhaustive or comprehensive in size and scope, it does yield results that were <a href="https://www.acq.osd.mil/eie/Downloads/BSI/Base%20Structure%20Report%20FY15.pdf">“reported in the 2015 Base Structure Report (BSR).”</a></p>
-<p>This geospatial dataset’s parameters were parsed from this <a href="https://opendata.arcgis.com/datasets/85e5114c86fc4e5ba2d1e29ca213b834_0.geojson">.geojson</a> format and linked directly to Tableau using <a href="https://lshpaner.rbind.io/datasets/US_Army_Corps_of_Engineers/DOD_Sites/ACE_DOD_Sites.js">Javascript</a> and html to produce this <a href="https://lshpaner.rbind.io/datasets/US_Army_Corps_of_Engineers/DOD_Sites/ACE_DOD_Sites.html">web data connector</a> whose button is clickable within the Tableau environment.</p>
+<p>This geospatial dataset’s parameters were parsed from this <a href="https://opendata.arcgis.com/datasets/85e5114c86fc4e5ba2d1e29ca213b834_0.geojson">.geojson</a> format and linked directly to Tableau using <a href="https://leonshpaner.com/datasets/US_Army_Corps_of_Engineers/DOD_Sites/ACE_DOD_Sites.js">Javascript</a> and html to produce this <a href="https://leonshpaner.com/datasets/US_Army_Corps_of_Engineers/DOD_Sites/ACE_DOD_Sites.html">web data connector</a> whose button is clickable within the Tableau environment.</p>
 <p>Plotting these military installations on a United States map immediately sheds light on their size and density by geographic region (state). There is a substantially larger clustering of data points on the east coast. However, it is important to note that California, as a state has the largest amount (93) of such installations than any other state. Of course, more light is shed on these findings as we dive deeper.</p>
 <p>For example, not only does California have the largest quantity of military sites than any other state, it accounts for 11% of the entire dataset, which is comprised of 846 Active and Inactive military installations. If we want to restrict these findings to only Active installations, California shows only 78 sites (a reduction in this state by 16%); whereas, the rest of the U.S. and it’s accompanying territories are downgraded to 790. As such, switching the parameters from Active to Inactive reduces the data size by only 6%. This is all a matter of preference, of course.</p>
 <p>Measuring the data by military branch may also prove to be quite useful. For example, it is interesting to note that the Army boasts 293 bases nationwide, accounting for 37.09% of all military bases. The smallest number of bases, on the other hand, is attributable to the Marine Corps, representing only 31 bases (a modest 3.92%).</p>
