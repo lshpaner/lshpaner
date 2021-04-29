@@ -12,16 +12,19 @@ image:
   focal point: ''
   preview_only: yes
 tags: 
-- Data Mining
-- Exploratory Data Analysis
-- Classification 
-- R Programming
-- "C5.0"
 - CART 
+- "C5.0"
+- Classification
+- Data Mining
+- Ensemble Methods
+- Exploratory Data Analysis
 - Logistic Regression
-- Random Forest
+- Machine Learning
 - Naïve Bayes
 - Neural Network
+- Random Forest
+- R Programming
+- Student Performance
 math: yes
 ---
 
