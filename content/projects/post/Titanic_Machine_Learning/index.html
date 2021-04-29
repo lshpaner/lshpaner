@@ -173,7 +173,7 @@ test&lt;-subset(boat, sample == FALSE)
 TrainTree&lt;-tree(Survived ~ Sex+Age+SibSp, data=train)
 
 plot(TrainTree)
-text(TrainTree, cex=.5)</code></pre>
+text(TrainTree, cex=.9)</code></pre>
 <p><img src="/projects/post/Titanic_Machine_Learning/index_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
 <pre class="r numberLines lineAnchors"><code>summary(TrainTree)
 ## 
@@ -184,7 +184,7 @@ text(TrainTree, cex=.5)</code></pre>
 ## Misclassification error rate: 0.1781 = 127 / 713
 TrainPrune&lt;-prune.tree(TrainTree,best = 3,newdata=test,method = &quot;misclass&quot;)
 plot(TrainPrune)
-text(TrainPrune, cex=.5)</code></pre>
+text(TrainPrune, cex=.9)</code></pre>
 <p><img src="/projects/post/Titanic_Machine_Learning/index_files/figure-html/unnamed-chunk-9-2.png" width="672" /></p>
 <pre class="r numberLines lineAnchors"><code>summary(TrainPrune)
 ## 
@@ -197,7 +197,7 @@ text(TrainPrune, cex=.5)</code></pre>
 ## Misclassification error rate: 0.1978 = 141 / 713
 TrainPrune&lt;-prune.tree(TrainTree,best = 2,newdata=test,method = &quot;misclass&quot;)
 plot(TrainPrune)
-text(TrainPrune, cex=.5)</code></pre>
+text(TrainPrune, cex=.9)</code></pre>
 <p><img src="/projects/post/Titanic_Machine_Learning/index_files/figure-html/unnamed-chunk-9-3.png" width="672" /></p>
 <pre class="r numberLines lineAnchors"><code>summary(TrainPrune)
 ## 
