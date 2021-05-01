@@ -1,5 +1,5 @@
 ---
-title: Projects
+title: ### Projects
 summary: "a vast array of projects for different endeavors and institutions."
 type: "blank"
 subtitle: 
