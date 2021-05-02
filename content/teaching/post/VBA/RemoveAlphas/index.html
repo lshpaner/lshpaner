@@ -10,6 +10,7 @@ math: true
 
 
 <p>Copy the following code into the VBA Environment in excel:</p>
+<p><br></p>
 <html>
 <style>
 p.indent {
@@ -28,22 +29,22 @@ div.a {
 <p style="font-family:consolas">
 <p><font color = blue> Sub </font color> RemoveAlphas()
 <br> <font color = green> '' Remove alpha characters from a string </font color></p>
-<font color = blue> Dim </font color> intI <font color = blue> As Integer </font color>
-<br> Dim strNotNum <font color = blue> As String </font color>, strTemp <font color=blue> As String </font color>
-<br>         <font color=blue>Set</font color> rngRR = Selection.SpecialCells(xlCellTypeConstants, _
-<br>         xlTextValues)
-<br> <font color = blue> For Each </font color> rngR <font color=blue> In </font color> rngRR
-<br>         strTemp = ""
-<br> <font color=blue> For </font color> intI = 1 <font color=blue>To</font color> Len(rngR.Value)
-<br> <font color=blue>If</font color> Mid(rngR.Value, intI, 1) <font color=blue>Like</font color> "[0-9]" <font color=blue> Then </font color>
-<br> strNotNum = Mid(rngR.Value, intI, 1)
-<br> <font color=blue>Else</font color>: strNotNum = " "
-<br> <font color=blue> End If </font color>
-<br> strTemp = strTemp &amp; strNotNum
-<br> <font color=blue> Next </font color> intI
-<br> rngR.Value = strTemp
-<br> <font color=blue>Next</font color> rngR
-<br> <font color=blue>End Sub</font color>
+<p>         <font color = blue> Dim </font color> intI <font color = blue> As Integer </font color>
+<br>          Dim strNotNum <font color = blue> As String </font color>, strTemp <font color=blue> As String </font color>
+<br>                 <font color=blue>Set</font color> rngRR = Selection.SpecialCells(xlCellTypeConstants, _
+<br>                 xlTextValues)
+<br>          <font color = blue> For Each </font color> rngR <font color=blue> In </font color> rngRR
+<br>                 strTemp = ""
+<br>          <font color=blue> For </font color> intI = 1 <font color=blue>To</font color> Len(rngR.Value)
+<br>          <font color=blue>If</font color> Mid(rngR.Value, intI, 1) <font color=blue>Like</font color> "[0-9]" <font color=blue> Then </font color>
+<br>          strNotNum = Mid(rngR.Value, intI, 1)
+<br>          <font color=blue>Else</font color>: strNotNum = " "
+<br>          <font color=blue> End If </font color>
+<br>          strTemp = strTemp &amp; strNotNum
+<br>          <font color=blue> Next </font color> intI
+<br>          rngR.Value = strTemp
+<br>          <font color=blue>Next</font color> rngR</p>
+<font color=blue>End Sub</font color>
 </p>
 </div>
 </body>
