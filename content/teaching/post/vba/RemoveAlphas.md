@@ -6,7 +6,7 @@ weight: 2
 
 # Page metadata.
 title: VBA Script for removing alpha characters from a string of alphanumeric text
-date: ""
+date: "Sys.Date()"
 lastmod: ""
 draft: false  # Is this a draft? true/false
 toc: true  # Show table of contents? true/false
