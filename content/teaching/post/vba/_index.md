@@ -6,8 +6,8 @@ weight: 1
 
 # Page metadata.
 title: Visual Basic for Applications (VBA)
-date: "Sys.Date()"
-lastmod: "Sys.Date()"
+date: '`r format(Sys.Date(), "%B %d, %Y")`'
+lastmod: '`r format(Sys.Date(), "%B %d, %Y")`'
 draft: false  # Is this a draft? true/false
 toc: true  # Show table of contents? true/false
 type: docs  # Do not modify.
