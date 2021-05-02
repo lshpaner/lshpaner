@@ -5,7 +5,6 @@ type: blank
 subtitle: ''
 url: ''
 ---
-
 ### University of San Diego
 
 [Essentials of Analytics in Excel - DAV-X800](https://pce.sandiego.edu/search/publicCourseSearchDetails.do?method=load&courseId=49435200) *(links to an external website)*
@@ -22,12 +21,11 @@ To reach me through the university, please visit this [link.](https://www.cornel
 - [Financial Modeling Full Lecture Series (PDF)](Financial_Modeling_Workshop_by_Leon_Shpaner-Full_Lecture_Series.pdf) - complete file of all lectures on Financial Modeling at UCLA
 
 ---
-
 ### Python and R in RStudio
 
-- [Reticulate Installation for Python in RStudio Demo](https://www.youtube.com/watch?v=gNryvKSc8Pk&t=920s)
+- [Reticulate Installation for Python in RStudio Demo](https://www.youtube.com/watch?v=gNryvKSc8Pk&t=920s) <i class="fab fa-youtube" style="font-size:22px"></i>
 
-
+---
 ### Visual Basic for Applications (VBA)
 
 > [Helpful macros for a variety of business applications](/teaching/post/vba)
