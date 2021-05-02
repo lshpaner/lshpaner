@@ -6,10 +6,9 @@ weight: 3
 
 # Page metadata.
 title: VBA - script for converting formulas in an excel workbook to values across all worksheets
-date: "`r Sys.Date()`"
-lastmod: "`r Sys.Date()`"
 draft: false  # Is this a draft? true/false
-toc: true  # Show table of contents? true/false
+date: "`r Sys.Date()`"
+toc: false # Show table of contents? true/false
 type: docs  # Do not modify.
 
 # Add menu entry to sidebar.
@@ -21,7 +20,9 @@ menu:
     weight: 3
 ---
 
-Copy the following code into the VBA Environment in excel:
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
 
 <br>
 
@@ -35,10 +36,11 @@ p.indent {
 div.a {
   line-height:130%;
 }
-
-
 </style>
 
+Copy the following code into the VBA Environment in excel:
+
+---
 <div class="a"> <p style="font-family:consolas"> <font color = blue> Sub </font color>  ConvertFormulasToValuesAllWorksheets()
 <br>
 <br> &nbsp;&nbsp;&nbsp;<font color = blue> Dim</font color> ws <font color=blue> As</font color>  Worksheet, rng  </font color> <font color=blue> As </font color> Range
@@ -51,7 +53,9 @@ div.a {
 <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color=blue> Next </font color> ws
 <br>
 <br> <font color = blue> End Sub </font color> 
-
 </p>
 
 </div>
+
+</html>
+---

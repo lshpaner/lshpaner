@@ -7,9 +7,9 @@ weight: 2
 # Page metadata.
 title: VBA Script for removing alpha characters from a string of alphanumeric text
 date: "`r Sys.Date()`"
-lastmod: "`r Sys.Date()`"
+lastmod: null
 draft: false  # Is this a draft? true/false
-toc: true  # Show table of contents? true/false
+toc: false  # Show table of contents? true/false
 type: docs  # Do not modify.
 
 # Add menu entry to sidebar.
@@ -21,7 +21,7 @@ menu:
     weight: 2
 ---
 
-Copy the following code into the VBA Environment in excel:
+
 
 <br>
 
@@ -38,11 +38,12 @@ div.a {
 
 
 </style>
+Copy the following code into the VBA Environment in excel:
 
-
+---
 <div class="a"> <p style="font-family:consolas"> <font color = blue> Sub </font color>  RemoveAlphas()
 <br>
-<br> <font color = green> '' Remove alpha characters from a string </font color>
+<br> <font color = green> \'\' Remove alpha characters from a string </font color>
 <br> &nbsp;&nbsp;&nbsp; <font color = blue> Dim </font color> intI <font color = blue> As Integer </font color> 
 <br> &nbsp;&nbsp;&nbsp; Dim strNotNum <font color = blue> As String </font color>, strTemp <font color=blue> As String </font color>
 <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color=blue>Set</font color> rngRR = Selection.SpecialCells(xlCellTypeConstants, _
@@ -50,9 +51,9 @@ div.a {
 <br> &nbsp;&nbsp;&nbsp; <font color = blue> For Each </font color> rngR <font color=blue> In </font color> rngRR
 <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strTemp = ""
 <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color=blue> For </font color> intI = 1 <font color=blue>To</font color> Len(rngR.Value)
-<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color=blue>If</font color> Mid(rngR.Value, intI, 1) <font color=blue>Like</font color> "[0-9]" <font color=blue> Then </font color>
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color=blue>If</font color> Mid(rngR.Value, intI, 1) <font color=blue>Like</font color> \"[0-9]\" <font color=blue> Then </font color>
 <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strNotNum = Mid(rngR.Value, intI, 1)
-<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color=blue>Else</font color>: strNotNum = " "
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color=blue>Else</font color>: strNotNum = \" \"
 <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color=blue> End If </font color>
 <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strTemp = strTemp & strNotNum
 <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color=blue> Next </font color> intI
@@ -63,3 +64,6 @@ div.a {
 </p>
 
 </div>
+
+</html>
+---

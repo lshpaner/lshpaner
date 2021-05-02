@@ -6,9 +6,8 @@ weight: 1
 
 # Page metadata.
 title: Visual Basic for Applications (VBA)
-date: "`Sys.Date()`"
-lastmod: "`Sys.Date()`"
 draft: false  # Is this a draft? true/false
+date: false
 toc: true  # Show table of contents? true/false
 type: docs  # Do not modify.
 
