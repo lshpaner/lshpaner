@@ -1,52 +1,71 @@
 ---
 title: "VBA - script for deleteing all hidden rows and columns and converting formulas in an excel workbook to values across all worksheets"
 author: "Leon Shpaner"
-date: "`r Sys.Date()`"
+date: 2020-11-13
 output: html_document
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
 Copy the following code into the VBA Environment in excel:
-<pre>
-  <code>
-  
-Sub DeleteHidden_ConvertToValuesAllWorksheets()
-    
-    Dim ws As Worksheet, rng As Range
-    For Each ws In ActiveWorkbook.Worksheets
-    For Each rng In ws.UsedRange
-        If rng.HasFormula Then
-        rng.Formula = rng.Value
-    End If
-        Next rng
-        Next ws
-'delete all Hidden rows-columns in all sheets
 
-    Dim r As Long, c As Long, x As Long
-    Application.ScreenUpdating = False
+<br>
 
-    For Each ws In Sheets
+<html>
 
-r = ws.Cells.Find(What:="*", SearchOrder:=xlByRows, SearchDirection:=xlPrevious).Row
-c = ws.Cells.Find(What:="*", SearchOrder:=xlByColumns, SearchDirection:=xlPrevious).Column
-    For x = r To 1 Step -1
+<style>
+p.indent {
+    text-indent: 30px;
+}
 
-    If ws.Rows(x).Hidden = True Then ws.Rows(x).Delete
-Next
-For x = c To 1 Step -1
-
-If ws.Columns(x).Hidden = True Then ws.Columns(x).Delete
-
-Next
-
-Next
-
-Application.ScreenUpdating = True
-End Sub
+div.a {
+  line-height:130%;
+}
 
 
+</style>
+</head>
+<body>
 
-  </code>
-</pre>
+<div class="a"> <p style="font-family:consolas"> <font color = blue> Sub </font color>  DeleteHidden_ConvertToValuesAllWorksheets()
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color = blue> Dim</font color> ws <font color=blue> As</font color>  Worksheet, rng  </font color> <font color=blue> As </font color> Range
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color=blue> For Each </font color> ws <font color=blue> In </font color> ActiveWorkbook.Worksheets
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color=blue> For Each </font color> rng <font color=blue> In </font color> ws.UsedRange
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color=blue> If </font color> rng.HasFormula <font color=blue> Then </font color>
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rng.Formula = rng.Value
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color=blue> End If </font color>
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color=blue> Next </font color> rng
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color=blue> Next </font color> ws
+
+<font color=green> \' delete all Hidden rows-columns in all sheets </font color>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color=blue> Dim </font color> r <font color=blue> As Long </font color>, c  <font color=blue> As Long </font color>, x  <font color=blue> As Long </font color>
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Application.ScreenUpdating = <font color=blue> False </font color>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color=blue> For Each </font color> ws <font color=blue> In </font color> Sheets
+
+r = ws.Cells.Find(What:=\"\*\", SearchOrder:=xlByRows, SearchDirection:=xlPrevious).Row
+<br> c = ws.Cells.Find(What:=\"\*\", SearchOrder:=xlByColumns, SearchDirection:=xlPrevious).Column
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color=blue> For </font color> x = r <font color=blue> To </font color> 1 <font color=blue> Step </font color> -1
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color=blue> If </font color> ws.Rows(x).Hidden = <font color=blue> True </font color>  <font color=blue> Then </font color> ws.Rows(x).Delete
+<br> <font color=blue> Next </font color>
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color=blue> For </font color> x = c <font color=blue> To </font color> 1 <font color=blue> Step </font color> -1
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color=blue> If </font color> ws.Columns(x).Hidden = <font color=blue> True </font color>  <font color=blue> Then </font color> ws.Columns(x).Delete
+
+<font color=blue> Next </font color>
+
+<font color=blue> Next </font color>
+
+Application.ScreenUpdating = <font color=blue> True </font color>
+
+<font color = blue> End Sub </font color> 
+
+</p>
+
+</div>
+</body>
+</html>
