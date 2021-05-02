@@ -6,8 +6,8 @@ weight: 4
 
 # Page metadata.
 title: VBA - script for deleteing all hidden rows and columns and converting formulas in an excel workbook to values across all worksheets
-date: "Sys.Date()"
-lastmod: "Sys.Date()"
+date: "`r Sys.Date()`"
+lastmod: "`r Sys.Date()`"
 draft: false  # Is this a draft? true/false
 toc: true  # Show table of contents? true/false
 type: docs  # Do not modify.
