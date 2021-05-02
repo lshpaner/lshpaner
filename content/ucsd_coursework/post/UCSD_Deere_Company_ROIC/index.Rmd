@@ -13,9 +13,10 @@ image:
 > Shpaner, Leon - University of California, San Diego - Financial Modeling with Excel
 >
 >
-> 
+>
 
-<iframe width="100%" height="700" frameborder="0" scrolling="no" src="https://onedrive.live.com/embed?resid=A5FB65B6C9763D08%2133893&authkey=%21AGXT7rpIgdHP8aU&em=2&AllowTyping=True&wdInConfigurator=True"></iframe>
+
+<iframe width="100%" height="700" frameborder="0" scrolling="yes" src="https://onedrive.live.com/embed?resid=A5FB65B6C9763D08%2133893&authkey=%21AGXT7rpIgdHP8aU&em=2&AllowTyping=True&wdInConfigurator=True"></iframe>
 
 > 1) Select a publicly traded manufacturing company of your own choice and use the ROIC / FCFF approach to: calculate normalized earnings or cash flow as if these numbers are achieved instantaneously (i.e., realized at this very 
 > moment in time);

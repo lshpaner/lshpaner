@@ -1,7 +1,7 @@
 ---
 title: "VBA Script for removing alpha characters from a string of alphanumeric text"
 author: "Leon Shpaner"
-date: "`r Sys.Date()`"
+date: "2020-11-13"
 output: html_document
 ---
 
@@ -10,27 +10,5 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 Copy the following code into the VBA Environment in excel:
-<pre>
-  <code>
-Sub RemoveAlphas()
-'' Remove alpha characters from a string.
-Dim intI As Integer
-Dim rngR As Range, rngRR As Range
-Dim strNotNum As String, strTemp As String
-Set rngRR = Selection.SpecialCells(xlCellTypeConstants, _
-xlTextValues)
-For Each rngR In rngRR
-strTemp = ""
-For intI = 1 To Len(rngR.Value)
-If Mid(rngR.Value, intI, 1) Like "[0-9]" Then
-strNotNum = Mid(rngR.Value, intI, 1)
-Else: strNotNum = ""
-End If
-strTemp = strTemp & strNotNum
-Next intI
-rngR.Value = strTemp
-Next rngR
-End Sub
-  </code>
-</pre>
 
+<iframe src="https://docs.google.com/document/d/e/2PACX-1vTc7-65IqoLkLHVr-XDfGsZm7lo9JmqDqApRP6sJfWxi_2batAmtc2epem4ra312YssLEH8k1iS-0GU/pub?embedded=true" width="100%" height="500"></iframe>
