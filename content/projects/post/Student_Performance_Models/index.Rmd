@@ -222,7 +222,7 @@ rpart.plot(cart_train)
 
 Logistic Regression was selected as the regression model of choice for this study due to performance being a binary response. The logistic regression equation takes the parametric form of the logistic regression model:
 
-$${p}(y) = \frac{\text{exp}(\beta_0+\beta_1x_1+\beta_2x_2+\cdot\cdot\cdot+\beta_px_p)}{1+\text{exp}(b_0+b_1x_1+b_2x_2+\cdot\cdot\cdot+b_px_p)}+\varepsilon$$ 
+$${p}(y) = \frac{\text{exp}(\beta_0+\beta_1x_1+\beta_2x_2+\cdot\cdot\cdot+\beta_px_p)}{1+\text{exp}(\beta_0+\beta_1x_1+\beta_2x_2+\cdot\cdot\cdot+\beta_px_p)}+\varepsilon$$ 
 Study time and absences are used to predict performance using this descriptive form:              
 
 
@@ -243,7 +243,7 @@ Multiple Naïve Bayes models were created and evaluated utilizing different pred
 $$p(X^*) = \frac{p(Y=y^*)p(Y=y^*)}{p(X^*)} $$
 where *x* and *y* are the posterior probabilities (Larose, 2019, pp.113-114). The resulting model showed a higher likelihood of receiving high grades for students with urban addresses, support from family, had attended nursery school, and expressed interest in pursuing higher education. Additionally, fewer absences and fewer previous class failures increases the likelihood of receiving a high grade. The results for study time were uninformative in this model. When evaluating the Naïve Bayes model with the test data set, the accuracy was found to be 64.95% with 90.62% sensitivity and 44.07% specificity.
 
-## **Neural Networks**
+## **Neural Network**
 
 This linear combination takes the following general form:
 

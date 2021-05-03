@@ -68,7 +68,7 @@ math: yes
 <div id="logistic-regression" class="section level2">
 <h2><strong>Logistic Regression</strong></h2>
 <p>Logistic Regression was selected as the regression model of choice for this study due to performance being a binary response. The logistic regression equation takes the parametric form of the logistic regression model:</p>
-<p><span class="math display">\[{p}(y) = \frac{\text{exp}(\beta_0+\beta_1x_1+\beta_2x_2+\cdot\cdot\cdot+\beta_px_p)}{1+\text{exp}(b_0+b_1x_1+b_2x_2+\cdot\cdot\cdot+b_px_p)}+\varepsilon\]</span>
+<p><span class="math display">\[{p}(y) = \frac{\text{exp}(\beta_0+\beta_1x_1+\beta_2x_2+\cdot\cdot\cdot+\beta_px_p)}{1+\text{exp}(\beta_0+\beta_1x_1+\beta_2x_2+\cdot\cdot\cdot+\beta_px_p)}+\varepsilon\]</span>
 Study time and absences are used to predict performance using this descriptive form:</p>
 <p><span class="math display">\[\hat{p}(\textit{performance}) = \frac{\text{exp}(b_0 + b_1(\textit{study time}) + b_2(\textit{absences}))}{1+\text{exp}(b_0 + b_1(\textit{study time})+b_2(\textit{absences}))}\]</span>
 Plugging in the coefficients from our training data we have:
@@ -85,8 +85,8 @@ The regression coefficient for absences is -0.052. By calculating <span class="m
 <p><span class="math display">\[p(X^*) = \frac{p(Y=y^*)p(Y=y^*)}{p(X^*)} \]</span>
 where <em>x</em> and <em>y</em> are the posterior probabilities (Larose, 2019, pp.113-114). The resulting model showed a higher likelihood of receiving high grades for students with urban addresses, support from family, had attended nursery school, and expressed interest in pursuing higher education. Additionally, fewer absences and fewer previous class failures increases the likelihood of receiving a high grade. The results for study time were uninformative in this model. When evaluating the Naïve Bayes model with the test data set, the accuracy was found to be 64.95% with 90.62% sensitivity and 44.07% specificity.</p>
 </div>
-<div id="neural-networks" class="section level2">
-<h2><strong>Neural Networks</strong></h2>
+<div id="neural-network" class="section level2">
+<h2><strong>Neural Network</strong></h2>
 <p>This linear combination takes the following general form:</p>
 <p><span class="math display">\[ net_j = \sum\limits_{i} W_{ij}x_{ij} = W_{0j}x_{0J}+W_{IJ}x_{Ij} +...+ W_{Ij}x_{Ij}\]</span>
 Refining this for our model, we have:</p>
