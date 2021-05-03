@@ -3,10 +3,10 @@ title: "Optimizing a Stock Portfolio in R"
 author: "Leon Shpaner"
 date: "2020-08-04"
 output:
-  html_document: default
-  word_document: default
   pdf_document: default
-subtitle: From a Diversified Portfolio Based on 4 Sample Stocks 
+  word_document: default
+  html_document: default
+subtitle: From a Diversified Portfolio Based on Four Sample Stocks 
 highlight: true
 image:
   caption: ''
@@ -25,8 +25,7 @@ tags:
 - Descriptive Statistics
 ---
 
-<link href="/rmarkdown-libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
-<script src="/rmarkdown-libs/anchor-sections/anchor-sections.js"></script>
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
 
 <p>In R Studio, we will utilize a classic stock portfolio optimization approach to examine the following 4 ticker symbols, Tejon Ranch Company (TRC), Snapchat (SNAP), AI Powered Equity ETF (AIEQ), and 2U (TWOU). These are pretty well-diversified stocks from a sample portfolio, so the data presented herein is true, significant, and will yield actionable insights.</p>
@@ -85,7 +84,7 @@ head(returns)</code></pre>
 ## 2020-01-08 -0.003743044 -0.021139224  0.0066040667  0.0016694909
 ## 2020-01-09 -0.006887915  0.041391782  0.0037983772 -0.0279166667
 ## 2020-01-10 -0.001261034  0.002880127 -0.0037840041 -0.0780111444</code></pre>
-<p>Taking this a step further, we examine the average returns(mu), covariance matrix (cov), standard deviation (s), and minimum value (min) of our returns vector as shown below:</p>
+<p>Taking this a step further, we examine the average returns(<span class="math inline">\(\mu\)</span>), covariance matrix (cov), standard deviation (s), and minimum value (min) of our returns vector as shown below:</p>
 <pre class="r"><code>mu&lt;-colMeans(returns)
 s&lt;-cov(returns)
 s</code></pre>
@@ -117,7 +116,6 @@ constr</code></pre>
                       dir=c(&quot;&gt;=&quot;,&quot;==&quot;),
                       rhs=c(minreturn,1)),
          maximum=FALSE)
-
 QP</code></pre>
 <pre><code>## ROI Optimization Problem:
 ## 

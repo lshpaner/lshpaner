@@ -3,10 +3,10 @@ title: "Optimizing a Stock Portfolio in R"
 author: "Leon Shpaner"
 date: "2020-08-04"
 output:
-  html_document: default
-  word_document: default
   pdf_document: default
-subtitle: From a Diversified Portfolio Based on 4 Sample Stocks 
+  word_document: default
+  html_document: default
+subtitle: From a Diversified Portfolio Based on Four Sample Stocks 
 highlight: true
 image:
   caption: ''
@@ -92,7 +92,7 @@ returns <- (close/lag(close) - 1)[-1]
 head(returns)
 ```
 
-Taking this a step further, we examine the average returns(mu), covariance matrix (cov), standard deviation (s), and minimum value (min) of our returns vector as shown below:
+Taking this a step further, we examine the average returns($\mu$), covariance matrix (cov), standard deviation (s), and minimum value (min) of our returns vector as shown below:
 ```{r message = TRUE}
 mu<-colMeans(returns)
 s<-cov(returns)
@@ -122,7 +122,6 @@ QP <- OP(Q_objective(Q=2*s,
                       dir=c(">=","=="),
                       rhs=c(minreturn,1)),
          maximum=FALSE)
-
 QP
 
 # run and view answer!
