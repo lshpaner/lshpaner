@@ -12,6 +12,7 @@ image:
   caption: ''
   focal_point: ''
   preview_only: yes
+math: true
 tags:
 - R
 - R Studio
@@ -92,7 +93,7 @@ returns <- (close/lag(close) - 1)[-1]
 head(returns)
 ```
 
-Taking this a step further, we examine the average returns($\mu$), covariance matrix (cov), standard deviation (s), and minimum value (min) of our returns vector as shown below:
+Taking this a step further, we examine the average returns ($\mu$), covariance matrix (cov), standard deviation (s), and minimum value (min) of our returns vector as shown below:
 ```{r message = TRUE}
 mu<-colMeans(returns)
 s<-cov(returns)
@@ -111,7 +112,7 @@ constr
 minreturn <- -0.6493151
 ```
 
-As shown above, the vector of ones is used to sum up the allocations (our decisions). The average return of the porfolio, mu, will need to be greater than or equal to the minimum return value of -0.6493151 that we have just calculated. 
+As shown above, the vector of ones is used to sum up the allocations (our decisions). The average return of the porfolio  $\mu$ will need to be greater than or equal to the minimum return value of -0.6493151 that we have just calculated. 
 
 Finally, we proceed to plug in the parameters for the quadratic program by placing them into the QP data frame, thereby allowing us to run the solution and ensuing ROI as follows:
 

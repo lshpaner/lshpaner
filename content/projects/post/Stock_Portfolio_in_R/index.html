@@ -12,6 +12,7 @@ image:
   caption: ''
   focal_point: ''
   preview_only: yes
+math: true
 tags:
 - R
 - R Studio
@@ -84,7 +85,7 @@ head(returns)</code></pre>
 ## 2020-01-08 -0.003743044 -0.021139224  0.0066040667  0.0016694909
 ## 2020-01-09 -0.006887915  0.041391782  0.0037983772 -0.0279166667
 ## 2020-01-10 -0.001261034  0.002880127 -0.0037840041 -0.0780111444</code></pre>
-<p>Taking this a step further, we examine the average returns(<span class="math inline">\(\mu\)</span>), covariance matrix (cov), standard deviation (s), and minimum value (min) of our returns vector as shown below:</p>
+<p>Taking this a step further, we examine the average returns (<span class="math inline">\(\mu\)</span>), covariance matrix (cov), standard deviation (s), and minimum value (min) of our returns vector as shown below:</p>
 <pre class="r"><code>mu&lt;-colMeans(returns)
 s&lt;-cov(returns)
 s</code></pre>
@@ -108,7 +109,7 @@ constr</code></pre>
 ## mu -0.0002256408 0.002914914 0.0007681058 0.006661802
 ##     1.0000000000 1.000000000 1.0000000000 1.000000000</code></pre>
 <pre class="r"><code>minreturn &lt;- -0.6493151</code></pre>
-<p>As shown above, the vector of ones is used to sum up the allocations (our decisions). The average return of the porfolio, mu, will need to be greater than or equal to the minimum return value of -0.6493151 that we have just calculated.</p>
+<p>As shown above, the vector of ones is used to sum up the allocations (our decisions). The average return of the porfolio <span class="math inline">\(\mu\)</span> will need to be greater than or equal to the minimum return value of -0.6493151 that we have just calculated.</p>
 <p>Finally, we proceed to plug in the parameters for the quadratic program by placing them into the QP data frame, thereby allowing us to run the solution and ensuing ROI as follows:</p>
 <pre class="r"><code>QP &lt;- OP(Q_objective(Q=2*s,
                      L=c(0,0,0,0)),
