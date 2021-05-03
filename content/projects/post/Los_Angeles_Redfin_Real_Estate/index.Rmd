@@ -193,7 +193,7 @@ Table 1 represents the characteristics by housing type (single family, townhouse
 <col style="width: 81px">
 <col style="width: 94px">
 <col style="width: 125px">
-<col style="width: 65px">
+<col style="width: 100px">
 </colgroup>
 <tbody>
   <tr>
@@ -815,7 +815,6 @@ The real estate market is laden with decisions relating to price and variables t
 
 <br>
 <br>
-
 
 ## **References**
 
