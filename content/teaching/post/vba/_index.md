@@ -43,7 +43,7 @@ We want to ensure that we are looking at the correct VBA Project. The project na
 
 <img src="vba3.png">
 
-You may select any sheet listed on the left-hand pane if you wish to insert a VBA script only pertaining to that sheet. However, if you wish to operate the script on the entire excel workbook, then you should select "ThisWorkbook" from that respective pane. 
+You may select any sheet listed on the left-hand pane if you wish to insert a VBA script only pertaining to that sheet. However, if you wish to operate the script on the entire Excel workbook, then you should select "ThisWorkbook" from that respective pane. 
 
 In any event, VBA script is inserted into what is called a "module." So, to insert a module, simply click on "Insert" followed by "Module" from the top menu.
 
