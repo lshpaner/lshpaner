@@ -63,11 +63,11 @@ pdf: true
 ---
 ### Tableau Projects
 
-[My Tableau Public Profile](https://public.tableau.com/profile/leon.shpaner/)
+> [My Tableau Public Profile](https://public.tableau.com/profile/leon.shpaner/)
 
 To access my web data connectors, visit the [Tableau Community Portal](https://tableau.github.io/webdataconnector/community/) and search for "Leon Shpaner" on the main page.
 
-Otherwise, the projects linked to these connectors in Tableau are below:
+**Otherwise, the projects linked to these connectors in Tableau are below:**
 
 1. [California COVID-19 Emergency Service Providers](/projects/post/covid_19_ca_emergencyproviders/) <br /> 
 2. [California Geothermal Wells](/projects/post/ca_geothermalwells/)  <br /> 
