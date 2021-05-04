@@ -8,7 +8,7 @@ weight: 1
 title: Visual Basic for Applications (VBA)
 draft: false  # Is this a draft? true/false
 date: false
-toc: true  # Show table of contents? true/false
+toc: false  # Show table of contents? true/false
 type: docs  # Do not modify.
 
 # Add menu entry to sidebar.
