@@ -5,7 +5,7 @@ summary: Learn how to use Academic's docs layout for publishing online courses, 
 weight: 3
 
 # Page metadata.
-title: VBA - script for converting formulas in an excel workbook to values across all worksheets
+title: VBA - Script for converting formulas in an Excel workbook to values across all worksheets
 draft: false  # Is this a draft? true/false
 date: "`r Sys.Date()`"
 toc: false # Show table of contents? true/false
@@ -38,7 +38,7 @@ div.a {
 }
 </style>
 
-Copy the following code into the VBA Environment in excel:
+Copy the following code into the VBA Environment in Excel:
 
 ---
 <div class="a"> <p style="font-family:consolas"> <font color = blue> Sub </font color>  ConvertFormulasToValuesAllWorksheets()

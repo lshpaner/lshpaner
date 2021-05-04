@@ -395,8 +395,6 @@ To determine which model is the strongest, a full model evaluation was performed
 
 ## **Conclusion**
 
-
-
 We hereby recommend the neural network model for repeated experiments of this magnitude and caliber for its propensity to deliver reliable results based on the metrics presented herein. Selecting different school subjects and tuning the hyperparameters may improve accuracy and precision; notwithstanding, this model has proven useful in identifying outside factors to student performance, allowing schools to more equitably aide student success. 
 
 ## **References**

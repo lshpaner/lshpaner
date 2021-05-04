@@ -38,7 +38,7 @@ div.a {
 
 
 </style>
-Copy the following code into the VBA Environment in excel:
+Copy the following code into the VBA Environment in Excel:
 
 ---
 <div class="a"> <p style="font-family:consolas"> <font color = blue> Sub </font color>  RemoveAlphas()
