@@ -58,7 +58,7 @@ pdf: true
 ---
 ### University of California, San Diego (UCSD)
 
-[Financial Modeling with Excel - projects] (/ucsd_coursework/) from the course taught by [Professor George Haloulakos](https://extension.ucsd.edu/about-extension/george-a-haloulakos)
+> [Financial Modeling with Excel - projects] (/ucsd_coursework/) from the course taught by [Professor George Haloulakos](https://extension.ucsd.edu/about-extension/george-a-haloulakos)
 
 ---
 ### Tableau Projects
