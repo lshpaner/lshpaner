@@ -11,19 +11,19 @@ pdf: true
 ### University of San Diego
 
 **I. Applied Data Mining**
-* [Predicting Student Performance in a Portuguese Secondary Institution](/projects/post/student_performance_models) - a joint data mining project with Juliet Sieland-Harris and Dan Choi <i class="fab fa-r-project" style="font-size:22px"></i>
+* [Predicting Student Performance in a Portuguese Secondary Institution](/projects/post/student_performance_models) - a joint data mining project with Juliet Sieland-Harris and Dan Choi 📈<i class="fab fa-r-project" style="font-size:22px"></i>
 
 **II. Data Science Foundations**
 
 * [Walmart Consulting Project](/projects/post/walmart_price_model) - applying the Cross-Industry Standard Process for Data Mining (CRISP-DM) model to real price data from Walmart
-* A recorded video of [the presentation can be seen here <i class="fab fa-youtube"></i>](https://www.youtube.com/watch?v=1TqfbGY39_c)
+* A recorded video of [the presentation can be seen here](https://www.youtube.com/watch?v=1TqfbGY39_c) <i class="fab fa-youtube" style="font-size:22px"></i>
 
 **III. Data Science Programming**
 
-* [European Bank Marketing Campaign Dataset](/projects/post/european_bank_marketing) - a joint python project in jupyter notebook with [Jose Luis Estrada](https://www.joseluisestrada.net/). <i class="fab fa-python" style="font-size:22px"></i>
+* [European Bank Marketing Campaign Dataset](/projects/post/european_bank_marketing) - a joint python project in jupyter notebook with [Jose Luis Estrada](https://www.joseluisestrada.net/) <i class="fab fa-python" style="font-size:22px"></i>
 * This in-depth analysis on European bank marketing is followed by logistic regression as a supervised learning method for best possible outcomes. 
-* A recorded video of [our presentation can be seen here <i class="fab fa-youtube"></i>](https://www.youtube.com/watch?v=-id0kLvWdJY). 
-* This project can also be viewed on our [shared GitHub repository <i class="fab fa-github"></i>](https://github.com/MSADS-500B-Data-Science-Programming/group_project).
+* A recorded video of [our presentation can be seen here](https://www.youtube.com/watch?v=-id0kLvWdJY) <i class="fab fa-youtube" style="font-size:22px"></i>
+* This project can also be viewed on our [shared GitHub repository](https://github.com/MSADS-500B-Data-Science-Programming/group_project) <i class="fab fa-github" style="font-size:22px"></i>
 
 **IV. Probability and Statistics for Data Science**
 
