@@ -64,7 +64,7 @@ pdf: true
 
 ### Tableau Projects
 
-Some of these projects are listed below:
+Some of these projects are presented below:
 
 1. [California COVID-19 Emergency Service Providers](/projects/post/covid_19_ca_emergencyproviders/) <br /> 
 2. [California Geothermal Wells](/projects/post/ca_geothermalwells/)  <br /> 
