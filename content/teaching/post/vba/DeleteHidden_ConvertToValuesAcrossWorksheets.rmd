@@ -52,7 +52,7 @@ Copy the following code into the VBA Environment in Excel:
 <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color=blue> Next </font color> rng
 <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color=blue> Next </font color> ws
 <br>
-<br> <font color=green> \' delete all Hidden rows-columns in all sheets </font color>
+<br> <font color=green> \' Delete all Hidden rows-columns in all sheets </font color>
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color=blue> Dim </font color> r <font color=blue> As Long </font color>, c  <font color=blue> As Long </font color>, x  <font color=blue> As Long </font color>
 <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Application.ScreenUpdating = <font color=blue> False </font color>
 <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color=blue> For Each </font color> ws <font color=blue> In </font color> Sheets

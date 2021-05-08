@@ -43,7 +43,7 @@ Copy the following code into the VBA Environment in Excel:
 ---
 <div class="a"> <p style="font-family:consolas"> <font color = blue> Sub </font color>  RemoveAlphas()
 <br>
-<br> <font color = green> \'\' Remove alpha characters from a string </font color>
+<br> <font color = green> \' Remove alpha characters from a string </font color>
 <br> &nbsp;&nbsp;&nbsp; <font color = blue> Dim </font color> intI <font color = blue> As Integer </font color> 
 <br> &nbsp;&nbsp;&nbsp; Dim strNotNum <font color = blue> As String </font color>, strTemp <font color=blue> As String </font color>
 <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color=blue>Set</font color> rngRR = Selection.SpecialCells(xlCellTypeConstants, _
