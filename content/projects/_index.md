@@ -58,26 +58,29 @@ pdf: true
 ---
 ### University of California, San Diego (UCSD)
 
-> [Financial Modeling with Excel - projects] (/ucsd_coursework/) from the course taught by [Professor George Haloulakos](https://extension.ucsd.edu/about-extension/george-a-haloulakos)
+[Financial Modeling with Excel - projects] (/ucsd_coursework/) from the course taught by [Professor George Haloulakos](https://extension.ucsd.edu/about-extension/george-a-haloulakos)
 
 ---
+
 ### Tableau Projects
 
-> [My Tableau Public Profile](https://public.tableau.com/profile/leon.shpaner/)
-
-To access my web data connectors, visit the [Tableau Community Portal](https://tableau.github.io/webdataconnector/community/) and search for "Leon Shpaner" on the main page.
-
-**Otherwise, the projects linked to these connectors in Tableau are below:**
+Some of these projects are listed below:
 
 1. [California COVID-19 Emergency Service Providers](/projects/post/covid_19_ca_emergencyproviders/) <br /> 
 2. [California Geothermal Wells](/projects/post/ca_geothermalwells/)  <br /> 
 3. [Department of Defense Sites in the U.S. and its Territories](/projects/post/dodsites/)
+
+To access my web data connectors, visit the [Tableau Community Portal](https://tableau.github.io/webdataconnector/community/) and search for "Leon Shpaner" on the main page. 
+
+[My Tableau Public Profile](https://public.tableau.com/profile/leon.shpaner/)
 
 ---
 
 ### Miscellaneous Models 
 
 1. F.L.O.W. STATE Model – A New Perspective on Balance Sheet Pro Forma as a [Blog Post](/projects/post/FlowStateModel/) and [Linkedin Article](https://www.linkedin.com/pulse/flow-state-model-new-perspective-balance-sheet-pro-forma-leon-shpaner/?trackingId=jWDIwg0KuFt65YH9OOY1vg%3D%3D) - article on linkedin pulse
+
+
 
 
 
