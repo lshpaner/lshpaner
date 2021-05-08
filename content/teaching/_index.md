@@ -7,7 +7,7 @@ url: ''
 ---
 ### University of San Diego
 
->[Essentials of Analytics in Excel - DAV-X800](https://pce.sandiego.edu/search/publicCourseSearchDetails.do?method=load&courseId=49435200) *(links to an external website)*
+[Essentials of Analytics in Excel - DAV-X800](https://pce.sandiego.edu/search/publicCourseSearchDetails.do?method=load&courseId=49435200) *(links to an external website)*
 
 To reach me through the university, please visit this [link.](https://www.sandiego.edu/directory/biography.php?profile_id=10353)
 
@@ -30,4 +30,4 @@ To reach me through the university, please visit this [link.](https://www.cornel
 ---
 ### Visual Basic for Applications (VBA)
 
-> [Helpful macros for a variety of business applications](/teaching/post/vba)
+[Helpful macros for a variety of business applications](/teaching/post/vba)
