@@ -268,7 +268,7 @@ Realizing that our challenge may extend beyond a traditional linear regression m
 
 
 
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTe1cKlC2-msTnvOtSJrZQKZkQHnnmzvl2ZqVbdCalpDp8Wio5yr07Nk6jHbP8iT3qExeY9qKmW7lK9/pubhtml/sheet?headers=false&amp;gid=0&amp;range=A1:BC33" width="98%" height="1745"></iframe>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTe1cKlC2-msTnvOtSJrZQKZkQHnnmzvl2ZqVbdCalpDp8Wio5yr07Nk6jHbP8iT3qExeY9qKmW7lK9/pubhtml/sheet?headers=false&amp;gid=0&amp;range=A1:BC33" width="98%" height="1745" frameborder=0></iframe>
 
 
 ## <u>**Data Understanding**</u>
