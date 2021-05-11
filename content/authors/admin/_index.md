@@ -33,7 +33,7 @@ social:
   link: "mailto:lshpaner@ucla.edu"
 - icon: instagram
   icon_pack: fab
-  link: https://instagram.com/leo1man  
+  link: https://instagram.com/leo1man 
 - icon: fab fa-linkedin-in
   icon_pack: fab
   link: https://www.linkedin.com/in/lshpaner/
