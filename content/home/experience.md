@@ -32,7 +32,7 @@ date_format = "Jan 2006"
   company = "The Los Angeles Film School"
   company_url = "https://www.lafilm.edu/"
   location = "Los Angeles, CA"
-  date_start = "2013-09-01"
+  date_start = "2013-09-23"
   date_end = "2020-10-30"
   description = """
   Responsibilities:
@@ -42,7 +42,7 @@ date_format = "Jan 2006"
   * Helped reduce bad-debt by about 200k by running flux analyses on collection rates, student headcount, and program margin analysis – this also allowed the CFO to save 20% annually in expenses across the board without cutting programs or staff
   """
 [[experience]]
-  title = "Sales Reporting Analyst (Contractor)"
+  title = "Sales Data Analyst (Contractor)"
   company = "Self Mastery Co."
   company_url = "https://www.selfmasteryco.com/"
   location = ""
