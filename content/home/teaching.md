@@ -90,6 +90,7 @@ ShowDatesOnPosts = true
   
   * Piloted the first ever summer workshop on Financial Modeling in Excel
   
+  
   Panel Judge:
   
   * Evaluate student presentations and provides specific feedback on students' presentation skills
