@@ -74,7 +74,7 @@ date_format = "Jan 2006"
   company_url = "https://www.verifi.com/"
   location = "Beverly Hills, CA"
   date_start = "2007-09-01"
-  date_end = "2009-01-01"
+  date_end = "2009-01-09"
   description = """
   Responsibilities:
   
