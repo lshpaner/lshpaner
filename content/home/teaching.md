@@ -72,8 +72,8 @@ ShowDatesOnPosts = true
   
   Responsibilities:
   
-  * Provided remote instruction on over 50 courses in Data Analytics and Inferential Statistics 
-  * Assess and provide relevant feedback for students on assignments
+  * Thus far, provided remote instruction on over 80 courses in data analytics and business statistics certificate programs
+  * Continue to assess and provide relevant feedback for students on projects and assignments
   * Encourage sharing of reflection and information by students using online platforms
   """
 

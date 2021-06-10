@@ -38,8 +38,8 @@ date_format = "Jan 2006"
   Responsibilities:
   
   * Rebuilt the School’s entire financial reporting infrastructure within a newly adopted CPM software, Prophix
-  * Saved the finance department about 20 hours per week by automating OPEX variance reports with our CPM and VBA macros
-  * Helped reduce bad-debt by about 200k by running flux analyses on collection rates, student headcount, and program margin analysis – this also allowed the CFO to save 20% annually in expenses across the board without cutting programs or staff
+  * Saved the finance department about 20 hours per month by integrating the OPEX variance report with the CPM, and automating it with a VBA macro
+  * Targeted bad-debt by running flux analyses on collection rates, student headcount, and program margin analysis, proposing actionable collection efforts to mitigate risk – this also allowed the CFO to save 20% annually in expenses across the board without cutting programs or staff
   """
 [[experience]]
   title = "Sale Reporting Analyst (Contractor)"
@@ -65,7 +65,7 @@ date_format = "Jan 2006"
   description = """
   Responsibilities:
   
-  * Negotiated with escrow officers, title companies, banks & realtors, resulting in a 7% increase in profit margins
+  * Conducted crucial conversations with escrow officers, title companies, banks, and realtors relating to delinquent accounts
   * Aided in recovering 400k in monies owed to the home owners’ associations by facilitating claims on surplus funds
   """
 [[experience]]
