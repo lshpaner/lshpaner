@@ -12,7 +12,8 @@ pdf: true
 
 **I. Applied Predictive Modeling**
 * [Predicting Cervical Cancer From Biopsy Results](/projects/post/predicting_cervical_cancer) - a joint predictive modeling project with Angela Zhang and Kiran Singh <i class="fab fa-r-project" style="font-size:22px"></i>
-* A recorded video of [the presentation can be seen here](https://youtu.be/luOFCHs3nJk) <i class="fab fa-youtube" style="font-size:22px"></i>
+* A recorded video of [the presentation can be seen here](https://youtu.be/luOFCHs3nJk) <i class="fab fa-youtube" style="font-size:22px"></i>.
+* The R Shiny app [can be viewed here](/Cervical_Cancer_App)
 
 **II. Applied Data Mining**
 * [Predicting Student Performance in a Portuguese Secondary Institution](/projects/post/student_performance_models) - a joint data mining project with Juliet Sieland-Harris and Dan Choi 📈<i class="fab fa-r-project" style="font-size:22px"></i>
