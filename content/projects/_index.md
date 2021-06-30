@@ -11,7 +11,7 @@ pdf: true
 ### University of San Diego
 
 **I. Applied Predictive Modeling**
-* [Predicting Cervical Cancer From Biopsy Results](/projects/post/cervical_cancer_pre) - a joint predictive modeling project with Angela Zhang and Kiran Singh <i class="fab fa-r-project" style="font-size:22px"></i>
+* [Predicting Cervical Cancer From Biopsy Results](/projects/post/predicting_cervical_cancer) - a joint predictive modeling project with Angela Zhang and Kiran Singh <i class="fab fa-r-project" style="font-size:22px"></i>
 * A recorded video of [the presentation can be seen here](https://youtu.be/luOFCHs3nJk) <i class="fab fa-youtube" style="font-size:22px"></i>
 
 **II. Applied Data Mining**
