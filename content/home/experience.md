@@ -42,7 +42,7 @@ date_format = "Jan 2006"
   * Targeted bad-debt by running flux analyses on collection rates, student headcount, and program margin analysis, proposing actionable collection efforts to mitigate risk – this also allowed the CFO to save 20% annually in expenses across the board without cutting programs or staff
   """
 [[experience]]
-  title = "Sale Reporting Analyst (Contractor)"
+  title = "Sales Reporting Analyst (Contractor)"
   company = "Self Mastery Co."
   company_url = "https://www.selfmasteryco.com/"
   location = ""
