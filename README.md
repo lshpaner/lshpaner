@@ -20,26 +20,21 @@ I build clinical machine learning systems across nephrology, oncology NLP, and u
 
 ## Selected work
 
-- **CKD/KFRT prediction pipeline** — XGBoost and CatBoost models for kidney failure risk stratification at UCLA Health
-- **Oncology NLP** — BioClinicalBERT and LLM-based zero/few-shot classification in Databricks (HIPAA-compliant)
-- **CircumScore** — ML-based surgical outcome prediction tool; paper published in [BMC Urology](https://doi.org/10.1186/s12894-026-02072-x)
-- **UAP/NUFORC ML classification** — anomaly detection on unidentified aerial phenomena reports
+- **CircumScore**: ML-based surgical outcome prediction tool; paper published in [BMC Urology](https://doi.org/10.1186/s12894-026-02072-x)
 
 ---
 
 ## Talks and publications
 
-- JupyterCon 2025 — *eda_toolkit* and *EquiBoots* (co-presented with Oscar Gil)
+- JupyterCon 2025: *eda_toolkit* and *EquiBoots* (co-presented with Oscar Gil)
 - Bio-IT World 2026, Boston
-- CHOC Research GoBEYOND 2026 — reproducible EDA frameworks poster
+- CHOC Research GoBEYOND 2026: reproducible EDA frameworks poster
 - Late-breaking abstract, JASN / Kidney Week 2025
 
 ---
 
 ## Links
 
-[datasciencedynamics.com](https://datasciencedynamics.github.io)  |  [LinkedIn](https://linkedin.com/in/lshpaner)  |  [Google Scholar](#)
+[datasciencedynamics.com](https://datasciencedynamics.github.io)  |  [LinkedIn](https://linkedin.com/in/lshpaner)  |  [Google Scholar](https://scholar.google.com/citations?user=RALKL5EAAAAJ&hl=en)
 
 ---
-
-*Under contract with Taylor and Francis for a data science textbook built around eda_toolkit.*
