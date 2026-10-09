@@ -1,6 +1,6 @@
 # Hi, I'm Leon Shpaner
 
-Data Scientist at **UCLA Health** | Adjunct Instructor at **UCLA Extension** and **University of San Diego** | Co-founder of **Data Science Dynamics**
+Data Scientist at **[UCLA Health](https://mii.ucla.edu/people/leon-shpaner-ms)**, instructor at **[UCLA Extension](https://www.uclaextension.edu/instructors/leon-shpaner)** adjunct professor at **[University of San Diego](https://www.sandiego.edu/directory/biography.php?profile_id=12138)**, and co-founder of **[Data Science Dynamics](https://datasciencedynamics.com/).**
 
 I build clinical machine learning systems across nephrology, oncology NLP, and urology, and develop open-source tools for reproducible data science.
 
