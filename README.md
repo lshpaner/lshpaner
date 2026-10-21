@@ -26,7 +26,7 @@ I build clinical machine learning systems across nephrology, oncology NLP, and u
 
 ## Talks and publications
 
-- [JupyterCon 2025)]
+- JupyterCon 2025
   - [EDA Toolkit Presentation](https://jupytercon2025.sched.com/event/28H3P/eda-toolkit-tutorial-on-streamlining-exploratory-data-analysis-in-jupyter-leon-shpaner-ucla-health-oscar-gil-university-of-california-riverside)
   - [EquiBoots](https://jupytercon2025.sched.com/event/28H3Y/equiboots-tutorial-on-bias-and-fairness-analysis-of-sensitive-attributes-from-an-ml-model-leon-shpaner-arthur-funnell-ucla-health)
 - [Bio-IT World 2026, Boston](https://www.youtube.com/watch?si=4GdxsaXBQv0KTldj&v=Trxoq2B8E9w&feature=youtu.be)
