@@ -26,10 +26,10 @@ I build clinical machine learning systems across nephrology, oncology NLP, and u
 
 ## Talks and publications
 
-- JupyterCon 2025: *eda_toolkit* and *EquiBoots* (co-presented with Oscar Gil)
-- Bio-IT World 2026, Boston
-- CHOC Research GoBEYOND 2026: reproducible EDA frameworks poster
-- Late-breaking abstract, JASN / Kidney Week 2025
+- [JupyterCon 2025: *eda_toolkit* and *EquiBoots* (co-presented with Oscar Gil)](https://jupytercon2025.sched.com/event/28H3P/eda-toolkit-tutorial-on-streamlining-exploratory-data-analysis-in-jupyter-leon-shpaner-ucla-health-oscar-gil-university-of-california-riverside)
+- [Bio-IT World 2026, Boston](https://www.youtube.com/watch?si=4GdxsaXBQv0KTldj&v=Trxoq2B8E9w&feature=youtu.be)
+- [CHOC Research GoBEYOND 2026: reproducible EDA frameworks poster](https://datasciencedynamics.com/files/PLDSC_2026_Reproducible_Exploratory_Data_Analysis_Frameworks_for_Pediatric_and_Lifespan_Clinical_Research.pdf)
+- [Late-breaking abstract, JASN / Kidney Week 2025](https://journals.lww.com/jasn/fulltext/10.1681/asn.2025k91143bs~improving-kidney-failure-risk-predictions-for-clinical)
 
 ---
 
